@@ -1,0 +1,32 @@
+{
+ "name": "webpack-testing",
+ "version": "1.0.0",
+ "description": "Webpack and testing exercise project",
+ "main": "src/index.js",
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "webpack"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/andrev36/webpack-testing.git"
+ },
+ "keywords": [
+  "webpack",
+  "testing"
+ ],
+ "author": "",
+ "license": "ISC",
+ "bugs": {
+  "url": "https://github.com/andrev36/webpack-testing/issues"
+ },
+ "homepage": "https://github.com/andrev36/webpack-testing#readme",
+ "dependencies": {},
+ "devDependencies": {
+  "css-loader": "^4.2.2",
+  "sass-loader": "^10.0.1",
+  "ts-loader": "^8.0.3",
+  "webpack": "^4.44.1",
+  "webpack-cli": "^3.3.12"
+ }
+}
