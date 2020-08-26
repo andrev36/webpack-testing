@@ -5,7 +5,8 @@
  "main": "src/index.js",
  "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
-  "build": "webpack"
+  "start": "webpack-dev-server --mode=development --open --hot",
+  "build": "webpack --mode=production"
  },
  "repository": {
   "type": "git",
@@ -21,12 +22,38 @@
   "url": "https://github.com/andrev36/webpack-testing/issues"
  },
  "homepage": "https://github.com/andrev36/webpack-testing#readme",
- "dependencies": {},
+ "dependencies": {
+  "react": "^16.13.1",
+  "react-dom": "^16.13.1",
+  "react-router-dom": "^5.2.0"
+ },
  "devDependencies": {
+  "@babel/core": "^7.11.4",
+  "@babel/preset-env": "^7.11.0",
+  "@babel/preset-react": "^7.10.4",
+  "@testing-library/react": "^10.4.9",
+  "@types/react": "^16.9.47",
+  "@types/react-dom": "^16.9.8",
+  "@types/react-router-dom": "^5.1.5",
+  "autoprefixer": "^9.8.6",
+  "babel-core": "^6.26.3",
+  "babel-loader": "^8.1.0",
+  "babel-preset-env": "^1.7.0",
+  "babel-preset-react": "^6.24.1",
+  "clean-webpack-plugin": "^3.0.0",
   "css-loader": "^4.2.2",
+  "file-loader": "^6.0.0",
+  "html-webpack-plugin": "^4.3.0",
+  "node-sass": "^4.14.1",
+  "postcss-loader": "^3.0.0",
   "sass-loader": "^10.0.1",
   "ts-loader": "^8.0.3",
+  "tslint": "^6.1.3",
+  "tslint-loader": "^3.5.4",
+  "tslint-react": "^5.0.0",
+  "typescript": "^4.0.2",
   "webpack": "^4.44.1",
-  "webpack-cli": "^3.3.12"
+  "webpack-cli": "^3.3.12",
+  "webpack-dev-server": "^3.11.0"
  }
 }
