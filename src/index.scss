@@ -1,0 +1,26 @@
+.heading__title {
+ font-size: 2rem;
+ text-align: center;
+}
+
+.container {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ justify-items: center;
+ align-items: center;
+ gap: 3px;
+}
+
+.item {
+ height: 200px;
+ width: 100%;
+ position: relative;
+ border: 3px solid green;
+ * {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+}
