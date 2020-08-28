@@ -2,14 +2,25 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Buttons } from './Buttons';
 import './index.scss';
+import { gql, useQuery } from '@apollo/client';
+
+const GET_POSTS = gql`
+ query GetPosts {
+  posts {
+   id
+   body
+  }
+ }
+`;
 
 interface Props {}
 
 export const MainPage = () => {
- let containerRef = useRef(null);
- useEffect(() => {
-  gsap.from(containerRef.current, { duration: 2, x: -100, opacity: 0 });
- }, []);
+ const { loading, error, data } = useQuery(GET_POSTS);
+ if (loading) return 'Loading...';
+ if (error) return `Error! ${error.message}`;
+
+ useEffect(() => {}, []);
  return (
   <React.Fragment>
    <h1 className='heading__title'>
@@ -34,7 +45,13 @@ export const MainPage = () => {
      </fieldset>
     </form>
     <div className='item'>
-     <button>Test Button</button>
+     {/* {data.posts.map((post: any) => {
+      return (
+       <ul>
+        <li>{post.body}</li>
+       </ul>
+      );
+     })} */}
     </div>
     <div className='item'>
      <button>Test Button</button>
