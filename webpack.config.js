@@ -23,24 +23,6 @@ module.exports = (options) => {
   },
   module: {
    rules: [
-    // {
-    //  test: /\.js?$/,
-    //  query: {
-    //   presets: [
-    //    [
-    //     '@babel/env',
-    //     {
-    //      targets: {
-    //       browsers: 'last 2 chrome versions'
-    //      }
-    //     }
-    //    ]
-    //   ]
-    //  },
-    //  loader: 'babel-loader',
-    //  include: [path.resolve(__dirname, 'src')],
-    //  exclude: [path.resolve(__dirname, 'node_modules')]
-    // },
     {
      test: /\.tsx?$/,
      use: ['babel-loader', 'ts-loader', 'tslint-loader']
@@ -93,7 +75,7 @@ module.exports = (options) => {
    ]
   },
   resolve: {
-   extensions: ['.ts', '.tsx', '.js', '.jsx']
+   extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss']
   },
   devServer: {
    contentBase: './dist',
