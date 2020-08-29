@@ -7,7 +7,7 @@ module.exports = {
  // Below is fix for .scss files with Jest
  transform: {
   '^.+\\.jsx?$': 'babel-jest',
-  '^.+\\.tsx?$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
+  '^.+\\.tsx?$': 'ts-jest',
   '.+\\.(css|styl|less|sass|scss)$': 'jest-transform-css'
  }
 };

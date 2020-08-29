@@ -5,16 +5,26 @@ import { Buttons } from './Buttons';
 // Check this blog about testing counter and form: https://blog.logrocket.com/a-quick-guide-to-testing-react-hooks-fa584c415407/
 // Example of testing useState hook: https://stackoverflow.com/a/60148368/11788161
 describe('counter buttons test', () => {
- it('should increment count by 1', () => {});
+ it('Buttons load with initial value of 0', () => {
+  const { getByTestId } = render(<Buttons />);
+  const countValue = getByTestId('countvalue');
+
+  expect(countValue.textContent).toBe('0');
+ });
+ it('should increment count by 1', () => {
+  const { getByText, getByTestId } = render(<Buttons />);
+  const countValue = getByTestId('countvalue');
+
+  fireEvent.click(getByText(/Increment/));
+
+  expect(countValue.textContent).toBe('1');
+ });
+ it('should decrement count by 1', () => {
+  const { getByText, getByTestId } = render(<Buttons />);
+  const countValue = getByTestId('countvalue');
+
+  fireEvent.click(getByText(/Decrement/));
+
+  expect(countValue.textContent).toBe('-1');
+ });
 });
-
-const { getByText, asFragment } = render(<Buttons />);
-const firstRender = asFragment();
-
-fireEvent.click(getByText(/Increment/));
-
-expect(firstRender).toBe(1);
-// This will snapshot only the difference between the first render, and the
-// state of the DOM after the click event.
-// See https://github.com/jest-community/snapshot-diff
-// expect(firstRender).toMatchDiffSnapshot(asFragment());

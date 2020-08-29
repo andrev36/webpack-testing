@@ -75,9 +75,10 @@ module.exports = (options) => {
    ]
   },
   resolve: {
-   extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss']
+   extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss', '.json']
   },
   devServer: {
+   historyApiFallback: true,
    contentBase: './dist',
    inline: true,
    host: 'localhost',

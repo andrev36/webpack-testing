@@ -19,7 +19,8 @@ export const Buttons = () => {
     >
      Increment
     </button>
-    <h2>Current count: {count} </h2>
+    <h2>Current count:</h2>
+    <h2 data-testid='countvalue'>{count}</h2>
     <button
      ref={decrementButtonRef}
      onClick={() => setCounter((count) => count - 1)}
