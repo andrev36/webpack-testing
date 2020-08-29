@@ -57,6 +57,7 @@
   "css-loader": "^4.2.2",
   "file-loader": "^6.0.0",
   "html-webpack-plugin": "^4.3.0",
+  "isomorphic-fetch": "^2.2.1",
   "jest": "^26.4.2",
   "jest-extended": "^0.11.5",
   "jest-transform-css": "^2.0.0",

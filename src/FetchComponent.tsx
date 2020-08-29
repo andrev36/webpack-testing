@@ -6,7 +6,7 @@ interface Props {
  code?: string;
 }
 
-const queryFetch = (query: any) =>
+export const queryFetch = (query: any) =>
  fetch('https://countries.trevorblades.com/', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
@@ -31,8 +31,8 @@ export const FetchComponent = () => {
 
  return (
   <div className='item'>
-   <ul>
-    Continent names (Fetched from GraphQL API) :
+   <ul data-testid='continents-list'>
+    Continent names (Fetched from GraphQL API):
     {continents.map((continent: Props, index: number) => {
      return <li key={index}>{continent.name}</li>;
     })}

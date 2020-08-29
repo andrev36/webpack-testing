@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { SelectElements } from './SelectElement';
 
-describe('select element tests', () => {
+describe('SelectElement tests', () => {
  it('select element loads with initial value of select', () => {
   const { getByTestId } = render(<SelectElements />);
 
@@ -10,7 +10,11 @@ describe('select element tests', () => {
   expect(currentlySelectedColorValue.textContent).toBe(
    'Currently selected color: red'
   );
+ });
+ it('select element changes color', () => {
+  const { getByTestId } = render(<SelectElements />);
 
+  const currentlySelectedColorValue = getByTestId('currently-selected-color');
   const selectElementValue = getByTestId('select-element');
 
   fireEvent.change(selectElementValue, {

@@ -2,6 +2,7 @@ const { defaults } = require('jest-config');
 
 module.exports = {
  // Below is configuration for setup with Typescript
+ setupFiles: ['./jest.setup.js'],
  setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
  moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
  // Below is fix for .scss files with Jest
