@@ -5,6 +5,7 @@ import './index.scss';
 import { gql, useQuery } from '@apollo/client';
 import { FetchComponent } from './FetchComponent';
 import { SelectElements } from './SelectElement';
+import { FormComponent } from './FormComponent';
 
 export const MainPage = () => {
  return (
@@ -16,7 +17,8 @@ export const MainPage = () => {
     <Buttons />
     <SelectElements />
     <FetchComponent />
-    <div className='item'>
+    <FormComponent />
+    <div className='full_width_item'>
      <button>Test Button</button>
     </div>
    </section>

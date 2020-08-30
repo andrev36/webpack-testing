@@ -18,11 +18,13 @@
  border: 3px solid black;
  text-align: center;
  padding: 4rem;
- // :first-child {
- // top: 50%;
- // margin: 0;
- // position: relative;
- // left: 50%;
- // transform: translate(-50%, -50%);
- // }
+}
+
+.full_width_item {
+ height: 10rem;
+ position: relative;
+ border: 3px solid black;
+ text-align: center;
+ padding: 4rem;
+ grid-column: 1/-1;
 }
