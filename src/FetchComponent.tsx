@@ -13,7 +13,9 @@ export const queryFetch = (query: any) =>
   body: JSON.stringify({
    query: query
   })
- }).then((res) => res.json());
+ })
+  .then((res) => res.json())
+  .catch((err) => console.log(err));
 
 export const FetchComponent = () => {
  const [continents, setContinent] = useState([]);
@@ -26,16 +28,20 @@ export const FetchComponent = () => {
       code
     }
   }
-`).then((data: any) => setContinent(data.data.continents));
+`)
+   .then((data: any) => setContinent(data.data.continents))
+   .catch((err: any) => console.log(err));
  }, []);
 
  return (
   <div className='item'>
+   <h2>Continent names (Fetched from GraphQL API):</h2>
    <ul data-testid='continents-list'>
-    Continent names (Fetched from GraphQL API):
-    {continents.map((continent: Props, index: number) => {
-     return <li key={index}>{continent.name}</li>;
-    })}
+    {continents.length
+     ? continents.map((continent: Props, index: number) => {
+        return <li key={index}>{continent.name}</li>;
+       })
+     : null}
    </ul>
   </div>
  );

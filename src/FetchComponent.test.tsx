@@ -7,22 +7,21 @@ describe('FetchComponent tests', () => {
   const { getByTestId } = render(<FetchComponent />);
 
   const fetchedContinents = getByTestId('continents-list');
-  expect(fetchedContinents).toBe(null);
+  expect(fetchedContinents.textContent).toBe('');
  });
- it('FetchComponent fetches continent', () => {
+ it('FetchComponent fetches continent', async () => {
   expect.assertions(1);
-  const { getByTestId } = render(<FetchComponent />);
+  // const { getByTestId } = render(<FetchComponent />);
 
-  const fetchedContinentsList = getByTestId('continents-list');
-  return queryFetch(`
+  // const fetchedContinentsList = getByTestId('continents-list');
+  const data = await queryFetch(`
   query {
     continents {
       name
       code
     }
   }
-`).then((data: any) => {
-   expect(data.data.continents.name).toContain('Africa');
-  });
+`);
+  expect(data.data.continents.name).toContain('Africa');
  });
 });

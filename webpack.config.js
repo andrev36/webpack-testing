@@ -18,8 +18,9 @@ module.exports = (options) => {
   entry: path.join(__dirname, 'src', 'index.tsx'),
   watch: true,
   output: {
-   filename: 'index.js',
-   path: path.resolve(__dirname, 'dist')
+   filename: '[name].js',
+   path: path.resolve(__dirname, 'dist'),
+   sourceMapFilename: '[name].js.map'
   },
   module: {
    rules: [
@@ -75,7 +76,7 @@ module.exports = (options) => {
    ]
   },
   resolve: {
-   extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss', '.json']
+   extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
   },
   devServer: {
    historyApiFallback: true,
