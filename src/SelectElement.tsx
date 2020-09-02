@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 import './index.scss';
+import CloudImage from '../assets/images/cloud.svg';
 
 export const SelectElements = () => {
  const [pickedColor, setPickedColor] = useState<string>('red');
@@ -8,6 +9,7 @@ export const SelectElements = () => {
  };
  return (
   <form className='item'>
+   <img src={CloudImage} alt='cloud' className='cloud-image-select-elements' />
    <fieldset>
     <legend>Selecting elements</legend>
     <p>

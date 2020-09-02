@@ -13,6 +13,7 @@ const client = new ApolloClient({
 // ! TODO Dark mode in one grid window on/off with moon icon
 // ! TODO Create ex. wave animation that is unveiling item
 // after drag
+// ! TODO Add Visibility sensor to animations
 class App extends React.Component {
  render() {
   return (

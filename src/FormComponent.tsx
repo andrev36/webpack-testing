@@ -1,6 +1,11 @@
-import React, { useRef, useState, ChangeEvent, FormEvent } from 'react';
-
-interface Props {}
+import React, {
+ useRef,
+ useState,
+ ChangeEvent,
+ FormEvent,
+ useEffect
+} from 'react';
+import { gsap } from 'gsap';
 
 export const FormComponent = () => {
  const [formValues, setFormValues] = useState({
@@ -20,36 +25,49 @@ export const FormComponent = () => {
   });
  };
 
+ const formContainer = useRef(null);
+ useEffect(() => {
+  gsap.from(formContainer.current, {
+   duration: 3.5,
+   rotationX: 100,
+   transformOrigin: '50% 0',
+   ease: 'Back.easeOut'
+  });
+ }, []);
+
  return (
   <React.Fragment>
-   <section className='item' data-testid='form-container'>
-    <form action='POST' onSubmit={printFormValues}>
-     <section>
-      <label htmlFor='name' id='name'>
-       Name
-      </label>
-      <input
-       type='text'
-       name='name'
-       value={formValues.name}
-       onChange={updateFormField}
-       data-testid='form-name-input'
-      />
-     </section>
-     <br />
-     <section>
-      <label htmlFor='email'>Email</label>
-      <input
-       type='email'
-       name='email'
-       value={formValues.email}
-       onChange={updateFormField}
-       data-testid='form-email-input'
-      />
-     </section>
-     <br />
-     <button>Submit</button>
-    </form>
+   <section className='item form-section' data-testid='form-container'>
+    <div className='form-container' ref={formContainer}>
+     <h2>Form</h2>
+     <form action='POST' onSubmit={printFormValues}>
+      <section>
+       <label htmlFor='name' id='name'>
+        Name
+       </label>
+       <input
+        type='text'
+        name='name'
+        value={formValues.name}
+        onChange={updateFormField}
+        data-testid='form-name-input'
+       />
+      </section>
+      <br />
+      <section>
+       <label htmlFor='email'>Email</label>
+       <input
+        type='email'
+        name='email'
+        value={formValues.email}
+        onChange={updateFormField}
+        data-testid='form-email-input'
+       />
+      </section>
+      <br />
+      <button>Submit</button>
+     </form>
+    </div>
    </section>
   </React.Fragment>
  );
