@@ -2,13 +2,13 @@
  font-family: 'Source Sans Pro';
  src: url('../fonts/SourceSansPro-Regular.ttf');
 }
+
 *,
 ::after,
 ::before {
  box-sizing: border-box;
  font-size: 100%;
  vertical-align: baseline;
- background: transparent;
 }
 body {
  font-size: 16px;
@@ -19,6 +19,7 @@ body {
 }
 
 @mixin item_style {
+ z-index: 0;
  position: relative;
  text-align: center;
  padding: 2rem;
@@ -40,7 +41,7 @@ body {
  grid-template-columns: repeat(2, minmax(200px, 1fr));
  grid-gap: 1.125rem;
  margin: 2rem auto;
- @media (max-width: 600px) {
+ @media (max-width: 900px) {
   grid-template-columns: 1fr;
  }
 }
@@ -69,7 +70,22 @@ body {
  height: 21rem;
 }
 
-.cloud-image-select-elements {
- max-height: 4rem;
- max-width: 4rem;
+.select-elements-container {
+ position: relative;
+ z-index: 1;
+ height: 23rem;
+ margin: 3.5rem auto 0;
+}
+
+.cloud-image {
+ position: absolute;
+ top: -5rem;
+ left: -3rem;
+ margin: 0 auto;
+ height: 14rem;
+}
+
+// ! TODO Add changing color according to chosen select value
+.cloud-image-path {
+ stroke: blue;
 }
