@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -10,6 +11,10 @@ const settings = {
 function srcPathExtend(subpath) {
  return path.join(settings.srcPath, subpath);
 }
+
+const root = __dirname;
+
+const gsapPath = '/node_modules/gsap/src/uncompressed/';
 
 module.exports = (options) => {
  return {
@@ -76,7 +81,14 @@ module.exports = (options) => {
    ]
   },
   resolve: {
-   extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+   extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+   modules: ['node_modules', path.resolve(__dirname, 'src')],
+   alias: {
+    TweenLite: 'gsap',
+    CSSPlugin: 'gsap',
+    Draggable: path.join(root, gsapPath + 'utils/Draggable.js'),
+    ScrollToPlugin: path.join(root, gsapPath + 'plugins/ScrollToPlugin.js')
+   }
   },
   devServer: {
    historyApiFallback: true,
@@ -89,6 +101,9 @@ module.exports = (options) => {
    new CleanWebpackPlugin({ verbose: true }),
    new HtmlWebpackPlugin({
     template: srcPathExtend('index.html')
+   }),
+   new webpack.ProvidePlugin({
+    TweenMax: 'gsap'
    })
   ]
  };

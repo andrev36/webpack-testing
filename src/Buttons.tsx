@@ -11,7 +11,7 @@ export const Buttons = () => {
   gsap.from(decrementButtonRef.current, { duration: 2, x: 100, opacity: 0 });
  }, []);
  return (
-  <div className='item'>
+  <section className='item'>
    <div>
     <button
      ref={incrementButtonRef}
@@ -28,6 +28,6 @@ export const Buttons = () => {
      Decrement
     </button>
    </div>
-  </div>
+  </section>
  );
 };

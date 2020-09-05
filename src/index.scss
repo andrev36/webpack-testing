@@ -72,12 +72,17 @@ body {
 
 .select-elements-container {
  position: relative;
- z-index: 1;
  height: 23rem;
  margin: 3.5rem auto 0;
 }
 
+.select-element {
+ z-index: 1;
+}
+
 .cloud-image {
+ z-index: 0;
+ pointer-events: none;
  position: absolute;
  top: -5rem;
  left: -3rem;
@@ -85,7 +90,37 @@ body {
  height: 14rem;
 }
 
-// ! TODO Add changing color according to chosen select value
-.cloud-image-path {
+.cloud-image-path-blue {
  stroke: blue;
+}
+.cloud-image-path-red {
+ stroke: red;
+}
+.cloud-image-path-green {
+ stroke: green;
+}
+.cloud-image-path-yellow {
+ stroke: yellow;
+}
+
+.wave1-svg {
+ position: absolute;
+ bottom: 9rem;
+ left: 0;
+ width: 100%;
+ z-index: 0;
+ pointer-events: none;
+}
+
+#wave1 {
+ z-index: 0;
+}
+
+#wave2 {
+ display: none;
+ z-index: 0;
+}
+
+.wave-button {
+ z-index: 1;
 }

@@ -6,6 +6,7 @@ import { gql, useQuery } from '@apollo/client';
 import { FetchComponent } from './FetchComponent';
 import { SelectElements } from './SelectElement';
 import { FormComponent } from './FormComponent';
+import { WaveComponent } from './WaveComponent';
 
 export const MainPage = () => {
  const mainHeadingRef = useRef(null);
@@ -30,15 +31,19 @@ export const MainPage = () => {
      Hello React and Webpack! Using hot reload!
     </h1>
    </div>
-   <section className='container'>
+   <main className='container'>
     <Buttons />
     <SelectElements />
     <FetchComponent />
     <FormComponent />
-    <div className='full_width_item'>
-     <button>Test Button</button>
-    </div>
-   </section>
+    <WaveComponent />
+    <section className='item'>
+     <div>123</div>
+    </section>
+    <section className='item'>
+     <div>123</div>
+    </section>
+   </main>
   </React.Fragment>
  );
 };

@@ -34,7 +34,7 @@ export const FetchComponent = () => {
  }, []);
 
  return (
-  <div className='item'>
+  <section className='item'>
    <h2>Continent names (Fetched from GraphQL API):</h2>
    <ul data-testid='continents-list'>
     {continents.length
@@ -43,6 +43,6 @@ export const FetchComponent = () => {
        })
      : null}
    </ul>
-  </div>
+  </section>
  );
 };
