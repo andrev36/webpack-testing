@@ -124,3 +124,34 @@ body {
 .wave-button {
  z-index: 1;
 }
+
+.wave-container {
+ overflow: hidden;
+}
+
+.wave-container-part {
+ height: 54%;
+ width: 100%;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ background: #0099ff;
+}
+
+.wave-container-part-after-animation {
+ height: 14%;
+ width: 100%;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ background: #0099ff;
+}
+
+.wave1-svg-after-animation {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ z-index: 0;
+ pointer-events: none;
+}
