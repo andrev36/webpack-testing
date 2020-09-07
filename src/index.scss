@@ -14,7 +14,7 @@ body {
  font-size: 16px;
  position: relative;
  min-height: 100%;
- min-width: 250px;
+ min-width: 240px;
  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
@@ -71,23 +71,29 @@ body {
 }
 
 .container__select {
- position: relative;
- height: 23rem;
- margin: 3.5rem auto 0;
+ @include item_style;
+ overflow-x: hidden;
+ width: 100%;
+ height: 20rem;
+ // padding: 8rem auto 0;
+ margin: 0 auto 0;
 }
 
 .select {
  z-index: 1;
 }
 
+.heading__picked-color {
+ margin: 5rem auto 0;
+}
+
 .img-cloud {
  z-index: 0;
  pointer-events: none;
  position: absolute;
- top: -5rem;
- left: -3rem;
+ transform: translate(-50%, 5%);
  margin: 0 auto;
- height: 10rem;
+ height: 12rem;
 }
 
 .img-cloud-path--blue {
@@ -103,15 +109,6 @@ body {
  stroke: yellow;
 }
 
-.svg-wave1 {
- position: absolute;
- bottom: 9rem;
- left: 0;
- width: 100%;
- z-index: 0;
- pointer-events: none;
-}
-
 #wave1 {
  z-index: 0;
 }
@@ -125,12 +122,21 @@ body {
  z-index: 1;
 }
 
-.container__wave {
+.container-wave {
  overflow: hidden;
 }
 
-.container__wave-part {
- height: 10rem;
+.svg-wave1 {
+ position: absolute;
+ bottom: 6rem;
+ left: 0;
+ width: 100%;
+ z-index: 0;
+ pointer-events: none;
+}
+
+.container-wave-part {
+ height: 7rem;
  width: 100%;
  position: absolute;
  left: 0;
@@ -138,7 +144,7 @@ body {
  background: #0099ff;
 }
 
-.container__wave-part--animation {
+.container-wave-part--animation {
  height: 1rem;
  width: 100%;
  position: absolute;
@@ -147,7 +153,7 @@ body {
  background: #0099ff;
 }
 
-.svg__wave1--animation {
+.svg-wave1--animation {
  position: absolute;
  bottom: 0;
  left: 0;

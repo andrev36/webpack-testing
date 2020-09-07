@@ -7,6 +7,11 @@ import { FetchComponent } from './FetchComponent';
 import { SelectElements } from './SelectElement';
 import { FormComponent } from './FormComponent';
 import { WaveComponent } from './WaveComponent';
+import { CSSPlugin, MorphSVGPlugin } from 'gsap/all';
+
+// Force CSSPlugin to not get dropped during build
+// gsap.registerPlugin(CSSPlugin);
+// gsap.registerPlugin(MorphSVGPlugin);
 
 export const MainPage = () => {
  const mainHeadingRef = useRef(null);

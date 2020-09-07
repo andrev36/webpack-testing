@@ -7,7 +7,7 @@ export const SelectElements = () => {
   setPickedColor(e.target.value);
  };
  return (
-  <form className='item'>
+  <div>
    <section className='container__select'>
     <svg
      width='770px'
@@ -36,32 +36,34 @@ export const SelectElements = () => {
       ></path>
      </g>
     </svg>
-    <legend>Selecting elements</legend>
-    <p>
+    <h2 className='heading__picked-color'>
+     <legend>Selecting elements</legend>
      <label data-testid='currently-selected-color'>
       Currently selected color: {pickedColor}
      </label>
-    </p>
-    <select
-     data-testid='select'
-     className='select'
-     value={pickedColor}
-     onChange={handleColorChange}
-    >
-     <option value='red' data-testid='red'>
-      red
-     </option>
-     <option value='blue' data-testid='blue'>
-      blue
-     </option>
-     <option value='green' data-testid='green'>
-      green
-     </option>
-     <option value='yellow' data-testid='yellow'>
-      yellow
-     </option>
-    </select>
+    </h2>
+    <form>
+     <select
+      data-testid='select'
+      className='select'
+      value={pickedColor}
+      onChange={handleColorChange}
+     >
+      <option value='red' data-testid='red'>
+       red
+      </option>
+      <option value='blue' data-testid='blue'>
+       blue
+      </option>
+      <option value='green' data-testid='green'>
+       green
+      </option>
+      <option value='yellow' data-testid='yellow'>
+       yellow
+      </option>
+     </select>
+    </form>
    </section>
-  </form>
+  </div>
  );
 };
