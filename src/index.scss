@@ -28,7 +28,7 @@ body {
   -3px -3px 8px 1px rgba(0, 0, 0, 0.22);
 }
 
-.heading__title {
+.heading__title--shadow {
  position: relative;
  margin: 3rem auto;
  font-size: 5rem;
@@ -51,13 +51,13 @@ body {
  @include item_style;
 }
 
-.full_width_item {
+.item-full-width {
  height: 22rem;
  @include item_style;
  grid-column: 1/-1;
 }
 
-.form-container {
+.container__form {
  margin: 0 auto;
  padding: 2rem;
  height: 16rem;
@@ -66,44 +66,44 @@ body {
  border-radius: 40px;
 }
 
-.form-section {
+.section__form {
  height: 21rem;
 }
 
-.select-elements-container {
+.container__select {
  position: relative;
  height: 23rem;
  margin: 3.5rem auto 0;
 }
 
-.select-element {
+.select {
  z-index: 1;
 }
 
-.cloud-image {
+.img-cloud {
  z-index: 0;
  pointer-events: none;
  position: absolute;
  top: -5rem;
  left: -3rem;
  margin: 0 auto;
- height: 14rem;
+ height: 10rem;
 }
 
-.cloud-image-path-blue {
+.img-cloud-path--blue {
  stroke: blue;
 }
-.cloud-image-path-red {
+.img-cloud-path--red {
  stroke: red;
 }
-.cloud-image-path-green {
+.img-cloud-path--green {
  stroke: green;
 }
-.cloud-image-path-yellow {
+.img-cloud-path--yellow {
  stroke: yellow;
 }
 
-.wave1-svg {
+.svg-wave1 {
  position: absolute;
  bottom: 9rem;
  left: 0;
@@ -121,16 +121,16 @@ body {
  z-index: 0;
 }
 
-.wave-button {
+.btn-wave {
  z-index: 1;
 }
 
-.wave-container {
+.container__wave {
  overflow: hidden;
 }
 
-.wave-container-part {
- height: 54%;
+.container__wave-part {
+ height: 10rem;
  width: 100%;
  position: absolute;
  left: 0;
@@ -138,8 +138,8 @@ body {
  background: #0099ff;
 }
 
-.wave-container-part-after-animation {
- height: 14%;
+.container__wave-part--animation {
+ height: 1rem;
  width: 100%;
  position: absolute;
  left: 0;
@@ -147,7 +147,7 @@ body {
  background: #0099ff;
 }
 
-.wave1-svg-after-animation {
+.svg__wave1--animation {
  position: absolute;
  bottom: 0;
  left: 0;

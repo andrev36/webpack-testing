@@ -27,7 +27,7 @@ export const MainPage = () => {
  return (
   <React.Fragment>
    <div>
-    <h1 className='heading__title' ref={mainHeadingRef}>
+    <h1 className='heading__title--shadow' ref={mainHeadingRef}>
      Hello React and Webpack! Using hot reload!
     </h1>
    </div>

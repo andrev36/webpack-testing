@@ -15,17 +15,17 @@ export const WaveComponent = () => {
  // }, []);
  return (
   <React.Fragment>
-   <section className='full_width_item wave-container'>
-    <button type='button' onClick={handleClick} className='wave-button'>
+   <section className='item-full-width container__wave'>
+    <button type='button' onClick={handleClick} className='btn-wave'>
      Test Button
     </button>
-    {/* <div className='wave-container-part-after-animation'> */}
-    <div className='wave-container-part'>
+    {/* <div className='container__wave-part--animation'> */}
+    <div className='container__wave-part'>
      <svg
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 1440 320'
-      className='wave1-svg'
-      // className='wave1-svg-after-animation'
+      className='svg-wave1'
+      // className='svg__wave1--animation'
      >
       <path
        fill='#0099ff'

@@ -6,7 +6,7 @@ describe('FormComponent tests', () => {
  // it('FormComponent loads with name and email inputs', () => {
  //  const { getByTestId } = render(<FormComponent />);
 
- //  const formContainer = getByTestId('form-container');
+ //  const formContainer = getByTestId('container__form');
  //  expect(formContainer).toBe(null);
  // });
  it('name input should allow letters to be inputted', () => {

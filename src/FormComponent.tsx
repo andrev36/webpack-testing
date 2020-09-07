@@ -37,8 +37,8 @@ export const FormComponent = () => {
 
  return (
   <React.Fragment>
-   <section className='item form-section' data-testid='form-container'>
-    <div className='form-container' ref={formContainer}>
+   <section className='item section__form' data-testid='container__form'>
+    <div className='container__form' ref={formContainer}>
      <h2>Form</h2>
      <form action='POST' onSubmit={printFormValues}>
       <section>

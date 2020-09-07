@@ -8,14 +8,14 @@ export const SelectElements = () => {
  };
  return (
   <form className='item'>
-   <section className='select-elements-container'>
+   <section className='container__select'>
     <svg
      width='770px'
      height='471px'
      viewBox='0 0 770 471'
      version='1.1'
      xmlns='http://www.w3.org/2000/svg'
-     className='cloud-image'
+     className='img-cloud'
     >
      <title>Combined Shape</title>
      <desc>Created with Sketch.</desc>
@@ -32,7 +32,7 @@ export const SelectElements = () => {
        stroke='#46AFE8'
        strokeWidth='14'
        fillRule='nonzero'
-       className={`cloud-image-path-${pickedColor}`}
+       className={`img-cloud-path--${pickedColor}`}
       ></path>
      </g>
     </svg>
@@ -43,8 +43,8 @@ export const SelectElements = () => {
      </label>
     </p>
     <select
-     data-testid='select-element'
-     className='select-element'
+     data-testid='select'
+     className='select'
      value={pickedColor}
      onChange={handleColorChange}
     >
