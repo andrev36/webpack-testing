@@ -38,34 +38,44 @@ export const FormComponent = () => {
  return (
   <React.Fragment>
    <section className='item section__form' data-testid='container__form'>
-    <div className='container__form' ref={formContainer}>
+    <div className='container-form' ref={formContainer}>
      <h2>Form</h2>
      <form action='POST' onSubmit={printFormValues}>
-      <section>
-       <label htmlFor='name' id='name'>
-        Name
-       </label>
-       <input
-        type='text'
-        name='name'
-        value={formValues.name}
-        onChange={updateFormField}
-        data-testid='form-name-input'
-       />
+      <section className='form__input-with-label'>
+       <div>
+        <label htmlFor='name' id='name'>
+         Name
+        </label>
+       </div>
+       <div>
+        <input
+         type='text'
+         name='name'
+         placeholder='Name'
+         value={formValues.name}
+         onChange={updateFormField}
+         data-testid='form-name-input'
+        />
+       </div>
       </section>
       <br />
-      <section>
-       <label htmlFor='email'>Email</label>
+      <section className='form__input-with-label'>
+       <div>
+        <label htmlFor='email'>Email</label>
+       </div>
        <input
         type='email'
         name='email'
+        placeholder='Email'
         value={formValues.email}
         onChange={updateFormField}
         data-testid='form-email-input'
        />
       </section>
       <br />
-      <button>Submit</button>
+      <button type='submit' className='form__btn'>
+       Submit
+      </button>
      </form>
     </div>
    </section>

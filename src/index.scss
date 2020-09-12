@@ -28,6 +28,39 @@ body {
   -3px -3px 8px 1px rgba(0, 0, 0, 0.22);
 }
 
+@mixin btn_style {
+ border: none;
+ background-color: transparent;
+ font-family: inherit;
+ padding: 0;
+ cursor: pointer;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ background-color: blue;
+ color: #fff;
+ border-radius: 8px;
+ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+ padding: 0.25em 0.75em;
+ min-width: 10ch;
+ min-height: 44px;
+ text-align: center;
+ line-height: 1.1;
+ transition: 300ms background-color ease-in-out;
+ &:hover,
+ &:active {
+  background-color: scale-color(blue, $lightness: -20%);
+ }
+ &:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px scale-color(blue, $lightness: -40%);
+ }
+ @media screen and (-ms-high-contrast: active) {
+  border: 2px solid currentcolor;
+ }
+}
+
 .heading__title--shadow {
  position: relative;
  margin: 3rem auto;
@@ -57,9 +90,24 @@ body {
  grid-column: 1/-1;
 }
 
-.container__form {
+// * NOTE Form section styles
+@mixin input_style {
+ border-radius: 10px;
+ padding: 0.5em;
+ margin: 0.4rem;
+ border: none;
+ box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
+ font-family: inherit;
+ font-size: inherit;
+ &:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px #0066ff;
+ }
+}
+
+.container-form {
  margin: 0 auto;
- padding: 2rem;
+ padding: 0.1rem;
  height: 16rem;
  width: 19rem;
  background-color: rgba(166, 166, 166, 0.11);
@@ -70,6 +118,32 @@ body {
  height: 21rem;
 }
 
+.form__btn {
+ @include btn_style;
+}
+
+input[type='text'] {
+ @include input_style;
+}
+
+input[type='email'] {
+ @include input_style;
+ &:invalid {
+  outline: none;
+  box-shadow: 0px 0px 8px red;
+ }
+}
+
+.form__input-with-label {
+ div {
+  display: block;
+  @media (orientation: landscape) {
+   display: inline;
+  }
+ }
+}
+
+// * NOTE Select element styles
 .container__select {
  @include item_style;
  overflow-x: hidden;
@@ -79,12 +153,16 @@ body {
  margin: 0 auto 0;
 }
 
-.select {
+.form__select {
  z-index: 1;
+ width: 9rem;
+ padding: 10px;
+ border-radius: 10px;
+ outline: none;
 }
 
 .heading__picked-color {
- margin: 5rem auto 0;
+ margin: 6rem auto 0;
 }
 
 .img-cloud {
@@ -109,6 +187,7 @@ body {
  stroke: yellow;
 }
 
+// * NOTE Wave section styles
 #wave1 {
  z-index: 0;
 }
@@ -160,4 +239,8 @@ body {
  width: 100%;
  z-index: 0;
  pointer-events: none;
+}
+
+.counter__btn {
+ @include btn_style;
 }
