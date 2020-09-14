@@ -7,30 +7,25 @@ export const WaveComponent = () => {
  const FirstWaveRef = useRef(null);
  const SecondWaveRef = useRef(null);
 
- // const handleClick = () => undefined;
- const handleClick = () =>
-  gsap.to(FirstWaveRef.current, {
-   duration: 1,
-   morphSVG: SecondWaveRef.current as any
-  });
- // gsap.to('#wave1', { duration: 1, morphSVG: '#wave2' });
+ const handleClick = () => {
+  gsap.to('#wave1', { duration: 1, morphSVG: '#wave2' });
+ };
  // useEffect(() => {
  //  gsap.to('wave1', { duration: 1, morphSVG: 'wave2' });
  // }, []);
  return (
   <React.Fragment>
-   <section className='item-full-width container-wave'>
-    <button type='button' onClick={handleClick} className='btn-wave'>
+   <section className='full_width_item wave-container'>
+    <button type='button' onClick={handleClick} className='wave-button'>
      Test Button
     </button>
-    <div className='container-wave-part'>
-     {/*  className='container-wave-part--animation */}
+    {/* <div className='wave-container-part-after-animation'> */}
+    <div className='wave-container-part'>
      <svg
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 1440 320'
-      className='svg-wave1'
-      // ref={FirstWaveRef}
-      // className='svg-wave1--animation'
+      className='wave1-svg'
+      // className='wave1-svg-after-animation'
      >
       <path
        fill='#0099ff'
@@ -45,7 +40,6 @@ export const WaveComponent = () => {
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 1440 320'
       className='wave2-svg'
-      // ref={SecondWaveRef}
      >
       <path
        fill='#0099ff'

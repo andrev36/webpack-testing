@@ -14,7 +14,7 @@ body {
  font-size: 16px;
  position: relative;
  min-height: 100%;
- min-width: 240px;
+ min-width: 250px;
  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
@@ -28,40 +28,7 @@ body {
   -3px -3px 8px 1px rgba(0, 0, 0, 0.22);
 }
 
-@mixin btn_style {
- border: none;
- background-color: transparent;
- font-family: inherit;
- padding: 0;
- cursor: pointer;
- display: inline-flex;
- align-items: center;
- justify-content: center;
- background-color: blue;
- color: #fff;
- border-radius: 8px;
- box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
- padding: 0.25em 0.75em;
- min-width: 10ch;
- min-height: 44px;
- text-align: center;
- line-height: 1.1;
- transition: 300ms background-color ease-in-out;
- &:hover,
- &:active {
-  background-color: scale-color(blue, $lightness: -20%);
- }
- &:focus {
-  outline-style: solid;
-  outline-color: transparent;
-  box-shadow: 0 0 0 4px scale-color(blue, $lightness: -40%);
- }
- @media screen and (-ms-high-contrast: active) {
-  border: 2px solid currentcolor;
- }
-}
-
-.heading__title--shadow {
+.heading__title {
  position: relative;
  margin: 3rem auto;
  font-size: 5rem;
@@ -84,110 +51,67 @@ body {
  @include item_style;
 }
 
-.item-full-width {
+.full_width_item {
  height: 22rem;
  @include item_style;
  grid-column: 1/-1;
 }
 
-// * NOTE Form section styles
-@mixin input_style {
- border-radius: 10px;
- padding: 0.5em;
- margin: 0.4rem;
- border: none;
- box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
- font-family: inherit;
- font-size: inherit;
- &:focus {
-  outline: none;
-  box-shadow: 0px 0px 8px #0066ff;
- }
-}
-
-.container-form {
+.form-container {
  margin: 0 auto;
- padding: 0.1rem;
+ padding: 2rem;
  height: 16rem;
  width: 19rem;
  background-color: rgba(166, 166, 166, 0.11);
  border-radius: 40px;
 }
 
-.section__form {
+.form-section {
  height: 21rem;
 }
 
-.form__btn {
- @include btn_style;
+.select-elements-container {
+ position: relative;
+ height: 23rem;
+ margin: 3.5rem auto 0;
 }
 
-input[type='text'] {
- @include input_style;
-}
-
-input[type='email'] {
- @include input_style;
- &:invalid {
-  outline: none;
-  box-shadow: 0px 0px 8px red;
- }
-}
-
-.form__input-with-label {
- div {
-  display: block;
-  @media (orientation: landscape) {
-   display: inline;
-  }
- }
-}
-
-// * NOTE Select element styles
-.container__select {
- @include item_style;
- overflow-x: hidden;
- width: 100%;
- height: 20rem;
- // padding: 8rem auto 0;
- margin: 0 auto 0;
-}
-
-.form__select {
+.select-element {
  z-index: 1;
- width: 9rem;
- padding: 10px;
- border-radius: 10px;
- outline: none;
 }
 
-.heading__picked-color {
- margin: 6rem auto 0;
-}
-
-.img-cloud {
+.cloud-image {
  z-index: 0;
  pointer-events: none;
  position: absolute;
- transform: translate(-50%, 5%);
+ top: -5rem;
+ left: -3rem;
  margin: 0 auto;
- height: 12rem;
+ height: 14rem;
 }
 
-.img-cloud-path--blue {
+.cloud-image-path-blue {
  stroke: blue;
 }
-.img-cloud-path--red {
+.cloud-image-path-red {
  stroke: red;
 }
-.img-cloud-path--green {
+.cloud-image-path-green {
  stroke: green;
 }
-.img-cloud-path--yellow {
+.cloud-image-path-yellow {
  stroke: yellow;
 }
 
-// * NOTE Wave section styles
+.wave1-svg {
+ position: absolute;
+ bottom: 9rem;
+ left: 0;
+ width: 100%;
+ z-index: 0;
+ pointer-events: none;
+}
+
 #wave1 {
  z-index: 0;
 }
@@ -197,25 +121,16 @@ input[type='email'] {
  z-index: 0;
 }
 
-.btn-wave {
+.wave-button {
  z-index: 1;
 }
 
-.container-wave {
+.wave-container {
  overflow: hidden;
 }
 
-.svg-wave1 {
- position: absolute;
- bottom: 6rem;
- left: 0;
- width: 100%;
- z-index: 0;
- pointer-events: none;
-}
-
-.container-wave-part {
- height: 7rem;
+.wave-container-part {
+ height: 54%;
  width: 100%;
  position: absolute;
  left: 0;
@@ -223,8 +138,8 @@ input[type='email'] {
  background: #0099ff;
 }
 
-.container-wave-part--animation {
- height: 1rem;
+.wave-container-part-after-animation {
+ height: 14%;
  width: 100%;
  position: absolute;
  left: 0;
@@ -232,15 +147,11 @@ input[type='email'] {
  background: #0099ff;
 }
 
-.svg-wave1--animation {
+.wave1-svg-after-animation {
  position: absolute;
  bottom: 0;
  left: 0;
  width: 100%;
  z-index: 0;
  pointer-events: none;
-}
-
-.counter__btn {
- @include btn_style;
 }
