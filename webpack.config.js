@@ -104,6 +104,9 @@ module.exports = (options) => {
    }),
    new webpack.ProvidePlugin({
     TweenMax: 'gsap'
+   }),
+   new webpack.ProvidePlugin({
+    MorphSVGPlugin: 'gsap'
    })
   ]
  };

@@ -15,7 +15,7 @@ describe('SelectElement tests', () => {
   const { getByTestId } = render(<SelectElements />);
 
   const currentlySelectedColorValue = getByTestId('currently-selected-color');
-  const selectElementValue = getByTestId('select-element');
+  const selectElementValue = getByTestId('select');
 
   fireEvent.change(selectElementValue, {
    target: { value: 'green' }
