@@ -10,6 +10,7 @@ const client = new ApolloClient({
  cache: new InMemoryCache()
 });
 
+// ! TODO Git merging: https://stackoverflow.com/questions/28932515/how-to-unmerge-a-git-merge#:~:text=3%20Answers&text=You%20can%20reset%20your%20branch,the%20HEADs%20you've%20had.
 // ! TODO Dark mode in one grid window on/off with moon icon
 // ! TODO Create ex. wave animation that is unveiling item
 // after drag
