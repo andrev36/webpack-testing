@@ -4,6 +4,11 @@ import './index.scss';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { Routes } from './Routes';
 import { BrowserRouter } from 'react-router-dom';
+import { gsap } from 'gsap';
+import { CSSPlugin } from 'gsap/all';
+
+// Force CSSPlugin to not get dropped during build
+gsap.registerPlugin(CSSPlugin);
 
 const client = new ApolloClient({
  uri: 'http://localhost:3000/graphql',
