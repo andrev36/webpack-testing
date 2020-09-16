@@ -11,23 +11,23 @@ export const Buttons = () => {
   gsap.from(decrementButtonRef.current, { duration: 2, x: 100, opacity: 0 });
  }, []);
  return (
-  <section className='item'>
-   <div>
-    <button
-     ref={incrementButtonRef}
-     onClick={() => setCounter((count) => count + 1)}
-    >
-     Increment
-    </button>
-    <h2>Current count:</h2>
-    <h2 data-testid='countvalue'>{count}</h2>
-    <button
-     ref={decrementButtonRef}
-     onClick={() => setCounter((count) => count - 1)}
-    >
-     Decrement
-    </button>
-   </div>
+  <section className='item counter'>
+   <button
+    ref={incrementButtonRef}
+    onClick={() => setCounter((count) => count + 1)}
+    className='counter__btn'
+   >
+    Increment
+   </button>
+   <h2>Current count:</h2>
+   <h2 data-testid='countvalue'>{count}</h2>
+   <button
+    ref={decrementButtonRef}
+    onClick={() => setCounter((count) => count - 1)}
+    className='counter__btn'
+   >
+    Decrement
+   </button>
   </section>
  );
 };
