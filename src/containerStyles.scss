@@ -1,0 +1,38 @@
+@mixin item_style {
+ z-index: 0;
+ position: relative;
+ text-align: center;
+ padding: 2rem;
+ border-radius: 40px;
+ box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.25),
+  -3px -3px 8px 1px rgba(0, 0, 0, 0.22);
+}
+
+.container {
+ display: grid;
+ grid-template-columns: repeat(2, minmax(200px, 1fr));
+ grid-gap: 1.125rem;
+ margin: 2rem auto;
+ @media (max-width: 900px) {
+  grid-template-columns: 1fr;
+ }
+}
+
+.item {
+ height: 16rem;
+ @include item_style;
+}
+
+.item-full-width {
+ height: 22rem;
+ @include item_style;
+ grid-column: 1/-1;
+}
+
+.heading__title--shadow {
+ position: relative;
+ margin: 3rem auto;
+ font-size: 5rem;
+ text-align: center;
+ text-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
+}

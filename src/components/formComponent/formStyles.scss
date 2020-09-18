@@ -1,0 +1,55 @@
+@use '../buttonComponent/buttonStyles.scss';
+@import '../buttonComponent/buttonStyles.scss';
+
+// * NOTE Form section styles
+@mixin input_style {
+ border-radius: 10px;
+ padding: 0.5em;
+ margin: 0.4rem;
+ border: none;
+ box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
+ font-family: inherit;
+ font-size: inherit;
+ &:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px #0066ff;
+ }
+}
+
+.container-form {
+ margin: 0 auto;
+ padding: 0.1rem;
+ height: 16rem;
+ width: 19rem;
+ background-color: rgba(166, 166, 166, 0.11);
+ border-radius: 40px;
+}
+
+.section__form {
+ height: 21rem;
+}
+
+.form__btn {
+ @include btn_style;
+}
+
+input[type='text'] {
+ @include input_style;
+}
+
+input[type='email'] {
+ @include input_style;
+ &:invalid {
+  outline: none;
+  box-shadow: 0px 0px 8px red;
+ }
+}
+
+.form__input-with-label {
+ div {
+  display: block;
+  @media (orientation: landscape) {
+   display: inline;
+  }
+ }
+}

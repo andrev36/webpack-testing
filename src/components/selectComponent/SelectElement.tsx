@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from 'react';
-import './index.scss';
+import '../../index.scss';
 
 export const SelectElements = () => {
  const [pickedColor, setPickedColor] = useState<string>('blue');

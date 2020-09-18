@@ -6,6 +6,7 @@ import React, {
  useEffect
 } from 'react';
 import { gsap } from 'gsap';
+import '../../index.scss';
 
 export const FormComponent = () => {
  const [formValues, setFormValues] = useState({

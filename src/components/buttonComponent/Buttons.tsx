@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
-import './index.scss';
+import '../../index.scss';
 
 export const Buttons = () => {
  const [count, setCounter] = useState(0);

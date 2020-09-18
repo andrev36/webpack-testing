@@ -1,246 +1,112 @@
-@font-face {
- font-family: 'Source Sans Pro';
- src: url('../fonts/SourceSansPro-Regular.ttf');
-}
+@use './components/formComponent/formStyles.scss';
+@use './components/buttonComponent/buttonStyles.scss';
+@use './global.scss';
+@use './containerStyles.scss';
+@use './components/buttonComponent/buttonStyles.scss';
+@use './components/selectComponent/selectElementStyles.scss';
+@use './components/waveComponent/waveStyles.scss';
+@import './components/formComponent/formStyles.scss';
+@import './components/buttonComponent/buttonStyles.scss';
+@import './global.scss';
+@import './containerStyles.scss';
+@import './components/buttonComponent/buttonStyles.scss';
+@import './components/selectComponent/selectElementStyles.scss';
+@import './components/waveComponent/waveStyles.scss';
 
-*,
-::after,
-::before {
- box-sizing: border-box;
- font-size: 100%;
- vertical-align: baseline;
-}
-body {
- font-size: 16px;
- position: relative;
- min-height: 100%;
- min-width: 240px;
- font-family: 'Source Sans Pro', Arial, sans-serif;
-}
+// // * NOTE Select element styles
+// .container__select {
+//  @include item_style;
+//  overflow-x: hidden;
+//  width: 100%;
+//  height: 20rem;
+//  // padding: 8rem auto 0;
+//  margin: 0 auto 0;
+// }
 
-@mixin item_style {
- z-index: 0;
- position: relative;
- text-align: center;
- padding: 2rem;
- border-radius: 40px;
- box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.25),
-  -3px -3px 8px 1px rgba(0, 0, 0, 0.22);
-}
+// .form__select {
+//  z-index: 1;
+//  width: 9rem;
+//  padding: 10px;
+//  border-radius: 10px;
+//  outline: none;
+// }
 
-@mixin btn_style {
- border: none;
- background-color: transparent;
- font-family: inherit;
- padding: 0;
- cursor: pointer;
- display: inline-flex;
- align-items: center;
- justify-content: center;
- background-color: blue;
- color: #fff;
- border-radius: 8px;
- box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
- padding: 0.25em 0.75em;
- min-width: 10ch;
- min-height: 44px;
- text-align: center;
- line-height: 1.1;
- transition: 300ms background-color ease-in-out;
- &:hover,
- &:active {
-  background-color: scale-color(blue, $lightness: -20%);
- }
- &:focus {
-  outline-style: solid;
-  outline-color: transparent;
-  box-shadow: 0 0 0 4px scale-color(blue, $lightness: -40%);
- }
- @media screen and (-ms-high-contrast: active) {
-  border: 2px solid currentcolor;
- }
-}
+// .heading__picked-color {
+//  margin: 6rem auto 0;
+// }
 
-.heading__title--shadow {
- position: relative;
- margin: 3rem auto;
- font-size: 5rem;
- text-align: center;
- text-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
-}
+// .img-cloud {
+//  z-index: 0;
+//  pointer-events: none;
+//  position: absolute;
+//  transform: translate(-50%, 5%);
+//  margin: 0 auto;
+//  height: 12rem;
+// }
 
-.container {
- display: grid;
- grid-template-columns: repeat(2, minmax(200px, 1fr));
- grid-gap: 1.125rem;
- margin: 2rem auto;
- @media (max-width: 900px) {
-  grid-template-columns: 1fr;
- }
-}
+// .img-cloud-path--blue {
+//  stroke: blue;
+// }
+// .img-cloud-path--red {
+//  stroke: red;
+// }
+// .img-cloud-path--green {
+//  stroke: green;
+// }
+// .img-cloud-path--yellow {
+//  stroke: yellow;
+// }
 
-.item {
- height: 16rem;
- @include item_style;
-}
+// // * NOTE Wave section styles
+// #wave1 {
+//  z-index: 0;
+// }
 
-.item-full-width {
- height: 22rem;
- @include item_style;
- grid-column: 1/-1;
-}
+// #wave2 {
+//  display: none;
+//  z-index: 0;
+// }
 
-// * NOTE Form section styles
-@mixin input_style {
- border-radius: 10px;
- padding: 0.5em;
- margin: 0.4rem;
- border: none;
- box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
- font-family: inherit;
- font-size: inherit;
- &:focus {
-  outline: none;
-  box-shadow: 0px 0px 8px #0066ff;
- }
-}
+// .btn-wave {
+//  z-index: 1;
+// }
 
-.container-form {
- margin: 0 auto;
- padding: 0.1rem;
- height: 16rem;
- width: 19rem;
- background-color: rgba(166, 166, 166, 0.11);
- border-radius: 40px;
-}
+// .container-wave {
+//  overflow: hidden;
+// }
 
-.section__form {
- height: 21rem;
-}
+// .svg-wave1 {
+//  position: absolute;
+//  bottom: 6rem;
+//  left: 0;
+//  width: 100%;
+//  z-index: 0;
+//  pointer-events: none;
+// }
 
-.form__btn {
- @include btn_style;
-}
+// .container-wave-part {
+//  height: 7rem;
+//  width: 100%;
+//  position: absolute;
+//  left: 0;
+//  bottom: 0;
+//  background: #0099ff;
+// }
 
-input[type='text'] {
- @include input_style;
-}
+// .container-wave-part--animation {
+//  height: 1rem;
+//  width: 100%;
+//  position: absolute;
+//  left: 0;
+//  bottom: 0;
+//  background: #0099ff;
+// }
 
-input[type='email'] {
- @include input_style;
- &:invalid {
-  outline: none;
-  box-shadow: 0px 0px 8px red;
- }
-}
-
-.form__input-with-label {
- div {
-  display: block;
-  @media (orientation: landscape) {
-   display: inline;
-  }
- }
-}
-
-// * NOTE Select element styles
-.container__select {
- @include item_style;
- overflow-x: hidden;
- width: 100%;
- height: 20rem;
- // padding: 8rem auto 0;
- margin: 0 auto 0;
-}
-
-.form__select {
- z-index: 1;
- width: 9rem;
- padding: 10px;
- border-radius: 10px;
- outline: none;
-}
-
-.heading__picked-color {
- margin: 6rem auto 0;
-}
-
-.img-cloud {
- z-index: 0;
- pointer-events: none;
- position: absolute;
- transform: translate(-50%, 5%);
- margin: 0 auto;
- height: 12rem;
-}
-
-.img-cloud-path--blue {
- stroke: blue;
-}
-.img-cloud-path--red {
- stroke: red;
-}
-.img-cloud-path--green {
- stroke: green;
-}
-.img-cloud-path--yellow {
- stroke: yellow;
-}
-
-// * NOTE Wave section styles
-#wave1 {
- z-index: 0;
-}
-
-#wave2 {
- display: none;
- z-index: 0;
-}
-
-.btn-wave {
- z-index: 1;
-}
-
-.container-wave {
- overflow: hidden;
-}
-
-.svg-wave1 {
- position: absolute;
- bottom: 6rem;
- left: 0;
- width: 100%;
- z-index: 0;
- pointer-events: none;
-}
-
-.container-wave-part {
- height: 7rem;
- width: 100%;
- position: absolute;
- left: 0;
- bottom: 0;
- background: #0099ff;
-}
-
-.container-wave-part--animation {
- height: 1rem;
- width: 100%;
- position: absolute;
- left: 0;
- bottom: 0;
- background: #0099ff;
-}
-
-.svg-wave1--animation {
- position: absolute;
- bottom: 0;
- left: 0;
- width: 100%;
- z-index: 0;
- pointer-events: none;
-}
-
-.counter__btn {
- @include btn_style;
-}
+// .svg-wave1--animation {
+//  position: absolute;
+//  bottom: 0;
+//  left: 0;
+//  width: 100%;
+//  z-index: 0;
+//  pointer-events: none;
+// }

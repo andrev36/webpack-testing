@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './index.scss';
+import '../../index.scss';
 
 interface Props {
  name?: string;

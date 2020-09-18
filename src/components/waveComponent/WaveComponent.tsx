@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './index.scss';
+import '../../index.scss';
 import { gsap } from 'gsap';
 
 // ! TODO Finish wave animation

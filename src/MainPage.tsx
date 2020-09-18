@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { Buttons } from './Buttons';
+import { Buttons } from './components/buttonComponent/Buttons';
 import './index.scss';
 import { gql, useQuery } from '@apollo/client';
-import { FetchComponent } from './FetchComponent';
-import { SelectElements } from './SelectElement';
-import { FormComponent } from './FormComponent';
-import { WaveComponent } from './WaveComponent';
+import { FetchComponent } from './components/fetchComponent/FetchComponent';
+import { SelectElements } from './components/selectComponent/SelectElement';
+import { FormComponent } from './components/formComponent/FormComponent';
+import { WaveComponent } from './components/waveComponent/WaveComponent';
 import { CSSPlugin, MorphSVGPlugin } from 'gsap/all';
 
 // Force CSSPlugin to not get dropped during build

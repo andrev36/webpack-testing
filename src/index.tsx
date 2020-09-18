@@ -15,7 +15,6 @@ const client = new ApolloClient({
  cache: new InMemoryCache()
 });
 
-// ! TODO test message to for git commit
 // ! TODO Dark mode in one grid window on/off with moon icon
 // ! TODO Create ex. wave animation that is unveiling item
 // after drag
