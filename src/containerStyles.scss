@@ -2,7 +2,8 @@
  z-index: 0;
  position: relative;
  text-align: center;
- padding: 2rem;
+ padding-top: 2rem;
+ padding-bottom: 2rem;
  border-radius: 40px;
  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.25),
   -3px -3px 8px 1px rgba(0, 0, 0, 0.22);
@@ -19,7 +20,6 @@
 }
 
 .item {
- height: 16rem;
  @include item_style;
 }
 

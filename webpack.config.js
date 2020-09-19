@@ -59,6 +59,17 @@ module.exports = (options) => {
      ]
     },
     {
+     test: /\.(png|jp(e*)g|svg|gif)$/,
+     use: [
+      {
+       loader: 'url-loader',
+       options: {
+        limit: 8000
+       }
+      }
+     ]
+    },
+    {
      test: /\.(ttf|eot|woff|woff2)$/,
      use: {
       loader: 'file-loader',
@@ -73,7 +84,7 @@ module.exports = (options) => {
       {
        loader: 'file-loader',
        options: {
-        outputPath: 'assets/'
+        outputPath: srcPathExtend('assets/images')
        }
       }
      ]

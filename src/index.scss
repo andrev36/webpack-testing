@@ -5,6 +5,7 @@
 @use './components/buttonComponent/buttonStyles.scss';
 @use './components/selectComponent/selectElementStyles.scss';
 @use './components/waveComponent/waveStyles.scss';
+@use './components/fetchComponent/fetchComponentStyles.scss';
 @import './components/formComponent/formStyles.scss';
 @import './components/buttonComponent/buttonStyles.scss';
 @import './global.scss';
@@ -12,101 +13,4 @@
 @import './components/buttonComponent/buttonStyles.scss';
 @import './components/selectComponent/selectElementStyles.scss';
 @import './components/waveComponent/waveStyles.scss';
-
-// // * NOTE Select element styles
-// .container__select {
-//  @include item_style;
-//  overflow-x: hidden;
-//  width: 100%;
-//  height: 20rem;
-//  // padding: 8rem auto 0;
-//  margin: 0 auto 0;
-// }
-
-// .form__select {
-//  z-index: 1;
-//  width: 9rem;
-//  padding: 10px;
-//  border-radius: 10px;
-//  outline: none;
-// }
-
-// .heading__picked-color {
-//  margin: 6rem auto 0;
-// }
-
-// .img-cloud {
-//  z-index: 0;
-//  pointer-events: none;
-//  position: absolute;
-//  transform: translate(-50%, 5%);
-//  margin: 0 auto;
-//  height: 12rem;
-// }
-
-// .img-cloud-path--blue {
-//  stroke: blue;
-// }
-// .img-cloud-path--red {
-//  stroke: red;
-// }
-// .img-cloud-path--green {
-//  stroke: green;
-// }
-// .img-cloud-path--yellow {
-//  stroke: yellow;
-// }
-
-// // * NOTE Wave section styles
-// #wave1 {
-//  z-index: 0;
-// }
-
-// #wave2 {
-//  display: none;
-//  z-index: 0;
-// }
-
-// .btn-wave {
-//  z-index: 1;
-// }
-
-// .container-wave {
-//  overflow: hidden;
-// }
-
-// .svg-wave1 {
-//  position: absolute;
-//  bottom: 6rem;
-//  left: 0;
-//  width: 100%;
-//  z-index: 0;
-//  pointer-events: none;
-// }
-
-// .container-wave-part {
-//  height: 7rem;
-//  width: 100%;
-//  position: absolute;
-//  left: 0;
-//  bottom: 0;
-//  background: #0099ff;
-// }
-
-// .container-wave-part--animation {
-//  height: 1rem;
-//  width: 100%;
-//  position: absolute;
-//  left: 0;
-//  bottom: 0;
-//  background: #0099ff;
-// }
-
-// .svg-wave1--animation {
-//  position: absolute;
-//  bottom: 0;
-//  left: 0;
-//  width: 100%;
-//  z-index: 0;
-//  pointer-events: none;
-// }
+@import './components/fetchComponent/fetchComponentStyles.scss';

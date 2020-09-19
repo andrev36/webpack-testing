@@ -4,9 +4,6 @@
  font-family: inherit;
  padding: 0;
  cursor: pointer;
- display: inline-flex;
- align-items: center;
- justify-content: center;
  background-color: blue;
  color: #fff;
  border-radius: 8px;
@@ -33,4 +30,8 @@
 
 .counter__btn {
  @include btn_style;
+}
+
+.section-counter {
+ margin: 2rem auto;
 }

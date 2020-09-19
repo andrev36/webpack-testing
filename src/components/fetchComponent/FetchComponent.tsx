@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../../index.scss';
+import GlobeIcon from '../../assets/images/globe.png';
 
 interface Props {
  name?: string;
@@ -34,12 +35,17 @@ export const FetchComponent = () => {
  }, []);
 
  return (
-  <section className='item'>
+  <section className='item fetch-section'>
    <h2>Continent names (Fetched from GraphQL API):</h2>
-   <ul data-testid='continents-list'>
+   <ul data-testid='continents-list' className='fetch-section__continents-list'>
     {continents.length
      ? continents.map((continent: Props, index: number) => {
-        return <li key={index}>{continent.name}</li>;
+        return (
+         <li key={index}>
+          <img src={GlobeIcon} alt='globe' />
+          {continent.name}
+         </li>
+        );
        })
      : null}
    </ul>
