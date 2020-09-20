@@ -31,13 +31,15 @@
  "dependencies": {
   "@apollo/client": "^3.1.4",
   "@types/react-visibility-sensor": "^5.1.0",
+  "@types/three": "^0.103.2",
   "graphql": "^15.3.0",
   "gsap": "^3.5.1",
   "react": "^16.13.1",
   "react-dom": "^16.13.1",
   "react-router": "^5.2.0",
   "react-router-dom": "^5.2.0",
-  "react-visibility-sensor": "^5.1.1"
+  "react-visibility-sensor": "^5.1.1",
+  "three": "^0.120.1"
  },
  "devDependencies": {
   "@babel/core": "^7.11.4",

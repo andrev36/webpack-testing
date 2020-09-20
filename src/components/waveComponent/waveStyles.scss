@@ -3,11 +3,6 @@
  z-index: 0;
 }
 
-#wave2 {
- display: none;
- z-index: 0;
-}
-
 .btn-wave {
  z-index: 1;
 }
@@ -18,7 +13,7 @@
 
 .svg-wave1 {
  position: absolute;
- bottom: 6rem;
+ bottom: 10.9rem;
  left: 0;
  width: 100%;
  z-index: 0;
@@ -26,28 +21,10 @@
 }
 
 .container-wave-part {
- height: 7rem;
+ height: 11rem;
  width: 100%;
  position: absolute;
  left: 0;
  bottom: 0;
  background: #0099ff;
-}
-
-.container-wave-part--animation {
- height: 1rem;
- width: 100%;
- position: absolute;
- left: 0;
- bottom: 0;
- background: #0099ff;
-}
-
-.svg-wave1--animation {
- position: absolute;
- bottom: 0;
- left: 0;
- width: 100%;
- z-index: 0;
- pointer-events: none;
 }

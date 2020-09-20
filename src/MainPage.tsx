@@ -14,25 +14,10 @@ import { CSSPlugin, MorphSVGPlugin } from 'gsap/all';
 // gsap.registerPlugin(MorphSVGPlugin);
 
 export const MainPage = () => {
- const mainHeadingRef = useRef(null);
- useEffect(() => {
-  // const tl = gsap.timeline({ repeat: 6, repeatDelay: 1, yoyo: true });
-  // tl.to(
-  //  mainHeadingRef.current,
-  //  {
-  //   duration: 0.2,
-  //   className: '+=superShadow',
-  //   top: '-=10px',
-  //   ease: 'power1.in',
-  //   stagger: 0.3
-  //  },
-  //  'start'
-  // );
- }, []);
  return (
   <React.Fragment>
    <div>
-    <h1 className='heading__title--shadow' ref={mainHeadingRef}>
+    <h1 className='heading__title--shadow'>
      Hello React and Webpack! Using hot reload!
     </h1>
    </div>

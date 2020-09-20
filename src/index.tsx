@@ -19,6 +19,7 @@ const client = new ApolloClient({
 // ! TODO Create ex. wave animation that is unveiling item
 // after drag
 // ! TODO Add Visibility sensor to animations
+// ! TODO ThreeJS animations
 class App extends React.Component {
  render() {
   return (

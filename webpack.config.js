@@ -31,7 +31,8 @@ module.exports = (options) => {
    rules: [
     {
      test: /\.tsx?$/,
-     use: ['babel-loader', 'ts-loader', 'tslint-loader']
+     // use: ['babel-loader', 'ts-loader', 'tslint-loader']
+     use: ['ts-loader', 'tslint-loader']
     },
     {
      test: /\.scss$/,
