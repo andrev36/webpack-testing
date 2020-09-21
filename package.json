@@ -31,7 +31,6 @@
  "dependencies": {
   "@apollo/client": "^3.1.4",
   "@types/react-visibility-sensor": "^5.1.0",
-  "@types/three": "^0.103.2",
   "graphql": "^15.3.0",
   "gsap": "^3.5.1",
   "react": "^16.13.1",
@@ -52,6 +51,7 @@
   "@types/react-dom": "^16.9.8",
   "@types/react-router": "^5.1.8",
   "@types/react-router-dom": "^5.1.5",
+  "@types/three": "^0.103.2",
   "autoprefixer": "^9.8.6",
   "babel-core": "^6.26.3",
   "babel-loader": "^8.1.0",

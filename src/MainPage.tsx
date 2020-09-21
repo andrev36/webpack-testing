@@ -8,6 +8,7 @@ import { SelectElements } from './components/selectComponent/SelectElement';
 import { FormComponent } from './components/formComponent/FormComponent';
 import { WaveComponent } from './components/waveComponent/WaveComponent';
 import { CSSPlugin, MorphSVGPlugin } from 'gsap/all';
+import { ThreeDimensionComponent } from 'components/ThreeDimensionComponent/ThreeDimensionComponent';
 
 // Force CSSPlugin to not get dropped during build
 // gsap.registerPlugin(CSSPlugin);
@@ -22,14 +23,17 @@ export const MainPage = () => {
     </h1>
    </div>
    <main className='container'>
+    <div className='item-full-width three-dimension-container'>
+     <ThreeDimensionComponent />
+    </div>
     <Buttons />
     <SelectElements />
     <FetchComponent />
     <FormComponent />
     <WaveComponent />
-    <section className='item'>
+    {/* <section className='item'>
      <div>123</div>
-    </section>
+    </section> */}
     <section className='item'>
      <div>123</div>
     </section>

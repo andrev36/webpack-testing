@@ -8,7 +8,7 @@ describe('SelectElement tests', () => {
 
   const currentlySelectedColorValue = getByTestId('currently-selected-color');
   expect(currentlySelectedColorValue.textContent).toBe(
-   'Currently selected color: red'
+   'Currently selected color: blue'
   );
  });
  it('select element changes color', () => {
