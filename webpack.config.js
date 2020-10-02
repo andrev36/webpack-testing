@@ -41,7 +41,10 @@ module.exports = (options) => {
       {
        loader: 'css-loader',
        options: {
-        sourceMap: true
+        sourceMap: true,
+        modules: true,
+        url: false,
+        localIdentName: '[hash:base64:5]'
        }
       },
       {
@@ -80,7 +83,7 @@ module.exports = (options) => {
      }
     },
     {
-     test: /\.(jpe?g|png|gif|svg|ico)$/i,
+     test: /\.(jpe?g|png|gif|svg|ico|gltf)$/i,
      use: [
       {
        loader: 'file-loader',

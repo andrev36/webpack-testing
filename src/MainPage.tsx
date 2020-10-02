@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { Buttons } from './components/buttonComponent/Buttons';
+import { Buttons } from './components/ButtonComponent/Buttons';
 import './index.scss';
 import { gql, useQuery } from '@apollo/client';
-import { FetchComponent } from './components/fetchComponent/FetchComponent';
-import { SelectElements } from './components/selectComponent/SelectElement';
-import { FormComponent } from './components/formComponent/FormComponent';
-import { WaveComponent } from './components/waveComponent/WaveComponent';
+import { FetchComponent } from './components/FetchComponent/FetchComponent';
+import { SelectElements } from './components/SelectComponent/SelectElement';
+import { FormComponent } from './components/FormComponent/FormComponent';
+import { WaveComponent } from './components/WaveComponent/WaveComponent';
 import { CSSPlugin, MorphSVGPlugin } from 'gsap/all';
 import { ThreeDimensionComponent } from 'components/ThreeDimensionComponent/ThreeDimensionComponent';
 
