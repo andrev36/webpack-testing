@@ -19,7 +19,7 @@ export class ThreeDimensionComponent extends React.Component {
   // * NOTE Loading custom 3D model below
   const loader = new GLTFLoader();
   // * NOTE Pikachu model from: https://github.com/SamsungInternet/ar-demos/tree/master/src/obj/pikachu
-  loader.load('./Duck.gltf', (gltf) => {
+  loader.load('src/assets/images/Duck.gltf', (gltf) => {
    const model = gltf.scene;
    scene.add(gltf.scene);
   });

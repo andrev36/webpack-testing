@@ -26,6 +26,7 @@ module.exports = (options) => {
    filename: '[name].js',
    path: path.resolve(__dirname, 'dist'),
    sourceMapFilename: '[name].js.map'
+   // publicPath: '/'
   },
   module: {
    rules: [
@@ -41,10 +42,10 @@ module.exports = (options) => {
       {
        loader: 'css-loader',
        options: {
-        sourceMap: true,
-        modules: true,
-        url: false,
-        localIdentName: '[hash:base64:5]'
+        sourceMap: true
+        // modules: true,
+        // url: false,
+        // localIdentName: '[hash:base64:5]'
        }
       },
       {
@@ -83,13 +84,22 @@ module.exports = (options) => {
      }
     },
     {
-     test: /\.(jpe?g|png|gif|svg|ico|gltf)$/i,
+     test: /\.(jpe?g|png|gif|svg|ico)$/i,
      use: [
       {
        loader: 'file-loader',
        options: {
-        outputPath: srcPathExtend('assets/images')
+        // outputPath: srcPathExtend('assets/images')
+        outputPath: 'assets/images'
        }
+      }
+     ]
+    },
+    {
+     test: /\.(gltf)$/,
+     use: [
+      {
+       loader: 'gltf-webpack-loader'
       }
      ]
     }

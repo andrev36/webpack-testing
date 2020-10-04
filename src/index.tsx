@@ -4,8 +4,7 @@ import './index.scss';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { Routes } from './Routes';
 import { BrowserRouter } from 'react-router-dom';
-import { gsap } from 'gsap';
-import { CSSPlugin } from 'gsap/all';
+import { gsap, CSSPlugin } from 'gsap';
 
 // Force CSSPlugin to not get dropped during build
 gsap.registerPlugin(CSSPlugin);

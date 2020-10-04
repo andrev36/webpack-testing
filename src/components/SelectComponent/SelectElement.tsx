@@ -3,6 +3,7 @@ import '../../index.scss';
 
 export const SelectElements = () => {
  const [pickedColor, setPickedColor] = useState<string>('blue');
+ const [listOpenState, setListOpen] = useState(false);
  const handleColorChange = (e: ChangeEvent<HTMLSelectElement>) => {
   setPickedColor(e.target.value);
  };
@@ -26,7 +27,7 @@ export const SelectElements = () => {
       strokeWidth='14'
       fillRule='nonzero'
       className={`img-cloud-path--${pickedColor}`}
-     ></path>
+     />
     </g>
    </svg>
    <h2 className='heading__picked-color'>
@@ -35,7 +36,17 @@ export const SelectElements = () => {
      Currently selected color: {pickedColor}
     </label>
    </h2>
-   <form>
+   <div className='dd-wrapper'>
+    <div className='dd-header'>
+     <div className='dd-header-title'></div>
+    </div>
+    <ul className='dd-list'>
+     <li className='dd-list-item'></li>
+     <li className='dd-list-item'></li>
+     <li className='dd-list-item'></li>
+    </ul>
+   </div>
+   {/* <form>
     <select
      data-testid='select'
      className='form__select'
@@ -55,7 +66,7 @@ export const SelectElements = () => {
       yellow
      </option>
     </select>
-   </form>
+   </form> */}
   </section>
  );
 };

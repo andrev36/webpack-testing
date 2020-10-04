@@ -32,6 +32,7 @@
   "@apollo/client": "^3.1.4",
   "@types/react-visibility-sensor": "^5.1.0",
   "enhanced-resolve": "^5.0.0",
+  "gltf-webpack-loader": "^1.0.6",
   "graphql": "^15.3.0",
   "gsap": "^3.5.1",
   "react": "^16.13.1",
