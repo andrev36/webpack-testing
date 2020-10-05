@@ -1,12 +1,42 @@
 import React, { useState, ChangeEvent } from 'react';
 import '../../index.scss';
+import onClickOutside from 'react-onclickoutside';
 
-export const SelectElements = () => {
+const SelectElementsComponent = () => {
  const [pickedColor, setPickedColor] = useState<string>('blue');
- const [listOpenState, setListOpen] = useState(false);
- const handleColorChange = (e: ChangeEvent<HTMLSelectElement>) => {
-  setPickedColor(e.target.value);
+ const [listOpen, setListOpen] = useState(false);
+
+ const toggleList = () => {
+  setListOpen(!listOpen);
  };
+
+ const handleColorChange = (value: string) => () => {
+  setPickedColor(value);
+  setListOpen(false);
+ };
+
+ const colors = ['blue', 'red', 'green', 'yellow'];
+
+ const selectList = () => {
+  return (
+   <ul className='select-wrapper__list' data-testid='select'>
+    {colors.map((color: string) => (
+     <li
+      key={color}
+      value={color}
+      data-testid={color}
+      className='select-wrapper__list-item'
+      onClick={handleColorChange(color)}
+     >
+      {color}
+     </li>
+    ))}
+   </ul>
+  );
+ };
+
+ (SelectElementsComponent as any).handleClickOutside = () => setListOpen(false);
+
  return (
   <section className='container__select'>
    <svg
@@ -36,37 +66,51 @@ export const SelectElements = () => {
      Currently selected color: {pickedColor}
     </label>
    </h2>
-   <div className='dd-wrapper'>
-    <div className='dd-header'>
-     <div className='dd-header-title'></div>
-    </div>
-    <ul className='dd-list'>
-     <li className='dd-list-item'></li>
-     <li className='dd-list-item'></li>
-     <li className='dd-list-item'></li>
-    </ul>
-   </div>
-   {/* <form>
-    <select
-     data-testid='select'
-     className='form__select'
-     value={pickedColor}
-     onChange={handleColorChange}
-    >
-     <option value='red' data-testid='red'>
-      red
-     </option>
-     <option value='blue' data-testid='blue'>
-      blue
-     </option>
-     <option value='green' data-testid='green'>
-      green
-     </option>
-     <option value='yellow' data-testid='yellow'>
-      yellow
-     </option>
-    </select>
-   </form> */}
+   <section className='select-wrapper'>
+    <header className='select-header'>
+     <div className='select-header__title' onClick={() => toggleList()}>
+      Select color
+      <span>
+       {listOpen ? (
+        <svg
+         xmlns='http://www.w3.org/2000/svg'
+         width='20'
+         height='20'
+         fill='none'
+         viewBox='0 0 24 24'
+        >
+         <path
+          fill='#000'
+          fill-rule='evenodd'
+          d='M5.30568 15.694C5.71325 16.102 6.37407 16.102 6.78165 15.694L12 10.4699L17.2183 15.694C17.6259 16.102 18.2867 16.102 18.6943 15.694C19.1019 15.286 19.1019 14.6244 18.6943 14.2164L12.7904 8.30602C12.5733 8.08864 12.2843 7.98707 12 8.00131C11.7157 7.98709 11.4267 8.08866 11.2096 8.30602L5.30568 14.2164C4.8981 14.6244 4.8981 15.286 5.30568 15.694Z'
+          clip-rule='evenodd'
+         />
+        </svg>
+       ) : (
+        <svg
+         xmlns='http://www.w3.org/2000/svg'
+         data-name='Layer 1'
+         viewBox='0 0 32 32'
+         width='20'
+         height='20'
+        >
+         <path d='M16,22a2,2,0,0,1-1.41-.59l-10-10A2,2,0,0,1,7.41,8.59L16,17.17l8.59-8.58a2,2,0,0,1,2.82,2.82l-10,10A2,2,0,0,1,16,22Z' />
+        </svg>
+       )}
+      </span>
+     </div>
+    </header>
+    {listOpen ? selectList() : null}
+   </section>
   </section>
  );
 };
+
+const clickOutsideConfig = {
+ handleClickOutside: () => (SelectElementsComponent as any).handleClickOutside
+};
+
+export const SelectElements = onClickOutside(
+ SelectElementsComponent,
+ clickOutsideConfig
+);

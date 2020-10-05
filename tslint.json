@@ -28,7 +28,10 @@
   "trailing-comma": true,
   "no-shadowed-variable": false,
   "typedef-whitespace": false,
-  "no-any": true
+  "no-any": true,
+  "jsx-no-lambda": false,
+  "no-submodule-imports": false,
+  "no-implicit-dependencies": false
  },
  "rulesDirectory": []
 }
