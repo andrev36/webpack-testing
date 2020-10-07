@@ -28,7 +28,7 @@ const SelectElementsComponent = () => {
       className='select-wrapper__list-item'
       onClick={handleColorChange(color)}
      >
-      {color}
+      <span>{color}</span>
      </li>
     ))}
    </ul>
@@ -81,9 +81,9 @@ const SelectElementsComponent = () => {
         >
          <path
           fill='#000'
-          fill-rule='evenodd'
+          fillRule='evenodd'
           d='M5.30568 15.694C5.71325 16.102 6.37407 16.102 6.78165 15.694L12 10.4699L17.2183 15.694C17.6259 16.102 18.2867 16.102 18.6943 15.694C19.1019 15.286 19.1019 14.6244 18.6943 14.2164L12.7904 8.30602C12.5733 8.08864 12.2843 7.98707 12 8.00131C11.7157 7.98709 11.4267 8.08866 11.2096 8.30602L5.30568 14.2164C4.8981 14.6244 4.8981 15.286 5.30568 15.694Z'
-          clip-rule='evenodd'
+          clipRule='evenodd'
          />
         </svg>
        ) : (

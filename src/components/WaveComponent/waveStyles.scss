@@ -1,3 +1,6 @@
+@use '../ButtonComponent/buttonStyles.scss';
+@import '../ButtonComponent/buttonStyles.scss';
+
 // * NOTE Wave section styles
 #wave1 {
  z-index: 0;
@@ -10,6 +13,10 @@
 .container-wave {
  overflow: hidden;
 }
+
+.container-wave__btn-wave {
+ @include btn_style;
+} 
 
 .svg-wave1 {
  position: absolute;

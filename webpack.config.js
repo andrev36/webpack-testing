@@ -16,120 +16,121 @@ const root = __dirname;
 
 const gsapPath = '/node_modules/gsap/src/uncompressed/';
 
-module.exports = (options) => {
- return {
-  devtool: 'source-map',
-  mode: 'development',
-  entry: path.join(__dirname, 'src', 'index.tsx'),
-  watch: true,
-  output: {
-   filename: '[name].js',
-   path: path.resolve(__dirname, 'dist'),
-   sourceMapFilename: '[name].js.map'
-   // publicPath: '/'
-  },
-  module: {
-   rules: [
-    {
-     test: /\.tsx?$/,
-     // use: ['babel-loader', 'ts-loader', 'tslint-loader']
-     use: ['ts-loader', 'tslint-loader']
-    },
-    {
-     test: /\.scss$/,
-     use: [
-      'style-loader',
-      {
-       loader: 'css-loader',
-       options: {
-        sourceMap: true
-        // modules: true,
-        // url: false,
-        // localIdentName: '[hash:base64:5]'
-       }
-      },
-      {
-       loader: 'postcss-loader',
-       options: {
-        plugins: [require('autoprefixer')()],
-        sourceMap: true
-       }
-      },
-      {
-       loader: 'sass-loader',
-       options: {
-        sourceMap: true
-       }
-      }
-     ]
-    },
-    {
-     test: /\.(png|jp(e*)g|svg|gif)$/,
-     use: [
-      {
-       loader: 'url-loader',
-       options: {
-        limit: 8000
-       }
-      }
-     ]
-    },
-    {
-     test: /\.(ttf|eot|woff|woff2)$/,
-     use: {
-      loader: 'file-loader',
+module.exports = {
+ devtool: 'inline-source-map',
+ mode: 'development',
+ entry: path.join(__dirname, 'src', 'index.tsx'),
+ watch: true,
+ output: {
+  filename: '[name].js',
+  path: path.resolve(__dirname, 'dist'),
+  sourceMapFilename: '[name].js.map'
+  // publicPath: '/'
+ },
+ module: {
+  rules: [
+   {
+    test: /\.tsx?$/,
+    use: ['babel-loader', 'ts-loader', 'tslint-loader']
+    // use: ['ts-loader', 'tslint-loader']
+   },
+   {
+    test: /\.scss$/,
+    use: [
+     'style-loader',
+     {
+      loader: 'css-loader',
       options: {
-       name: 'fonts/[name].[ext]'
+       sourceMap: true
+      }
+     },
+     {
+      loader: 'postcss-loader',
+      options: {
+       plugins: [require('autoprefixer')()],
+       sourceMap: true
+      }
+     },
+     {
+      loader: 'sass-loader',
+      options: {
+       sourceMap: true
       }
      }
-    },
-    {
-     test: /\.(jpe?g|png|gif|svg|ico)$/i,
-     use: [
-      {
-       loader: 'file-loader',
-       options: {
-        // outputPath: srcPathExtend('assets/images')
-        outputPath: 'assets/images'
-       }
+    ]
+   },
+   {
+    test: /\.(png|jp(e*)g|svg|gif)$/,
+    use: [
+     {
+      loader: 'url-loader',
+      options: {
+       limit: 8000,
+       sourceMap: true
       }
-     ]
-    },
-    {
-     test: /\.(gltf)$/,
-     use: [
-      {
-       loader: 'gltf-webpack-loader'
-      }
-     ]
+     }
+    ]
+   },
+   {
+    test: /\.(ttf|eot|woff|woff2)$/,
+    use: {
+     loader: 'file-loader',
+     options: {
+      name: 'fonts/[name].[ext]',
+      sourceMap: true
+     }
     }
-   ]
-  },
-  resolve: {
-   extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
-   modules: ['node_modules', path.resolve(__dirname, 'src')],
-   alias: {
-    TweenLite: 'gsap',
-    CSSPlugin: 'gsap',
-    Draggable: path.join(root, gsapPath + 'utils/Draggable.js'),
-    ScrollToPlugin: path.join(root, gsapPath + 'plugins/ScrollToPlugin.js')
+   },
+   {
+    test: /\.(jpe?g|png|gif|svg|ico)$/i,
+    use: [
+     {
+      loader: 'file-loader',
+      options: {
+       // outputPath: srcPathExtend('assets/images')
+       outputPath: 'assets/images',
+       sourceMap: true
+      }
+     }
+    ]
+   },
+   {
+    test: /\.(gltf)$/,
+    use: [
+     {
+      loader: 'gltf-webpack-loader',
+      options: {
+       sourceMap: true
+      }
+     }
+    ]
    }
-  },
-  devServer: {
-   historyApiFallback: true,
-   contentBase: './dist',
-   inline: true,
-   host: 'localhost',
-   port: 3000
-  },
-  plugins: [
-   new CleanWebpackPlugin({ verbose: true }),
-   new HtmlWebpackPlugin({
-    template: srcPathExtend('index.html')
-   }),
-   new webpack.ProvidePlugin({
-    TweenMax: 'gsap'
-   })
   ]
- };
+ },
+ resolve: {
+  extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+  modules: ['node_modules', path.resolve(__dirname, 'src')],
+  alias: {
+   TweenLite: 'gsap',
+   CSSPlugin: 'gsap',
+   Draggable: path.join(root, gsapPath + 'utils/Draggable.js'),
+   ScrollToPlugin: path.join(root, gsapPath + 'plugins/ScrollToPlugin.js')
+  }
+ },
+ devServer: {
+  historyApiFallback: true,
+  contentBase: './dist',
+  inline: true,
+  host: 'localhost',
+  port: 3000
+ },
+ plugins: [
+  new CleanWebpackPlugin({ verbose: true }),
+  new HtmlWebpackPlugin({
+   template: srcPathExtend('index.html')
+  }),
+  new webpack.ProvidePlugin({
+   TweenMax: 'gsap'
+  })
+ ]
 };
