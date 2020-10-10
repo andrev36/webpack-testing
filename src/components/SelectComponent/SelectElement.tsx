@@ -1,6 +1,8 @@
 import React, { useState, ChangeEvent } from 'react';
 import '../../index.scss';
 import onClickOutside from 'react-onclickoutside';
+const DownArrowIcon = require('../../assets/images/down-arrow.svg').default;
+const UpArrowIcon = require('../../assets/images/up-arrow.svg').default;
 
 const SelectElementsComponent = () => {
  const [pickedColor, setPickedColor] = useState<string>('blue');
@@ -39,6 +41,10 @@ const SelectElementsComponent = () => {
 
  return (
   <section className='container__select'>
+   {/* width='770px'
+    height='471px'
+        className='img-cloud'
+*/}
    <svg
     width='770px'
     height='471px'
@@ -72,30 +78,17 @@ const SelectElementsComponent = () => {
       Select color
       <span>
        {listOpen ? (
-        <svg
-         xmlns='http://www.w3.org/2000/svg'
-         width='20'
-         height='20'
-         fill='none'
-         viewBox='0 0 24 24'
-        >
-         <path
-          fill='#000'
-          fillRule='evenodd'
-          d='M5.30568 15.694C5.71325 16.102 6.37407 16.102 6.78165 15.694L12 10.4699L17.2183 15.694C17.6259 16.102 18.2867 16.102 18.6943 15.694C19.1019 15.286 19.1019 14.6244 18.6943 14.2164L12.7904 8.30602C12.5733 8.08864 12.2843 7.98707 12 8.00131C11.7157 7.98709 11.4267 8.08866 11.2096 8.30602L5.30568 14.2164C4.8981 14.6244 4.8981 15.286 5.30568 15.694Z'
-          clipRule='evenodd'
-         />
-        </svg>
+        <img
+         src={UpArrowIcon}
+         alt='globe'
+         className='select-header__arrow-img'
+        />
        ) : (
-        <svg
-         xmlns='http://www.w3.org/2000/svg'
-         data-name='Layer 1'
-         viewBox='0 0 32 32'
-         width='20'
-         height='20'
-        >
-         <path d='M16,22a2,2,0,0,1-1.41-.59l-10-10A2,2,0,0,1,7.41,8.59L16,17.17l8.59-8.58a2,2,0,0,1,2.82,2.82l-10,10A2,2,0,0,1,16,22Z' />
-        </svg>
+        <img
+         src={DownArrowIcon}
+         alt='globe'
+         className='select-header__arrow-img'
+        />
        )}
       </span>
      </div>

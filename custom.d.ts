@@ -5,8 +5,28 @@ declare module '*.png' {
  const value: any;
  export = value;
 }
-declare module '*.jpg';
-declare module '*.jpeg';
-declare module '*.webp';
-declare module '*.svg';
-declare module '*.gif';
+
+declare module '*.jpg' {
+ const value: any;
+ export = value;
+}
+
+declare module '*.jpeg' {
+ const value: any;
+ export = value;
+}
+
+declare module '*.webp' {
+ const value: any;
+ export = value;
+}
+
+declare module '*.svg' {
+ const value: any;
+ export = value;
+}
+
+declare module '*.gif' {
+ const value: any;
+ export = value;
+}

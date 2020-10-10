@@ -17,7 +17,7 @@ const root = __dirname;
 const gsapPath = '/node_modules/gsap/src/uncompressed/';
 
 module.exports = {
- devtool: 'inline-source-map',
+ devtool: 'source-map',
  mode: 'development',
  entry: path.join(__dirname, 'src', 'index.tsx'),
  watch: true,
@@ -25,14 +25,12 @@ module.exports = {
   filename: '[name].js',
   path: path.resolve(__dirname, 'dist'),
   sourceMapFilename: '[name].js.map'
-  // publicPath: '/'
  },
  module: {
   rules: [
    {
-    test: /\.tsx?$/,
+    test: /\.(tsx|ts)$/,
     use: ['babel-loader', 'ts-loader', 'tslint-loader']
-    // use: ['ts-loader', 'tslint-loader']
    },
    {
     test: /\.scss$/,
@@ -80,19 +78,6 @@ module.exports = {
       sourceMap: true
      }
     }
-   },
-   {
-    test: /\.(jpe?g|png|gif|svg|ico)$/i,
-    use: [
-     {
-      loader: 'file-loader',
-      options: {
-       // outputPath: srcPathExtend('assets/images')
-       outputPath: 'assets/images',
-       sourceMap: true
-      }
-     }
-    ]
    },
    {
     test: /\.(gltf)$/,

@@ -16,7 +16,18 @@
 
 .container-wave__btn-wave {
  @include btn_style;
-} 
+}
+
+.container-wave__treasure-img {
+ position: relative;
+ margin: 3rem auto;
+ @media (max-width: 900px) {
+  margin: 9rem auto;
+ }
+ @media (min-width: 900px) and (max-width: 1200px) {
+  margin: 6rem auto;
+ }
+}
 
 .svg-wave1 {
  position: absolute;
@@ -25,6 +36,7 @@
  width: 100%;
  z-index: 0;
  pointer-events: none;
+ fill: #0099ff;
 }
 
 .container-wave-part {

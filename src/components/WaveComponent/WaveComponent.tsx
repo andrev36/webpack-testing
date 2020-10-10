@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../../index.scss';
 import { gsap } from 'gsap';
-import TreasureIcon from "../../assets/images/treasure.svg";
+const TreasureIcon = require('../../assets/images/treasure.svg').default;
 
 export const WaveComponent = () => {
  const WaveContainerRef = useRef(null);
@@ -16,9 +16,16 @@ export const WaveComponent = () => {
  return (
   <React.Fragment>
    <section className='item-full-width container-wave'>
-    <button type='button' onClick={handleClick} className='container-wave__btn-wave'>
+    <button
+     type='button'
+     onClick={handleClick}
+     className='container-wave__btn-wave'
+    >
      Test Button
     </button>
+    <div className='container-wave__treasure-img'>
+     <img src={TreasureIcon} alt='treasure' width='100px' />
+    </div>
     <div className='container-wave-part' ref={WaveContainerRef}>
      <svg
       xmlns='http://www.w3.org/2000/svg'

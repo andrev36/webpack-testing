@@ -31,9 +31,6 @@ export const MainPage = () => {
     <FetchComponent />
     <FormComponent />
     <WaveComponent />
-    {/* <section className='item'>
-     <div>123</div>
-    </section> */}
     <section className='item'>
      <div>123</div>
     </section>

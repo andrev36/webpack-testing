@@ -34,6 +34,7 @@
   "gltf-webpack-loader": "^1.0.6",
   "graphql": "^15.3.0",
   "gsap": "^3.5.1",
+  "image-webpack-loader": "^7.0.1",
   "react": "^16.13.1",
   "react-dom": "^16.13.1",
   "react-onclickoutside": "^6.9.0",
