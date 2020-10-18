@@ -44,7 +44,7 @@ const SelectElementsComponent = () => {
    {/* width='770px'
     height='471px'
         className='img-cloud'
-*/}
+   */}
    <svg
     width='770px'
     height='471px'

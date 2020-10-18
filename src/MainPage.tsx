@@ -23,14 +23,14 @@ export const MainPage = () => {
     </h1>
    </div>
    <main className='container'>
-    <div className='item-full-width three-dimension-container'>
-     <ThreeDimensionComponent />
-    </div>
     <Buttons />
     <SelectElements />
     <FetchComponent />
     <FormComponent />
     <WaveComponent />
+    <div className='item-full-width three-dimension-container'>
+     {/* <ThreeDimensionComponent /> */}
+    </div>
     <section className='item'>
      <div>123</div>
     </section>
