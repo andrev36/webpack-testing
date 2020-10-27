@@ -1,10 +1,20 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { createRef, useEffect, useRef, useState } from 'react';
 import '../../index.scss';
+import { gsap } from 'gsap';
+import { FadeInContainerAnimation } from 'animations/FadeInContainerAnimation';
+import VisibilitySensor from 'react-visibility-sensor';
 import { gsap } from 'gsap';
 const TreasureIcon = require('../../assets/images/treasure.svg').default;
 
 export const WaveComponent = () => {
  const WaveContainerRef = useRef(null);
+ const WaveButtonRef = useRef(null);
+
+ const [isVisible, setVisibility] = useState(false);
+
+ const onChange = (visiblity: boolean) => {
+  visiblity && setVisibility(visiblity);
+ };
 
  const handleClick = () => {
   gsap.to(WaveContainerRef.current, {
@@ -13,16 +23,29 @@ export const WaveComponent = () => {
   });
  };
 
+ useEffect(() => {
+  isVisible
+   ? gsap.from(WaveButtonRef.current, {
+      duration: 2,
+      x: 100,
+      opacity: 0
+     })
+   : null;
+ }, [isVisible]);
+
  return (
   <React.Fragment>
    <section className='item-full-width container-wave'>
-    <button
-     type='button'
-     onClick={handleClick}
-     className='container-wave__btn-wave'
-    >
-     Test Button
-    </button>
+    <VisibilitySensor onChange={onChange}>
+     <button
+      ref={WaveButtonRef}
+      type='button'
+      onClick={handleClick}
+      className='container-wave__btn-wave'
+     >
+      Test Button
+     </button>
+    </VisibilitySensor>
     <div className='container-wave__treasure-img'>
      <img src={TreasureIcon} alt='treasure' width='100px' />
     </div>
