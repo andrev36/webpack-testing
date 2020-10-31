@@ -1,3 +1,4 @@
+import { FadeInContainerAnimation } from 'animations/FadeInContainerAnimation';
 import React, { useEffect, useState } from 'react';
 import '../../index.scss';
 const GlobeIcon = require('../../assets/images/globe.svg').default;
@@ -36,7 +37,9 @@ export const FetchComponent = () => {
 
  return (
   <section className='item fetch-section'>
-   <h2>Continent names (Fetched from GraphQL API):</h2>
+   <FadeInContainerAnimation>
+    <h2>Continent names (Fetched from GraphQL API):</h2>
+   </FadeInContainerAnimation>
    <ul data-testid='continents-list' className='fetch-section__continents-list'>
     {continents.length
      ? continents.map((continent: Props, index: number) => {

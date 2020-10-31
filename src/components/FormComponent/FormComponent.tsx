@@ -1,11 +1,11 @@
+import { gsap } from 'gsap';
 import React, {
- useRef,
- useState,
  ChangeEvent,
  FormEvent,
- useEffect
+ useEffect,
+ useRef,
+ useState
 } from 'react';
-import { gsap } from 'gsap';
 import '../../index.scss';
 
 export const FormComponent = () => {

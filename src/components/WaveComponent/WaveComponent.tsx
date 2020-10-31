@@ -1,20 +1,17 @@
-import React, { createRef, useEffect, useRef, useState } from 'react';
-import '../../index.scss';
+import {
+ GSAPFadeInAnimationFromValues,
+ GSAPFadeInAnimationToValues
+} from 'animations/fadeInAnimations';
+import { VisibilityAnimationHook } from 'animations/VisibilityAnimationHook';
 import { gsap } from 'gsap';
-import { FadeInContainerAnimation } from 'animations/FadeInContainerAnimation';
+import React, { useRef } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
-import { gsap } from 'gsap';
+import '../../index.scss';
 const TreasureIcon = require('../../assets/images/treasure.svg').default;
 
 export const WaveComponent = () => {
  const WaveContainerRef = useRef(null);
  const WaveButtonRef = useRef(null);
-
- const [isVisible, setVisibility] = useState(false);
-
- const onChange = (visiblity: boolean) => {
-  visiblity && setVisibility(visiblity);
- };
 
  const handleClick = () => {
   gsap.to(WaveContainerRef.current, {
@@ -23,15 +20,13 @@ export const WaveComponent = () => {
   });
  };
 
- useEffect(() => {
-  isVisible
-   ? gsap.from(WaveButtonRef.current, {
-      duration: 2,
-      x: 100,
-      opacity: 0
-     })
-   : null;
- }, [isVisible]);
+ const fadeInFromRightSideAnimation = gsap.fromTo(
+  WaveButtonRef.current,
+  GSAPFadeInAnimationFromValues(100),
+  GSAPFadeInAnimationToValues()
+ );
+
+ const onChange = VisibilityAnimationHook(fadeInFromRightSideAnimation);
 
  return (
   <React.Fragment>

@@ -1,5 +1,5 @@
+import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
 import { Buttons } from './Buttons';
 
 // Check this blog about testing counter and form: https://blog.logrocket.com/a-quick-guide-to-testing-react-hooks-fa584c415407/

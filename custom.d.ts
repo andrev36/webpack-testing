@@ -1,5 +1,5 @@
-import 'jest-extended';
 import '@testing-library/jest-dom/extend-expect';
+import 'jest-extended';
 
 declare module '*.png' {
  const value: any;

@@ -1,6 +1,6 @@
+import { useGLTF } from '@react-three/drei';
 import React, { Suspense } from 'react';
 import { Canvas } from 'react-three-fiber';
-import { useGLTF } from '@react-three/drei';
 
 const DuckModel = () => {
  // const gltf = useGLTF('./src/assets/models/Duck/glTF/Duck.gltf', true);

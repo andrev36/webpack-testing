@@ -1,6 +1,6 @@
-import React, { useState, ChangeEvent } from 'react';
-import '../../index.scss';
+import React, { useState } from 'react';
 import onClickOutside from 'react-onclickoutside';
+import '../../index.scss';
 const DownArrowIcon = require('../../assets/images/down-arrow.svg').default;
 const UpArrowIcon = require('../../assets/images/up-arrow.svg').default;
 
@@ -41,10 +41,6 @@ const SelectElementsComponent = () => {
 
  return (
   <section className='container__select'>
-   {/* width='770px'
-    height='471px'
-        className='img-cloud'
-   */}
    <svg
     width='770px'
     height='471px'
