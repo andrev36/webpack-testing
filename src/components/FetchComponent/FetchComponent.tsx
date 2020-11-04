@@ -1,5 +1,11 @@
-import { FadeInContainerAnimation } from 'animations/FadeInContainerAnimation';
-import React, { useEffect, useState } from 'react';
+import { gsap } from 'gsap';
+import React, { useEffect, useRef, useState } from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
+import {
+ GSAPFadeInAnimationFromValues,
+ GSAPFadeInAnimationToValues
+} from '../../animations/fadeInAnimations';
+import { VisibilityAnimationHook } from '../../animations/VisibilityAnimationHook';
 import '../../index.scss';
 const GlobeIcon = require('../../assets/images/globe.svg').default;
 
@@ -21,6 +27,17 @@ export const queryFetch = (query: string) =>
 
 export const FetchComponent = () => {
  const [continents, setContinent] = useState([]);
+ const containerRef = useRef(null);
+
+ const fadeInFromRightSideAnimation = gsap.fromTo(
+  containerRef.current,
+  GSAPFadeInAnimationFromValues(-100),
+  GSAPFadeInAnimationToValues()
+ );
+
+ const onChangeFadeFromRightSide = VisibilityAnimationHook(
+  fadeInFromRightSideAnimation
+ );
 
  useEffect(() => {
   queryFetch(`
@@ -37,9 +54,9 @@ export const FetchComponent = () => {
 
  return (
   <section className='item fetch-section'>
-   <FadeInContainerAnimation>
-    <h2>Continent names (Fetched from GraphQL API):</h2>
-   </FadeInContainerAnimation>
+   <VisibilitySensor onChange={onChangeFadeFromRightSide}>
+    <h2 ref={containerRef}>Continent names (Fetched from GraphQL API):</h2>
+   </VisibilitySensor>
    <ul data-testid='continents-list' className='fetch-section__continents-list'>
     {continents.length
      ? continents.map((continent: Props, index: number) => {

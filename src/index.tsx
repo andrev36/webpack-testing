@@ -14,9 +14,6 @@ const client = new ApolloClient({
  cache: new InMemoryCache()
 });
 
-// ! TODO Dark mode in one grid window on/off with moon icon
-// ! TODO Add Visibility sensor to animations
-// ! TODO ThreeJS animations
 class App extends React.Component {
  render() {
   return (

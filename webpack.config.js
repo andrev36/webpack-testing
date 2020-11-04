@@ -4,8 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const root = __dirname;
-
 const gsapPath = '/node_modules/gsap/src/uncompressed/';
 
 module.exports = {
@@ -104,8 +102,8 @@ module.exports = {
   alias: {
    TweenLite: 'gsap',
    CSSPlugin: 'gsap',
-   Draggable: path.join(root, gsapPath + 'utils/Draggable.js'),
-   ScrollToPlugin: path.join(root, gsapPath + 'plugins/ScrollToPlugin.js')
+   Draggable: path.join(__dirname, gsapPath + 'utils/Draggable.js'),
+   ScrollToPlugin: path.join(__dirname, gsapPath + 'plugins/ScrollToPlugin.js')
   }
  },
  devServer: {
