@@ -1,9 +1,6 @@
 {
  "defaultSeverity": "error",
- "extends": [
-  "tslint:latest",
-  "tslint-react"
- ],
+ "extends": ["tslint:latest", "tslint-react"],
  "jsRules": {},
  "rules": {
   "prefer-object-spread": true,
@@ -31,7 +28,8 @@
   "no-any": true,
   "jsx-no-lambda": false,
   "no-submodule-imports": false,
-  "no-implicit-dependencies": false
+  "no-implicit-dependencies": false,
+  "jsx-boolean-value": false
  },
  "rulesDirectory": []
 }
