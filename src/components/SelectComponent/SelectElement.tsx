@@ -63,10 +63,10 @@ const SelectElementsComponent = () => {
   GSAPFadeInAnimationToValues()
  );
 
- const onChangeFadeFromLeftSide = VisibilityAnimationHook(
+ const { onChange: onChangeFadeFromLeftSide } = VisibilityAnimationHook(
   fadeInFromLeftSideAnimation
  );
- const onChangeFadeFromRightSide = VisibilityAnimationHook(
+ const { onChange: onChangeFadeFromRightSide } = VisibilityAnimationHook(
   fadeInFromRightSideAnimation
  );
 

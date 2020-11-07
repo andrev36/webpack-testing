@@ -35,7 +35,7 @@ export const FetchComponent = () => {
   GSAPFadeInAnimationToValues()
  );
 
- const onChangeFadeFromRightSide = VisibilityAnimationHook(
+ const { onChange: onChangeFadeFromRightSide } = VisibilityAnimationHook(
   fadeInFromRightSideAnimation
  );
 

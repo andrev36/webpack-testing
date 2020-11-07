@@ -10,5 +10,5 @@ export const VisibilityAnimationHook = ({ animation }: any) => {
    isVisible ? animation : null;
   } catch (err) {}
  }, [isVisible]);
- return onChange;
+ return { onChange };
 };

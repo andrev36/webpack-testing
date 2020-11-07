@@ -26,7 +26,7 @@ export const WaveComponent = () => {
   GSAPFadeInAnimationToValues()
  );
 
- const onChange = VisibilityAnimationHook(fadeInFromRightSideAnimation);
+ const { onChange } = VisibilityAnimationHook(fadeInFromRightSideAnimation);
 
  return (
   <React.Fragment>

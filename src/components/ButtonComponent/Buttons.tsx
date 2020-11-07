@@ -1,60 +1,81 @@
-import {
- GSAPFadeInAnimationFromValues,
- GSAPFadeInAnimationToValues
-} from 'animations/fadeInAnimations';
-import { VisibilityAnimationHook } from 'animations/VisibilityAnimationHook';
 import { gsap } from 'gsap';
-import React, { useRef, useState } from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef, useState } from 'react';
 import '../../index.scss';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Buttons = () => {
  const [count, setCounter] = useState(0);
+ const incrementContainerButtonRef = useRef(null);
+ const decrementContainerButtonRef = useRef(null);
  const incrementButtonRef = useRef(null);
  const decrementButtonRef = useRef(null);
 
- const fadeInFromLeftSideAnimation = gsap.fromTo(
-  incrementButtonRef.current,
-  GSAPFadeInAnimationFromValues(100),
-  GSAPFadeInAnimationToValues()
- );
+ const handleClickIncrement = () => {
+  setCounter((count) => count + 1);
+ };
 
- const fadeInFromRightSideAnimation = gsap.fromTo(
-  decrementButtonRef.current,
-  GSAPFadeInAnimationFromValues(-100),
-  GSAPFadeInAnimationToValues()
- );
+ const handleClickDecrement = () => {
+  setCounter((count) => count - 1);
+ };
 
- const onChangeFadeFromLeftSide = VisibilityAnimationHook(
-  fadeInFromLeftSideAnimation
- );
- const onChangeFadeFromRightSide = VisibilityAnimationHook(
-  fadeInFromRightSideAnimation
- );
+ useEffect(() => {
+  gsap.fromTo(
+   incrementContainerButtonRef.current,
+   { x: '-=100', opacity: 0 },
+   {
+    x: '0',
+    opacity: 1,
+    stagger: 0.2,
+    duration: 3,
+    scrollTrigger: {
+     trigger: '.counter_btn_increment',
+     start: 'center-=200 center+=200',
+     markers: true
+    }
+   }
+  );
+  gsap.fromTo(
+   decrementContainerButtonRef.current,
+   { x: '+=100', opacity: 0 },
+   {
+    x: '0',
+    opacity: 1,
+    stagger: 0.2,
+    duration: 3,
+    scrollTrigger: {
+     trigger: '.counter_btn_decrement',
+     start: 'center-=200 center+=200',
+     markers: true
+    }
+   }
+  );
+ }, []);
 
  return (
   <section className='item'>
    <div className='section-counter'>
-    <VisibilitySensor onChange={onChangeFadeFromLeftSide}>
+    <div ref={incrementContainerButtonRef} className='container-increment_btn'>
      <button
       ref={incrementButtonRef}
-      onClick={() => setCounter((count) => count + 1)}
-      className='counter__btn'
+      onClick={handleClickIncrement}
+      className='counter__btn counter_btn_increment'
      >
-      Increment
+      <span>Increment</span>
      </button>
-    </VisibilitySensor>
+    </div>
     <h2>Current count:</h2>
     <h2 data-testid='countvalue'>{count}</h2>
-    <VisibilitySensor onChange={onChangeFadeFromRightSide}>
+    <div ref={decrementContainerButtonRef} className='container_decrement_btn'>
      <button
+      onClick={handleClickDecrement}
+      className='counter__btn counter_btn_decrement'
       ref={decrementButtonRef}
-      onClick={() => setCounter((count) => count - 1)}
-      className='counter__btn'
      >
-      Decrement
+      <span>Decrement</span>
      </button>
-    </VisibilitySensor>
+    </div>
    </div>
   </section>
  );

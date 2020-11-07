@@ -31,7 +31,9 @@ export const FormComponent = () => {
   ease: 'Back.easeOut'
  });
 
- const onChangeHingeAnimation = VisibilityAnimationHook(hingeAnimation);
+ const { onChange: onChangeHingeAnimation } = VisibilityAnimationHook(
+  hingeAnimation
+ );
 
  return (
   <React.Fragment>
