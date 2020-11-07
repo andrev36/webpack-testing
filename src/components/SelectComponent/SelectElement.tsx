@@ -1,15 +1,12 @@
-import {
- GSAPFadeInAnimationFromValues,
- GSAPFadeInAnimationToValues
-} from 'animations/fadeInAnimations';
-import { VisibilityAnimationHook } from 'animations/VisibilityAnimationHook';
 import { gsap } from 'gsap';
-import React, { useRef, useState } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef, useState } from 'react';
 import onClickOutside from 'react-onclickoutside';
-import VisibilitySensor from 'react-visibility-sensor';
 import '../../index.scss';
 const DownArrowIcon = require('../../assets/images/down-arrow.svg').default;
 const UpArrowIcon = require('../../assets/images/up-arrow.svg').default;
+
+gsap.registerPlugin(ScrollTrigger);
 
 const SelectElementsComponent = () => {
  // * NOTE Select element logic
@@ -51,24 +48,36 @@ const SelectElementsComponent = () => {
  const headingRef = useRef(null);
  const selectElementRef = useRef(null);
 
- const fadeInFromLeftSideAnimation = gsap.fromTo(
-  headingRef.current,
-  GSAPFadeInAnimationFromValues(100),
-  GSAPFadeInAnimationToValues()
- );
-
- const fadeInFromRightSideAnimation = gsap.fromTo(
-  selectElementRef.current,
-  GSAPFadeInAnimationFromValues(-100),
-  GSAPFadeInAnimationToValues()
- );
-
- const { onChange: onChangeFadeFromLeftSide } = VisibilityAnimationHook(
-  fadeInFromLeftSideAnimation
- );
- const { onChange: onChangeFadeFromRightSide } = VisibilityAnimationHook(
-  fadeInFromRightSideAnimation
- );
+ useEffect(() => {
+  gsap.fromTo(
+   headingRef.current,
+   { x: '-=100', opacity: 0 },
+   {
+    x: '0',
+    opacity: 1,
+    stagger: 0.2,
+    duration: 3,
+    scrollTrigger: {
+     trigger: 'heading__picked-color',
+     start: 'center-=200 center+=200'
+    }
+   }
+  );
+  gsap.fromTo(
+   selectElementRef.current,
+   { x: '+=100', opacity: 0 },
+   {
+    x: '0',
+    opacity: 1,
+    stagger: 0.2,
+    duration: 3,
+    scrollTrigger: {
+     trigger: 'select-wrapper',
+     start: 'center-=200 center+=200'
+    }
+   }
+  );
+ }, []);
 
  return (
   <section className='container__select'>
@@ -93,39 +102,35 @@ const SelectElementsComponent = () => {
      />
     </g>
    </svg>
-   <VisibilitySensor onChange={onChangeFadeFromLeftSide}>
-    <h2 className='heading__picked-color' ref={headingRef}>
-     <legend>Selecting elements</legend>
-     <label data-testid='currently-selected-color'>
-      Currently selected color: {pickedColor}
-     </label>
-    </h2>
-   </VisibilitySensor>
-   <VisibilitySensor onChange={onChangeFadeFromRightSide}>
-    <section className='select-wrapper' ref={selectElementRef}>
-     <header className='select-header'>
-      <div className='select-header__title' onClick={() => toggleList()}>
-       Select color
-       <span>
-        {listOpen ? (
-         <img
-          src={UpArrowIcon}
-          alt='globe'
-          className='select-header__arrow-img'
-         />
-        ) : (
-         <img
-          src={DownArrowIcon}
-          alt='globe'
-          className='select-header__arrow-img'
-         />
-        )}
-       </span>
-      </div>
-     </header>
-     {listOpen ? selectList() : null}
-    </section>
-   </VisibilitySensor>
+   <h2 className='heading__picked-color' ref={headingRef}>
+    <legend>Selecting elements</legend>
+    <label data-testid='currently-selected-color'>
+     Currently selected color: {pickedColor}
+    </label>
+   </h2>
+   <section className='select-wrapper' ref={selectElementRef}>
+    <header className='select-header'>
+     <div className='select-header__title' onClick={() => toggleList()}>
+      Select color
+      <span>
+       {listOpen ? (
+        <img
+         src={UpArrowIcon}
+         alt='globe'
+         className='select-header__arrow-img'
+        />
+       ) : (
+        <img
+         src={DownArrowIcon}
+         alt='globe'
+         className='select-header__arrow-img'
+        />
+       )}
+      </span>
+     </div>
+    </header>
+    {listOpen ? selectList() : null}
+   </section>
   </section>
  );
 };

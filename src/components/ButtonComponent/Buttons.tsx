@@ -31,8 +31,7 @@ export const Buttons = () => {
     duration: 3,
     scrollTrigger: {
      trigger: '.container-increment__counter-btn-increment',
-     start: 'center-=200 center+=200',
-     markers: true
+     start: 'center-=200 center+=200'
     }
    }
   );
@@ -46,8 +45,7 @@ export const Buttons = () => {
     duration: 3,
     scrollTrigger: {
      trigger: '.container-decrement__counter-btn-decrement',
-     start: 'center-=200 center+=200',
-     markers: true
+     start: 'center-=200 center+=200'
     }
    }
   );
