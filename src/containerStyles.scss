@@ -32,11 +32,3 @@
  @include item_style;
  grid-column: 1/-1;
 }
-
-.heading__title--shadow {
- position: relative;
- margin: 3rem auto;
- font-size: 5rem;
- text-align: center;
- text-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
-}

@@ -1,3 +1,32 @@
+@use '../ButtonComponent/buttonStyles.scss';
+@import '../ButtonComponent/buttonStyles.scss';
+
 .three-dimension-container {
- height: 34rem;
+ min-height: 100vh;
+}
+
+.container-choose-btn__choose-btn {
+ &-duck {
+  @include btn_style;
+  position: relative;
+  top: 5rem;
+  right: 2rem;
+ }
+ &-cow {
+  @include btn_style;
+  position: relative;
+  top: 5rem;
+  right: 0;
+ }
+ &-chicken {
+  @include btn_style;
+  position: relative;
+  top: 9.5rem;
+  right: 3rem;
+ }
+}
+
+.choose-submit-btn {
+ position: absolute;
+ bottom: 3rem;
 }

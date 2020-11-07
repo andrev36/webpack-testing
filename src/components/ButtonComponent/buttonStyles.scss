@@ -28,7 +28,15 @@
  }
 }
 
-.counter__btn {
+.btn {
+ @include btn_style;
+}
+
+.container-increment__counter-btn {
+ @include btn_style;
+}
+
+.container-decrement__counter-btn {
  @include btn_style;
 }
 

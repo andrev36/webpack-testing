@@ -30,7 +30,7 @@ export const Buttons = () => {
     stagger: 0.2,
     duration: 3,
     scrollTrigger: {
-     trigger: '.counter_btn_increment',
+     trigger: '.container-increment__counter-btn-increment',
      start: 'center-=200 center+=200',
      markers: true
     }
@@ -45,7 +45,7 @@ export const Buttons = () => {
     stagger: 0.2,
     duration: 3,
     scrollTrigger: {
-     trigger: '.counter_btn_decrement',
+     trigger: '.container-decrement__counter-btn-decrement',
      start: 'center-=200 center+=200',
      markers: true
     }
@@ -56,21 +56,21 @@ export const Buttons = () => {
  return (
   <section className='item'>
    <div className='section-counter'>
-    <div ref={incrementContainerButtonRef} className='container-increment_btn'>
+    <div ref={incrementContainerButtonRef} className='container-increment'>
      <button
       ref={incrementButtonRef}
       onClick={handleClickIncrement}
-      className='counter__btn counter_btn_increment'
+      className='container-increment__counter-btn container-increment__counter-btn-increment'
      >
       <span>Increment</span>
      </button>
     </div>
     <h2>Current count:</h2>
     <h2 data-testid='countvalue'>{count}</h2>
-    <div ref={decrementContainerButtonRef} className='container_decrement_btn'>
+    <div ref={decrementContainerButtonRef} className='container-decrement'>
      <button
       onClick={handleClickDecrement}
-      className='counter__btn counter_btn_decrement'
+      className='container-decrement__counter-btn container-decrement__counter-btn-decrement'
       ref={decrementButtonRef}
      >
       <span>Decrement</span>
