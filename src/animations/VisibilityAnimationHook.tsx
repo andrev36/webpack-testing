@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const VisibilityAnimationHook = ({ animation }: any) => {
+const VisibilityAnimationHook = ({ animation }: any) => {
  const [isVisible, setVisibility] = useState(false);
  const onChange = (visibility: boolean) => {
   visibility && setVisibility(visibility);
@@ -12,3 +12,5 @@ export const VisibilityAnimationHook = ({ animation }: any) => {
  }, [isVisible]);
  return { onChange };
 };
+
+export { VisibilityAnimationHook };

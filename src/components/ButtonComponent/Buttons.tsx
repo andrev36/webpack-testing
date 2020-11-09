@@ -5,7 +5,7 @@ import '../../index.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const Buttons = () => {
+const Buttons = () => {
  const [count, setCounter] = useState(0);
  const incrementContainerButtonRef = useRef(null);
  const decrementContainerButtonRef = useRef(null);
@@ -78,3 +78,5 @@ export const Buttons = () => {
   </section>
  );
 };
+
+export { Buttons };

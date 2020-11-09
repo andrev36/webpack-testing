@@ -14,7 +14,7 @@ interface Props {
  code?: string;
 }
 
-export const queryFetch = (query: string) =>
+const queryFetch = (query: string) =>
  fetch('https://countries.trevorblades.com/', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
@@ -25,7 +25,7 @@ export const queryFetch = (query: string) =>
   .then((res) => res.json())
   .catch((err) => console.log(err));
 
-export const FetchComponent = () => {
+const FetchComponent = () => {
  const [continents, setContinent] = useState([]);
  const containerRef = useRef(null);
 
@@ -76,3 +76,5 @@ export const FetchComponent = () => {
   </section>
  );
 };
+
+export { queryFetch, FetchComponent };

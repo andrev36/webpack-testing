@@ -4,7 +4,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 import { VisibilityAnimationHook } from '../../animations/VisibilityAnimationHook';
 import '../../index.scss';
 
-export const FormComponent = () => {
+const FormComponent = () => {
  const [formValues, setFormValues] = useState({
   name: '',
   email: ''
@@ -84,3 +84,5 @@ export const FormComponent = () => {
   </React.Fragment>
  );
 };
+
+export { FormComponent };

@@ -1,4 +1,4 @@
-export const GSAPFadeInAnimationToValues = () => {
+const GSAPFadeInAnimationToValues = () => {
  return {
   x: 0,
   autoAlpha: 1,
@@ -6,9 +6,7 @@ export const GSAPFadeInAnimationToValues = () => {
  };
 };
 
-export const GSAPFadeInAnimationFromValues = (
- horizontalTranslateValue: number
-) => {
+const GSAPFadeInAnimationFromValues = (horizontalTranslateValue: number) => {
  return {
   duration: 2,
   x: horizontalTranslateValue,
@@ -16,3 +14,5 @@ export const GSAPFadeInAnimationFromValues = (
   opacity: 0
  };
 };
+
+export { GSAPFadeInAnimationToValues, GSAPFadeInAnimationFromValues };

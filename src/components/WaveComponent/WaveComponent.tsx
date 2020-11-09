@@ -9,7 +9,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 import '../../index.scss';
 const TreasureIcon = require('../../assets/images/treasure.svg').default;
 
-export const WaveComponent = () => {
+const WaveComponent = () => {
  const WaveContainerRef = useRef(null);
  const WaveButtonRef = useRef(null);
 
@@ -63,3 +63,5 @@ export const WaveComponent = () => {
   </React.Fragment>
  );
 };
+
+export { WaveComponent };

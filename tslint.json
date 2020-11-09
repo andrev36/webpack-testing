@@ -29,7 +29,8 @@
   "jsx-no-lambda": false,
   "no-submodule-imports": false,
   "no-implicit-dependencies": false,
-  "jsx-boolean-value": false
+  "jsx-boolean-value": false,
+  "comment-format": false
  },
  "rulesDirectory": []
 }

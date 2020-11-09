@@ -6,7 +6,9 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
 import { Routes } from './Routes';
 
-// Force CSSPlugin to not get dropped during build
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Force CSSPlugin to not get dropped during build
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 gsap.registerPlugin(CSSPlugin);
 
 const client = new ApolloClient({

@@ -7,7 +7,7 @@ import { SelectElements } from './components/SelectComponent/SelectElement';
 import { WaveComponent } from './components/WaveComponent/WaveComponent';
 import './index.scss';
 
-export const MainPage = () => {
+const MainPage = () => {
  return (
   <React.Fragment>
    <main className='container'>
@@ -23,3 +23,5 @@ export const MainPage = () => {
   </React.Fragment>
  );
 };
+
+export { MainPage };

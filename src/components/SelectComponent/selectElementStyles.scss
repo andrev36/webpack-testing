@@ -1,7 +1,9 @@
 @use '../../containerStyles.scss';
 @import '../../containerStyles.scss';
 
-// * NOTE Select element styles
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Select element styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .container__select {
  @include item_style;
  overflow-x: hidden;

@@ -9,7 +9,9 @@ const UpArrowIcon = require('../../assets/images/up-arrow.svg').default;
 gsap.registerPlugin(ScrollTrigger);
 
 const SelectElementsComponent = () => {
- // * NOTE Select element logic
+ /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * NOTE Select element logic
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const [pickedColor, setPickedColor] = useState<string>('blue');
  const [listOpen, setListOpen] = useState(false);
 
@@ -44,7 +46,9 @@ const SelectElementsComponent = () => {
 
  (SelectElementsComponent as any).handleClickOutside = () => setListOpen(false);
 
- // * NOTE Fade in animations
+ /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * NOTE Fade in animations
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const headingRef = useRef(null);
  const selectElementRef = useRef(null);
 
@@ -139,7 +143,9 @@ const clickOutsideConfig = {
  handleClickOutside: () => (SelectElementsComponent as any).handleClickOutside
 };
 
-export const SelectElements = onClickOutside(
+const SelectElements = onClickOutside(
  SelectElementsComponent,
  clickOutsideConfig
 );
+
+export { SelectElements };
