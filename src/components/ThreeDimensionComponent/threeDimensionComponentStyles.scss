@@ -1,52 +1,93 @@
+@use '../../containerStyles.scss';
+@import '../../containerStyles.scss';
 @use '../ButtonComponent/buttonStyles.scss';
 @import '../ButtonComponent/buttonStyles.scss';
 
+$min-width: 1200px;
+
 .three-dimension-container {
+ min-width: 100%;
+ @include item_style;
+ grid-column: 1/-1;
  min-height: 100vh;
+ background-color: #fff;
+ position: relative;
 }
 
-.container-choose-btn__choose-btn {
+.container-pet {
+ position: absolute;
+ left: 50vw;
+ top: 0rem;
+ width: 100%;
+ transform: translate(-50%);
+ @media (min-width: $min-width) {
+  top: 25vh;
+ }
+}
+
+.container-flex-pet {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ @media (min-width: $min-width) {
+  flex-direction: row;
+ }
+}
+
+.container-choose-pet {
+ margin: 2rem 0;
+ @media (min-width: $min-width) {
+  margin: 0 3rem;
+ }
  &-duck {
-  @include btn_style;
-  position: relative;
-  top: 1rem;
-  right: 2.5rem;
-  @media (min-width: 1100px) {
-   position: relative;
-   top: 5rem;
-   right: 2rem;
+  height: 12rem;
+  width: 20rem;
+  @media (min-width: $min-width) {
+   height: 20rem;
+   width: 50rem;
   }
  }
  &-cow {
-  @include btn_style;
-  position: relative;
-  top: 1rem;
-  right: 2.5rem;
-  @media (min-width: 1100px) {
-   position: relative;
-   top: 5rem;
-   right: 0;
+  height: 8rem;
+  width: 25rem;
+  @media (min-width: $min-width) {
+   height: 14rem;
+   width: 25rem;
   }
  }
  &-chicken {
-  @include btn_style;
-  position: relative;
-  top: 4.5rem;
-  right: 2.5rem;
-  @media (min-width: 1100px) {
-   position: relative;
-   top: 9.5rem;
-   right: 3rem;
+  height: 10rem;
+  width: 30rem;
+  @media (min-width: $min-width) {
+   height: 20rem;
+   width: 40rem;
   }
  }
 }
 
-.choose-submit-btn {
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! TODO Refactor below rules to appear in one line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container-choose-pet-btn__choose-btn {
+ &-duck {
+  @include btn_style;
+ }
+ &-cow {
+  @include btn_style;
+ }
+ &-chicken {
+  @include btn_style;
+ }
+}
+
+.choose-pet-submit-btn {
  position: absolute;
- bottom: 1rem;
- right: 2rem;
+ bottom: 3rem;
+ right: 5rem;
  text-align: center;
- @media (min-width: 1100px) {
-  bottom: 3rem;
+ @media (min-width: $min-width) {
+  bottom: 12rem;
+  right: 8rem;
  }
 }

@@ -11,9 +11,7 @@ const MainPage = () => {
  return (
   <React.Fragment>
    <main className='container'>
-    <div className='item-full-width three-dimension-container'>
-     <ThreeDimensionComponent />
-    </div>
+    <ThreeDimensionComponent />
     <Buttons />
     <SelectElements />
     <FetchComponent />

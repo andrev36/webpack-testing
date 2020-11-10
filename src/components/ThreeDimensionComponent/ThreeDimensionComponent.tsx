@@ -1,108 +1,220 @@
 import { Html, useGLTF } from '@react-three/drei';
 import React, { Fragment, Suspense, useRef } from 'react';
-import { Canvas, useFrame } from 'react-three-fiber';
-import { useMedia } from 'react-use';
+import { Canvas, extend, useFrame, useThree } from 'react-three-fiber';
+import useMedia from 'react-use/lib/useMedia';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import '../../index.scss';
 
-// * NOTE Importing 3D models
-const DuckModel = () => {
- const gltf = useGLTF('./models/Duck/glTF/Duck.gltf', true);
+extend({ OrbitControls });
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Hack so that react recognizes camelCased tags inside JSX element
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+declare global {
+ namespace JSX {
+  interface IntrinsicElements {
+   orbitControls: any;
+   planeBufferMaterial: any;
+  }
+ }
+}
+
+interface ModelProps {
+ modelPath: string;
+}
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Importing 3D models
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const Model = ({ modelPath }: ModelProps) => {
+ const gltf = useGLTF(modelPath, true);
  return <primitive object={gltf.scene} dispose={null} />;
 };
 
-const CowModel = () => {
- const gltf = useGLTF('./models/Cow/scene.gltf', true);
- return <primitive object={gltf.scene} dispose={null} />;
-};
-
-const ChickenModel = () => {
- const gltf = useGLTF('./models/Chicken/scene.gltf', true);
- return <primitive object={gltf.scene} dispose={null} />;
-};
-
-// * NOTE Lights settings
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Lights settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const Lights = () => (
  <>
   <ambientLight intensity={0.3} />
+  <directionalLight position={[10, 10, 5]} intensity={1} />
+  <directionalLight position={[0, 10, 0]} intensity={1.5} />
+  <spotLight position={[0, 1000, 0]} intensity={1} />
  </>
 );
 
-// * NOTE 3D models content
-const HTMLContent = () => {
- // * NOTE 3D models refs and ration animation
- const duckModelRef = useRef<any>();
- const cowModelRef = useRef<any>();
- const chickenModelRef = useRef<any>();
-
- useFrame(() => (duckModelRef.current.rotation.y += 0.01));
- useFrame(() => (cowModelRef.current.rotation.y += 0.01));
- useFrame(() => (chickenModelRef.current.rotation.y += 0.01));
-
- // * NOTE Media query for 3D models position
- const isWide = useMedia('(min-width: 1100px) ');
- const DUCK_X_POSITION = isWide ? 0 : 0;
- const DUCK_Y_POSITION = isWide ? -1 : -3;
- const DUCK_Z_POSITION = isWide ? 0 : 0;
- const COW_X_POSITION = isWide ? 37 : 0;
- const COW_Y_POSITION = isWide ? 1 : -4;
- const COW_Z_POSITION = isWide ? -45 : -45;
- const CHICKEN_X_POSITION = isWide ? -7 : 0;
- const CHICKEN_Y_POSITION = isWide ? 2.5 : 5.5;
- const CHICKEN_Z_POSITION = isWide ? -5 : -5;
-
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Orbit settings and setup
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const OrbitControlsSettings = () => {
+ const orbitRef = useRef<any>();
+ const { camera, gl } = useThree();
+ useFrame(() => {
+  orbitRef.current.update();
+ });
  return (
-  <Fragment>
-   <group>
-    <mesh
-     ref={duckModelRef}
-     position={[DUCK_X_POSITION, DUCK_Y_POSITION, DUCK_Z_POSITION]}
-     rotation={[Math.PI / 8, -Math.PI / 1.3, 0]}
-    >
-     <DuckModel />
-     <Html>
-      <button className='container-choose-btn__choose-btn-duck'>Duck</button>
-     </Html>
-    </mesh>
-    <mesh
-     ref={cowModelRef}
-     position={[COW_X_POSITION, COW_Y_POSITION, COW_Z_POSITION]}
-     rotation={[Math.PI / 8, -Math.PI / 1.3, 0]}
-    >
-     <CowModel />
-     <Html>
-      <button className='container-choose-btn__choose-btn-cow'>Cow</button>
-     </Html>
-    </mesh>
-    <mesh
-     ref={chickenModelRef}
-     position={[CHICKEN_X_POSITION, CHICKEN_Y_POSITION, CHICKEN_Z_POSITION]}
-     rotation={[Math.PI / 8, -Math.PI / 1.3, 0]}
-    >
-     <ChickenModel />
-     <Html>
-      <button className='container-choose-btn__choose-btn-chicken'>
-       Chicken
-      </button>
-     </Html>
-    </mesh>
-   </group>
-  </Fragment>
+  <orbitControls
+   autoRotate
+   maxPolarAngle={Math.PI / 3}
+   minPolarAngle={Math.PI / 3}
+   args={[camera, gl.domElement]}
+   ref={orbitRef}
+  />
  );
 };
 
-const ThreeDimensionComponent = () => {
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Background settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const PlaneBackground = () => (
+ <mesh>
+  <planeBufferMaterial />
+ </mesh>
+);
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE 3D models content
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const DuckModel = () => {
+ /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * NOTE 3D models refs and ration animation
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ const duckModelRef = useRef<any>();
+
+ useFrame(() => (duckModelRef.current.rotation.y += 0.01));
+
  return (
-  <>
-   <Canvas camera={{ position: [0, 0, 5] }}>
-    <Lights />
-    <Suspense fallback={null}>
-     <HTMLContent />
-    </Suspense>
-   </Canvas>
-   <header>
-    <button className='btn choose-submit-btn'>Submit</button>
-   </header>
-  </>
+  <mesh ref={duckModelRef} rotation={[0, -Math.PI / 1.3, 0]}>
+   <Model modelPath='./models/Duck/glTF/Duck.gltf' />
+  </mesh>
+ );
+};
+
+const CowModel = () => {
+ /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * NOTE 3D models refs and ration animation
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ const cowModelRef = useRef<any>();
+
+ useFrame(() => (cowModelRef.current.rotation.y += 0.01));
+
+ return (
+  <mesh ref={cowModelRef} rotation={[0, -Math.PI / 1.3, 0]}>
+   <Model modelPath='./models/Cow/scene.gltf' />
+  </mesh>
+ );
+};
+
+const ChickenModel = () => {
+ /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * NOTE 3D models refs and ration animation
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ const chickenModelRef = useRef<any>();
+
+ useFrame(() => (chickenModelRef.current.rotation.y += 0.01));
+
+ return (
+  <mesh ref={chickenModelRef} rotation={[0, -Math.PI / 1.3, 0]}>
+   <Model modelPath='./models/Chicken/scene.gltf' />
+  </mesh>
+ );
+};
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Content inside react-three-fiber Html tags
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const HTMLContent = ({
+ DUCK_Z_POSITION,
+ COW_Z_POSITION,
+ CHICKEN_Z_POSITION
+}: any) => {
+ return (
+  <Html>
+   <div className='container-pet'>
+    <div className='container-flex-pet'>
+     <div className='container-choose-pet container-choose-pet-duck'>
+      <Canvas
+       camera={{
+        position: [0, 0, DUCK_Z_POSITION]
+       }}
+      >
+       <OrbitControlsSettings />
+       <Lights />
+       <Suspense fallback={null}>
+        <DuckModel />
+       </Suspense>
+      </Canvas>
+      <button className='container-choose-pet-btn__choose-btn-duck'>
+       Duck
+      </button>
+     </div>
+     <div className='container-choose-pet container-choose-pet-cow'>
+      <Canvas
+       camera={{
+        position: [0, 0, COW_Z_POSITION]
+       }}
+      >
+       <OrbitControlsSettings />
+       <Lights />
+       <Suspense fallback={null}>
+        <CowModel />
+       </Suspense>
+      </Canvas>
+      <button className='container-choose-pet-btn__choose-btn-cow'>Cow</button>
+     </div>
+     <div className='container-choose-pet container-choose-pet-chicken'>
+      <Canvas
+       camera={{
+        position: [0, 0, CHICKEN_Z_POSITION],
+        fov: 100
+       }}
+      >
+       <OrbitControlsSettings />
+       <Lights />
+       <Suspense fallback={null}>
+        <ChickenModel />
+       </Suspense>
+      </Canvas>
+      <button className=' container-choose-pet-btn__choose-btn-chicken'>
+       Chicken
+      </button>
+     </div>
+    </div>
+   </div>
+  </Html>
+ );
+};
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Main component
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const ThreeDimensionComponent = () => {
+ /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * NOTE Media query for 3D models position
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ const isWide = useMedia('(min-width: 1100px) ');
+ const DUCK_Z_POSITION = isWide ? 3 : 3;
+ const COW_Z_POSITION = isWide ? -25 : -25;
+ const CHICKEN_Z_POSITION = isWide ? 3 : 3;
+ return (
+  <section className='three-dimension-container'>
+   <Fragment>
+    <Canvas
+     camera={{
+      position: [0, 0, 0]
+     }}
+    >
+     <HTMLContent
+      DUCK_Z_POSITION={DUCK_Z_POSITION}
+      COW_Z_POSITION={COW_Z_POSITION}
+      CHICKEN_Z_POSITION={CHICKEN_Z_POSITION}
+     />
+    </Canvas>
+    <header>
+     <button className='btn choose-pet-submit-btn'>Submit</button>
+    </header>
+   </Fragment>
+  </section>
  );
 };
 
