@@ -65,9 +65,9 @@ const FetchComponent = () => {
         return (
          <li key={index}>
           <img
-           src={GlobeIcon}
            alt='globe'
            className='fetch-section__globe-svg'
+           src={GlobeIcon}
           />
           <span>{continent.name}</span>
          </li>

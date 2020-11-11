@@ -126,9 +126,9 @@ const ChickenModel = () => {
 * NOTE Content inside react-three-fiber Html tags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const HTMLContent = ( {
- DUCK_Z_POSITION,
- COW_Z_POSITION,
  CHICKEN_Z_POSITION,
+ COW_Z_POSITION,
+ DUCK_Z_POSITION,
 }: any, ) => {
  return (
   <Html>
@@ -195,9 +195,9 @@ const ThreeDimensionComponent = () => {
  * NOTE Media query for 3D models position
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const isWide = useMedia( '(min-width: 1100px) ', )
- const DUCK_Z_POSITION = isWide ? 3 : 3
- const COW_Z_POSITION = isWide ? -25 : -25
  const CHICKEN_Z_POSITION = isWide ? 3 : 3
+ const COW_Z_POSITION = isWide ? -25 : -25
+ const DUCK_Z_POSITION = isWide ? 3 : 3
 
  return (
   <section className='three-dimension-container'>
@@ -208,9 +208,9 @@ const ThreeDimensionComponent = () => {
      }}
     >
      <HTMLContent
-      DUCK_Z_POSITION={DUCK_Z_POSITION}
-      COW_Z_POSITION={COW_Z_POSITION}
       CHICKEN_Z_POSITION={CHICKEN_Z_POSITION}
+      COW_Z_POSITION={COW_Z_POSITION}
+      DUCK_Z_POSITION={DUCK_Z_POSITION}
      />
     </Canvas>
     <header>

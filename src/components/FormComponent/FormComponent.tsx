@@ -56,12 +56,12 @@ const FormComponent = () => {
         </div>
         <div>
          <input
-          type='text'
-          name='name'
-          placeholder='Name'
-          value={formValues.name}
-          onChange={updateFormField}
           data-testid='form-name-input'
+          name='name'
+          onChange={updateFormField}
+          placeholder='Name'
+          type='text'
+          value={formValues.name}
          />
         </div>
        </section>
@@ -71,12 +71,12 @@ const FormComponent = () => {
          <label htmlFor='email'>Email</label>
         </div>
         <input
-         type='email'
-         name='email'
-         placeholder='Email'
-         value={formValues.email}
-         onChange={updateFormField}
          data-testid='form-email-input'
+         name='email'
+         onChange={updateFormField}
+         placeholder='Email'
+         type='email'
+         value={formValues.email}
         />
        </section>
        <br />

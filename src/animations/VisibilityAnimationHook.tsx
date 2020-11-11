@@ -7,7 +7,7 @@ const VisibilityAnimationHook = ( { animation, }: any, ) => {
  }
  useEffect( () => {
   try {
-   isVisible ? animation : null
+   isVisible && animation()
   } catch ( err ) {
    console.log( 'err:', err, )
   }

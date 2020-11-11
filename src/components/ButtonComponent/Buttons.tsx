@@ -7,10 +7,10 @@ gsap.registerPlugin( ScrollTrigger, )
 
 const Buttons = () => {
  const [count, setCounter, ] = useState( 0, )
- const incrementContainerButtonRef = useRef( null, )
+ const decrementButtonRef = useRef( null, )
  const decrementContainerButtonRef = useRef( null, )
  const incrementButtonRef = useRef( null, )
- const decrementButtonRef = useRef( null, )
+ const incrementContainerButtonRef = useRef( null, )
 
  const handleClickIncrement = () => {
   setCounter( ( countIncrement, ) => countIncrement + 1, )
@@ -56,9 +56,9 @@ const Buttons = () => {
    <div className='section-counter'>
     <div ref={incrementContainerButtonRef} className='container-increment'>
      <button
-      ref={incrementButtonRef}
-      onClick={handleClickIncrement}
       className='container-increment__counter-btn container-increment__counter-btn-increment'
+      onClick={handleClickIncrement}
+      ref={incrementButtonRef}
      >
       <span>Increment</span>
      </button>
@@ -67,8 +67,8 @@ const Buttons = () => {
     <h2 data-testid='countvalue'>{count}</h2>
     <div ref={decrementContainerButtonRef} className='container-decrement'>
      <button
-      onClick={handleClickDecrement}
       className='container-decrement__counter-btn container-decrement__counter-btn-decrement'
+      onClick={handleClickDecrement}
       ref={decrementButtonRef}
      >
       <span>Decrement</span>

@@ -1,6 +1,6 @@
 {
  "defaultSeverity": "error",
- "extends": ["tslint:latest", "tslint-react"],
+ "extends": ["tslint:latest", "tslint-react", "tslint-react-hooks"],
  "jsRules": {},
  "rules": {
   "align": true,
@@ -28,8 +28,14 @@
   "increment-decrement": true,
   "interface-name": false,
   "interface-over-type-literal": true,
+  "jsx-alignment": true,
   "jsx-boolean-value": false,
+  "jsx-key": true,
   "jsx-no-lambda": true,
+  "jsx-no-string-ref": true,
+  "jsx-self-close": true,
+  "jsx-space-before-trailing-slash": true,
+  "jsx-wrap-multiline": true,
   "linebreak-style": [true, "LF"],
   "member-ordering": false,
   "newline-before-return": true,
@@ -112,6 +118,12 @@
   "prefer-template": true,
   "promise-function-async": true,
   "quotemark": [true, "single"],
+  "react-hooks-nesting": {
+   "options": {
+    "detect-hooks-from-non-react-namespace": true
+   },
+   "severity": "error"
+  },
   "restrict-plus-operands": true,
   "return-undefined": true,
   "semicolon": false,
