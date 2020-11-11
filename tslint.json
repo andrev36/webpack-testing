@@ -3,34 +3,151 @@
  "extends": ["tslint:latest", "tslint-react"],
  "jsRules": {},
  "rules": {
-  "prefer-object-spread": true,
-  "await-promise": true,
-  "class-name": true,
-  "deprecation": true,
-  "linebreak-style": [true, "LF"],
-  "no-console": false,
-  "ordered-imports": false,
-  "no-namespace": false,
-  "quotemark": false,
-  "semicolon": false,
-  "no-reference": false,
-  "interface-name": false,
-  "object-literal-sort-keys": false,
-  "no-unused-expression": true,
-  "interface-over-type-literal": false,
-  "no-consecutive-blank-lines": false,
+  "align": true,
+  "array-type": [true, "array"],
   "arrow-parens": true,
-  "member-ordering": false,
-  "no-var-keyword": true,
-  "trailing-comma": true,
-  "no-shadowed-variable": false,
-  "typedef-whitespace": false,
-  "no-any": true,
-  "jsx-no-lambda": false,
-  "no-submodule-imports": false,
-  "no-implicit-dependencies": false,
+  "arrow-return-shorthand": true,
+  "await-promise": true,
+  "ban-comma-operator": true,
+  "binary-expression-operand-order": true,
+  "class-name": true,
+  "comment-format": false,
+  "curly": true,
+  "cyclomatic-complexity": true,
+  "deprecation": true,
+  "eofline": true,
+  "file-name-casing": [
+   true,
+   {
+    ".tsx": "pascal-case",
+    ".ts": "camel-case"
+   }
+  ],
+  "forin": true,
+  "import-spacing": true,
+  "increment-decrement": true,
+  "interface-name": false,
+  "interface-over-type-literal": true,
   "jsx-boolean-value": false,
-  "comment-format": false
+  "jsx-no-lambda": true,
+  "linebreak-style": [true, "LF"],
+  "member-ordering": false,
+  "newline-before-return": true,
+  "newline-per-chained-call": false,
+  "no-any": true,
+  "no-async-without-await": true,
+  "no-bitwise": true,
+  "no-boolean-literal-compare": true,
+  "no-conditional-assignment": true,
+  "no-consecutive-blank-lines": true,
+  "no-console": false,
+  "no-default-export": true,
+  "no-default-import": true,
+  "no-duplicate-imports": [
+   true,
+   {
+    "allow-namespace-imports": true
+   }
+  ],
+  "no-duplicate-switch-case": true,
+  "no-duplicate-variable": [true, "check-parameters"],
+  "no-empty": true,
+  "no-empty-interface": true,
+  "no-floating-promises": true,
+  "no-for-in-array": true,
+  "no-implicit-dependencies": false,
+  "no-inferrable-types": true,
+  "no-invalid-template-strings": true,
+  "no-irregular-whitespace": true,
+  "no-namespace": false,
+  "no-non-null-assertion": true,
+  "no-parameter-reassignment": true,
+  "no-reference": false,
+  "no-return-await": true,
+  "no-shadowed-variable": true,
+  "no-sparse-arrays": true,
+  "no-string-literal": true,
+  "no-string-throw": true,
+  "no-submodule-imports": false,
+  "no-switch-case-fall-through": true,
+  "no-trailing-whitespace": true,
+  "no-unnecessary-initializer": true,
+  "no-unsafe-finally": true,
+  "no-unused-expression": [true, "allow-fast-null-checks"],
+  "no-unused-variable": [
+   true,
+   {
+    "ignore-pattern": "^_"
+   }
+  ],
+  "no-use-before-declare": true,
+  "no-var-keyword": true,
+  "no-var-requires": false,
+  "no-void": true,
+  "number-literal-format": true,
+  "object-literal-shorthand": true,
+  "object-literal-sort-keys": true,
+  "one-line": [
+   true,
+   "check-catch",
+   "check-finally",
+   "check-else",
+   "check-open-brace",
+   "check-whitespace"
+  ],
+  "one-variable-per-declaration": true,
+  "only-arrow-functions": true,
+  "ordered-imports": true,
+  "prefer-conditional-expression": true,
+  "prefer-const": true,
+  "prefer-for-of": true,
+  "prefer-method-signature": true,
+  "prefer-object-spread": true,
+  "prefer-switch": [
+   true,
+   {
+    "min-cases": 2
+   }
+  ],
+  "prefer-template": true,
+  "promise-function-async": true,
+  "quotemark": [true, "single"],
+  "restrict-plus-operands": true,
+  "return-undefined": true,
+  "semicolon": false,
+  "space-within-parens": [true, 1],
+  "switch-default": true,
+  "trailing-comma": [
+   true,
+   {
+    "multiline": "always",
+    "singleline": "always"
+   }
+  ],
+  "triple-equals": [true, "allow-null-check", "allow-undefined-check"],
+  "typedef-whitespace": [
+   true,
+   {
+    "call-signature": "space",
+    "index-signature": "space",
+    "parameter": "nospace",
+    "property-declaration": "nospace",
+    "variable-declaration": "space"
+   }
+  ],
+  "unified-signatures": true,
+  "unnecessary-else": true,
+  "use-default-type-parameter": true,
+  "use-isnan": true,
+  "variable-name": {
+   "options": [
+    "ban-keywords",
+    "check-format",
+    "allow-leading-underscore",
+    "require-const-for-all-caps",
+    "allow-pascal-case"
+   ]
+  }
  },
  "rulesDirectory": []
 }
