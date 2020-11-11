@@ -1,27 +1,25 @@
 @mixin btn_style {
- border: none;
- background-color: transparent;
- font-family: inherit;
- padding: 0;
- cursor: pointer;
  background-color: blue;
- color: #fff;
  border-radius: 8px;
+ border: none;
  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
- padding: 0.25em 0.75em;
- min-width: 10ch;
- min-height: 44px;
- text-align: center;
+ color: #fff;
+ cursor: pointer;
+ font-family: inherit;
  line-height: 1.1;
+ min-height: 44px;
+ min-width: 10ch;
+ padding: 0.25em 0.75em;
+ text-align: center;
  transition: 300ms background-color ease-in-out;
  &:hover,
  &:active {
   background-color: scale-color(blue, $lightness: -20%);
  }
  &:focus {
-  outline-style: solid;
-  outline-color: transparent;
   box-shadow: 0 0 0 4px scale-color(blue, $lightness: -40%);
+  outline-color: transparent;
+  outline-style: solid;
  }
  @media screen and (-ms-high-contrast: active) {
   border: 2px solid currentcolor;

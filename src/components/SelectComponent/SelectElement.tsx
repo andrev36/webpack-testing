@@ -1,87 +1,88 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { useEffect, useRef, useState } from 'react';
-import onClickOutside from 'react-onclickoutside';
-import '../../index.scss';
-const DownArrowIcon = require('../../assets/images/down-arrow.svg').default;
-const UpArrowIcon = require('../../assets/images/up-arrow.svg').default;
+import { gsap, } from 'gsap'
+import { ScrollTrigger, } from 'gsap/ScrollTrigger'
+import React, { useEffect, useRef, useState, } from 'react'
+import onClickOutside from 'react-onclickoutside'
+import '../../index.scss'
+const DownArrowIcon = require( '../../assets/images/down-arrow.svg', ).default
+const UpArrowIcon = require( '../../assets/images/up-arrow.svg', ).default
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin( ScrollTrigger, )
 
 const SelectElementsComponent = () => {
  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * NOTE Select element logic
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
- const [pickedColor, setPickedColor] = useState<string>('blue');
- const [listOpen, setListOpen] = useState(false);
+ const [pickedColor, setPickedColor, ] = useState<string>( 'blue', )
+ const [listOpen, setListOpen, ] = useState( false, )
 
  const toggleList = () => {
-  setListOpen(!listOpen);
- };
+  setListOpen( !listOpen, )
+ }
+ const handleToggleList = () => toggleList()
 
- const handleColorChange = (value: string) => () => {
-  setPickedColor(value);
-  setListOpen(false);
- };
+ const handleColorChange = ( value: string, ) => () => {
+  setPickedColor( value, )
+  setListOpen( false, )
+ }
 
- const colors = ['blue', 'red', 'green', 'yellow'];
+ const colors = ['blue', 'red', 'green', 'yellow', ]
 
  const selectList = () => {
   return (
    <ul className='select-wrapper__list' data-testid='select'>
-    {colors.map((color: string) => (
+    {colors.map( ( color: string, ) => (
      <li
       key={color}
       value={color}
       data-testid={color}
       className='select-wrapper__list-item'
-      onClick={handleColorChange(color)}
+      onClick={handleColorChange( color, )}
      >
       <span>{color}</span>
      </li>
-    ))}
+    ), )}
    </ul>
-  );
- };
+  )
+ }
 
- (SelectElementsComponent as any).handleClickOutside = () => setListOpen(false);
+ ( SelectElementsComponent as any ).handleClickOutside = () => setListOpen( false, )
 
  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * NOTE Fade in animations
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
- const headingRef = useRef(null);
- const selectElementRef = useRef(null);
+ const headingRef = useRef( null, )
+ const selectElementRef = useRef( null, )
 
- useEffect(() => {
+ useEffect( () => {
   gsap.fromTo(
    headingRef.current,
-   { x: '-=100', opacity: 0 },
+   { x: '-=100', opacity: 0, },
    {
-    x: '0',
-    opacity: 1,
-    stagger: 0.2,
     duration: 3,
+    opacity: 1,
     scrollTrigger: {
+     start: 'center-=200 center+=200',
      trigger: 'heading__picked-color',
-     start: 'center-=200 center+=200'
-    }
-   }
-  );
+    },
+    stagger: 0.2,
+    x: '0',
+   },
+  )
   gsap.fromTo(
    selectElementRef.current,
-   { x: '+=100', opacity: 0 },
+   { x: '+=100', opacity: 0, },
    {
-    x: '0',
-    opacity: 1,
-    stagger: 0.2,
     duration: 3,
+    opacity: 1,
     scrollTrigger: {
+     start: 'center-=200 center+=200',
      trigger: 'select-wrapper',
-     start: 'center-=200 center+=200'
-    }
-   }
-  );
- }, []);
+    },
+    stagger: 0.2,
+    x: '0',
+   },
+  )
+ }, [], )
 
  return (
   <section className='container__select'>
@@ -114,7 +115,7 @@ const SelectElementsComponent = () => {
    </h2>
    <section className='select-wrapper' ref={selectElementRef}>
     <header className='select-header'>
-     <div className='select-header__title' onClick={() => toggleList()}>
+     <div className='select-header__title' onClick={handleToggleList}>
       Select color
       <span>
        {listOpen ? (
@@ -136,16 +137,16 @@ const SelectElementsComponent = () => {
     {listOpen ? selectList() : null}
    </section>
   </section>
- );
-};
+ )
+}
 
 const clickOutsideConfig = {
- handleClickOutside: () => (SelectElementsComponent as any).handleClickOutside
-};
+ handleClickOutside: () => ( SelectElementsComponent as any ).handleClickOutside,
+}
 
 const SelectElements = onClickOutside(
  SelectElementsComponent,
- clickOutsideConfig
-);
+ clickOutsideConfig,
+)
 
-export { SelectElements };
+export { SelectElements, }

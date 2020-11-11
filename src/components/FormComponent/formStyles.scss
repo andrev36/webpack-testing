@@ -6,12 +6,12 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @mixin input_style {
  border-radius: 10px;
- padding: 0.5em;
- margin: 0.4rem;
  border: none;
  box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
  font-family: inherit;
  font-size: inherit;
+ margin: 0.4rem;
+ padding: 0.5em;
  &:focus {
   outline: none;
   box-shadow: 0px 0px 8px #0066ff;
@@ -19,12 +19,12 @@
 }
 
 .container-form {
- margin: 0 auto;
- padding: 0.1rem;
- height: 16rem;
- width: 19rem;
  background-color: rgba(166, 166, 166, 0.41);
  border-radius: 40px;
+ height: 16rem;
+ margin: 0 auto;
+ padding: 0.1rem;
+ width: 19rem;
 }
 
 .section__form {

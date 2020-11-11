@@ -1,16 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, } from 'react'
 
-const VisibilityAnimationHook = ({ animation }: any) => {
- const [isVisible, setVisibility] = useState(false);
- const onChange = (visibility: boolean) => {
-  visibility && setVisibility(visibility);
- };
- useEffect(() => {
+const VisibilityAnimationHook = ( { animation, }: any, ) => {
+ const [isVisible, setVisibility, ] = useState( false, )
+ const onChange = ( visibility: boolean, ) => {
+  visibility && setVisibility( visibility, )
+ }
+ useEffect( () => {
   try {
-   isVisible ? animation : null;
-  } catch (err) {}
- }, [isVisible]);
- return { onChange };
-};
+   isVisible ? animation : null
+  } catch ( err ) {
+   console.log( 'err:', err, )
+  }
+ }, [isVisible, ], )
 
-export { VisibilityAnimationHook };
+ return { onChange, }
+}
+
+export { VisibilityAnimationHook, }

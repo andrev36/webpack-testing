@@ -6,30 +6,30 @@
 $min-width: 1200px;
 
 .three-dimension-container {
- min-width: 100%;
  @include item_style;
+ background-color: #fff;
  grid-column: 1/-1;
  min-height: 100vh;
- background-color: #fff;
+ min-width: 100%;
  position: relative;
 }
 
 .container-pet {
- position: absolute;
  left: 50vw;
+ position: absolute;
  top: 0rem;
- width: 100%;
  transform: translate(-50%);
+ width: 100%;
  @media (min-width: $min-width) {
   top: 25vh;
  }
 }
 
 .container-flex-pet {
- display: flex;
  align-items: center;
- justify-content: center;
+ display: flex;
  flex-direction: column;
+ justify-content: center;
  @media (min-width: $min-width) {
   flex-direction: row;
  }
@@ -82,8 +82,8 @@ $min-width: 1200px;
 }
 
 .choose-pet-submit-btn {
- position: absolute;
  bottom: 3rem;
+ position: absolute;
  right: 5rem;
  text-align: center;
  @media (min-width: $min-width) {

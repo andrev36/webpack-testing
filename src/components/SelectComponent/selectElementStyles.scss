@@ -6,16 +6,16 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .container__select {
  @include item_style;
- overflow-x: hidden;
- width: 100%;
  height: 25rem;
  margin: 0 auto 0;
+ overflow-x: hidden;
+ width: 100%;
 }
 
 .form__select {
- z-index: 1;
- width: 9rem;
  padding: 0.625rem;
+ width: 9rem;
+ z-index: 1;
 }
 
 .select-wrapper {
@@ -23,37 +23,36 @@
 }
 
 .select-header {
- z-index: 1;
- position: relative;
- width: 9rem;
- padding: 0.625rem;
  border: 1px solid black;
  margin: 0 auto;
  outline: none;
+ padding: 0.625rem;
+ position: relative;
+ width: 9rem;
+ z-index: 1;
 }
 
 .select-header__title {
  cursor: pointer;
- // background-color: white;
  span {
   margin: auto auto auto 8px;
  }
 }
 
 .select-wrapper__list {
- z-index: 1;
- padding: 0;
- margin: 0 auto;
  list-style: none;
+ margin: 0 auto;
+ padding: 0;
+ z-index: 1;
 }
 
 .select-wrapper__list-item {
- z-index: 1;
- width: 9rem;
- padding: 5px;
+ background-color: white;
  border: 1px solid black;
  margin: 0 auto;
- background-color: white;
+ padding: 5px;
+ width: 9rem;
+ z-index: 1;
  span {
   cursor: pointer;
  }
@@ -68,12 +67,12 @@
 }
 
 .img-cloud {
- z-index: -1;
+ height: 12rem;
+ margin: 0 auto;
  pointer-events: none;
  position: absolute;
  transform: translate(-50%, 5%);
- margin: 0 auto;
- height: 12rem;
+ z-index: -1;
 }
 
 .img-cloud-path--blue {

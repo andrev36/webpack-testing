@@ -1,20 +1,21 @@
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import { CSSPlugin, gsap } from 'gsap';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import './index.scss';
-import { Routes } from './Routes';
+// tslint:disable: file-name-casing
+import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client'
+import { CSSPlugin, gsap, } from 'gsap'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter, } from 'react-router-dom'
+import './index.scss'
+import { Routes, } from './Routes'
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Force CSSPlugin to not get dropped during build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-gsap.registerPlugin(CSSPlugin);
+gsap.registerPlugin( CSSPlugin, )
 
-const client = new ApolloClient({
+const client = new ApolloClient( {
+ cache: new InMemoryCache(),
  uri: 'http://localhost:3000/graphql',
- cache: new InMemoryCache()
-});
+}, )
 
 class App extends React.Component {
  render() {
@@ -24,8 +25,8 @@ class App extends React.Component {
      <Routes />
     </BrowserRouter>
    </ApolloProvider>
-  );
+  )
  }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render( <App />, document.getElementById( 'root', ), )

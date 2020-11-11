@@ -1,55 +1,55 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { useEffect, useRef, useState } from 'react';
-import '../../index.scss';
+import { gsap, } from 'gsap'
+import { ScrollTrigger, } from 'gsap/ScrollTrigger'
+import React, { useEffect, useRef, useState, } from 'react'
+import '../../index.scss'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin( ScrollTrigger, )
 
 const Buttons = () => {
- const [count, setCounter] = useState(0);
- const incrementContainerButtonRef = useRef(null);
- const decrementContainerButtonRef = useRef(null);
- const incrementButtonRef = useRef(null);
- const decrementButtonRef = useRef(null);
+ const [count, setCounter, ] = useState( 0, )
+ const incrementContainerButtonRef = useRef( null, )
+ const decrementContainerButtonRef = useRef( null, )
+ const incrementButtonRef = useRef( null, )
+ const decrementButtonRef = useRef( null, )
 
  const handleClickIncrement = () => {
-  setCounter((count) => count + 1);
- };
+  setCounter( ( countIncrement, ) => countIncrement + 1, )
+ }
 
  const handleClickDecrement = () => {
-  setCounter((count) => count - 1);
- };
+  setCounter( ( countDecrement, ) => countDecrement - 1, )
+ }
 
- useEffect(() => {
+ useEffect( () => {
   gsap.fromTo(
    incrementContainerButtonRef.current,
-   { x: '-=100', opacity: 0 },
+   { x: '-=100', opacity: 0, },
    {
-    x: '0',
-    opacity: 1,
-    stagger: 0.2,
     duration: 3,
+    opacity: 1,
     scrollTrigger: {
+     start: 'center-=200 center+=200',
      trigger: '.container-increment__counter-btn-increment',
-     start: 'center-=200 center+=200'
-    }
-   }
-  );
+    },
+    stagger: 0.2,
+    x: '0',
+   },
+  )
   gsap.fromTo(
    decrementContainerButtonRef.current,
-   { x: '+=100', opacity: 0 },
+   { x: '+=100', opacity: 0, },
    {
-    x: '0',
-    opacity: 1,
-    stagger: 0.2,
     duration: 3,
+    opacity: 1,
     scrollTrigger: {
+     start: 'center-=200 center+=200',
      trigger: '.container-decrement__counter-btn-decrement',
-     start: 'center-=200 center+=200'
-    }
-   }
-  );
- }, []);
+    },
+    stagger: 0.2,
+    x: '0',
+   },
+  )
+ }, [], )
 
  return (
   <section className='item'>
@@ -76,7 +76,7 @@ const Buttons = () => {
     </div>
    </div>
   </section>
- );
-};
+ )
+}
 
-export { Buttons };
+export { Buttons, }

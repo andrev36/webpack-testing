@@ -1,42 +1,48 @@
-import { gsap } from 'gsap';
-import React, { ChangeEvent, FormEvent, useRef, useState } from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
-import { VisibilityAnimationHook } from '../../animations/VisibilityAnimationHook';
-import '../../index.scss';
+import { gsap, } from 'gsap'
+import React, {
+ ChangeEvent,
+ FormEvent,
+ Fragment,
+ useRef,
+ useState,
+} from 'react'
+import VisibilitySensor from 'react-visibility-sensor'
+import { VisibilityAnimationHook, } from '../../animations/VisibilityAnimationHook'
+import '../../index.scss'
 
 const FormComponent = () => {
- const [formValues, setFormValues] = useState({
+ const [formValues, setFormValues, ] = useState( {
+  email: '',
   name: '',
-  email: ''
- });
+ }, )
 
- const printFormValues = (e: FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  console.log(formValues.name, formValues.email);
- };
+ const printFormValues = ( e: FormEvent<HTMLFormElement>, ) => {
+  e.preventDefault()
+  console.log( formValues.name, formValues.email, )
+ }
 
- const updateFormField = (e: ChangeEvent<HTMLInputElement>) => {
-  setFormValues({
+ const updateFormField = ( e: ChangeEvent<HTMLInputElement>, ) => {
+  setFormValues( {
    ...formValues,
-   [e.target.name]: e.target.value
-  });
- };
+   [e.target.name]: e.target.value,
+  }, )
+ }
 
- const formContainerRef = useRef(null);
+ const formContainerRef = useRef( null, )
 
- const hingeAnimation = gsap.from(formContainerRef.current, {
+ const hingeAnimation = gsap.from( formContainerRef.current, {
   duration: 3.5,
+  ease: 'Back.easeOut',
   rotationX: 100,
   transformOrigin: '50% 0',
-  ease: 'Back.easeOut'
- });
+ }, )
 
- const { onChange: onChangeHingeAnimation } = VisibilityAnimationHook(
-  hingeAnimation
- );
+ const { onChange: onChangeHingeAnimation, } = VisibilityAnimationHook(
+  hingeAnimation,
+ )
 
  return (
-  <React.Fragment>
+  <Fragment>
    <section className='item section__form' data-testid='container__form'>
     <VisibilitySensor onChange={onChangeHingeAnimation}>
      <div className='container-form' ref={formContainerRef}>
@@ -81,8 +87,8 @@ const FormComponent = () => {
      </div>
     </VisibilitySensor>
    </section>
-  </React.Fragment>
- );
-};
+  </Fragment>
+ )
+}
 
-export { FormComponent };
+export { FormComponent, }
