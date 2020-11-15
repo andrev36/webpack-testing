@@ -8,10 +8,13 @@ const UpArrowIcon = require( '../../assets/images/up-arrow.svg', ).default
 
 gsap.registerPlugin( ScrollTrigger, )
 
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! TODO Fix bug with visual animation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const SelectElementsComponent = () => {
  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * NOTE Select element logic
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    * NOTE Select element logic
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const [pickedColor, setPickedColor, ] = useState<string>( 'blue', )
  const [listOpen, setListOpen, ] = useState( false, )
 
@@ -48,8 +51,8 @@ const SelectElementsComponent = () => {
  ( SelectElementsComponent as any ).handleClickOutside = () => setListOpen( false, )
 
  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * NOTE Fade in animations
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    * NOTE Fade in animations
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const headingRef = useRef( null, )
  const selectElementRef = useRef( null, )
 

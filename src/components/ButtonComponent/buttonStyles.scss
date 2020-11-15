@@ -30,14 +30,8 @@
  @include btn_style;
 }
 
-.container-increment__counter-btn {
- @include btn_style;
-}
-
-.container-decrement__counter-btn {
- @include btn_style;
-}
-
 .section-counter {
  margin: 2rem auto;
+ padding-bottom: 2rem;
+ padding-top: 2rem;
 }

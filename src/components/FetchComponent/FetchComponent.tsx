@@ -1,17 +1,17 @@
-import { gsap, } from 'gsap';
-import React, { useEffect, useRef, useState, } from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
+import { gsap, } from 'gsap'
+import React, { useEffect, useRef, useState, } from 'react'
+import VisibilitySensor from 'react-visibility-sensor'
 import {
  GSAPFadeInAnimationFromValues,
  GSAPFadeInAnimationToValues,
-} from '../../animations/fadeInAnimations';
-import { VisibilityAnimationHook, } from '../../animations/VisibilityAnimationHook';
-import '../../index.scss';
-const GlobeIcon = require( '../../assets/images/globe.svg', ).default;
+} from '../../animations/fadeInAnimations'
+import { VisibilityAnimationHook, } from '../../animations/VisibilityAnimationHook'
+import '../../index.scss'
+const GlobeIcon = require( '../../assets/images/globe.svg', ).default
 
 interface Props {
- name?: string;
- code?: string;
+ name?: string
+ code?: string
 }
 
 const queryFetch = ( query: string, ) =>
@@ -25,21 +25,21 @@ const queryFetch = ( query: string, ) =>
   method: 'POST',
  }, )
   .then( ( res, ) => res.json(), )
-  .catch( ( err, ) => console.log( err, ), );
+  .catch( ( err, ) => console.log( err, ), )
 
 const FetchComponent = () => {
- const [continents, setContinent, ] = useState( [], );
- const containerRef = useRef( null, );
+ const [continents, setContinent, ] = useState( [], )
+ const containerRef = useRef( null, )
 
  const fadeInFromRightSideAnimation = gsap.fromTo(
   containerRef.current,
   GSAPFadeInAnimationFromValues( -100, ),
   GSAPFadeInAnimationToValues(),
- );
+ )
 
  const { onChange: onChangeFadeFromRightSide, } = VisibilityAnimationHook(
   fadeInFromRightSideAnimation,
- );
+ )
 
  useEffect( () => {
   queryFetch( `
@@ -51,8 +51,8 @@ const FetchComponent = () => {
   }
 `, )
    .then( ( data, ) => setContinent( data.data.continents, ), )
-   .catch( ( err, ) => console.log( err, ), );
- }, [], );
+   .catch( ( err, ) => console.log( err, ), )
+ }, [], )
 
  return (
   <section className='item fetch-section'>
@@ -71,12 +71,12 @@ const FetchComponent = () => {
           />
           <span>{continent.name}</span>
          </li>
-        );
+        )
        }, )
      : null}
    </ul>
   </section>
- );
-};
+ )
+}
 
-export { queryFetch, FetchComponent, };
+export { queryFetch, FetchComponent, }

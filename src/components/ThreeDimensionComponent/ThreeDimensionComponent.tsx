@@ -200,24 +200,22 @@ const ThreeDimensionComponent = () => {
  const DUCK_Z_POSITION = isWide ? 3 : 3
 
  return (
-  <section className='three-dimension-container'>
-   <Fragment>
-    <Canvas
-     camera={{
-      position: [0, 0, 0, ],
-     }}
-    >
-     <HTMLContent
-      CHICKEN_Z_POSITION={CHICKEN_Z_POSITION}
-      COW_Z_POSITION={COW_Z_POSITION}
-      DUCK_Z_POSITION={DUCK_Z_POSITION}
-     />
-    </Canvas>
-    <header>
-     <button className='btn choose-pet-submit-btn'>Submit</button>
-    </header>
-   </Fragment>
-  </section>
+  <Fragment>
+   <Canvas
+    camera={{
+     position: [0, 0, 0, ],
+    }}
+   >
+    <HTMLContent
+     CHICKEN_Z_POSITION={CHICKEN_Z_POSITION}
+     COW_Z_POSITION={COW_Z_POSITION}
+     DUCK_Z_POSITION={DUCK_Z_POSITION}
+    />
+   </Canvas>
+   <header>
+    <button className='btn choose-pet-submit-btn'>Submit</button>
+   </header>
+  </Fragment>
  )
 }
 

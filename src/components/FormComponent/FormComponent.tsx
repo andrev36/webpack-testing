@@ -10,6 +10,9 @@ import VisibilitySensor from 'react-visibility-sensor'
 import { VisibilityAnimationHook, } from '../../animations/VisibilityAnimationHook'
 import '../../index.scss'
 
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! TODO Fix bug with visual animation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const FormComponent = () => {
  const [formValues, setFormValues, ] = useState( {
   email: '',
@@ -43,7 +46,7 @@ const FormComponent = () => {
 
  return (
   <Fragment>
-   <section className='item section__form' data-testid='container__form'>
+   <section className='section__form' data-testid='container__form'>
     <VisibilitySensor onChange={onChangeHingeAnimation}>
      <div className='container-form' ref={formContainerRef}>
       <h2>Form</h2>
