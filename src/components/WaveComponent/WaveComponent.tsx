@@ -1,50 +1,30 @@
-import {
- GSAPFadeInAnimationFromValues,
- GSAPFadeInAnimationToValues,
-} from 'animations/fadeInAnimations'
-import { VisibilityAnimationHook, } from 'animations/VisibilityAnimationHook'
 import { gsap, } from 'gsap'
-import React, { useRef, } from 'react'
-import VisibilitySensor from 'react-visibility-sensor'
+import React from 'react'
 import '../../index.scss'
 const TreasureIcon = require( '../../assets/images/treasure.svg', ).default
 
 const WaveComponent = () => {
- const WaveButtonRef = useRef( null, )
- const WaveContainerRef = useRef( null, )
-
  const handleClick = () => {
-  gsap.to( WaveContainerRef.current, {
+  gsap.to( '.container-wave-part', {
    duration: 1,
    y: 100,
   }, )
  }
 
- const fadeInFromRightSideAnimation = gsap.fromTo(
-  WaveButtonRef.current,
-  GSAPFadeInAnimationFromValues( 100, ),
-  GSAPFadeInAnimationToValues(),
- )
-
- const { onChange, } = VisibilityAnimationHook( fadeInFromRightSideAnimation, )
-
  return (
   <React.Fragment>
    <section className='item-full-width container-wave'>
-    <VisibilitySensor onChange={onChange}>
-     <button
-      className='container-wave__btn-wave'
-      onClick={handleClick}
-      ref={WaveButtonRef}
-      type='button'
-     >
-      Test Button
-     </button>
-    </VisibilitySensor>
+    <button
+     className='container-wave__btn-wave'
+     onClick={handleClick}
+     type='button'
+    >
+     Test Button
+    </button>
     <div className='container-wave__treasure-img'>
      <img src={TreasureIcon} alt='treasure' width='100px' />
     </div>
-    <div className='container-wave-part' ref={WaveContainerRef}>
+    <div className='container-wave-part'>
      <svg
       className='svg-wave1'
       viewBox='0 0 1440 320'

@@ -1,6 +1,6 @@
 import { gsap, } from 'gsap'
 import { ScrollTrigger, } from 'gsap/ScrollTrigger'
-import React, { useEffect, useRef, useState, } from 'react'
+import React, { useRef, useState, } from 'react'
 import onClickOutside from 'react-onclickoutside'
 import '../../index.scss'
 const DownArrowIcon = require( '../../assets/images/down-arrow.svg', ).default
@@ -8,9 +8,6 @@ const UpArrowIcon = require( '../../assets/images/up-arrow.svg', ).default
 
 gsap.registerPlugin( ScrollTrigger, )
 
-/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-! TODO Fix bug with visual animation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const SelectElementsComponent = () => {
  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     * NOTE Select element logic
@@ -55,37 +52,6 @@ const SelectElementsComponent = () => {
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const headingRef = useRef( null, )
  const selectElementRef = useRef( null, )
-
- useEffect( () => {
-  gsap.fromTo(
-   headingRef.current,
-   { x: '-=100', opacity: 0, },
-   {
-    duration: 3,
-    opacity: 1,
-    scrollTrigger: {
-     start: 'center-=200 center+=200',
-     trigger: 'heading__picked-color',
-    },
-    stagger: 0.2,
-    x: '0',
-   },
-  )
-  gsap.fromTo(
-   selectElementRef.current,
-   { x: '+=100', opacity: 0, },
-   {
-    duration: 3,
-    opacity: 1,
-    scrollTrigger: {
-     start: 'center-=200 center+=200',
-     trigger: 'select-wrapper',
-    },
-    stagger: 0.2,
-    x: '0',
-   },
-  )
- }, [], )
 
  return (
   <section className='container__select'>

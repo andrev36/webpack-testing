@@ -212,9 +212,6 @@ const ThreeDimensionComponent = () => {
      DUCK_Z_POSITION={DUCK_Z_POSITION}
     />
    </Canvas>
-   <header>
-    <button className='btn choose-pet-submit-btn'>Submit</button>
-   </header>
   </Fragment>
  )
 }

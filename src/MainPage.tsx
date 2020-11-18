@@ -2,7 +2,7 @@ import { ThreeDimensionComponent, } from 'components/ThreeDimensionComponent/Thr
 import { gsap, } from 'gsap'
 import { ScrollToPlugin, } from 'gsap/ScrollToPlugin'
 import { ScrollTrigger, } from 'gsap/ScrollTrigger'
-import React, { useEffect, useRef, useState, } from 'react'
+import React, { useEffect, useState, } from 'react'
 import { Buttons, } from './components/ButtonComponent/Buttons'
 import { FetchComponent, } from './components/FetchComponent/FetchComponent'
 import { FormComponent, } from './components/FormComponent/FormComponent'
@@ -14,7 +14,6 @@ gsap.registerPlugin( ScrollTrigger, )
 gsap.registerPlugin( ScrollToPlugin, )
 
 const MainPage = () => {
- const slideContainerRef = useRef<any>()
  const [currentSlide, setCurrentSlide, ] = useState<number>( 1, )
 
  const [pageHeight, setPageHeight, ] = useState( window.innerHeight, )
@@ -28,7 +27,7 @@ const MainPage = () => {
  useEffect( () => {
   window.addEventListener( 'resize', updatePageHeight, )
 
-  gsap.set( slideContainerRef.current, {
+  gsap.set( '.slides-container', {
    height: `${pageHeight} px`,
    scrollTo: {
     y: `.slide-${currentSlide}`,
@@ -38,37 +37,100 @@ const MainPage = () => {
   return () => window.removeEventListener( 'resize', updatePageHeight, )
  }, [], )
 
- const goToNextSlide = () => {
-  gsap.to( slideContainerRef.current, {
+ const goToSlide = ( slide: number, ) => {
+  setCurrentSlide( slide, )
+  gsap.to( '.slides-container', {
    duration: 1,
    scrollTo: {
-    y: `.slide-${currentSlide + 1}`,
+    y: `.slide-${slide}`,
    },
   }, )
-  setCurrentSlide( currentSlide + 1, )
+  setCurrentSlide( slide, )
  }
 
- const goToPreviousSlide = () => {
-  gsap.to( slideContainerRef.current, {
-   duration: 1,
-   scrollTo: {
-    y: `.slide-${currentSlide - 1}`,
+ const handleGoToFirstSlide = () => goToSlide( 1, )
+
+ const handleGoToSecondSlide = () => {
+  goToSlide( 2, )
+  gsap.fromTo(
+   '.container-increment',
+   { x: '-=100', opacity: 0, },
+   {
+    duration: 3,
+    opacity: 1,
+    stagger: 0.2,
+    x: '0',
    },
+  )
+  gsap.fromTo(
+   '.container-decrement',
+   { x: '+=100', opacity: 0, },
+   {
+    duration: 3,
+    opacity: 1,
+    stagger: 0.2,
+    x: '0',
+   },
+  )
+  gsap.fromTo(
+   '.heading__picked-color',
+   { x: '-=100', opacity: 0, },
+   {
+    duration: 3,
+    opacity: 1,
+    stagger: 0.2,
+    x: '0',
+   },
+  )
+  gsap.fromTo(
+   '.select-wrapper',
+   { x: '+=100', opacity: 0, },
+   {
+    duration: 3,
+    opacity: 1,
+    stagger: 0.2,
+    x: '0',
+   },
+  )
+  gsap.from( '.container-form', {
+   duration: 3.5,
+   ease: 'Back.easeOut',
+   rotationX: 100,
+   transformOrigin: '50% 0',
   }, )
-  setCurrentSlide( currentSlide - 1, )
  }
 
- const handleGoToNextSlide = () => goToNextSlide()
- const handleGoToPreviousSlide = () => goToPreviousSlide()
+ const handleGoToThirdSlide = () => {
+  goToSlide( 3, )
+  gsap.fromTo(
+   '.container-wave__btn-wave',
+   {
+    autoAlpha: 0,
+    duration: 2,
+    opacity: 0,
+    x: 100,
+   },
+   {
+    autoAlpha: 1,
+    opacity: 1,
+    x: 0,
+   },
+  )
+ }
 
  return (
   <React.Fragment>
-   <main className='slides-container' ref={slideContainerRef}>
+   <main className='slides-container'>
     <section className='slide slide-1'>
      <ThreeDimensionComponent />
-     <button className='btn go-next' onClick={handleGoToNextSlide}>
-      Next
-     </button>
+     <header className='btn-container-next-prev'>
+      <button
+       className='btn btn-go-next-slide-1'
+       onClick={handleGoToSecondSlide}
+      >
+       Next
+      </button>
+     </header>
     </section>
     <section className='slide slide-2'>
      <div className='slide-2-flex-item'>
@@ -80,19 +142,26 @@ const MainPage = () => {
      <div className='slide-2-flex-item'>
       <FormComponent />
      </div>
-     <button className='btn go-next' onClick={handleGoToNextSlide}>
-      Next
-     </button>
-     <button className='btn go-prev' onClick={handleGoToPreviousSlide}>
-      Previous
-     </button>
+     <header className='btn-container-next-prev'>
+      <button
+       className='btn btn-go-prev-slide-2'
+       onClick={handleGoToFirstSlide}
+      >
+       Previous
+      </button>
+      <button
+       className='btn btn-go-next-slide-2'
+       onClick={handleGoToThirdSlide}
+      >
+       Next
+      </button>
+     </header>
     </section>
     <section className='slide slide-3'>
      <WaveComponent />
      <button
-      className='btn go-prev'
-      onClick={handleGoToPreviousSlide}
-      style={{ position: 'absolute', top: '2rem', right: '2rem', }}
+      className='btn btn-go-prev-slide-3'
+      onClick={handleGoToSecondSlide}
      >
       Previous
      </button>
