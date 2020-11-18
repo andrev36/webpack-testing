@@ -1,14 +1,21 @@
 import { gsap, } from 'gsap'
-import React from 'react'
+import React, { useState, } from 'react'
 import '../../index.scss'
+import { Portal, } from './Portal'
 const TreasureIcon = require( '../../assets/images/treasure.svg', ).default
 
 const WaveComponent = () => {
- const handleClick = () => {
+ const [isPortalVisible, setPortalVisible, ] = useState( false, )
+
+ const handleButtonClick = () => {
   gsap.to( '.container-wave-part', {
    duration: 1,
    y: 100,
   }, )
+ }
+
+ const handleChestIconClick = () => {
+  setPortalVisible( true, )
  }
 
  return (
@@ -16,13 +23,13 @@ const WaveComponent = () => {
    <section className='item-full-width container-wave'>
     <button
      className='container-wave__btn-wave'
-     onClick={handleClick}
+     onClick={handleButtonClick}
      type='button'
     >
      Test Button
     </button>
     <div className='container-wave__treasure-img'>
-     <img src={TreasureIcon} alt='treasure' width='100px' />
+     <img src={TreasureIcon} alt='treasure' width='100px' onClick={handleChestIconClick}   />
     </div>
     <div className='container-wave-part'>
      <svg
@@ -40,6 +47,11 @@ const WaveComponent = () => {
      </svg>
     </div>
    </section>
+   {isPortalVisible ? (
+    <Portal id='modal-root'  >
+     <div>hello portal</div>
+    </Portal>
+   ) : null}
   </React.Fragment>
  )
 }
