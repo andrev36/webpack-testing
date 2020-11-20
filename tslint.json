@@ -144,7 +144,7 @@
     "index-signature": "space",
     "parameter": "nospace",
     "property-declaration": "nospace",
-    "variable-declaration": "space"
+    "variable-declaration": "nospace"
    }
   ],
   "unified-signatures": true,

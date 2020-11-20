@@ -18,7 +18,7 @@ const Buttons = () => {
 
  return (
   <div className='section-counter'>
-   <div className='container-increment'>
+   <div className='section-counter__container-increment'>
     <button
      className='btn container-increment__counter-btn-increment'
      onClick={handleClickIncrement}
@@ -28,7 +28,7 @@ const Buttons = () => {
    </div>
    <h2>Current count:</h2>
    <h2 data-testid='countvalue'>{count}</h2>
-   <div className='container-decrement'>
+   <div className='section-counter__container-decrement'>
     <button
      className='btn container-decrement__counter-btn-decrement'
      onClick={handleClickDecrement}

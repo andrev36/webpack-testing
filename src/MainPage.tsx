@@ -4,7 +4,6 @@ import { ScrollToPlugin, } from 'gsap/ScrollToPlugin'
 import { ScrollTrigger, } from 'gsap/ScrollTrigger'
 import React, { useEffect, useState, } from 'react'
 import { Buttons, } from './components/ButtonComponent/Buttons'
-import { FetchComponent, } from './components/FetchComponent/FetchComponent'
 import { FormComponent, } from './components/FormComponent/FormComponent'
 import { SelectElements, } from './components/SelectComponent/SelectElement'
 import { WaveComponent, } from './components/WaveComponent/WaveComponent'
@@ -26,16 +25,15 @@ const MainPage = () => {
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  useEffect( () => {
   window.addEventListener( 'resize', updatePageHeight, )
-
-  gsap.set( '.slides-container', {
-   height: `${pageHeight} px`,
+  gsap.to( '.slides-container', {
+   duration: 0.1,
    scrollTo: {
     y: `.slide-${currentSlide}`,
    },
   }, )
 
   return () => window.removeEventListener( 'resize', updatePageHeight, )
- }, [], )
+ }, [ window.innerHeight, ], )
 
  const goToSlide = ( slide: number, ) => {
   setCurrentSlide( slide, )
@@ -136,7 +134,7 @@ const MainPage = () => {
      <div className='slide-2-flex-item'>
       <Buttons />
      </div>
-     <div className='slide-2-flex-item container__select'>
+     <div className='slide-2-flex-item'>
       <SelectElements />
      </div>
      <div className='slide-2-flex-item'>
@@ -165,9 +163,6 @@ const MainPage = () => {
      >
       Previous
      </button>
-    </section>
-    <section className='slide slide-4'>
-     <FetchComponent />
     </section>
    </main>
   </React.Fragment>

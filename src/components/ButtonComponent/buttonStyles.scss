@@ -31,7 +31,17 @@
 }
 
 .section-counter {
- margin: 2rem auto;
- padding-bottom: 2rem;
- padding-top: 2rem;
+ align-items: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ margin: auto;
+ @media (max-width: 900px) {
+  flex-direction: row;
+ }
+}
+
+.section-counter__container-increment,
+.section-counter__container-decrement {
+ margin: auto 1rem;
 }

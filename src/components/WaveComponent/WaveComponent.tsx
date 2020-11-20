@@ -1,8 +1,10 @@
+import { FetchComponent, } from 'components/FetchComponent/FetchComponent'
 import { gsap, } from 'gsap'
 import React, { useState, } from 'react'
 import '../../index.scss'
 import { Portal, } from './Portal'
 const TreasureIcon = require( '../../assets/images/treasure.svg', ).default
+const PortalCloseIcon = require( '../../assets/images/close.svg', ).default
 
 const WaveComponent = () => {
  const [isPortalVisible, setPortalVisible, ] = useState( false, )
@@ -12,10 +14,21 @@ const WaveComponent = () => {
    duration: 1,
    y: 100,
   }, )
+  gsap.to( '.container-wave__treasure-img', {
+   duration: 0.1,
+   repeat: -1,
+   x: '-=5',
+   y: '+=5',
+   yoyo: true,
+  }, )
  }
 
  const handleChestIconClick = () => {
   setPortalVisible( true, )
+ }
+
+ const handlePortalCloseButtonClick = () => {
+  setPortalVisible( false, )
  }
 
  return (
@@ -28,8 +41,14 @@ const WaveComponent = () => {
     >
      Test Button
     </button>
-    <div className='container-wave__treasure-img'>
-     <img src={TreasureIcon} alt='treasure' width='100px' onClick={handleChestIconClick}   />
+    <div className='container-wave__container-treasure-img'>
+     <img
+      alt='treasure'
+      className='container-wave__treasure-img'
+      onClick={handleChestIconClick}
+      src={TreasureIcon}
+      width='100px'
+     />
     </div>
     <div className='container-wave-part'>
      <svg
@@ -46,12 +65,29 @@ const WaveComponent = () => {
       />
      </svg>
     </div>
+    {isPortalVisible ? (
+     <Portal id='modal-root'>
+      <section className='container-portal'>
+       <header className='container-close-icon'>
+        <button
+         className='btn container-close-icon__btn'
+         onClick={handlePortalCloseButtonClick}
+        >
+         <img
+          alt='close portal'
+          className='container-close-icon__img'
+          src={PortalCloseIcon}
+         />
+        </button>
+       </header>
+       <main className='container-portal-main-content'  >
+        <h1 className='container-portal-main-content__heading'>Congratulations</h1>
+        <FetchComponent />
+       </main>
+      </section>
+     </Portal>
+    ) : null}
    </section>
-   {isPortalVisible ? (
-    <Portal id='modal-root'  >
-     <div>hello portal</div>
-    </Portal>
-   ) : null}
   </React.Fragment>
  )
 }

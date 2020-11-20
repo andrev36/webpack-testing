@@ -14,3 +14,8 @@ target="_blank">Up Arrow Icon</a> by <a
 href="https://iconscout.com/contributors/Rengised">Alex
 Martinov</a> on <a
 href="https://iconscout.com">Iconscout</a>
+
+<a href="https://iconscout.com/icons/close"
+target="_blank">Close Icon</a> by <a
+href="https://iconscout.com/contributors/google-inc"
+target="_blank">Google Inc.</a>

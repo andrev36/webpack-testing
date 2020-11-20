@@ -18,34 +18,85 @@
 
 .container-wave__btn-wave {
  @include btn_style;
+ left: 50vw;
+ position: absolute;
+ top: 5rem;
+ transform: translate(-50%);
+}
+
+.container-wave__container-treasure-img {
+ margin: 0.3rem;
+ overflow: visible;
 }
 
 .container-wave__treasure-img {
- margin: 3rem auto;
+ margin: 3rem auto auto;
  position: relative;
  @media (max-width: 900px) {
-  margin: 9rem auto;
+  margin: 9rem auto auto;
  }
  @media (min-width: 900px) and (max-width: 1200px) {
-  margin: 6rem auto;
+  margin: 6rem auto auto;
  }
 }
 
 .svg-wave1 {
- bottom: 10.9rem;
+ bottom: 21.9rem;
  fill: #0099ff;
  left: 0;
  pointer-events: none;
  position: absolute;
  width: 100%;
  z-index: 0;
+ @media (max-width: 900px) {
+  bottom: 23.9rem;
+ }
 }
 
 .container-wave-part {
  background: #0099ff;
  bottom: 0;
- height: 11rem;
+ height: 22rem;
  left: 0;
  position: absolute;
  width: 100%;
+ @media (max-width: 900px) {
+  height: 24rem;
+ }
+}
+
+.container-portal {
+ align-items: center;
+ background-color: white;
+ border: 1px solid black;
+ display: flex;
+ height: 90vh;
+ justify-content: center;
+ left: 50vw;
+ position: relative;
+ top: 0;
+ transform: translate(-50%);
+ width: 90vw;
+ z-index: 9999;
+}
+
+.container-close-icon {
+ position: absolute;
+ right: 3rem;
+ top: 3rem;
+}
+
+.container-portal-main-content__heading {
+ text-align: center;
+}
+
+.container-close-icon__btn {
+ background-color: white;
+}
+
+.container-portal-main-content {
+ left: 50%;
+ position: absolute;
+ top: 10rem;
+ transform: translate(-50%);
 }
