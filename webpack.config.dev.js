@@ -1,7 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -9,20 +7,22 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const gsapPath = '/node_modules/gsap/src/uncompressed/'
 
 module.exports = {
+ devServer: {
+  contentBase: './dist',
+  historyApiFallback: true,
+  host: 'localhost',
+  inline: true,
+  port: 3000,
+ },
  devtool: 'source-map',
  entry: path.join(__dirname, 'src', 'index.tsx'),
- mode: 'production',
+ // entry: '../src/index.tsx',
+ mode: 'development',
  module: {
   rules: [
-   // {
-   //  test: /.s?css$/,
-   //  use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-   // },
    {
-    test: /\.tsx?$/,
-    exclude: '/node_modules/',
-    include: path.resolve(__dirname, 'src'),
-    use: 'ts-loader',
+    test: /\.(tsx|ts)$/,
+    use: ['babel-loader', 'ts-loader', 'tslint-loader'],
    },
    {
     test: /\.scss$/,
@@ -96,14 +96,6 @@ module.exports = {
    },
   ],
  },
- optimization: {
-  minimize: true,
-  minimizer: [
-   // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-   // `...`
-   new CssMinimizerPlugin(),
-  ],
- },
  output: {
   filename: '[name].js',
   path: path.resolve(__dirname, 'dist'),
@@ -138,4 +130,5 @@ module.exports = {
   extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   modules: ['node_modules', path.resolve(__dirname, 'src')],
  },
+ watch: true,
 }
