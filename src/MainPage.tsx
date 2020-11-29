@@ -8,6 +8,7 @@ import { FormComponent, } from './components/FormComponent/FormComponent'
 import { SelectElements, } from './components/SelectComponent/SelectElement'
 import { WaveComponent, } from './components/WaveComponent/WaveComponent'
 import './index.scss'
+const BackgroundPicture = require( './assets/images/background/background.png', ).default
 
 gsap.registerPlugin( ScrollTrigger, )
 gsap.registerPlugin( ScrollToPlugin, )
@@ -120,6 +121,11 @@ const MainPage = () => {
   <React.Fragment>
    <main className='slides-container'>
     <section className='slide slide-1'>
+     <img
+      src={BackgroundPicture}
+      alt='background'
+      className='slide-1__background-img'
+     />
      <ThreeDimensionComponent />
      <header className='btn-container-next-prev'>
       <button

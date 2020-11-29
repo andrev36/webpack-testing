@@ -83,6 +83,17 @@ module.exports = {
     ],
    },
    {
+    test: /\.mp3$/,
+    use: [
+     {
+      loader: 'file-loader',
+      options: {
+       outputPath: 'assets/sounds',
+      },
+     },
+    ],
+   },
+   {
     test: /\.(bin)$/,
     use: [
      {

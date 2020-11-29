@@ -130,6 +130,22 @@ const HTMLContent = ( {
  COW_Z_POSITION,
  DUCK_Z_POSITION,
 }: any, ) => {
+ const CowSound = new Audio( '/sounds/Cow/cow.mp3', )
+ const ChickenSound = new Audio( '/sounds/Chicken/chicken.mp3', )
+ const DuckSound = new Audio( '/sounds/Duck/duck.mp3', )
+
+ const playCowSound = () => {
+  return CowSound.play()
+ }
+
+ const playChickenSound = () => {
+  return ChickenSound.play()
+ }
+
+ const playDuckSound = () => {
+  return DuckSound.play()
+ }
+
  return (
   <Html>
    <div className='container-pet'>
@@ -146,7 +162,10 @@ const HTMLContent = ( {
         <DuckModel />
        </Suspense>
       </Canvas>
-      <button className='container-choose-pet-btn__choose-btn-duck'>
+      <button
+       className='container-choose-pet-btn__choose-btn-duck'
+       onClick={playDuckSound}
+      >
        Duck
       </button>
      </div>
@@ -162,7 +181,12 @@ const HTMLContent = ( {
         <CowModel />
        </Suspense>
       </Canvas>
-      <button className='container-choose-pet-btn__choose-btn-cow'>Cow</button>
+      <button
+       className='container-choose-pet-btn__choose-btn-cow'
+       onClick={playCowSound}
+      >
+       Cow
+      </button>
      </div>
      <div className='container-choose-pet container-choose-pet-chicken'>
       <Canvas
@@ -177,7 +201,10 @@ const HTMLContent = ( {
         <ChickenModel />
        </Suspense>
       </Canvas>
-      <button className=' container-choose-pet-btn__choose-btn-chicken'>
+      <button
+       className=' container-choose-pet-btn__choose-btn-chicken'
+       onClick={playChickenSound}
+      >
        Chicken
       </button>
      </div>
@@ -194,7 +221,7 @@ const ThreeDimensionComponent = () => {
  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * NOTE Media query for 3D models position
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
- const isWide = useMedia( '(min-width: 1100px) ', )
+ const isWide = useMedia( '(min-width: 1100px)', )
  const CHICKEN_Z_POSITION = isWide ? 3 : 3
  const COW_Z_POSITION = isWide ? -25 : -25
  const DUCK_Z_POSITION = isWide ? 3 : 3
