@@ -75,28 +75,32 @@
  left: 50vw;
  position: relative;
  top: 0;
- transform: translate(-50%);
+ transform: translate(-52.5%);
  width: 90vw;
  z-index: 9999;
 }
 
 .container-close-icon {
  position: absolute;
- right: 3rem;
- top: 3rem;
+ bottom: 2rem;
 }
 
-.container-portal-main-content__heading {
+.container-portal__container-heading {
+ width: 100%;
+}
+
+.container-portal__heading {
+ background-color: #F2F2F2;
+ border-bottom: 5px solid green;
+ font-size: 3rem;
+ margin-top: 0;
+ padding-bottom: 0.8rem;
+ position: absolute;
  text-align: center;
+ top: 2px;
+ width: 100%;
 }
 
 .container-close-icon__btn {
  background-color: white;
-}
-
-.container-portal-main-content {
- left: 50%;
- position: absolute;
- top: 10rem;
- transform: translate(-50%);
 }

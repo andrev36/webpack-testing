@@ -68,11 +68,15 @@ const WaveComponent = () => {
     {isPortalVisible ? (
      <Portal id='modal-root'>
       <section className='container-portal'>
+       <div className='container-portal__container-heading'>
+        <h1 className='container-portal__heading'>Congratulations</h1>
+       </div>
        <header className='container-close-icon'>
         <button
          className='btn container-close-icon__btn'
          onClick={handlePortalCloseButtonClick}
         >
+         <span>Close</span>
          <img
           alt='close portal'
           className='container-close-icon__img'
@@ -80,10 +84,7 @@ const WaveComponent = () => {
          />
         </button>
        </header>
-       <main className='container-portal-main-content'  >
-        <h1 className='container-portal-main-content__heading'>Congratulations</h1>
-        <FetchComponent />
-       </main>
+       <FetchComponent />
       </section>
      </Portal>
     ) : null}

@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState, } from 'react'
+import React, { useEffect, useState, } from 'react'
 import '../../index.scss'
 
 const FetchComponent = () => {
  const [quote, setQuote, ] = useState( '', )
- const containerRef = useRef( null, )
 
  useEffect( () => {
   fetch( 'https://api.kanye.rest', )
@@ -13,9 +12,9 @@ const FetchComponent = () => {
  }, [], )
 
  return (
-  <section className='item fetch-section'>
-   <h2 ref={containerRef}>item names (Fetched from GraphQL API):</h2>
-   <span className='fetch-section__quote'>{quote}</span>
+  <section className='fetch-section'>
+   <div className='fetch-section__quote'><q>{quote}</q></div>
+   <p className='fetch-section_quote-author'>- Kanye West</p>
   </section>
  )
 }
