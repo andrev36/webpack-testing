@@ -30,14 +30,56 @@
 }
 
 .container-wave__treasure-img {
- margin: 3rem auto auto;
- position: relative;
+ margin: auto auto;
+ position: absolute;
+ top: 30vh;
  @media (max-width: 900px) {
-  margin: 9rem auto auto;
+  top: 40vh;
  }
  @media (min-width: 900px) and (max-width: 1200px) {
-  margin: 6rem auto auto;
+  top: 35vh;
  }
+}
+
+.container-wave__container-sun-img {
+ margin: 0.3rem;
+ overflow: visible;
+}
+
+.container-wave__sun-img {
+ left: 5rem;
+ margin: 1rem auto auto;
+ position: absolute;
+ top: 3rem;
+ @media (max-width: 900px) {
+  margin: 8rem auto auto;
+ }
+ @media (min-width: 900px) and (max-width: 1200px) {
+  margin: 5rem auto auto;
+ }
+}
+
+.container-wave__container-cloud-img {
+ margin: 0.3rem;
+ overflow: visible;
+}
+
+.container-wave__cloud-img {
+ margin: 1rem auto auto;
+ position: absolute;
+ right: 0rem;
+ top: -4rem;
+ z-index: 0;
+ @media (min-width: 900px) and (max-width: 3000px) {
+  right: 5rem;
+  top: 4rem;
+ }
+}
+
+.container-wave__sand-background {
+ background: #f9e3be;
+ height: 6rem;
+ width: 100vw;
 }
 
 .svg-wave1 {
@@ -90,7 +132,7 @@
 }
 
 .container-portal__heading {
- background-color: #F2F2F2;
+ background-color: #f2f2f2;
  border-bottom: 5px solid green;
  font-size: 3rem;
  margin-top: 0;

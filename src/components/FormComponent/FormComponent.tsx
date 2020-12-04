@@ -21,6 +21,9 @@ const FormComponent = () => {
  return (
   <Fragment>
    <section className='section__form' data-testid='container__form'>
+    <div className='slide-2-flex-item__numbering'>
+     <p>3</p>
+    </div>
     <div className='container-form'>
      <form action='POST' onSubmit={printFormValues}>
       <section className='form__input-with-label'>
@@ -40,10 +43,6 @@ const FormComponent = () => {
         />
        </div>
       </section>
-      <br />
-      <button type='submit' className='form__btn'>
-       Submit
-      </button>
      </form>
     </div>
    </section>

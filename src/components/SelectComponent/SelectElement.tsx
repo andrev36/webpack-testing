@@ -51,10 +51,13 @@ const SelectElementsComponent = () => {
     * NOTE Fade in animations
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const headingRef = useRef( null, )
- const selectElementRef = useRef( null, )
+  const selectElementRef = useRef( null, )
 
  return (
   <section className='container__select'>
+   <div className='slide-2-flex-item__numbering'>
+    <p>2</p>
+   </div>
    <svg
     className='img-cloud'
     height='471px'

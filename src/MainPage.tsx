@@ -2,13 +2,14 @@ import { ThreeDimensionComponent, } from 'components/ThreeDimensionComponent/Thr
 import { gsap, } from 'gsap'
 import { ScrollToPlugin, } from 'gsap/ScrollToPlugin'
 import { ScrollTrigger, } from 'gsap/ScrollTrigger'
-import React, { useEffect, useState, } from 'react'
-import { Buttons, } from './components/ButtonComponent/Buttons'
-import { FormComponent, } from './components/FormComponent/FormComponent'
-import { SelectElements, } from './components/SelectComponent/SelectElement'
+import React, { ChangeEvent, FormEvent, useEffect, useState, } from 'react'
+import { FirstSlideContent, } from 'slides/FirstSlideContent'
+import { SecondSlideContent, } from 'slides/SecondSlideContent'
+import { ThirdSlideContent, } from 'slides/ThirdSlideContent'
 import { WaveComponent, } from './components/WaveComponent/WaveComponent'
 import './index.scss'
-const BackgroundPicture = require( './assets/images/background/background.png', ).default
+const BackgroundPicture = require( './assets/images/background/background.png', )
+ .default
 
 gsap.registerPlugin( ScrollTrigger, )
 gsap.registerPlugin( ScrollToPlugin, )
@@ -117,59 +118,36 @@ const MainPage = () => {
   )
  }
 
+ const [chosenAnimal, setChosenAnimal, ] = useState( '', )
+
+ const handleClick = () => setChosenAnimal( 'Cow', )
+
+ const [formValues, setFormValues, ] = useState( {
+  name: '',
+ }, )
+
+ const printFormValues = ( e: FormEvent<HTMLFormElement>, ) => {
+  e.preventDefault()
+  console.log( formValues.name, )
+ }
+
+ const updateFormField = ( e: ChangeEvent<HTMLInputElement>, ) => {
+  setFormValues( {
+   ...formValues,
+   [e.target.name]: e.target.value,
+  }, )
+ }
+
  return (
   <React.Fragment>
    <main className='slides-container'>
-    <section className='slide slide-1'>
-     <img
-      src={BackgroundPicture}
-      alt='background'
-      className='slide-1__background-img'
-     />
-     <ThreeDimensionComponent />
-     <header className='btn-container-next-prev'>
-      <button
-       className='btn btn-go-next-slide-1'
-       onClick={handleGoToSecondSlide}
-      >
-       Next
-      </button>
-     </header>
-    </section>
-    <section className='slide slide-2'>
-     <div className='slide-2-flex-item'>
-      <Buttons />
-     </div>
-     <div className='slide-2-flex-item'>
-      <SelectElements />
-     </div>
-     <div className='slide-2-flex-item'>
-      <FormComponent />
-     </div>
-     <header className='btn-container-next-prev'>
-      <button
-       className='btn btn-go-prev-slide-2'
-       onClick={handleGoToFirstSlide}
-      >
-       Previous
-      </button>
-      <button
-       className='btn btn-go-next-slide-2'
-       onClick={handleGoToThirdSlide}
-      >
-       Next
-      </button>
-     </header>
-    </section>
-    <section className='slide slide-3'>
-     <WaveComponent />
-     <button
-      className='btn btn-go-prev-slide-3'
-      onClick={handleGoToSecondSlide}
-     >
-      Previous
-     </button>
-    </section>
+    <FirstSlideContent handleGoToSecondSlide={handleGoToSecondSlide} />
+    <SecondSlideContent
+     printFormValues={printFormValues}
+     handleGoToThirdSlide={handleGoToThirdSlide}
+     handleGoToFirstSlide={handleGoToFirstSlide}
+    />
+    <ThirdSlideContent handleGoToSecondSlide={handleGoToSecondSlide} />
    </main>
   </React.Fragment>
  )

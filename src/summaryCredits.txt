@@ -19,3 +19,17 @@ href="https://iconscout.com">Iconscout</a>
 target="_blank">Close Icon</a> by <a
 href="https://iconscout.com/contributors/google-inc"
 target="_blank">Google Inc.</a>
+
+<a href="https://iconscout.com/icons/sun"
+target="_blank">Sun Icon</a> by <a
+href="https://iconscout.com/contributors/iconscout">Iconscout
+Freebies</a> on <a
+href="https://iconscout.com">Iconscout</a>
+
+<a href="https://iconscout.com/icons/sun" target="_blank">Sun Icon</a> by <a
+href="https://iconscout.com/contributors/iconscout">Iconscout
+Freebies</a> on <a
+href="https://iconscout.com">Iconscout</a>
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+

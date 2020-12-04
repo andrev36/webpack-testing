@@ -5,6 +5,8 @@ import '../../index.scss'
 import { Portal, } from './Portal'
 const TreasureIcon = require( '../../assets/images/treasure.svg', ).default
 const PortalCloseIcon = require( '../../assets/images/close.svg', ).default
+const SunIcon = require( '../../assets/images/sun.svg', ).default
+const CloudIcon = require( '../../assets/images/cloud2.svg', ).default
 
 const WaveComponent = () => {
  const [isPortalVisible, setPortalVisible, ] = useState( false, )
@@ -41,6 +43,23 @@ const WaveComponent = () => {
     >
      Test Button
     </button>
+    <div className='container-wave__sand-background' />
+    <div className='container-wave__container-cloud-img'>
+     <img
+      alt='cloud'
+      className='container-wave__cloud-img'
+      src={CloudIcon}
+      width='250px'
+     />
+    </div>
+    <div className='container-wave__container-sun-img'>
+     <img
+      alt='sun'
+      className='container-wave__sun-img'
+      src={SunIcon}
+      width='100px'
+     />
+    </div>
     <div className='container-wave__container-treasure-img'>
      <img
       alt='treasure'

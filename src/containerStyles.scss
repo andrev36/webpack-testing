@@ -33,7 +33,7 @@
  text-align: center;
 }
 
-.slide-1__background-img {
+.background-img {
  position: absolute;
  top: 0;
  left: 0;
@@ -47,6 +47,10 @@
  align-items: flex-start;
  display: flex;
  justify-content: center;
+}
+
+.slide-3 {
+ background-color: #ccebff;
 }
 
 .btn-container-next-prev {
@@ -75,5 +79,23 @@
  width: 21.875rem;
  @media (max-width: 900px) {
   margin: 1rem;
+ }
+}
+
+.slide-2-flex-item__numbering {
+ border-radius: 100%;
+ border: 0.1em solid grey;
+ height: 2rem;
+ left: -4rem;
+ position: relative;
+ text-align: center;
+ top: -2rem;
+ width: 2rem;
+ p {
+  color: grey;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0.1em;
  }
 }
