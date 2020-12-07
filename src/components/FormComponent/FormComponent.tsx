@@ -21,10 +21,11 @@ const FormComponent = () => {
  return (
   <Fragment>
    <section className='section__form' data-testid='container__form'>
-    <div className='slide-2-flex-item__numbering'>
+    <div className='slide-2-flex-item__numbering-third-tab'>
      <p>3</p>
     </div>
     <div className='container-form'>
+     <h1>Insert your name</h1>
      <form action='POST' onSubmit={printFormValues}>
       <section className='form__input-with-label'>
        <div>

@@ -33,3 +33,7 @@ href="https://iconscout.com">Iconscout</a>
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
+<a href="https://iconscout.com/icons/sound"
+target="_blank">Sound Icon</a> by <a
+href="https://iconscout.com/contributors/ziyad-al-junaidi"
+target="_blank">Ziyad Al-junaidi</a>

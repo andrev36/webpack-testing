@@ -35,13 +35,18 @@ const WaveComponent = () => {
 
  return (
   <React.Fragment>
-   <section className='item-full-width container-wave'>
+   <section className='container-wave'>
+    <div className='container-wave__container-heading'>
+     <h1 className='container-wave__heading'>
+      Press button and then chest which will show beneath waves!
+     </h1>
+    </div>
     <button
      className='container-wave__btn-wave'
      onClick={handleButtonClick}
      type='button'
     >
-     Test Button
+     Claim reward!
     </button>
     <div className='container-wave__sand-background' />
     <div className='container-wave__container-cloud-img'>
@@ -49,7 +54,6 @@ const WaveComponent = () => {
       alt='cloud'
       className='container-wave__cloud-img'
       src={CloudIcon}
-      width='250px'
      />
     </div>
     <div className='container-wave__container-sun-img'>

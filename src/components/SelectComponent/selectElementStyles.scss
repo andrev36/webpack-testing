@@ -5,7 +5,9 @@
 * NOTE Select element styles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .container__select {
+ height: 15rem;
  margin: auto;
+ z-index: 2;
 }
 
 .form__select {
@@ -38,8 +40,9 @@
 .select-wrapper__list {
  list-style: none;
  margin: 0 auto;
+ overflow: hidden;
  padding: 0;
- z-index: 1;
+ z-index: 2;
 }
 
 .select-wrapper__list-item {

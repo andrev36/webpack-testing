@@ -18,10 +18,11 @@ const Buttons = () => {
 
  return (
   <div className='section-counter'>
+   <div className='slide-2-flex-item__numbering-first-tab'>
+    <p>1</p>
+   </div>
+   <h1>Select amount of animals to adopt</h1>
    <div className='section-counter__container-increment'>
-    <div className='slide-2-flex-item__numbering'>
-     <p>1</p>
-    </div>
     <button
      className='btn container-increment__counter-btn-increment'
      onClick={handleClickIncrement}

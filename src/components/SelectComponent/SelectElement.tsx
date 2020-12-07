@@ -51,11 +51,11 @@ const SelectElementsComponent = () => {
     * NOTE Fade in animations
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const headingRef = useRef( null, )
-  const selectElementRef = useRef( null, )
+ const selectElementRef = useRef( null, )
 
  return (
   <section className='container__select'>
-   <div className='slide-2-flex-item__numbering'>
+   <div className='slide-2-flex-item__numbering-second-tab'>
     <p>2</p>
    </div>
    <svg
@@ -92,13 +92,13 @@ const SelectElementsComponent = () => {
       <span>
        {listOpen ? (
         <img
-         alt='globe'
+         alt='up arrow'
          className='select-header__arrow-img'
          src={UpArrowIcon}
         />
        ) : (
         <img
-         alt='globe'
+         alt='down arrow'
          className='select-header__arrow-img'
          src={DownArrowIcon}
         />

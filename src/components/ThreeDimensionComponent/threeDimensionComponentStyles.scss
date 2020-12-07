@@ -17,7 +17,7 @@ $min-width: 1200px;
 .container-pet {
  left: 50vw;
  position: absolute;
- top: 0rem;
+ top: 2rem;
  transform: translate(-50%);
  width: 100%;
  @media (min-width: $min-width) {
@@ -41,24 +41,24 @@ $min-width: 1200px;
   margin: 0 3rem;
  }
  &-duck {
-  height: 12rem;
-  width: 20rem;
+  height: 8rem;
+  width: 16rem;
   @media (min-width: $min-width) {
    height: 20rem;
    width: 50rem;
   }
  }
  &-cow {
-  height: 8rem;
-  width: 25rem;
+  height: 5rem;
+  width: 12rem;
   @media (min-width: $min-width) {
    height: 14rem;
    width: 25rem;
   }
  }
  &-chicken {
-  height: 10rem;
-  width: 30rem;
+  height: 7rem;
+  width: 22rem;
   @media (min-width: $min-width) {
    height: 20rem;
    width: 40rem;
@@ -81,13 +81,17 @@ $min-width: 1200px;
  }
 }
 
-.choose-pet-submit-btn {
- bottom: 3rem;
+.slide-1__heading {
+ background-color: rgba(23, 6, 0, 0.7);
+ border-radius: 10px;
+ color: white;
+ font-size: 2rem;
+ padding: 0.2em;
  position: absolute;
- right: 5rem;
- text-align: center;
+ top: -1.5rem;
+ z-index: 1;
  @media (min-width: $min-width) {
-  bottom: 12rem;
-  right: 8rem;
+  font-size: 4rem;
+  top: 3rem;
  }
 }
