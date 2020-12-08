@@ -1,12 +1,10 @@
-import { ThreeDimensionComponent, } from 'components/ThreeDimensionComponent/ThreeDimensionComponent'
 import { gsap, } from 'gsap'
 import { ScrollToPlugin, } from 'gsap/ScrollToPlugin'
 import { ScrollTrigger, } from 'gsap/ScrollTrigger'
-import React, { ChangeEvent, FormEvent, useEffect, useState, } from 'react'
+import React, { useEffect, useState, } from 'react'
 import { FirstSlideContent, } from 'slides/FirstSlideContent'
 import { SecondSlideContent, } from 'slides/SecondSlideContent'
 import { ThirdSlideContent, } from 'slides/ThirdSlideContent'
-import { WaveComponent, } from './components/WaveComponent/WaveComponent'
 import './index.scss'
 const BackgroundPicture = require( './assets/images/background/background.png', )
  .default
@@ -35,7 +33,7 @@ const MainPage = () => {
   }, )
 
   return () => window.removeEventListener( 'resize', updatePageHeight, )
- }, [ window.innerHeight, ], )
+ }, [window.innerHeight, ], )
 
  const goToSlide = ( slide: number, ) => {
   setCurrentSlide( slide, )
@@ -45,7 +43,6 @@ const MainPage = () => {
     y: `.slide-${slide}`,
    },
   }, )
-  setCurrentSlide( slide, )
  }
 
  const handleGoToFirstSlide = () => goToSlide( 1, )
@@ -118,32 +115,11 @@ const MainPage = () => {
   )
  }
 
- const [chosenAnimal, setChosenAnimal, ] = useState( '', )
-
- const handleClick = () => setChosenAnimal( 'Cow', )
-
- const [formValues, setFormValues, ] = useState( {
-  name: '',
- }, )
-
- const printFormValues = ( e: FormEvent<HTMLFormElement>, ) => {
-  e.preventDefault()
-  console.log( formValues.name, )
- }
-
- const updateFormField = ( e: ChangeEvent<HTMLInputElement>, ) => {
-  setFormValues( {
-   ...formValues,
-   [e.target.name]: e.target.value,
-  }, )
- }
-
  return (
   <React.Fragment>
    <main className='slides-container'>
     <FirstSlideContent handleGoToSecondSlide={handleGoToSecondSlide} />
     <SecondSlideContent
-     printFormValues={printFormValues}
      handleGoToThirdSlide={handleGoToThirdSlide}
      handleGoToFirstSlide={handleGoToFirstSlide}
     />

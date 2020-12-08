@@ -33,6 +33,11 @@ const WaveComponent = () => {
   setPortalVisible( false, )
  }
 
+ const chosenAnimalFromStorage = localStorage.getItem( 'chosenAnimal', )
+ const chosenColorFromStorage = localStorage.getItem( 'chosenColor', )
+ const chosenAnimalCountFromStorage = localStorage.getItem( 'chosenAnimalCount', )
+ const firstNameFromStorage = localStorage.getItem( 'firstName', )
+
  return (
   <React.Fragment>
    <section className='container-wave'>
@@ -50,11 +55,7 @@ const WaveComponent = () => {
     </button>
     <div className='container-wave__sand-background' />
     <div className='container-wave__container-cloud-img'>
-     <img
-      alt='cloud'
-      className='container-wave__cloud-img'
-      src={CloudIcon}
-     />
+     <img alt='cloud' className='container-wave__cloud-img' src={CloudIcon} />
     </div>
     <div className='container-wave__container-sun-img'>
      <img
@@ -108,6 +109,12 @@ const WaveComponent = () => {
         </button>
        </header>
        <FetchComponent />
+       <section className='container-portal__submitted-data'>
+        <p>Adopted animal: {chosenAnimalFromStorage}</p>
+        <p>Chosen animal name: {firstNameFromStorage}</p>
+        <p>Chosen pet toy color: {chosenColorFromStorage}</p>
+        <p>Chosen animal count: {chosenAnimalCountFromStorage}</p>
+       </section>
       </section>
      </Portal>
     ) : null}

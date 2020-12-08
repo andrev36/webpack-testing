@@ -72,6 +72,9 @@
  position: absolute;
  transform: translate(-50%, 5%);
  z-index: -1;
+ @media (max-width: 900px) {
+  height: 10rem;
+ }
 }
 
 .img-cloud-path--blue {

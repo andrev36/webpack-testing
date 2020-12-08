@@ -101,6 +101,7 @@
   top: 2.5rem;
   width: 2rem;
   @media (max-width: 900px) {
+   display: none;
    left: 0.4rem;
    top: -1rem;
   }
@@ -121,6 +122,9 @@
   text-align: center;
   top: 0.4rem;
   width: 2rem;
+  @media (max-width: 900px) {
+   display: none;
+  }
   p {
    color: black;
    font-family: sans-serif;
@@ -138,6 +142,9 @@
   text-align: center;
   top: -0.5rem;
   width: 2rem;
+  @media (max-width: 900px) {
+   display: none;
+  }
   p {
    color: black;
    font-family: sans-serif;

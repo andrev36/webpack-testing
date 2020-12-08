@@ -1,5 +1,5 @@
 import { Html, useGLTF, } from '@react-three/drei'
-import React, { Fragment, Suspense, useRef, } from 'react'
+import React, { Fragment, Suspense, useRef, useState, } from 'react'
 import { Canvas, extend, useFrame, useThree, } from 'react-three-fiber'
 import useMedia from 'react-use/lib/useMedia'
 import { OrbitControls, } from 'three/examples/jsm/controls/OrbitControls'
@@ -66,15 +66,6 @@ const OrbitControlsSettings = () => {
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* NOTE Background settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-const PlaneBackground = () => (
- <mesh>
-  <planeBufferMaterial />
- </mesh>
-)
-
-/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE 3D models content
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const DuckModel = () => {
@@ -134,15 +125,26 @@ const HTMLContent = ( {
  const ChickenSound = new Audio( '/sounds/Chicken/chicken.mp3', )
  const DuckSound = new Audio( '/sounds/Duck/duck.mp3', )
 
+ const [chosenAnimal, setChosenAnimal, ] = useState( '', )
+
+ const handleChoseAnimal = ( animal: string, ) =>
+  localStorage.setItem( 'chosenAnimal', animal, )
+
  const playCowSound = () => {
+  handleChoseAnimal( 'Cow', )
+
   return CowSound.play()
  }
 
  const playChickenSound = () => {
+  handleChoseAnimal( 'Chicken', )
+
   return ChickenSound.play()
  }
 
  const playDuckSound = () => {
+  handleChoseAnimal( 'Duck', )
+
   return DuckSound.play()
  }
 

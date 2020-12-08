@@ -20,9 +20,10 @@ const SelectElementsComponent = () => {
  }
  const handleToggleList = () => toggleList()
 
- const handleColorChange = ( value: string, ) => () => {
-  setPickedColor( value, )
+ const handleColorChange = ( color: string, ) => () => {
+  setPickedColor( color, )
   setListOpen( false, )
+  localStorage.setItem( 'chosenColor', color, )
  }
 
  const colors = ['blue', 'red', 'green', 'yellow', ]
@@ -60,10 +61,8 @@ const SelectElementsComponent = () => {
    </div>
    <svg
     className='img-cloud'
-    height='471px'
     version='1.1'
     viewBox='0 0 770 471'
-    width='770px'
     xmlns='http://www.w3.org/2000/svg'
    >
     <title>Combined Shape</title>
@@ -80,10 +79,7 @@ const SelectElementsComponent = () => {
     </g>
    </svg>
    <h2 className='heading__picked-color' ref={headingRef}>
-    <legend>Selecting elements</legend>
-    <label data-testid='currently-selected-color'>
-     Currently selected color: {pickedColor}
-    </label>
+    <legend>Choose color of the toy</legend>
    </h2>
    <section className='select-wrapper' ref={selectElementRef}>
     <header className='select-header'>

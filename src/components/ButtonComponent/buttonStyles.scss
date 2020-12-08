@@ -39,10 +39,34 @@
  padding: 0.1rem;
  @media (max-width: 900px) {
   flex-direction: row;
+  height: 5rem;
  }
 }
 
 .section-counter__container-increment,
 .section-counter__container-decrement {
  margin: auto 1rem;
+}
+
+.section-counter-container {
+ display: inline-block;
+ @media (max-width: 900px) {
+  display: inline;
+  position: absolute;
+  top: 0rem;
+ }
+}
+
+.section-counter__count-value {
+ font-size: 1.3rem;
+}
+
+.section-counter-buttons {
+ align-items: center;
+ display: flex;
+ justify-content: center;
+ @media (max-width: 900px) {
+  position: absolute;
+  top: 2.5rem;
+ }
 }
