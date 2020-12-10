@@ -12,7 +12,7 @@ const SecondSlideContent = ( {
  handleGoToFirstSlide,
 }: any, ) => {
  return (
-   <section className='slide slide-2'>
+  <section className='slide slide-2'>
    <img src={BackgroundPicture} alt='background' className='background-img' />
    <div className='slide-2-flex-item'>
     <Buttons />

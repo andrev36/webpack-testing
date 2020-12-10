@@ -76,12 +76,11 @@
 
 .slide-2-flex-item {
  align-items: center;
- background-color: rgba(166, 166, 166, 0.5);
- border-radius: 10px;
+ background-color: #bacdd4;
+ border-radius: 20px;
  display: flex;
  justify-content: center;
  margin: auto 2rem;
- min-width: 21.875rem;
  padding: 1rem;
  width: 21.875rem;
  @media (max-width: 900px) {
@@ -94,11 +93,11 @@
   border-radius: 100%;
   border: 0.1em solid black;
   height: 2rem;
-  left: -9.5rem;
+  left: -9rem;
   min-width: 2rem;
   position: relative;
   text-align: center;
-  top: 2.5rem;
+  top: 0rem;
   width: 2rem;
   @media (max-width: 900px) {
    display: none;
@@ -117,7 +116,7 @@
   border-radius: 100%;
   border: 0.1em solid black;
   height: 2rem;
-  left: -3.5rem;
+  left: -4rem;
   position: relative;
   text-align: center;
   top: 0.4rem;
@@ -137,10 +136,10 @@
   border-radius: 100%;
   border: 0.1em solid black;
   height: 2rem;
-  left: -1rem;
+  left: -0.5rem;
   position: relative;
   text-align: center;
-  top: -0.5rem;
+  top: 0rem;
   width: 2rem;
   @media (max-width: 900px) {
    display: none;
@@ -154,3 +153,4 @@
   }
  }
 }
+

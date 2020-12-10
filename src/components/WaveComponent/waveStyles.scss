@@ -194,3 +194,27 @@
   margin: 0;
  }
 }
+
+.container-wave__info-treasure-opened {
+ bottom: 5rem;
+ color: white;
+ font-size: 4rem;
+ margin: 0 auto;
+ position: absolute;
+ width: 100%;
+ z-index: 1;
+}
+
+.container-portal__container-heading-second {
+ width: 100%;
+}
+
+.container-portal__heading-second {
+ font-size: 2.5rem;
+ margin-top: 2rem;
+ padding-bottom: 0.8rem;
+ position: absolute;
+ text-align: center;
+ top: 2px;
+ width: 100%;
+}

@@ -1,5 +1,6 @@
 import { gsap, } from 'gsap'
 import { ScrollTrigger, } from 'gsap/ScrollTrigger'
+import { capitalize, } from 'lodash'
 import React, { useRef, useState, } from 'react'
 import onClickOutside from 'react-onclickoutside'
 import '../../index.scss'
@@ -39,7 +40,7 @@ const SelectElementsComponent = () => {
       onClick={handleColorChange( color, )}
       value={color}
      >
-      <span>{color}</span>
+      <span>{capitalize( color, )}</span>
      </li>
     ), )}
    </ul>
@@ -55,7 +56,7 @@ const SelectElementsComponent = () => {
  const selectElementRef = useRef( null, )
 
  return (
-  <section className='container__select'>
+  <section className='container-select'>
    <div className='slide-2-flex-item__numbering-second-tab'>
     <p>2</p>
    </div>
@@ -79,12 +80,16 @@ const SelectElementsComponent = () => {
     </g>
    </svg>
    <h2 className='heading__picked-color' ref={headingRef}>
-    <legend>Choose color of the toy</legend>
+    <legend>Choose a color of the toy (gift)</legend>
    </h2>
    <section className='select-wrapper' ref={selectElementRef}>
     <header className='select-header'>
-     <div className='select-header__title' onClick={handleToggleList}>
-      Select color
+     <div
+      className='select-header__title'
+      data-testid='currently-selected-color'
+      onClick={handleToggleList}
+     >
+      {capitalize( pickedColor, )}
       <span>
        {listOpen ? (
         <img

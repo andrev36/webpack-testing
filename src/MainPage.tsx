@@ -6,8 +6,6 @@ import { FirstSlideContent, } from 'slides/FirstSlideContent'
 import { SecondSlideContent, } from 'slides/SecondSlideContent'
 import { ThirdSlideContent, } from 'slides/ThirdSlideContent'
 import './index.scss'
-const BackgroundPicture = require( './assets/images/background/background.png', )
- .default
 
 gsap.registerPlugin( ScrollTrigger, )
 gsap.registerPlugin( ScrollToPlugin, )
@@ -19,10 +17,6 @@ const MainPage = () => {
 
  const updatePageHeight = () => setPageHeight( window.innerHeight, )
 
- /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- ! TODO Fix bug with resizing (decrease size) - it don't
- ! update height
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  useEffect( () => {
   window.addEventListener( 'resize', updatePageHeight, )
   gsap.to( '.slides-container', {
@@ -50,7 +44,7 @@ const MainPage = () => {
  const handleGoToSecondSlide = () => {
   goToSlide( 2, )
   gsap.fromTo(
-   '.container-increment',
+   '.section-counter__container-increment',
    { x: '-=100', opacity: 0, },
    {
     duration: 3,
@@ -60,7 +54,7 @@ const MainPage = () => {
    },
   )
   gsap.fromTo(
-   '.container-decrement',
+   '.section-counter__container-decrement',
    { x: '+=100', opacity: 0, },
    {
     duration: 3,
@@ -90,7 +84,7 @@ const MainPage = () => {
    },
   )
   gsap.from( '.container-form', {
-   duration: 3.5,
+   duration: 6.5,
    ease: 'Back.easeOut',
    rotationX: 100,
    transformOrigin: '50% 0',

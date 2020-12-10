@@ -4,23 +4,18 @@
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Select element styles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.container__select {
+.container-select {
  height: 15rem;
  margin: auto;
  z-index: 2;
 }
 
-.form__select {
- padding: 0.625rem;
- width: 9rem;
- z-index: 1;
-}
-
 .select-wrapper {
- margin: 0.8rem auto;
+ margin: 0.5rem auto;
 }
 
 .select-header {
+ background-color: white;
  border: 1px solid black;
  margin: 0 auto;
  outline: none;
@@ -58,7 +53,8 @@
 }
 
 .heading__picked-color {
- margin: 5rem auto 0;
+ margin: 4rem auto 0;
+ width: 12rem;
 }
 
 .select-header__arrow-img {

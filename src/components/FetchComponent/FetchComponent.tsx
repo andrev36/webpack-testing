@@ -13,7 +13,9 @@ const FetchComponent = () => {
 
  return (
   <section className='fetch-section'>
-   <div className='fetch-section__quote'><q>{quote}</q></div>
+   <div className='fetch-section__quote'>
+    <q>{quote}</q>
+   </div>
    <p className='fetch-section_quote-author'>- Kanye West</p>
   </section>
  )

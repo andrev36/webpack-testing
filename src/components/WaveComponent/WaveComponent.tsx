@@ -10,8 +10,10 @@ const CloudIcon = require( '../../assets/images/cloud2.svg', ).default
 
 const WaveComponent = () => {
  const [isPortalVisible, setPortalVisible, ] = useState( false, )
+ const [chestOpened, setChestOpened, ] = useState( false, )
 
  const handleButtonClick = () => {
+  setChestOpened( true, )
   gsap.to( '.container-wave-part', {
    duration: 1,
    y: 100,
@@ -74,6 +76,11 @@ const WaveComponent = () => {
       width='100px'
      />
     </div>
+    {chestOpened ? (
+     <div className='container-wave__info-treasure-opened'>
+      <h1>Click chest</h1>
+     </div>
+    ) : null}
     <div className='container-wave-part'>
      <svg
       className='svg-wave1'
@@ -94,6 +101,11 @@ const WaveComponent = () => {
       <section className='container-portal'>
        <div className='container-portal__container-heading'>
         <h1 className='container-portal__heading'>Congratulations</h1>
+       </div>
+       <div className='container-portal__container-heading-second'>
+        <h2 className='container-portal__heading-second'>
+         As a reward please enjoy Kanye West quote
+        </h2>
        </div>
        <header className='container-close-icon'>
         <button
