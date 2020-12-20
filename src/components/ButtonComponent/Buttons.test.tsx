@@ -17,12 +17,12 @@ describe( 'counter buttons test', () => {
 
   expect( countValue.textContent, ).toBe( '1', )
  }, )
- it( 'should decrement count by 1', () => {
+ it( 'should decrement count by 1 and not be below 1', () => {
   const { getByText, getByTestId, } = render( <Buttons />, )
   const countValue = getByTestId( 'countvalue', )
 
   fireEvent.click( getByText( /Decrement/, ), )
 
-  expect( countValue.textContent, ).toBe( '-1', )
+  expect( countValue.textContent, ).not.toBe( '0', )
  }, )
 }, )

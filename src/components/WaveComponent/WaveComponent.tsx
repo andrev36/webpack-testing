@@ -1,44 +1,44 @@
-import { FetchComponent, } from 'components/FetchComponent/FetchComponent'
-import { gsap, } from 'gsap'
-import React, { useState, } from 'react'
+import { gsap } from 'gsap'
+import React, { useState } from 'react'
 import '../../index.scss'
-import { Portal, } from './Portal'
-const TreasureIcon = require( '../../assets/images/treasure.svg', ).default
-const PortalCloseIcon = require( '../../assets/images/close.svg', ).default
-const SunIcon = require( '../../assets/images/sun.svg', ).default
-const CloudIcon = require( '../../assets/images/cloud2.svg', ).default
+import { FetchComponent } from '../FetchComponent/FetchComponent'
+import { Portal } from './Portal'
+const TreasureIcon = require('../../assets/images/treasure.svg').default
+const PortalCloseIcon = require('../../assets/images/close.svg').default
+const SunIcon = require('../../assets/images/sun.svg').default
+const CloudIcon = require('../../assets/images/cloud2.svg').default
 
 const WaveComponent = () => {
- const [isPortalVisible, setPortalVisible, ] = useState( false, )
- const [chestOpened, setChestOpened, ] = useState( false, )
+ const [isPortalVisible, setPortalVisible] = useState(false)
+ const [chestOpened, setChestOpened] = useState(false)
 
  const handleButtonClick = () => {
-  setChestOpened( true, )
-  gsap.to( '.container-wave-part', {
+  setChestOpened(true)
+  gsap.to('.container-wave-part', {
    duration: 1,
    y: 100,
-  }, )
-  gsap.to( '.container-wave__treasure-img', {
+  })
+  gsap.to('.container-wave__treasure-img', {
    duration: 0.1,
    repeat: -1,
    x: '-=5',
    y: '+=5',
    yoyo: true,
-  }, )
+  })
  }
 
  const handleChestIconClick = () => {
-  setPortalVisible( true, )
+  setPortalVisible(true)
  }
 
  const handlePortalCloseButtonClick = () => {
-  setPortalVisible( false, )
+  setPortalVisible(false)
  }
 
- const chosenAnimalFromStorage = localStorage.getItem( 'chosenAnimal', )
- const chosenColorFromStorage = localStorage.getItem( 'chosenColor', )
- const chosenAnimalCountFromStorage = localStorage.getItem( 'chosenAnimalCount', )
- const firstNameFromStorage = localStorage.getItem( 'firstName', )
+ const chosenAnimalFromStorage = localStorage.getItem('chosenAnimal')
+ const chosenColorFromStorage = localStorage.getItem('chosenColor')
+ const chosenAnimalCountFromStorage = localStorage.getItem('chosenAnimalCount')
+ const firstNameFromStorage = localStorage.getItem('firstName')
 
  return (
   <React.Fragment>
@@ -50,6 +50,7 @@ const WaveComponent = () => {
     </div>
     <button
      className='container-wave__btn-wave'
+     data-testid='container-wave__btn-wave'
      onClick={handleButtonClick}
      type='button'
     >
@@ -77,13 +78,16 @@ const WaveComponent = () => {
      />
     </div>
     {chestOpened ? (
-     <div className='container-wave__info-treasure-opened'>
+     <div
+      className='container-wave__info-treasure-opened'
+      data-testid='container-wave__info-treasure-opened'
+     >
       <h1>Click chest</h1>
      </div>
     ) : null}
     <div className='container-wave-part'>
      <svg
-      className='svg-wave1'
+      className='container-wave-part__svg-wave1'
       viewBox='0 0 1440 320'
       xmlns='http://www.w3.org/2000/svg'
      >
@@ -101,11 +105,6 @@ const WaveComponent = () => {
       <section className='container-portal'>
        <div className='container-portal__container-heading'>
         <h1 className='container-portal__heading'>Congratulations</h1>
-       </div>
-       <div className='container-portal__container-heading-second'>
-        <h2 className='container-portal__heading-second'>
-         As a reward please enjoy Kanye West quote
-        </h2>
        </div>
        <header className='container-close-icon'>
         <button
@@ -135,4 +134,4 @@ const WaveComponent = () => {
  )
 }
 
-export { WaveComponent, }
+export { WaveComponent }

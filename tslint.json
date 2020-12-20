@@ -140,7 +140,7 @@
   "typedef-whitespace": [
    true,
    {
-    "call-signature": "space",
+    "call-signature": "nospace",
     "index-signature": "space",
     "parameter": "nospace",
     "property-declaration": "nospace",

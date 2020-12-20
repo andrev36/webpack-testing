@@ -13,10 +13,10 @@ const FetchComponent = () => {
 
  return (
   <section className='fetch-section'>
-   <div className='fetch-section__quote'>
+   <div className='fetch-section__quote' data-testid='fetch-section__quote'>
     <q>{quote}</q>
    </div>
-   <p className='fetch-section_quote-author'>- Kanye West</p>
+   <p className='fetch-section__quote-author'>- Kanye West</p>
   </section>
  )
 }

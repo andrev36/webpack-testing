@@ -1,59 +1,59 @@
-import { gsap, } from 'gsap'
-import { ScrollTrigger, } from 'gsap/ScrollTrigger'
-import { capitalize, } from 'lodash'
-import React, { useRef, useState, } from 'react'
-import onClickOutside from 'react-onclickoutside'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { capitalize } from 'lodash'
+import React, { useRef, useState } from 'react'
+import onClickOutside, { ConfigObject } from 'react-onclickoutside'
 import '../../index.scss'
-const DownArrowIcon = require( '../../assets/images/down-arrow.svg', ).default
-const UpArrowIcon = require( '../../assets/images/up-arrow.svg', ).default
+const DownArrowIcon = require('../../assets/images/down-arrow.svg').default
+const UpArrowIcon = require('../../assets/images/up-arrow.svg').default
 
-gsap.registerPlugin( ScrollTrigger, )
+gsap.registerPlugin(ScrollTrigger)
 
 const SelectElementsComponent = () => {
  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     * NOTE Select element logic
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
- const [pickedColor, setPickedColor, ] = useState<string>( 'blue', )
- const [listOpen, setListOpen, ] = useState( false, )
+ const [pickedColor, setPickedColor] = useState<string>('blue')
+ const [listOpen, setListOpen] = useState<boolean>(false)
 
  const toggleList = () => {
-  setListOpen( !listOpen, )
+  setListOpen(!listOpen)
  }
  const handleToggleList = () => toggleList()
 
- const handleColorChange = ( color: string, ) => () => {
-  setPickedColor( color, )
-  setListOpen( false, )
-  localStorage.setItem( 'chosenColor', color, )
+ const handleColorChange = (color: string) => () => {
+  setPickedColor(color)
+  setListOpen(false)
+  localStorage.setItem('chosenColor', color)
  }
 
- const colors = ['blue', 'red', 'green', 'yellow', ]
+ const colors: string[] = ['blue', 'red', 'green', 'yellow']
 
  const selectList = () => {
   return (
    <ul className='select-wrapper__list' data-testid='select'>
-    {colors.map( ( color: string, ) => (
+    {colors.map((color: string) => (
      <li
       className='select-wrapper__list-item'
       data-testid={color}
       key={color}
-      onClick={handleColorChange( color, )}
+      onClick={handleColorChange(color)}
       value={color}
      >
-      <span>{capitalize( color, )}</span>
+      <span>{capitalize(color)}</span>
      </li>
-    ), )}
+    ))}
    </ul>
   )
  }
 
- ( SelectElementsComponent as any ).handleClickOutside = () => setListOpen( false, )
+ ( SelectElementsComponent as any).handleClickOutside = () => setListOpen(false)
 
  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     * NOTE Fade in animations
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
- const headingRef = useRef( null, )
- const selectElementRef = useRef( null, )
+ const headingRef = useRef(null)
+ const selectElementRef = useRef(null)
 
  return (
   <section className='container-select'>
@@ -89,7 +89,7 @@ const SelectElementsComponent = () => {
       data-testid='currently-selected-color'
       onClick={handleToggleList}
      >
-      {capitalize( pickedColor, )}
+      {capitalize(pickedColor)}
       <span>
        {listOpen ? (
         <img
@@ -113,8 +113,8 @@ const SelectElementsComponent = () => {
  )
 }
 
-const clickOutsideConfig = {
- handleClickOutside: () => ( SelectElementsComponent as any ).handleClickOutside,
+const clickOutsideConfig: ConfigObject | undefined = {
+ handleClickOutside: (): void => ( SelectElementsComponent as any).handleClickOutside,
 }
 
 const SelectElements = onClickOutside(
@@ -122,4 +122,4 @@ const SelectElements = onClickOutside(
  clickOutsideConfig,
 )
 
-export { SelectElements, }
+export { SelectElements }

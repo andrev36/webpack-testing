@@ -18,37 +18,21 @@
  }
 }
 
+input[type='text'] {
+ @include input_style;
+}
+
 .container-form {
  border-radius: 20px;
  margin: 0 auto;
  padding: 0.1rem;
  width: 19rem;
-}
-
-.section__form {
-}
-
-.form__btn {
- @include btn_style;
-}
-
-input[type='text'] {
- @include input_style;
-}
-
-input[type='email'] {
- @include input_style;
- &:invalid {
-  outline: none;
-  box-shadow: 0px 0px 8px red;
- }
-}
-
-.form__input-with-label {
- div {
-  display: block;
-  @media (orientation: landscape) {
-   display: inline;
+ &__input-with-label {
+  div {
+   display: block;
+   @media (orientation: landscape) {
+    display: inline;
+   }
   }
  }
 }

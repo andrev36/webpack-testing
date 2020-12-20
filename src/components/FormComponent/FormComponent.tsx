@@ -22,7 +22,7 @@ const FormComponent = () => {
     </div>
     <div className='container-form'>
      <h1>Insert your name</h1>
-     <section className='form__input-with-label'>
+     <section className='container-form__input-with-label'>
       <div>
        <label htmlFor='name' id='name'>
         Name

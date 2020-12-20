@@ -1,11 +1,17 @@
-import { Html, useGLTF, } from '@react-three/drei'
-import React, { Fragment, Suspense, useRef, useState, } from 'react'
-import { Canvas, extend, useFrame, useThree, } from 'react-three-fiber'
+import { Html, useGLTF } from '@react-three/drei'
+import React, { Fragment, Suspense, useRef } from 'react'
+import {
+ Canvas,
+ extend,
+ ReactThreeFiber,
+ useFrame,
+ useThree
+} from 'react-three-fiber'
 import useMedia from 'react-use/lib/useMedia'
-import { OrbitControls, } from 'three/examples/jsm/controls/OrbitControls'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import '../../index.scss'
 
-extend( { OrbitControls, }, )
+extend({ OrbitControls })
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Hack so that react recognizes camelCased tags inside JSX element
@@ -13,7 +19,10 @@ extend( { OrbitControls, }, )
 declare global {
  namespace JSX {
   interface IntrinsicElements {
-   orbitControls: any
+   orbitControls: ReactThreeFiber.Object3DNode<
+    OrbitControls,
+    typeof OrbitControls
+   >
    planeBufferMaterial: any
   }
  }
@@ -26,8 +35,8 @@ interface ModelProps {
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Importing 3D models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-const Model = ( { modelPath, }: ModelProps, ) => {
- const gltf = useGLTF( modelPath, true, )
+const Model = ({ modelPath }: ModelProps) => {
+ const gltf = useGLTF(modelPath, true)
 
  return <primitive object={gltf.scene} dispose={null} />
 }
@@ -38,9 +47,9 @@ const Model = ( { modelPath, }: ModelProps, ) => {
 const Lights = () => (
  <>
   <ambientLight intensity={0.3} />
-  <directionalLight position={[10, 10, 5, ]} intensity={1} />
-  <directionalLight position={[0, 10, 0, ]} intensity={1.5} />
-  <spotLight position={[0, 1000, 0, ]} intensity={1} />
+  <directionalLight position={[10, 10, 5]} intensity={1} />
+  <directionalLight position={[0, 10, 0]} intensity={1.5} />
+  <spotLight position={[0, 1000, 0]} intensity={1} />
  </>
 )
 
@@ -48,15 +57,15 @@ const Lights = () => (
 * NOTE Orbit settings and setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const OrbitControlsSettings = () => {
- const orbitRef = useRef<any>()
- const { camera, gl, } = useThree()
- useFrame( () => {
-  orbitRef.current.update()
- }, )
+ const orbitRef = useRef<any>(null)
+ const { camera, gl } = useThree()
+ useFrame(() => {
+  orbitRef?.current?.update()
+ })
 
  return (
   <orbitControls
-   args={[camera, gl.domElement, ]}
+   args={[camera, gl.domElement]}
    autoRotate
    maxPolarAngle={Math.PI / 3}
    minPolarAngle={Math.PI / 3}
@@ -74,10 +83,10 @@ const DuckModel = () => {
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const duckModelRef = useRef<any>()
 
- useFrame( () => ( duckModelRef.current.rotation.y += 0.01 ), )
+ useFrame(() => (duckModelRef.current.rotation.y += 0.01))
 
  return (
-  <mesh ref={duckModelRef} rotation={[0, -Math.PI / 1.3, 0, ]}>
+  <mesh ref={duckModelRef} rotation={[0, -Math.PI / 1.3, 0]}>
    <Model modelPath='./models/Duck/glTF/Duck.gltf' />
   </mesh>
  )
@@ -89,10 +98,10 @@ const CowModel = () => {
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const cowModelRef = useRef<any>()
 
- useFrame( () => ( cowModelRef.current.rotation.y += 0.01 ), )
+ useFrame(() => (cowModelRef.current.rotation.y += 0.01))
 
  return (
-  <mesh ref={cowModelRef} rotation={[0, -Math.PI / 1.3, 0, ]}>
+  <mesh ref={cowModelRef} rotation={[0, -Math.PI / 1.3, 0]}>
    <Model modelPath='./models/Cow/scene.gltf' />
   </mesh>
  )
@@ -104,10 +113,10 @@ const ChickenModel = () => {
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const chickenModelRef = useRef<any>()
 
- useFrame( () => ( chickenModelRef.current.rotation.y += 0.01 ), )
+ useFrame(() => (chickenModelRef.current.rotation.y += 0.01))
 
  return (
-  <mesh ref={chickenModelRef} rotation={[0, -Math.PI / 1.3, 0, ]}>
+  <mesh ref={chickenModelRef} rotation={[0, -Math.PI / 1.3, 0]}>
    <Model modelPath='./models/Chicken/scene.gltf' />
   </mesh>
  )
@@ -116,34 +125,36 @@ const ChickenModel = () => {
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Content inside react-three-fiber Html tags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-const HTMLContent = ( {
+const HTMLContent = ({
  CHICKEN_Z_POSITION,
  COW_Z_POSITION,
  DUCK_Z_POSITION,
-}: any, ) => {
- const CowSound = new Audio( '/sounds/Cow/cow.mp3', )
- const ChickenSound = new Audio( '/sounds/Chicken/chicken.mp3', )
- const DuckSound = new Audio( '/sounds/Duck/duck.mp3', )
+}: {
+ CHICKEN_Z_POSITION: number
+ COW_Z_POSITION: number
+ DUCK_Z_POSITION: number
+}) => {
+ const CowSound = new Audio('/sounds/Cow/cow.mp3')
+ const ChickenSound = new Audio('/sounds/Chicken/chicken.mp3')
+ const DuckSound = new Audio('/sounds/Duck/duck.mp3')
 
- const [chosenAnimal, setChosenAnimal, ] = useState( '', )
+ const handleChoseAnimal = (animal: string) =>
+  localStorage.setItem('chosenAnimal', animal)
 
- const handleChoseAnimal = ( animal: string, ) =>
-  localStorage.setItem( 'chosenAnimal', animal, )
-
- const playCowSound = () => {
-  handleChoseAnimal( 'Cow', )
+ const playCowSound = async (): Promise<void> => {
+  handleChoseAnimal('Cow')
 
   return CowSound.play()
  }
 
- const playChickenSound = () => {
-  handleChoseAnimal( 'Chicken', )
+ const playChickenSound = async (): Promise<void> => {
+  handleChoseAnimal('Chicken')
 
   return ChickenSound.play()
  }
 
- const playDuckSound = () => {
-  handleChoseAnimal( 'Duck', )
+ const playDuckSound = async (): Promise<void> => {
+  handleChoseAnimal('Duck')
 
   return DuckSound.play()
  }
@@ -155,7 +166,7 @@ const HTMLContent = ( {
      <div className='container-choose-pet container-choose-pet-duck'>
       <Canvas
        camera={{
-        position: [0, 0, DUCK_Z_POSITION, ],
+        position: [0, 0, DUCK_Z_POSITION],
        }}
       >
        <OrbitControlsSettings />
@@ -174,7 +185,7 @@ const HTMLContent = ( {
      <div className='container-choose-pet container-choose-pet-cow'>
       <Canvas
        camera={{
-        position: [0, 0, COW_Z_POSITION, ],
+        position: [0, 0, COW_Z_POSITION],
        }}
       >
        <OrbitControlsSettings />
@@ -194,7 +205,7 @@ const HTMLContent = ( {
       <Canvas
        camera={{
         fov: 100,
-        position: [0, 0, CHICKEN_Z_POSITION, ],
+        position: [0, 0, CHICKEN_Z_POSITION],
        }}
       >
        <OrbitControlsSettings />
@@ -223,7 +234,7 @@ const ThreeDimensionComponent = () => {
  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * NOTE Media query for 3D models position
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
- const isWide = useMedia( '(min-width: 1100px)', )
+ const isWide = useMedia('(min-width: 1100px)')
  const CHICKEN_Z_POSITION = isWide ? 3 : 3
  const COW_Z_POSITION = isWide ? -25 : -25
  const DUCK_Z_POSITION = isWide ? 3 : 3
@@ -232,7 +243,7 @@ const ThreeDimensionComponent = () => {
   <Fragment>
    <Canvas
     camera={{
-     position: [0, 0, 0, ],
+     position: [0, 0, 0],
     }}
    >
     <HTMLContent
@@ -245,4 +256,4 @@ const ThreeDimensionComponent = () => {
  )
 }
 
-export { ThreeDimensionComponent, }
+export { ThreeDimensionComponent }

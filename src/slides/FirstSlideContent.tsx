@@ -3,9 +3,11 @@ import React from 'react'
 const BackgroundPicture = require( '../assets/images/background/background.png', )
  .default
 
-interface Props {}
+interface Props {
+ handleGoToSecondSlide() : void;
+}
 
-const FirstSlideContent = ( { handleGoToSecondSlide, }: any, ) => {
+const FirstSlideContent = ( { handleGoToSecondSlide, }: Props, ) => {
  return (
   <section className='slide slide-1'>
    <h1 className='slide-1__heading'>Adopt an animal</h1>

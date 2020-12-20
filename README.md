@@ -1,6 +1,6 @@
 # webpack-testing
 
-Repository for educational purposes. Exercise mainly for Webpack and Web App Testing.
+Repository for learning purposes. Exercise mainly for Webpack and Web App Testing.
 
 Technologies used:
 
@@ -11,7 +11,6 @@ Technologies used:
 - Babel
 - GSAP
 - ThreeJS
-- GraphQL (Apollo Client)
 - TSLint
 
 Clone repository using command:

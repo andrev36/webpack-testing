@@ -66,17 +66,8 @@ $min-width: 1200px;
  }
 }
 
-/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-! TODO Refactor below rules to appear in one line
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .container-choose-pet-btn__choose-btn {
- &-duck {
-  @include btn_style;
- }
- &-cow {
-  @include btn_style;
- }
- &-chicken {
+ &-duck, &-cow, &-chicken {
   @include btn_style;
  }
 }

@@ -6,7 +6,7 @@ import '../../index.scss'
 gsap.registerPlugin( ScrollTrigger, )
 
 const Buttons = () => {
- const [count, setCounter, ] = useState( 1, )
+ const [count, setCounter, ] = useState<number>( 1, )
 
  const handleClickIncrement = () => {
   setCounter( ( countIncrement, ) => countIncrement + 1, )

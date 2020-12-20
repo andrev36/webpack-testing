@@ -7,9 +7,7 @@ describe( 'SelectElement tests', () => {
   const { getByTestId, } = render( <SelectElements />, )
 
   const currentlySelectedColorValue = getByTestId( 'currently-selected-color', )
-  expect( currentlySelectedColorValue.textContent, ).toBe(
-   'Currently selected color: blue',
-  )
+  expect( currentlySelectedColorValue.textContent, ).toBe( 'Blue', )
  }, )
  it( 'select element changes color', () => {
   const { getByTestId, } = render( <SelectElements />, )
@@ -21,8 +19,6 @@ describe( 'SelectElement tests', () => {
    target: { value: 'green', },
   }, )
 
-  expect( currentlySelectedColorValue.textContent, ).toBe(
-   'Currently selected color: green',
-  )
+  expect( currentlySelectedColorValue.textContent, ).toBe( 'Green', )
  }, )
 }, )

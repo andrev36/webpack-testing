@@ -1,9 +1,11 @@
 import { WaveComponent, } from 'components/WaveComponent/WaveComponent'
 import React from 'react'
 
-interface Props {}
+interface Props {
+ handleGoToSecondSlide() : void
+}
 
-const ThirdSlideContent = ( { handleGoToSecondSlide, }: any, ) => {
+const ThirdSlideContent = ( { handleGoToSecondSlide, }: Props, ) => {
  return (
   <section className='slide slide-3'>
    <WaveComponent />
