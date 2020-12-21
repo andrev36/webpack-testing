@@ -1,9 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const gsapPath = '/node_modules/gsap/src/uncompressed/'
@@ -14,10 +12,6 @@ module.exports = {
  mode: 'production',
  module: {
   rules: [
-   // {
-   //  test: /.s?css$/,
-   //  use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-   // },
    {
     test: /\.tsx?$/,
     exclude: '/node_modules/',
@@ -117,14 +111,11 @@ module.exports = {
  },
  output: {
   filename: '[name].js',
-  path: path.resolve(__dirname, 'dist'),
+  path: path.resolve(__dirname, 'docs'),
   publicPath: '/',
   sourceMapFilename: '[name].js.map',
  },
  plugins: [
-  new CleanWebpackPlugin({
-   verbose: true,
-  }),
   new HtmlWebpackPlugin({
    template: path.join(__dirname, 'src', 'index.html'),
   }),
