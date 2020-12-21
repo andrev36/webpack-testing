@@ -13,10 +13,20 @@ module.exports = {
  module: {
   rules: [
    {
-    test: /\.tsx?$/,
+    test: /\.(tsx|ts)$/,
     exclude: '/node_modules/',
     include: path.resolve(__dirname, 'src'),
-    use: 'ts-loader',
+    use: ['babel-loader', 'ts-loader', 'tslint-loader'],
+   },
+   {
+    test: /\.js$/,
+    exclude: /node_modules/,
+    use: {
+     loader: 'babel-loader',
+     options: {
+      presets: ['@babel/preset-env', '@babel/preset-react'],
+     },
+    },
    },
    {
     test: /\.scss$/,
@@ -110,10 +120,10 @@ module.exports = {
   ],
  },
  output: {
-  filename: '[name].js',
+  filename: 'main.js',
   path: path.resolve(__dirname, 'docs'),
-  publicPath: '/',
-  sourceMapFilename: '[name].js.map',
+  publicPath: './',
+  sourceMapFilename: 'main.js.map',
  },
  plugins: [
   new HtmlWebpackPlugin({

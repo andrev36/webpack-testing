@@ -16,7 +16,6 @@ module.exports = {
  },
  devtool: 'source-map',
  entry: path.join(__dirname, 'src', 'index.tsx'),
- // entry: '../src/index.tsx',
  mode: 'development',
  module: {
   rules: [

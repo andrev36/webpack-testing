@@ -77,11 +77,11 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "./";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 56);
+/******/ 	return __webpack_require__(__webpack_require__.s = 54);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -51584,7 +51584,7 @@ if ( typeof __THREE_DEVTOOLS__ !== 'undefined' ) {
 
 
 if (true) {
-  module.exports = __webpack_require__(57);
+  module.exports = __webpack_require__(55);
 } else {}
 
 
@@ -51725,7 +51725,7 @@ var esm_extends = __webpack_require__(3);
 var three_module = __webpack_require__(0);
 
 // EXTERNAL MODULE: ./node_modules/react-reconciler/index.js
-var react_reconciler = __webpack_require__(50);
+var react_reconciler = __webpack_require__(48);
 var react_reconciler_default = /*#__PURE__*/__webpack_require__.n(react_reconciler);
 
 // EXTERNAL MODULE: ./node_modules/react-three-fiber/node_modules/scheduler/index.js
@@ -51735,13 +51735,13 @@ var scheduler = __webpack_require__(27);
 var react = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/tiny-emitter/index.js
-var tiny_emitter = __webpack_require__(51);
+var tiny_emitter = __webpack_require__(49);
 
 // CONCATENATED MODULE: ./node_modules/use-asset/dist/index.js
 const r=[],dist_n=(e,r)=>e.length===r.length&&e.every((e,n)=>e===r[n]);function o(e,r,o,s=0,t=!1){for(const e of r)if(dist_n(o,e.args)){if(t)return;if(e.error)throw e.error;if(e.response)return e.response;throw e.promise}const i={args:o,promise:e(...o).then(e=>i.response=null==e||e).catch(e=>i.error=e).then(()=>{s>0&&setTimeout(()=>{const e=r.indexOf(i);-1!==e&&r.splice(e,1)},s)})};if(r.push(i),!t)throw i.promise}function dist_s(e,...r){if(void 0===r)e.splice(0,e.length);else{const o=e.find(e=>dist_n(r,e.args));if(o){const r=e.indexOf(o);-1!==r&&e.splice(r,1)}}}function t(e,r=0){const t=[];return{read:(...n)=>o(e,t,n,r),preload:(...n)=>{o(e,t,n,r,!0)},clear:(...e)=>dist_s(t,...e),peek:(...e)=>{var r;return null==(r=t.find(r=>dist_n(e,r.args)))?void 0:r.response}}}function dist_i(n,s){return Object(react["useMemo"])(()=>o(n,r,s,dist_i.lifespan),s)}dist_i.lifespan=0,dist_i.clear=(...e)=>dist_s(r,...e),dist_i.preload=(e,...n)=>{o(e,r,n,dist_i.lifespan,!0)},dist_i.peek=(...e)=>{var o;return null==(o=r.find(r=>dist_n(e,r.args)))?void 0:o.response};
 
 // EXTERNAL MODULE: ./node_modules/react-use-measure/dist/web.js
-var web = __webpack_require__(52);
+var web = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./node_modules/react-merge-refs/dist/react-merge-refs.esm.js
 var react_merge_refs_esm = __webpack_require__(15);
@@ -55570,7 +55570,7 @@ if (true) {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(58);
+  module.exports = __webpack_require__(56);
 } else {}
 
 
@@ -55615,8 +55615,8 @@ var useLayoutEffect = typeof window !== 'undefined' &&
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(66);
-            var content = __webpack_require__(67);
+var api = __webpack_require__(64);
+            var content = __webpack_require__(65);
 
             content = content.__esModule ? content.default : content;
 
@@ -61157,7 +61157,7 @@ function findIndex(arr, test) {
 if (false) { var throwOnDirectAccess, ReactIs; } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(62)();
+  module.exports = __webpack_require__(60)();
 }
 
 
@@ -63552,7 +63552,7 @@ var createStringInterpolator = function (config) {
 
 
 if (true) {
-  module.exports = __webpack_require__(76);
+  module.exports = __webpack_require__(74);
 } else {}
 
 
@@ -63568,7 +63568,7 @@ if (true) {
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _react_spring_shared_stringInterpolation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(26);
-/* harmony import */ var _react_spring_shared_colors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(53);
+/* harmony import */ var _react_spring_shared_colors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(51);
 /* harmony import */ var _react_spring_animated__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8);
 /* harmony import */ var _react_spring_shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2);
 /* harmony import */ var _react_spring_shared__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7);
@@ -68711,7 +68711,7 @@ var index = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext || create
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(64)
+var isarray = __webpack_require__(62)
 
 /**
  * Expose `pathToRegexp`.
@@ -69296,7 +69296,7 @@ function deprecateInterpolate() {
 
 
 if (true) {
-  module.exports = __webpack_require__(65);
+  module.exports = __webpack_require__(63);
 } else {}
 
 
@@ -69738,53 +69738,6 @@ function toComment(sourceMap) {
 
 /***/ }),
 /* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (url, options) {
-  if (!options) {
-    // eslint-disable-next-line no-param-reassign
-    options = {};
-  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
-
-
-  url = url && url.__esModule ? url.default : url;
-
-  if (typeof url !== 'string') {
-    return url;
-  } // If url is already wrapped in quotes, remove them
-
-
-  if (/^['"].*['"]$/.test(url)) {
-    // eslint-disable-next-line no-param-reassign
-    url = url.slice(1, -1);
-  }
-
-  if (options.hash) {
-    // eslint-disable-next-line no-param-reassign
-    url += options.hash;
-  } // Should url be wrapped?
-  // See https://drafts.csswg.org/css-values-3/#urls
-
-
-  if (/["'() \t\n]/.test(url) || options.needQuotes) {
-    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, '\\n'), "\"");
-  }
-
-  return url;
-};
-
-/***/ }),
-/* 45 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.p + "fonts/SourceSansPro-Regular.ttf");
-
-/***/ }),
-/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -70294,7 +70247,7 @@ module.exports = pick;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(24)))
 
 /***/ }),
-/* 47 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -71789,7 +71742,7 @@ module.exports = omit;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(24)))
 
 /***/ }),
-/* 48 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // stats.js - http://github.com/mrdoob/stats.js
@@ -71800,26 +71753,26 @@ v){c=Math.min(c,f);g=Math.max(g,f);b.fillStyle=l;b.globalAlpha=1;b.fillRect(0,0,
 
 
 /***/ }),
-/* 49 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 !function(e,o){ true?o(exports):undefined}(this,(function(e){"use strict";const o=["992 - Silicon Motion SM502","991 - ATI Mobility 128 M3","990 - VIA S3 Graphics ProSavage8","989 - SIS Mirage M661FX ","988 - SIS Mirage 2 M760","987 - VIA Castle Rock","986 - VIA S3G UniChrome Pro","985 - VIA S3G UniChrome Pro II","984 - ATI Radeon IGP 320M","983 - ATI Radeon IGP 340M","982 - ATI Mobility Radeon 7000 IGP","981 - Intel Extreme Graphics 2","980 - VIA Chrome9 HC","979 - ATI Mobility Radeon M6","978 - ATI Mobility Radeon M7","977 - ATI Mobility Radeon 9000 IGP","976 - ATI Mobility Radeon 9100 IGP","975 - NVIDIA GeForce 2 Go (200 / 100)","974 - NVIDIA GeForce 3 Go","965 - Intel Graphics Media Accelerator (GMA) 500","963 - Intel Graphics Media Accelerator (GMA) 600","952 - SIS Mirage 3 671MX","951 - SIS Mirage 3+ 672MX","950 - ATI Radeon Xpress 1100","949 - ATI Radeon Xpress 200M","948 - Intel Graphics Media Accelerator (GMA) 900","947 - ATI Mobility FireGL 7800","946 - ATI Mobility Radeon 7500","934 - Intel Graphics Media Accelerator (GMA) 950","933 - Intel Graphics Media Accelerator (GMA) 3150","931 - NVIDIA GeForce 4 420 Go","930 - NVIDIA GeForce 4 440 Go","929 - NVIDIA GeForce 4 460 Go","928 - NVIDIA GeForce 4 488 Go","927 - ATI Mobility Radeon 9000","926 - NVIDIA GeForce FX Go 5200","925 - ATI Mobility FireGL 9000","924 - ATI Mobility Radeon 9200","923 - Intel Graphics Media Accelerator (GMA) 3600","921 - NVIDIA GeForce 7000M","920 - NVIDIA GeForce Go 6100","919 - NVIDIA GeForce Go 6150","918 - ATI Radeon Xpress 1150","917 - NVIDIA GeForce 7150M","916 - NVIDIA GeForce 7190M","915 - Intel Graphics Media Accelerator (GMA) 3650","904 - Intel Graphics Media Accelerator (GMA) X3100","903 - ATI Radeon Xpress X1200","902 - ATI Radeon Xpress 1250","901 - ATI Radeon Xpress X1250","900 - ATI Radeon Xpress X1270","899 - NVIDIA GeForce FX Go 5600 / 5650","898 - NVIDIA Quadro FX Go 1000","897 - NVIDIA GeForce FX Go 5700","896 - NVIDIA GeForce Go 6200","895 - NVIDIA GeForce Go 6250","894 - ATI Mobility Radeon X300","893 - NVIDIA GeForce Go 6400","892 - NVIDIA GeForce Go 7200","891 - ATI Mobility Radeon 9550","890 - ATI Mobility FireGL T2","889 - ATI Mobility Radeon 9600","888 - NVIDIA GeForce4 4200 Go","887 - ATI Mobility Radeon X1300","886 - ATI Mobility FireGL T2e","885 - ATI Mobility Radeon 9700","884 - ATI Mobility Radeon HD 2300","883 - ATI Mobility Radeon X2300","882 - ATI Mobility FireGL V3100","881 - ATI Mobility FireGL V3200","880 - ATI Mobility Radeon X600","879 - NVIDIA Quadro NVS 110M","874 - NVIDIA GeForce Go 7300","873 - NVIDIA Quadro NVS 120M","872 - NVIDIA Quadro FX 350M","871 - NVIDIA GeForce Go 7400","869 - Intel Graphics Media Accelerator (GMA) 4500M","868 - Intel Graphics Media Accelerator (GMA) 4500MHD","867 - Intel Graphics Media Accelerator (GMA) 4700MHD","866 - NVIDIA GeForce 8200M G","865 - NVIDIA Quadro NVS 130M","862 - NVIDIA GeForce 8400M G","861 - ATI Radeon HD 3100","860 - ATI Mobility Radeon HD 3400","851 - ATI Radeon HD 4100","850 - ATI Radeon HD 4225","849 - ATI Radeon HD 3200","848 - ATI Mobility Radeon HD 2400","847 - NVIDIA Quadro NVS 135M","846 - NVIDIA GeForce 8400M GS","845 - NVIDIA GeForce 9100M G","844 - ATI Mobility Radeon X1400","843 - ATI Mobility Radeon X1350","842 - NVIDIA Quadro FX 360M","841 - NVIDIA Quadro NVS 150M","840 - AMD Radeon HD 6250","839 - Intel Graphics Media Accelerator (GMA) HD Graphics","838 - ATI Radeon HD 4200","837 - ATI Radeon HD 4250","836 - ATI Radeon HD 4270","835 - ATI Mobility Radeon HD 2400 XT","834 - ATI Mobility Radeon HD 3410","833 - ATI Mobility Radeon HD 3430","832 - ATI Mobility Radeon HD 3450","831 - AMD Radeon HD 6290","830 - AMD Radeon HD 7290","829 - NVIDIA GeForce 9200M GS","828 - NVIDIA Quadro NVS 160M","827 - NVIDIA Quadro FX 370M","826 - NVIDIA GeForce 9300M GS","825 - NVIDIA ION 2","824 - NVIDIA GeForce 9300M G","823 - ATI Mobility Radeon HD 3470","822 - NVIDIA GeForce 9400M GeForceBoost","821 - ATI Mobility Radeon HD 3470 Hybrid X2","820 - AMD Radeon HD 8180","819 - AMD Radeon HD 6310","818 - AMD Radeon HD 7310","817 - AMD Radeon HD 6320","816 - AMD Radeon HD 7340","812 - Intel HD Graphics (Bay Trail)","803 - Intel HD Graphics (Sandy Bridge)","802 - NVIDIA GeForce 9400M (G) / ION (LE)","801 - NVIDIA GeForce G 205M","800 - NVIDIA GeForce G 102M","799 - NVIDIA GeForce 9500M GE","798 - NVIDIA GeForce G 103M","797 - NVIDIA GeForce G 105M","795 - Intel HD Graphics 2000","794 - NVIDIA Quadro NVS 140M","793 - NVIDIA GeForce 8400M GT","792 - ATI Mobility Radeon HD 4330","791 - AMD Radeon HD 6330M","790 - NVIDIA GeForce G 110M","789 - ATI Mobility FireGL V5000","788 - ATI Mobility Radeon X700","787 - ATI Mobility Radeon X1450","786 - NVIDIA GeForce Go 6600","785 - ATI Mobility Radeon 9800","784 - ATI Mobility FireGL V5200","783 - ATI Mobility Radeon X1600","782 - ATI Mobility Radeon X800","781 - NVIDIA Quadro NVS 300M","780 - NVIDIA GeForce Go 7600","779 - ATI Mobility Radeon X2500","778 - ATI Mobility FireGL V5250","777 - ATI Mobility Radeon X1700","776 - NVIDIA GeForce 305M","775 - ATI Mobility Radeon HD 530v","774 - ATI Radeon HD 4350","773 - ATI Mobility Radeon HD 4350","772 - ATI Mobility Radeon HD 4530","771 - AMD Radeon HD 6350M","770 - AMD Radeon HD 7350M","769 - Intel HD Graphics (Ivy Bridge)","768 - Intel HD Graphics 2500","767 - ATI Mobility Radeon HD 4550","766 - ATI Mobility Radeon HD 540v","765 - AMD Radeon HD 8210","764 - ATI Mobility Radeon HD 5430","763 - AMD Radeon HD 6380G","762 - AMD Radeon HD 6430M","761 - ATI Mobility Radeon X800XT","760 - NVIDIA Quadro FX Go 1400","759 - NVIDIA GeForce Go 6800","758 - NVIDIA GeForce Go 7700","757 - NVIDIA NVS 2100M","756 - NVIDIA GeForce 8600M GS","755 - NVIDIA GeForce 9500M G","754 - NVIDIA GeForce Go 7600 GT","753 - NVIDIA GeForce 315M","752 - NVIDIA GeForce 405M","751 - NVIDIA NVS 3100M","750 - NVIDIA GeForce G210M","749 - NVIDIA GeForce 310M","748 - NVIDIA Quadro FX 380M","747 - Intel HD Graphics 3000","746 - ATI Mobility Radeon HD 2600","745 - NVIDIA GeForce 8600M GT","744 - ATI Mobility Radeon HD 5450","743 - NVIDIA Quadro FX 570M","742 - ATI Mobility Radeon HD 4570","741 - Intel HD Graphics (Cherry Trail)","740 - AMD Radeon HD 8250","739 - AMD Radeon R6 (Mullins)","738 - AMD Radeon HD 8240","737 - ATI Mobility Radeon HD 545v","736 - ATI Mobility Radeon HD 5145","735 - ATI Mobility FireGL V5700","734 - ATI Mobility Radeon HD 3650","733 - AMD Radeon HD 7430M","732 - AMD Radeon HD 6450M","731 - ATI Mobility Radeon HD 5470","730 - AMD Radeon HD 8280","729 - AMD Radeon HD 6370M","727 - AMD Radeon R2 (Mullins/Beema/Carrizo-L)","723 - AMD Radeon HD 7370M","722 - NVIDIA GeForce 410M","721 - NVIDIA GeForce GT 415M","720 - ATI Mobility Radeon HD 2700","719 - AMD Radeon HD 6480G","718 - AMD Radeon HD 7400G","717 - NVIDIA GeForce 9500M GS","716 - NVIDIA GeForce 9600M GS","715 - NVIDIA GeForce Go 7800","714 - NVIDIA GeForce Go 6800 Ultra","713 - ATI Mobility Radeon X1800","712 - ATI Mobility Radeon X1800XT","711 - ATI Mobility Radeon X1900","710 - ATI Mobility Radeon HD 2600 XT","709 - NVIDIA GeForce GT 320M","708 - NVIDIA GeForce 320M","707 - AMD Radeon HD 8310G","706 - AMD Radeon HD 6520G","705 - Intel HD Graphics (Haswell)","701 - ATI Mobility FireGL V5725","700 - ATI Mobility Radeon HD 3670","699 - AMD Radeon HD 7420G","698 - NVIDIA GeForce GT 520M","697 - AMD FirePro M3900","696 - AMD Radeon HD 6470M","695 - Intel HD Graphics 400 (Braswell)","694 - Intel HD Graphics (Braswell)","693 - Intel HD Graphics 405 (Braswell)","690 - NVIDIA GeForce 705M","689 - NVIDIA GeForce 610M","688 - AMD Radeon HD 7450M","687 - AMD Radeon HD 6510G2","686 - NVIDIA GeForce GT 120M","685 - NVIDIA Quadro FX 770M","684 - NVIDIA GeForce GT 220M","683 - NVIDIA GeForce 9600M GT","682 - NVIDIA Quadro FX 1500M","681 - NVIDIA Quadro NVS 320M","680 - NVIDIA GeForce Go 7900 GS","679 - NVIDIA GeForce Go 7800 GTX","678 - NVIDIA Quadro FX 1600M","677 - NVIDIA Quadro FX 1700M","676 - NVIDIA GeForce 8700M GT","675 - NVIDIA GeForce 9650M GT","674 - NVIDIA GeForce 9650M GS","673 - Intel HD Graphics 500","672 - Intel UHD Graphics 600","671 - AMD Radeon HD 8330","670 - AMD Radeon HD 8350G","669 - NVIDIA Quadro FX 2500M","668 - NVIDIA GeForce Go 7900 GTX","667 - NVIDIA NVS 4200M","666 - NVIDIA GeForce GT 130M","665 - NVIDIA GeForce Go 7900 GS SLI","664 - NVIDIA GeForce 8600M GT SLI","663 - NVIDIA GeForce Go 7800 GTX SLI","662 - NVIDIA GeForce GT 325M","661 - AMD Radeon HD 7520G","660 - NVIDIA GeForce GT 520MX","654 - AMD Radeon HD 8400","653 - AMD Radeon HD 8410G","652 - AMD Radeon HD 6490M","651 - AMD Radeon HD 7470M","650 - AMD Radeon HD 8450G","649 - AMD Radeon HD 6515G2","648 - AMD Radeon HD 6480G + HD 7450M Dual Graphics","647 - AMD Radeon HD 7500G","646 - AMD Radeon HD 6540G2","645 - AMD Radeon HD 6520G + HD 7450M Dual Graphics","644 - AMD Radeon HD 6545G2","643 - AMD Radeon HD 6450 GDDR5","642 - Intel HD Graphics (Skylake)","641 - Intel HD Graphics 4200","640 - Intel HD Graphics (Broadwell)","639 - AMD Radeon R2 (Stoney Ridge)","638 - AMD Radeon R3 (Mullins/Beema)","637 - AMD Radeon R4 (Kaveri)","636 - AMD Radeon R4 (Beema)","635 - AMD Radeon R5 (Beema/Carrizo-L)","633 - AMD Radeon R4 (Stoney Ridge)","632 - AMD Radeon HD 6620G","629 - Intel HD Graphics 4000","628 - AMD Radeon HD 7480D","627 - ATI Mobility Radeon HD 550v","626 - NVIDIA GeForce GT 230M","625 - NVIDIA GeForce 9700M GT","624 - NVIDIA GeForce 8700M GT SLI","623 - NVIDIA Quadro FX 3500M","622 - NVIDIA GeForce Go 7950 GTX","621 - AMD Radeon HD 7510M","620 - Intel HD Graphics 5300","619 - Intel HD Graphics 505","618 - Intel UHD Graphics 605","617 - AMD Radeon HD 7490M","616 - NVIDIA GeForce GT 240M","615 - NVIDIA Quadro NVS 5100M","614 - NVIDIA Quadro FX 880M","613 - NVIDIA GeForce GT 330M","612 - ATI Mobility Radeon HD 3850","611 - AMD Radeon HD 7530M","610 - NVIDIA GeForce GT 420M","609 - NVIDIA GeForce Go 7900 GTX SLI","608 - NVIDIA GeForce GT 220","607 - NVIDIA GeForce Go 7950 GTX SLI","606 - ATI Mobility Radeon HD 4650","605 - ATI Mobility Radeon HD 560v","604 - ATI Mobility Radeon HD 5165","603 - AMD Radeon HD 6640G2","602 - AMD Radeon HD 6620G + HD 7450M Dual Graphics","601 - ATI Mobility Radeon HD 3870","600 - AMD Radeon HD 7600G","599 - AMD Radeon HD 7500G + HD 7550M Dual Graphics","598 - NVIDIA GeForce GT 335M","597 - NVIDIA Quadro FX 2700M","596 - AMD Radeon HD 6645G2","595 - NVIDIA GeForce 9700M GTS","594 - NVIDIA GeForce GT 425M","593 - ATI Mobility Radeon HD 4670","592 - AMD Radeon HD 7550M","591 - ATI Mobility Radeon HD 565v","590 - NVIDIA NVS 5200M","589 - Intel HD Graphics 510","588 - AMD Radeon HD 8610G","587 - Intel HD Graphics 4400","586 - Intel HD Graphics 610","585 - Intel UHD Graphics 610","584 - Intel HD Graphics 515","576 - AMD Radeon HD 7640G","575 - AMD Radeon HD 8470D","574 - AMD Radeon HD 7620G","573 - AMD Radeon HD 7610M","572 - AMD Radeon HD 7640G + HD 7610M Dual Graphics","571 - AMD Radeon HD 6550D","570 - NVIDIA GeForce GT 525M","569 - NVIDIA GeForce GT 620M","568 - NVIDIA GeForce GT 625M","567 - NVIDIA Quadro K500M","566 - AMD Radeon HD 8550G","565 - AMD Radeon HD 6530M","564 - AMD Radeon HD 8510G","563 - ATI Mobility Radeon HD 5650","562 - NVIDIA Quadro FX 1800M","561 - AMD Radeon HD 7630M","560 - AMD Radeon HD 7570M","559 - AMD FirePro M2000","558 - AMD Radeon HD 7650M","557 - AMD Radeon HD 6630M","556 - NVIDIA GeForce GTS 250M","555 - NVIDIA GeForce GTS 350M","554 - AMD Radeon HD 7590M","553 - AMD Radeon HD 6550M","552 - ATI Radeon HD 5570","551 - NVIDIA Quadro K510M","550 - Intel HD Graphics 5000","549 - AMD Radeon HD 6680G2","548 - NVIDIA GeForce GT 435M","547 - AMD Radeon HD 7660G","546 - NVIDIA GeForce 710M","545 - NVIDIA NVS 5400M","544 - ATI FirePro M5800","543 - AMD Radeon R5 (Kaveri)","542 - AMD Radeon R5 (Carrizo)","541 - Intel HD Graphics 615","540 - Intel UHD Graphics 615","539 - Intel UHD Graphics 617","530 - Qualcomm Adreno 630","526 - Intel HD Graphics 5500","525 - ATI Mobility Radeon HD 5730","524 - Intel HD Graphics 4600","523 - AMD Radeon HD 6650M","522 - AMD Radeon HD 6690G2","521 - NVIDIA GeForce GT 540M","520 - Intel Iris Graphics 5100","519 - AMD Radeon HD 8550M","518 - NVIDIA Quadro K610M","517 - Intel HD Graphics 6000","516 - AMD Radeon HD 8570M","515 - AMD Radeon HD 8450G + Radeon HD 8570M Dual Graphics","514 - AMD Radeon HD 6720G2","513 - ATI Mobility Radeon HD 5750","511 - AMD Radeon R5 (Stoney Ridge)","510 - AMD Radeon RX Vega 2","509 - AMD Radeon R5 M420","508 - AMD Radeon R5 M315","507 - AMD Radeon R5 M230","506 - AMD Radeon R5 M320","505 - AMD Radeon R5 M240","504 - NVIDIA GeForce 8800M GTS","503 - NVIDIA GeForce GT 720M","502 - Intel UHD Graphics G4 (Lakefield GT1 48 EU)","501 - Intel Iris Graphics 6100","500 - Intel HD Graphics 520","499 - NVIDIA GeForce 820M","498 - NVIDIA GeForce 910M","497 - NVIDIA Quadro 1000M","496 - AMD Radeon RX Vega 3","495 - AMD Radeon R5 M255","494 - AMD Radeon R5 M430","493 - AMD Radeon R5 M330","492 - AMD Radeon R5 M335","491 - NVIDIA GeForce GTS 150M","490 - AMD Radeon HD 7560D","489 - NVIDIA GeForce GT 630M","488 - AMD Radeon HD 7670M","487 - AMD Radeon HD 7520G + HD 7670M Dual Graphics","486 - AMD Radeon HD 6620G + HD 7670M Dual Graphics","485 - AMD Radeon HD 7640G + HD 7670M Dual Graphics","484 - AMD Radeon HD 8650G","483 - AMD Radeon HD 6570M","482 - ATI Mobility Radeon HD 5770","481 - ATI Mobility Radeon HD 4830","480 - NVIDIA GeForce 9800M GS","479 - AMD Radeon HD 6730M","478 - AMD Radeon HD 6740G2","477 - AMD Radeon HD 6760G2","476 - ATI Mobility Radeon HD 5830","475 - AMD Radeon HD 6830M","474 - NVIDIA GeForce GT 430","473 - NVIDIA GeForce 9800M GTS","472 - NVIDIA GeForce GTS 160M","471 - NVIDIA GeForce GTS 260M","470 - AMD Radeon HD 8590M","469 - NVIDIA GeForce GT 550M","468 - NVIDIA Quadro K1000M","467 - AMD Radeon HD 6750M","466 - AMD Radeon HD 7660D","465 - AMD Radeon R6 M255DX","464 - AMD Radeon HD 8670M","463 - AMD Radeon HD 8550G + HD 8670M Dual Graphics","462 - AMD Radeon HD 7660G + HD 7670M Dual Graphics","461 - AMD Radeon HD 8650G + HD 8570M Dual Graphics","460 - AMD Radeon HD 8650G + HD 8670M Dual Graphics","459 - AMD Radeon HD 8570D","458 - Intel HD Graphics 5600","457 - AMD Radeon HD 7690M","456 - AMD Radeon HD 6755G2","455 - NVIDIA GeForce GT 240 GDDR5","454 - NVIDIA GeForce GTS 360M","453 - NVIDIA GeForce GT 445M","452 - NVIDIA Quadro FX 3600M","451 - NVIDIA GeForce 8800M GTX","450 - NVIDIA GeForce 9800M GT","449 - NVIDIA Quadro 2000M","448 - AMD FirePro W2100","447 - AMD Radeon HD 6850M","446 - ATI Mobility Radeon HD 5850","445 - ATI Radeon HD 5670","444 - NVIDIA GeForce GT 555M","443 - NVIDIA GeForce GT 635M","442 - AMD Radeon HD 6770M","441 - AMD Radeon HD 8730M","440 - AMD Radeon HD 8650M","439 - AMD Radeon R6 (Kaveri)","438 - NVIDIA GeForce GT 640M LE","437 - AMD FirePro M5950","436 - AMD Radeon HD 7690M XT","435 - AMD Radeon HD 8670D","434 - AMD Radeon HD 6775G2","433 - NVIDIA Quadro FX 2800M","432 - NVIDIA GeForce 9800M GTX","431 - NVIDIA GeForce GTX 260M","430 - ATI Mobility Radeon HD 4850","429 - ATI FirePro M7740","428 - ATI Mobility Radeon HD 4860","427 - Qualcomm Adreno 680","426 - Qualcomm Adreno 685","425 - AMD Radeon R6 (Carrizo)","424 - Intel HD Graphics 620","423 - Intel UHD Graphics 620","422 - AMD Radeon R5 (Bristol Ridge)","420 - Intel HD Graphics P530","419 - Intel HD Graphics 530","418 - Intel UHD Graphics G7 (Lakefield GT2 64 EU)","417 - Intel HD Graphics P630","416 - Intel HD Graphics 630","415 - Intel UHD Graphics P630","414 - Intel UHD Graphics 630","413 - Intel UHD Graphics G1 (Ice Lake 32 EU)","412 - AMD Radeon RX Vega 5","411 - AMD Radeon RX Vega 6 (Ryzen 2000/3000)","410 - AMD Radeon R6 M340DX","409 - AMD Radeon 610","408 - AMD Radeon 520","407 - AMD Radeon R7 M340","406 - AMD Radeon R7 M260","405 - NVIDIA Quadro FX 3700M","404 - ATI Mobility Radeon HD 3850 X2","403 - NVIDIA GeForce 8800M GTX SLI","402 - ATI Mobility Radeon HD 3870 X2","401 - NVIDIA GeForce 9800M GTS SLI","400 - AMD Radeon R7 M440","399 - AMD Radeon 620","398 - AMD Radeon R8 M445DX","397 - AMD Radeon HD 8690M","396 - NVIDIA GeForce 9800M GT SLI","395 - NVIDIA GeForce 920M","394 - NVIDIA GeForce GTX 280M","393 - AMD Radeon R7 M360","391 - AMD Radeon HD 7730M","390 - AMD Radeon R7 M460","389 - AMD Radeon R8 M365DX","388 - AMD Radeon R7 (Kaveri)","387 - AMD Radeon R7 (Carrizo)","386 - NVIDIA GeForce GT 640M","385 - AMD Radeon R7 (Bristol Ridge)","384 - ATI Mobility Radeon HD 4870","383 - NVIDIA GeForce GTX 285M","382 - NVIDIA Quadro FX 3800M","381 - AMD Radeon R7 M265","380 - AMD Radeon R7 M270","379 - NVIDIA Quadro 3000M","378 - AMD Radeon HD 8750M","377 - AMD FirePro M4100","376 - AMD Radeon HD 7750M","375 - NVIDIA GeForce GT 645M","374 - NVIDIA GeForce GT 730M","373 - AMD Radeon HD 8550G + HD 8750M Dual Graphics","372 - NVIDIA GeForce GTX 460M","371 - AMD Radeon R7 M260X","370 - AMD Radeon HD 8770M","369 - AMD Radeon HD 8830M","368 - NVIDIA GeForce 9800M GTX SLI","367 - ATI Radeon HD 4850","366 - AMD Radeon HD 6870M","365 - ATI FirePro M7820","364 - AMD FirePro M4000","363 - NVIDIA Quadro 5000M","362 - NVIDIA GeForce 825M","361 - ATI Mobility Radeon HD 5870","360 - NVIDIA GeForce GT 735M","359 - NVIDIA GeForce GTX 260M SLI","358 - NVIDIA GeForce GTS 450","357 - NVIDIA Quadro K2000M","352 - Intel Iris Graphics 540","351 - NVIDIA GeForce 920MX","350 - Intel Iris Plus Graphics 640","349 - NVIDIA GeForce MX110","348 - NVIDIA GeForce 830M","346 - Intel Iris Plus Graphics 645","345 - AMD Radeon RX Vega 6 (Ryzen 4000)","344 - AMD Radeon 625","343 - AMD Radeon 530","342 - Intel Iris Graphics 550","341 - NVIDIA GeForce 930M","340 - Intel Iris Plus Graphics 650","339 - NVIDIA GeForce GT 740M","338 - AMD Radeon R7 384 Cores (Kaveri Desktop)","337 - Intel Iris Pro Graphics 5200","336 - AMD Radeon R7 512 Cores (Kaveri Desktop)","335 - NVIDIA GeForce GTX 560M","334 - AMD Radeon HD 7770M","333 - NVIDIA GeForce GT 745M","332 - AMD Radeon R7 M275DX","331 - NVIDIA GeForce 840M","330 - NVIDIA Quadro M500M","329 - NVIDIA Quadro K620M","328 - NVIDIA GeForce GT 650M","327 - AMD Radeon R7 M370","326 - AMD Radeon R7 M380","325 - AMD Radeon R7 M445","324 - Intel Iris Plus Graphics 655","323 - AMD Radeon R9 M375","322 - AMD FirePro W4190M","321 - NVIDIA Quadro M600M","318 - NVIDIA GeForce 930MX","317 - Intel Iris Plus Graphics G4 (Ice Lake 48 EU)","316 - NVIDIA GeForce 940M","315 - AMD Radeon RX Vega 7","314 - AMD Radeon RX Vega 8 (Ryzen 2000/3000)","313 - NVIDIA Quadro K1100M","312 - NVIDIA Quadro M520","311 - NVIDIA GeForce 940MX","310 - NVIDIA GeForce MX130","309 - Intel Iris Pro Graphics 6200","308 - NVIDIA GeForce GT 750M","307 - NVIDIA GeForce GTX 480M","306 - NVIDIA GeForce GTX 470M","305 - NVIDIA Quadro 4000M","304 - ATI Mobility Radeon HD 4870 X2","303 - AMD FirePro W4100","302 - AMD FirePro W4170M","301 - AMD Radeon HD 8790M","300 - AMD Radeon R7 M465","299 - AMD Radeon HD 7850M","298 - AMD Radeon R9 M265X","297 - AMD Radeon R9 M365X","296 - AMD Radeon HD 8850M","295 - NVIDIA GeForce 845M","294 - NVIDIA GeForce GTX 660M","293 - NVIDIA GeForce GT 755M","292 - AMD Radeon R7 250","291 - AMD Radeon HD 6950M","290 - NVIDIA GeForce GTX 280M SLI","289 - NVIDIA GeForce GTX 550 Ti","288 - ATI Radeon HD 5770","287 - NVIDIA Quadro K2100M","286 - AMD Radeon RX Vega 8 (Ryzen 4000)","285 - NVIDIA GeForce MX230","284 - AMD FirePro M5100","283 - AMD FirePro M6000","282 - Intel UHD Graphics Xe G4 48EUs","281 - NVIDIA GeForce GTX 570M","280 - NVIDIA Quadro K3000M","279 - AMD Radeon HD 7870M","278 - AMD Radeon HD 8870M","277 - AMD Radeon R9 M270","276 - AMD Radeon HD 6970M","275 - AMD FirePro M8900","274 - AMD FirePro W5130M","273 - NVIDIA Maxwell GPU Surface Book","272 - AMD Radeon RX Vega 9","271 - NVIDIA GeForce GTX 670M","270 - AMD Radeon R9 M275","269 - NVIDIA GeForce GTX 760M","268 - NVIDIA Quadro 5010M","267 - NVIDIA GeForce GTX 670MX","266 - AMD Radeon R9 M370X","265 - AMD FirePro W5170M","264 - NVIDIA Quadro K3100M","263 - NVIDIA GeForce GTX 285M SLI","262 - AMD Radeon HD 6790","261 - NVIDIA GeForce GTX 460 768MB","260 - NVIDIA GeForce GTX 485M","259 - ATI Mobility Radeon HD 5870 Crossfire","258 - NVIDIA GeForce GTX 460M SLI","257 - NVIDIA GeForce GT 650M SLI","256 - AMD Radeon HD 7770","255 - AMD Radeon R9 M380","254 - AMD Radeon R9 M385","253 - AMD Radeon R9 M470","252 - AMD Radeon HD 6990M","251 - NVIDIA GeForce GTX 580M","250 - NVIDIA GeForce GTX 675M","249 - ATI Radeon HD 5850","248 - Intel Iris Pro Graphics 580","247 - Intel Iris Pro Graphics P580","246 - AMD Radeon RX Vega 10","245 - Intel Iris Plus Graphics G7 (Ice Lake 64 EU)","244 - NVIDIA Quadro P500","243 - NVIDIA Quadro K4000M","242 - NVIDIA GeForce GTX 560M SLI","241 - NVIDIA GeForce GTX 480M SLI","240 - NVIDIA GeForce GTX 470M SLI","239 - NVIDIA GeForce GTX 765M","238 - NVIDIA GeForce 945M","237 - NVIDIA GeForce GTX 470","236 - AMD Radeon HD 6870","235 - NVIDIA GeForce GTX 560 Ti","234 - AMD Radeon HD 7950M","233 - AMD Radeon R9 M280X","232 - AMD Radeon RX Vega 11","231 - NVIDIA Quadro M620","230 - NVIDIA Quadro M1000M","229 - NVIDIA GeForce GTX 850M","228 - NVIDIA Quadro P520","227 - AMD Radeon R9 M385X","226 - AMD Radeon R9 M470X","225 - AMD Radeon 540X","224 - AMD Radeon 630","223 - AMD Radeon Pro 450","222 - NVIDIA GeForce GTX 950M","221 - NVIDIA GeForce GT 750M SLI","220 - NVIDIA GeForce GTX 675MX","219 - AMD Radeon HD 6970M Crossfire","218 - NVIDIA GeForce GTX 485M SLI","217 - NVIDIA GeForce GT 755M SLI","216 - AMD Radeon HD 6990M Crossfire","215 - NVIDIA GeForce GTX 580M SLI","214 - NVIDIA GeForce GTX 860M","213 - AMD Radeon Pro WX 3100","212 - AMD Radeon RX 540","211 - AMD Radeon Pro WX 2100","210 - AMD Radeon RX 540X","209 - NVIDIA GeForce GTX 770M","208 - Intel Iris Xe Graphics G7 80EUs","207 - NVIDIA Quadro K4100M","206 - NVIDIA Quadro K5000M","205 - NVIDIA Quadro M2000M","204 - NVIDIA GeForce MX330","203 - NVIDIA GeForce MX150","202 - NVIDIA GeForce MX250","201 - NVIDIA Quadro P600","200 - NVIDIA GeForce GT 1030","199 - AMD Radeon Pro 455","198 - AMD Radeon Pro 555","197 - AMD Radeon Pro 555X","196 - AMD Radeon Pro WX 3200","195 - AMD Radeon RX 640","194 - AMD Radeon RX 550","193 - AMD Radeon RX 550X","192 - NVIDIA Quadro P620","191 - NVIDIA Quadro M1200","190 - NVIDIA GeForce GTX 480","189 - NVIDIA GeForce GTX 570","188 - NVIDIA GeForce GTX 670MX SLI","187 - NVIDIA GeForce GTX 750 Ti","186 - NVIDIA GeForce GTX 960M","185 - AMD Radeon Pro WX 4130","184 - AMD Radeon Pro 460","183 - AMD Radeon Pro 560","182 - AMD Radeon Pro 560X","181 - AMD Radeon HD 7970M","180 - AMD FirePro M6100","179 - AMD Radeon R9 M390","178 - NVIDIA GeForce GTX 775M","177 - NVIDIA GeForce GTX 680M","176 - AMD Radeon RX 460","175 - NVIDIA GeForce GTX 765M SLI","174 - NVIDIA GeForce GTX 675M SLI","173 - AMD Radeon HD 6970","172 - NVIDIA GeForce GTX 580","171 - AMD Radeon HD 8970M","170 - AMD Radeon R9 M290X","169 - NVIDIA GeForce GTX 870M","168 - NVIDIA Quadro M2200","167 - AMD Radeon RX 560","166 - AMD Radeon RX 560X","165 - NVIDIA GeForce GTX 965M","164 - AMD Radeon HD 7870","163 - AMD Radeon Pro WX 4150","162 - AMD Radeon RX 460","161 - NVIDIA GeForce GTX 680MX","160 - NVIDIA GeForce MX350","159 - NVIDIA Quadro P1000","158 - NVIDIA Quadro K5100M","157 - NVIDIA GeForce GTX 780M","156 - NVIDIA GeForce GTX 760","155 - NVIDIA GeForce GTX 660 Ti","154 - AMD Radeon R9 270X","153 - NVIDIA GeForce GTX 950","152 - NVIDIA GeForce GTX 1050 Max-Q","151 - NVIDIA GeForce GTX 880M","150 - NVIDIA GeForce GTX 590","149 - Intel Iris Xe Graphics G7 96EUs","148 - AMD Radeon R7 370","147 - AMD Radeon R9 M395","146 - AMD FirePro W7170M","145 - Intel Xe DG1 LP (iDG1LP) Mobile","144 - NVIDIA GeForce GTX 1050 Mobile","143 - NVIDIA GeForce GTX 1050","142 - NVIDIA Quadro M3000M","141 - AMD Radeon R9 M390X","140 - AMD Radeon R9 M295X","139 - AMD Radeon R9 M485X","138 - AMD Radeon Pro Vega 16","137 - AMD Radeon Pro WX Vega M GL","136 - AMD Radeon RX Vega M GL / 870","135 - NVIDIA GeForce GTX 1050 Ti Max-Q","134 - AMD Radeon R9 M395X","133 - NVIDIA GeForce GTX 770M SLI","132 - AMD Radeon HD 7970","131 - NVIDIA GeForce GTX 680","130 - NVIDIA GeForce GTX 860M SLI","129 - NVIDIA GeForce GTX 970M","128 - NVIDIA Quadro M4000M","127 - NVIDIA Quadro P2000 Max-Q","126 - NVIDIA Quadro P2000","125 - NVIDIA GeForce GTX 1050 Ti","124 - NVIDIA GeForce GTX 1050 Ti Mobile","123 - NVIDIA GeForce GTX 960","122 - AMD Radeon R9 380","121 - AMD Radeon R9 280X","120 - NVIDIA Quadro M5000M","119 - AMD Radeon Pro Vega 20","118 - AMD Radeon RX Vega M GH","117 - NVIDIA GeForce GTX 980M","116 - AMD Radeon HD 7970M Crossfire","115 - NVIDIA GeForce GTX 680M SLI","114 - AMD Radeon HD 8970M Crossfire","113 - AMD Radeon R9 M290X Crossfire","112 - NVIDIA GeForce GTX 965M SLI","111 - AMD Radeon RX 490M","110 - AMD Radeon R9 290X","109 - NVIDIA GeForce GTX 780M SLI","108 - NVIDIA GeForce GTX 880M SLI","107 - NVIDIA GeForce MX450","106 - NVIDIA Quadro T1000 Max-Q","105 - NVIDIA Quadro T1000","104 - NVIDIA GeForce GTX 1650 Max-Q","103 - AMD Radeon RX 470","102 - AMD Radeon RX 570","101 - AMD Radeon RX 570X","100 - AMD Radeon RX 470","99 - AMD Radeon Pro WX 7100","98 - AMD Radeon RX 480","97 - NVIDIA Quadro P3000 Max-Q","96 - NVIDIA GeForce GTX 1060 Max-Q","95 - NVIDIA GeForce GTX 1650 Ti Max-Q","94 - NVIDIA GeForce GTX 1650","93 - NVIDIA GeForce GTX 1650 Mobile","92 - NVIDIA GeForce GTX 970","91 - NVIDIA Quadro P3000","90 - AMD Radeon RX 5300M","89 - AMD Radeon Pro 5300M","88 - AMD Radeon RX Vega Mobile","87 - NVIDIA GeForce GTX 780 Ti","86 - AMD Radeon RX 580","85 - AMD Radeon RX 580X","84 - NVIDIA Quadro P3200","83 - NVIDIA Quadro P4000 Max-Q","82 - AMD Radeon Pro 5500M","81 - AMD Radeon RX 5500M","80 - NVIDIA GeForce GTX 1060 Mobile","79 - AMD Radeon RX 480","78 - NVIDIA GeForce GTX 1650 Ti Mobile","76 - NVIDIA Quadro T2000 Max-Q","75 - NVIDIA Quadro T2000","74 - NVIDIA Quadro P4000","73 - AMD Radeon RX 570","72 - NVIDIA GeForce GTX 1060","71 - NVIDIA GeForce GTX 970M SLI","70 - AMD Radeon R9 390X","69 - NVIDIA Quadro M5500","68 - NVIDIA GeForce GTX 980","67 - AMD Radeon RX 580","66 - AMD Radeon RX 590","65 - NVIDIA GeForce GTX 980","64 - AMD Radeon R9 Nano","63 - AMD Radeon R9 Fury","62 - NVIDIA GeForce GTX 980M SLI","61 - NVIDIA Quadro P5000 Max-Q","60 - NVIDIA GeForce GTX 1660 Ti Max-Q","59 - AMD Radeon Pro 5600M","58 - NVIDIA GeForce GTX 1070 Max-Q","57 - NVIDIA GeForce GTX 1660","56 - NVIDIA GeForce GTX 980 Ti","55 - AMD Radeon RX 5600M","54 - NVIDIA GeForce GTX 1660 Ti Mobile","53 - NVIDIA Quadro P5000","52 - NVIDIA GeForce GTX 1660 Super","51 - NVIDIA GeForce GTX 1660 Ti","50 - NVIDIA Quadro P4200","49 - NVIDIA GeForce GTX 1070 Mobile","48 - NVIDIA GeForce RTX 2060 Max-Q","47 - AMD Radeon Pro Vega 56","46 - NVIDIA GeForce GTX 1080 Max-Q","45 - AMD Radeon RX 5600 XT","44 - NVIDIA GeForce GTX 1070","43 - NVIDIA Quadro P5200","42 - NVIDIA GeForce GTX 980 SLI","41 - NVIDIA GeForce RTX 2060 Mobile","40 - AMD Radeon RX Vega 56","39 - NVIDIA Quadro RTX 3000 Max-Q","38 - NVIDIA Quadro RTX 3000","37 - NVIDIA GeForce RTX 2070 Max-Q","36 - NVIDIA GeForce GTX 1070 Ti","35 - NVIDIA GeForce RTX 2070 Super Max-Q","34 - NVIDIA GeForce RTX 2060","33 - NVIDIA Quadro RTX 4000 Max-Q","32 - NVIDIA Quadro RTX 4000","31 - NVIDIA GeForce GTX 1080 Mobile","30 - AMD Radeon RX Vega 64","29 - AMD Radeon RX 5700M","28 - AMD Radeon RX 5700","27 - NVIDIA GeForce RTX 2060 Super","26 - NVIDIA GeForce RTX 2070 Mobile","25 - NVIDIA GeForce RTX 2070 Super Mobile","24 - NVIDIA GeForce GTX 1080","22 - NVIDIA GeForce RTX 2070","21 - AMD Radeon RX 5700 XT","20 - AMD Radeon VII","19 - NVIDIA GeForce RTX 2070 Super","18 - NVIDIA GeForce RTX 2080 Max-Q","17 - NVIDIA GeForce RTX 2080 Super Max-Q","16 - NVIDIA GeForce GTX 1070 SLI","15 - NVIDIA GeForce GTX 1070 SLI","14 - NVIDIA GeForce GTX 1080 SLI","13 - NVIDIA Titan X Pascal","12 - NVIDIA GeForce GTX 1080 Ti","11 - NVIDIA GeForce RTX 2080 Mobile","10 - NVIDIA GeForce RTX 2080 Super Mobile","9 - NVIDIA Quadro RTX 5000 Max-Q","8 - NVIDIA Quadro RTX 5000","6 - NVIDIA GeForce RTX 2080","5 - NVIDIA GeForce RTX 2080 Super","4 - NVIDIA Quadro RTX 6000","2 - NVIDIA GeForce RTX 2080 Ti","1 - NVIDIA Titan RTX"],I=["973 - ARM Mali-200","972 - Qualcomm Adreno 200","971 - PowerVR SGX530","970 - PowerVR SGX531","969 - PowerVR SGX535","968 - Vivante GC800","967 - Qualcomm Adreno 203","966 - Qualcomm Adreno 205","964 - PowerVR SGX540","962 - NVIDIA GeForce ULP (Tegra 2)","961 - ARM Mali-400 MP","960 - ARM Mali-400 MP2","959 - Vivante GC1000+ Dual-Core","958 - Qualcomm Adreno 220","957 - Broadcom VideoCore-IV","956 - NVIDIA GeForce ULP (Tegra 3)","955 - ARM Mali-400 MP4","954 - Vivante GC4000","953 - Qualcomm Adreno 225","945 - Qualcomm Adreno 302","944 - Vivante GC7000UL","943 - ARM Mali-T720","942 - Qualcomm Adreno 304","941 - Qualcomm Adreno 305","940 - Qualcomm Adreno 306","939 - Qualcomm Adreno 308","938 - PowerVR SGX544","937 - ARM Mali-T720 MP2","936 - PowerVR SGX544MP2","935 - PowerVR SGX545","932 - PowerVR SGX543MP2","922 - PowerVR SGX543MP3","914 - ARM Mali-T830 MP1","913 - ARM Mali-450 MP4","912 - ARM Mali-T720 MP4","911 - PowerVR GE8100","910 - PowerVR GE8300","909 - PowerVR GE8320","908 - ARM Mali-T760 MP2","907 - Qualcomm Adreno 320","906 - ARM Mali-T624","905 - PowerVR SGX543MP4","878 - ARM Mali-T830 MP2","877 - Qualcomm Adreno 405","876 - PowerVR G6200","875 - NVIDIA GeForce Tegra 4","870 - ARM Mali-T604 MP4","864 - ARM Mali-T830 MP3","863 - ARM Mali-T860 MP2","859 - Qualcomm Adreno 504","858 - Qualcomm Adreno 505","857 - PowerVR GE8322 / IMG8322","856 - Qualcomm Adreno 506","855 - Qualcomm Adreno 508","854 - Qualcomm Adreno 509","853 - ARM Mali-T628 MP4","852 - PowerVR SGX554MP4","814 - ARM Mali-T760 MP4","813 - ARM Mali-T628 MP6","812 - Intel HD Graphics (Bay Trail)","811 - PowerVR G6400","810 - PowerVR GX6250","809 - PowerVR G6430","808 - Qualcomm Adreno 330","807 - Qualcomm Adreno 510","806 - Qualcomm Adreno 512","805 - Qualcomm Adreno 610","804 - Qualcomm Adreno 612","741 - Intel HD Graphics (Cherry Trail)","728 - ARM Mali-G51 MP4","726 - Qualcomm Adreno 616","725 - Qualcomm Adreno 618","724 - Qualcomm Adreno 418","704 - Qualcomm Adreno 620","703 - Qualcomm Adreno 420","702 - PowerVR GX6450","692 - ARM Mali-T880 MP2","691 - ARM Mali-T760 MP6","659 - ARM Mali-G52 MP1","658 - ARM Mali-G52 MP2","657 - ARM Mali-G52 MP6","656 - ARM Mali-T880 MP4","655 - ARM Mali-G72 MP3","634 - Qualcomm Adreno 430","631 - ARM Mali-G71 MP2","630 - ARM Mali-T760 MP8","583 - ARM Mali-G76 MP4","582 - ARM Mali-T880 MP12","581 - Apple A9 / PowerVR GT7600","580 - NVIDIA Tegra K1 Kepler GPU","579 - PowerVR GXA6850","578 - Qualcomm Adreno 530","577 - PowerVR GM9446","538 - ARM Mali-G71 MP8","537 - ARM Mali-G72 MP12","536 - ARM Mali-G71 MP20","535 - ARM Mali-G72 MP18","534 - ARM Mali-G57 MP6","533 - Qualcomm Adreno 540","532 - ARM Mali-G76 MP10","531 - ARM Mali-G76 MP12","530 - Qualcomm Adreno 630","529 - Qualcomm Adreno 640","528 - ARM Mali-G76 MP16","527 - ARM Mali-G77 MP11","512 - Apple A10 Fusion GPU / PowerVR","421 - NVIDIA Tegra X1 Maxwell GPU","392 - Apple A9X / PowerVR Series 7XT","356 - Apple A10X Fusion GPU / PowerVR","355 - Apple A11 Bionic GPU","354 - Qualcomm Adreno 650","353 - Apple A12 Bionic GPU","347 - Apple A13 Bionic GPU","320 - Apple A12X Bionic GPU","319 - Apple A12Z Bionic GPU"],r=e=>e.toLowerCase().split("- ")[1].split(" /")[0];var M="undefined"==typeof window;const D=new(function(){function e(e){this.userAgent=e||(!M&&window.navigator?window.navigator.userAgent:""),this.isAndroidDevice=!/like android/i.test(this.userAgent)&&/android/i.test(this.userAgent),this.iOSDevice=this.match(1,/(iphone|ipod|ipad)/i).toLowerCase(),!M&&"MacIntel"===navigator.platform&&navigator.maxTouchPoints>2&&!window.MSStream&&(this.iOSDevice="ipad")}return e.prototype.match=function(e,o){var I=this.userAgent.match(o);return I&&I.length>1&&I[e]||""},Object.defineProperty(e.prototype,"isMobile",{get:function(){return!this.isTablet&&(/[^-]mobi/i.test(this.userAgent)||"iphone"===this.iOSDevice||"ipod"===this.iOSDevice||this.isAndroidDevice||/nexus\s*[0-6]\s*/i.test(this.userAgent))},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"isTablet",{get:function(){return/tablet/i.test(this.userAgent)&&!/tablet pc/i.test(this.userAgent)||"ipad"===this.iOSDevice||this.isAndroidDevice&&!/[^-]mobi/i.test(this.userAgent)||!/nexus\s*[0-6]\s*/i.test(this.userAgent)&&/nexus\s*[0-9]+/i.test(this.userAgent)},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"isDesktop",{get:function(){return!this.isMobile&&!this.isTablet},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"isMacOS",{get:function(){return/macintosh/i.test(this.userAgent)&&{version:this.match(1,/mac os x (\d+(\.?_?\d+)+)/i).replace(/[_\s]/g,".").split(".").map((function(e){return e}))[1]}},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"isWindows",{get:function(){return/windows /i.test(this.userAgent)&&{version:this.match(1,/Windows ((NT|XP)( \d\d?.\d)?)/i)}},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"isiOS",{get:function(){return!!this.iOSDevice&&{version:this.match(1,/os (\d+([_\s]\d+)*) like mac os x/i).replace(/[_\s]/g,".")||this.match(1,/version\/(\d+(\.\d+)?)/i)}},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"isAndroid",{get:function(){return this.isAndroidDevice&&{version:this.match(1,/android[ \/-](\d+(\.\d+)*)/i)}},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"browser",{get:function(){var e=this.match(1,/version\/(\d+(\.\d+)?)/i);return/opera/i.test(this.userAgent)?{name:"Opera",version:e||this.match(1,/(?:opera|opr|opios)[\s\/](\d+(\.\d+)?)/i)}:/opr\/|opios/i.test(this.userAgent)?{name:"Opera",version:this.match(1,/(?:opr|opios)[\s\/](\d+(\.\d+)?)/i)||e}:/SamsungBrowser/i.test(this.userAgent)?{name:"Samsung Internet for Android",version:e||this.match(1,/(?:SamsungBrowser)[\s\/](\d+(\.\d+)?)/i)}:/yabrowser/i.test(this.userAgent)?{name:"Yandex Browser",version:e||this.match(1,/(?:yabrowser)[\s\/](\d+(\.\d+)?)/i)}:/ucbrowser/i.test(this.userAgent)?{name:"UC Browser",version:this.match(1,/(?:ucbrowser)[\s\/](\d+(\.\d+)?)/i)}:/msie|trident/i.test(this.userAgent)?{name:"Internet Explorer",version:this.match(1,/(?:msie |rv:)(\d+(\.\d+)?)/i)}:/(edge|edgios|edga|edg)/i.test(this.userAgent)?{name:"Microsoft Edge",version:this.match(2,/(edge|edgios|edga|edg)\/(\d+(\.\d+)?)/i)}:/firefox|iceweasel|fxios/i.test(this.userAgent)?{name:"Firefox",version:this.match(1,/(?:firefox|iceweasel|fxios)[ \/](\d+(\.\d+)?)/i)}:/chromium/i.test(this.userAgent)?{name:"Chromium",version:this.match(1,/(?:chromium)[\s\/](\d+(?:\.\d+)?)/i)||e}:/chrome|crios|crmo/i.test(this.userAgent)?{name:"Chrome",version:this.match(1,/(?:chrome|crios|crmo)\/(\d+(\.\d+)?)/i)}:/safari|applewebkit/i.test(this.userAgent)?{name:"Safari",version:e}:{name:this.match(1,/^(.*)\/(.*) /),version:this.match(2,/^(.*)\/(.*) /)}},enumerable:!1,configurable:!0}),e}()),{browser:a,isMobile:A,isTablet:n}=D,i=e=>e.replace(/[\D]/g,""),G=(e,o)=>{const I=e?e.length:0,r=o?o.length:0;if(0===I)return r;if(0===r)return I;const M=new Array(r+1);for(let e=0;e<=r;++e){(M[e]=new Array(I+1))[0]=e}const D=M[0];for(let e=1;e<=I;++e)D[e]=e;for(let D=1;D<=r;++D)for(let r=1;r<=I;++r)o.charAt(D-1)===e.charAt(r-1)?M[D][r]=M[D-1][r-1]:M[D][r]=Math.min(M[D-1][r-1],M[D][r-1],M[D-1][r])+1;return M[r][I]},d=(e,o,I)=>{const M=["adreno","apple","mali-t","mali","nvidia","powervr"].find(e=>o.includes(e)),D=[];if(M)for(let a=0;a<e.length;a++){const A=e[a];for(let e=0;e<A.length;e++){const n=r(A[e]);!n.includes(M)||"mali"===n&&n.includes("mali-t")||!i(n).includes(I)||D.push({rank:[a,"BENCHMARK - "+n],distance:G(o,n)})}}const a=R(D);return a.length>0?a[0].rank:[void 0,void 0]},R=e=>e.sort((e,o)=>e.distance-o.distance),c=(e,o,I)=>{const M=["intel","amd","nvidia"].find(e=>o.includes(e)),D=[];if(M)for(let a=0;a<e.length;a++){const A=e[a];for(let e=0;e<A.length;e++){const n=r(A[e]);n.includes(M)&&i(n).includes(I)&&D.push({rank:[a,"BENCHMARK - "+n],distance:G(o,n)})}}const a=R(D);return a.length>0?a[0].rank:[void 0,void 0]};e.getGPUTier=({mobileBenchmarkPercentages:e=[0,50,30,20],desktopBenchmarkPercentages:r=[0,50,30,20],forceRendererString:M="",forceMobile:D=!1,glContext:G,failIfMajorPerformanceCaveat:R=!0}={})=>{let t;const V=A||n||D,l=(e=1,o="FALLBACK")=>({tier:`GPU_${V?"MOBILE":"DESKTOP"}_TIER_${e}`,type:o});if(M)t=M;else{const e=G||((e,o=!0)=>{const I={alpha:!1,antialias:!1,depth:!1,failIfMajorPerformanceCaveat:o,powerPreference:"high-performance",stencil:!1};"boolean"!=typeof e&&"Safari"===e.name&&e.version.includes("12")&&delete I.powerPreference;const r=document.createElement("canvas"),M=r.getContext("webgl",I)||r.getContext("experimental-webgl",I);if(M&&M instanceof WebGLRenderingContext)return M})(a,R);if(!e)return l(0,"WEBGL_UNSUPPORTED");t=(e=>{const o=e.getExtension("WEBGL_debug_renderer_info");return o&&e.getParameter(o.UNMASKED_RENDERER_WEBGL)})(e)}t=(e=>{let o=e.toLowerCase();return o.includes("angle (")&&o.includes("direct3d")&&(o=o.replace("angle (","").split(" direct3d")[0]),o.includes("nvidia")&&o.includes("gb")&&(o=o.split(/\dgb/)[0]),o})(t);if(/(radeon hd 6970m|radeon hd 6770m|radeon hd 6490m|radeon hd 6630m|radeon hd 6750m|radeon hd 5750|radeon hd 5670|radeon hd 4850|radeon hd 4870|radeon hd 4670|geforce 9400m|geforce 320m|geforce 330m|geforce gt 130|geforce gt 120|geforce gtx 285|geforce 8600|geforce 9600m|geforce 9400m|geforce 8800 gs|geforce 8800 gt|quadro fx 5|quadro fx 4|radeon hd 2600|radeon hd 2400|radeon r9 200|mali-4|mali-3|mali-2|google swiftshader|sgx543|legacy|sgx 543)/.test(t))return l(0,"BLACKLISTED");const[s,N]=(V?d:c)(((e,o)=>{let I=0;return o.map(o=>{const r=Math.round(e.length/100*o),M=e.slice(I,I+r);return I+=r,M})})(V?I:o,V?e:r),t,i(t));return l(s,N)},Object.defineProperty(e,"__esModule",{value:!0})}));
 
 
 /***/ }),
-/* 50 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(73);
+  module.exports = __webpack_require__(71);
 } else {}
 
 
 /***/ }),
-/* 51 */
+/* 49 */
 /***/ (function(module, exports) {
 
 function E () {
@@ -71892,7 +71845,7 @@ module.exports.TinyEmitter = E;
 
 
 /***/ }),
-/* 52 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72068,10 +72021,10 @@ if ( true && Object.getOwnPropertyDescriptor && Object.getOwnPropertyDescriptor(
 
 /* harmony default export */ __webpack_exports__["a"] = (useMeasure);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(77)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(75)(module)))
 
 /***/ }),
-/* 53 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72232,57 +72185,88 @@ var colors = {
 //# sourceMappingURL=colors.js.map
 
 /***/ }),
-/* 54 */,
-/* 55 */,
-/* 56 */
+/* 52 */,
+/* 53 */,
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
+
+var __extends = undefined && undefined.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
     };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+var __importDefault = undefined && undefined.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable: file-name-casing
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+}); // tslint:disable: file-name-casing
+
 var gsap_1 = __webpack_require__(20);
+
 var react_1 = __importDefault(__webpack_require__(1));
+
 var react_dom_1 = __importDefault(__webpack_require__(14));
-var react_router_dom_1 = __webpack_require__(61);
+
+var react_router_dom_1 = __webpack_require__(59);
+
 __webpack_require__(17);
-var Routes_1 = __webpack_require__(68);
+
+var Routes_1 = __webpack_require__(66);
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Force CSSPlugin to not get dropped during build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-gsap_1.gsap.registerPlugin(gsap_1.CSSPlugin);
-var App = /** @class */ (function (_super) {
-    __extends(App, _super);
-    function App() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    App.prototype.render = function () {
-        return (react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
-            react_1.default.createElement(Routes_1.Routes, null)));
-    };
-    return App;
-}(react_1.default.Component));
-react_dom_1.default.render(react_1.default.createElement(App, null), document.getElementById('root'));
 
+
+gsap_1.gsap.registerPlugin(gsap_1.CSSPlugin);
+
+var App =
+/** @class */
+function (_super) {
+  __extends(App, _super);
+
+  function App() {
+    return _super !== null && _super.apply(this, arguments) || this;
+  }
+
+  App.prototype.render = function () {
+    return react_1["default"].createElement(react_router_dom_1.BrowserRouter, null, react_1["default"].createElement(Routes_1.Routes, null));
+  };
+
+  return App;
+}(react_1["default"].Component);
+
+react_dom_1["default"].render(react_1["default"].createElement(App, null), document.getElementById('root'));
 
 /***/ }),
-/* 57 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72314,7 +72298,7 @@ exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.u
 
 
 /***/ }),
-/* 58 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72330,7 +72314,7 @@ exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.u
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1),n=__webpack_require__(30),r=__webpack_require__(59);function u(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(u(227));
+var aa=__webpack_require__(1),n=__webpack_require__(30),r=__webpack_require__(57);function u(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(u(227));
 function ba(a,b,c,d,e,f,g,h,k){var l=Array.prototype.slice.call(arguments,3);try{b.apply(c,l)}catch(m){this.onError(m)}}var da=!1,ea=null,fa=!1,ha=null,ia={onError:function(a){da=!0;ea=a}};function ja(a,b,c,d,e,f,g,h,k){da=!1;ea=null;ba.apply(ia,arguments)}function ka(a,b,c,d,e,f,g,h,k){ja.apply(this,arguments);if(da){if(da){var l=ea;da=!1;ea=null}else throw Error(u(198));fa||(fa=!0,ha=l)}}var la=null,ma=null,na=null;
 function oa(a,b,c){var d=a.type||"unknown-event";a.currentTarget=na(c);ka(d,b,void 0,a);a.currentTarget=null}var pa=null,qa={};
 function ra(){if(pa)for(var a in qa){var b=qa[a],c=pa.indexOf(a);if(!(-1<c))throw Error(u(96,a));if(!sa[c]){if(!b.extractEvents)throw Error(u(97,a));sa[c]=b;c=b.eventTypes;for(var d in c){var e=void 0;var f=c[d],g=b,h=d;if(ta.hasOwnProperty(h))throw Error(u(99,h));ta[h]=f;var k=f.phasedRegistrationNames;if(k){for(e in k)k.hasOwnProperty(e)&&ua(k[e],g,h);e=!0}else f.registrationName?(ua(f.registrationName,g,h),e=!0):e=!1;if(!e)throw Error(u(98,d,a));}}}}
@@ -72613,19 +72597,19 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!gk(c))throw Er
 
 
 /***/ }),
-/* 59 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(60);
+  module.exports = __webpack_require__(58);
 } else {}
 
 
 /***/ }),
-/* 60 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72653,7 +72637,7 @@ exports.unstable_shouldYield=function(){var a=exports.unstable_now();V(a);var b=
 
 
 /***/ }),
-/* 61 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72967,7 +72951,7 @@ if (false) { var ariaCurrentType; }
 
 
 /***/ }),
-/* 62 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72980,7 +72964,7 @@ if (false) { var ariaCurrentType; }
 
 
 
-var ReactPropTypesSecret = __webpack_require__(63);
+var ReactPropTypesSecret = __webpack_require__(61);
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -73038,7 +73022,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 63 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73057,7 +73041,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 64 */
+/* 62 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -73066,7 +73050,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 65 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73088,7 +73072,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 66 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73363,167 +73347,237 @@ module.exports = function (list, options) {
 };
 
 /***/ }),
-/* 67 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(43);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(44);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fonts_SourceSansPro_Regular_ttf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(45);
 // Imports
 
-
-
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_fonts_SourceSansPro_Regular_ttf__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}.btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}.fetch-section{align-items:center;display:flex;flex-direction:column;font-size:1.5rem;height:22rem;justify-content:flex-start;position:absolute;width:22rem}@media (max-width: 900px){.fetch-section{font-size:1rem;width:15rem}}.fetch-section__quote,.fetch-section__quote-author{align-items:center;display:flex;justify-content:center}@use '../ButtonComponent/buttonStyles.scss';.btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}input[type='text']{border-radius:10px;border:none;box-shadow:0 0 12px 3px rgba(0,0,0,0.1);font-family:inherit;font-size:inherit;margin:0.4rem;padding:0.5em}input[type='text']:focus{outline:none;box-shadow:0px 0px 8px #0066ff}.container-form{border-radius:20px;margin:0 auto;padding:0.1rem;width:19rem}.container-form__input-with-label div{display:block}@media (orientation: landscape){.container-form__input-with-label div{display:inline}}@use '../../containerStyles.scss';.slides-container{height:100vh;left:0;overflow:hidden;position:absolute;top:0;width:100%;z-index:10}.slide{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;height:105vh;justify-content:center;position:relative;text-align:center}.slide-2{align-items:flex-start;display:flex;justify-content:center}@media (max-width: 700px){.slide-2{align-content:flex-start}}.slide-3{background-color:#ccebff}.background-img{height:100vh;left:0;-o-object-fit:none;object-fit:none;position:absolute;top:0;width:100vw;z-index:-1}.btn-container-next-prev{bottom:4rem;position:absolute;right:1rem;text-align:center}.btn-go-prev-slide-2,.btn-go-next-slide-2{margin:auto 1rem}.btn-go-prev-slide-3{position:absolute;right:2rem;bottom:4rem}.slide-2-flex-item{align-items:center;background-color:#bacdd4;border-radius:20px;display:flex;justify-content:center;margin:auto 2rem;padding:1rem;width:21.875rem}@media (max-width: 900px){.slide-2-flex-item{margin:0}}.slide-2-flex-item__numbering-first-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-9rem;min-width:2rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-first-tab{display:none;left:0.4rem;top:-1rem}}.slide-2-flex-item__numbering-first-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-second-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-4rem;position:relative;text-align:center;top:0.4rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-second-tab{display:none}}.slide-2-flex-item__numbering-second-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-third-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-0.5rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-third-tab{display:none}}.slide-2-flex-item__numbering-third-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.container-select{height:15rem;margin:auto;z-index:2}.select-wrapper{margin:0.5rem auto}.select-wrapper__list{list-style:none;margin:0 auto;overflow:hidden;padding:0;z-index:2}.select-wrapper__list-item{background-color:white;border:1px solid black;margin:0 auto;padding:5px;width:9rem;z-index:1}.select-wrapper__list-item span{cursor:pointer}.select-header{background-color:white;border:1px solid black;margin:0 auto;outline:none;padding:0.625rem;position:relative;width:9rem;z-index:1}.select-header__title{cursor:pointer}.select-header__title span{margin:auto auto auto 8px}.heading__picked-color{margin:4rem auto 0;width:12rem}.select-header__arrow-img{width:20px}.img-cloud{height:12rem;margin:0 auto;pointer-events:none;position:absolute;transform:translate(-50%, 5%);z-index:-1}@media (max-width: 900px){.img-cloud{height:10rem}}.img-cloud-path--blue{stroke:blue}.img-cloud-path--red{stroke:red}.img-cloud-path--green{stroke:green}.img-cloud-path--yellow{stroke:yellow}@use '../../containerStyles.scss';.slides-container{height:100vh;left:0;overflow:hidden;position:absolute;top:0;width:100%;z-index:10}.slide{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;height:105vh;justify-content:center;position:relative;text-align:center}.slide-2{align-items:flex-start;display:flex;justify-content:center}@media (max-width: 700px){.slide-2{align-content:flex-start}}.slide-3{background-color:#ccebff}.background-img{height:100vh;left:0;-o-object-fit:none;object-fit:none;position:absolute;top:0;width:100vw;z-index:-1}.btn-container-next-prev{bottom:4rem;position:absolute;right:1rem;text-align:center}.btn-go-prev-slide-2,.btn-go-next-slide-2{margin:auto 1rem}.btn-go-prev-slide-3{position:absolute;right:2rem;bottom:4rem}.slide-2-flex-item{align-items:center;background-color:#bacdd4;border-radius:20px;display:flex;justify-content:center;margin:auto 2rem;padding:1rem;width:21.875rem}@media (max-width: 900px){.slide-2-flex-item{margin:0}}.slide-2-flex-item__numbering-first-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-9rem;min-width:2rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-first-tab{display:none;left:0.4rem;top:-1rem}}.slide-2-flex-item__numbering-first-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-second-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-4rem;position:relative;text-align:center;top:0.4rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-second-tab{display:none}}.slide-2-flex-item__numbering-second-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-third-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-0.5rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-third-tab{display:none}}.slide-2-flex-item__numbering-third-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}@use '../ButtonComponent/buttonStyles.scss';.btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}.three-dimension-container{border-radius:40px;box-shadow:3px 3px 8px 1px rgba(0,0,0,0.25),-3px -3px 8px 1px rgba(0,0,0,0.22);margin:0 auto 0;max-width:45rem;padding-bottom:2rem;padding-top:2rem;position:relative;text-align:center;width:100%;z-index:0;background-color:#fff;grid-column:1/-1;min-height:100vh;min-width:100%;position:relative}.container-pet{left:50vw;position:absolute;top:2rem;transform:translate(-50%);width:100%}@media (min-width: 1200px){.container-pet{top:25vh}}.container-flex-pet{align-items:center;display:flex;flex-direction:column;justify-content:center}@media (min-width: 1200px){.container-flex-pet{flex-direction:row}}.container-choose-pet{margin:2rem 0}@media (min-width: 1200px){.container-choose-pet{margin:0 3rem}}.container-choose-pet-duck{height:8rem;width:16rem}@media (min-width: 1200px){.container-choose-pet-duck{height:20rem;width:50rem}}.container-choose-pet-cow{height:5rem;width:12rem}@media (min-width: 1200px){.container-choose-pet-cow{height:14rem;width:25rem}}.container-choose-pet-chicken{height:7rem;width:22rem}@media (min-width: 1200px){.container-choose-pet-chicken{height:20rem;width:40rem}}.container-choose-pet-btn__choose-btn-duck,.container-choose-pet-btn__choose-btn-cow,.container-choose-pet-btn__choose-btn-chicken{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.container-choose-pet-btn__choose-btn-duck:hover,.container-choose-pet-btn__choose-btn-duck:active,.container-choose-pet-btn__choose-btn-cow:hover,.container-choose-pet-btn__choose-btn-cow:active,.container-choose-pet-btn__choose-btn-chicken:hover,.container-choose-pet-btn__choose-btn-chicken:active{background-color:#00c}.container-choose-pet-btn__choose-btn-duck:focus,.container-choose-pet-btn__choose-btn-cow:focus,.container-choose-pet-btn__choose-btn-chicken:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.container-choose-pet-btn__choose-btn-duck,.container-choose-pet-btn__choose-btn-cow,.container-choose-pet-btn__choose-btn-chicken{border:2px solid currentcolor}}.slide-1__heading{background-color:rgba(23,6,0,0.7);border-radius:10px;color:white;font-size:2rem;padding:0.2em;position:absolute;top:-1.5rem;z-index:1}@media (min-width: 1200px){.slide-1__heading{font-size:4rem;top:3rem}}@use '../ButtonComponent/buttonStyles.scss';.btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}#wave1{z-index:0}.btn-wave{z-index:1}.container-wave{overflow:hidden}.container-wave__btn-wave{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out;left:50vw;position:absolute;top:10rem;transform:translate(-50%);z-index:1}.container-wave__btn-wave:hover,.container-wave__btn-wave:active{background-color:#00c}.container-wave__btn-wave:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.container-wave__btn-wave{border:2px solid currentcolor}}.container-wave__container-treasure-img{margin:0.3rem;overflow:visible;width:100%}.container-wave__treasure-img{left:50vw;margin:0 auto;position:absolute;top:30vh;transform:translate(-50%)}@media (max-width: 900px){.container-wave__treasure-img{top:40vh}}@media (min-width: 900px) and (max-width: 1200px){.container-wave__treasure-img{top:35vh}}.container-wave__container-sun-img{margin:0.3rem;overflow:visible}.container-wave__sun-img{left:5rem;margin:1rem auto auto;position:absolute;top:3rem}@media (max-width: 900px){.container-wave__sun-img{top:0.1rem;left:0.1rem}}@media (min-width: 900px) and (max-width: 1200px){.container-wave__sun-img{top:2rem}}.container-wave__container-cloud-img{margin:0.3rem;overflow:visible}.container-wave__cloud-img{margin:1rem auto auto;position:absolute;right:1rem;top:-1rem;width:100px;z-index:0}@media (min-width: 900px) and (max-width: 3000px){.container-wave__cloud-img{right:5rem;top:-1rem;width:200px}}.container-wave__sand-background{background:#f9e3be;bottom:0;height:33rem;left:0;position:absolute;width:100%}@media (max-width: 900px){.container-wave__sand-background{height:35rem}}.container-wave-part{background:#0099ff;bottom:0;height:22rem;left:0;position:absolute;width:100%}@media (max-width: 900px){.container-wave-part{height:28rem}}.container-wave-part__svg-wave1{bottom:21.9rem;fill:#0099ff;left:0;pointer-events:none;position:absolute;width:100%;z-index:0}@media (max-width: 900px){.container-wave-part__svg-wave1{bottom:27.9rem}}.container-wave__container-heading{width:100vw}.container-wave__heading{font-size:2rem;margin:0 auto;position:absolute;text-align:center;top:2rem;width:100%;z-index:1}.container-wave__heading p{font-size:1.3rem}.container-wave__info-treasure-opened{bottom:5rem;color:white;font-size:4rem;margin:0 auto;position:absolute;width:100%;z-index:1}.container-portal{align-items:center;background-color:white;border:1px solid black;display:flex;height:90vh;justify-content:center;left:50vw;position:relative;top:0;transform:translate(-52.5%);width:90vw;z-index:9999}.container-portal__container-heading{width:100%}.container-portal__heading{background-color:#f2f2f2;border-bottom:5px solid green;font-size:2.5rem;margin-top:0;padding-bottom:0.8rem;position:absolute;text-align:center;top:2px;width:100%}.container-portal__submitted-data{align-items:center;bottom:7rem;display:flex;flex-direction:column;font-size:1rem;height:5rem;justify-content:flex-start;position:absolute;width:15rem}.container-portal__submitted-data p{margin:0}.container-close-icon{position:absolute;bottom:2rem}.container-close-icon__btn{align-items:center;display:flex;font-size:1.2rem;justify-content:center}.slides-container{height:100vh;left:0;overflow:hidden;position:absolute;top:0;width:100%;z-index:10}.slide{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;height:105vh;justify-content:center;position:relative;text-align:center}.slide-2{align-items:flex-start;display:flex;justify-content:center}@media (max-width: 700px){.slide-2{align-content:flex-start}}.slide-3{background-color:#ccebff}.background-img{height:100vh;left:0;-o-object-fit:none;object-fit:none;position:absolute;top:0;width:100vw;z-index:-1}.btn-container-next-prev{bottom:4rem;position:absolute;right:1rem;text-align:center}.btn-go-prev-slide-2,.btn-go-next-slide-2{margin:auto 1rem}.btn-go-prev-slide-3{position:absolute;right:2rem;bottom:4rem}.slide-2-flex-item{align-items:center;background-color:#bacdd4;border-radius:20px;display:flex;justify-content:center;margin:auto 2rem;padding:1rem;width:21.875rem}@media (max-width: 900px){.slide-2-flex-item{margin:0}}.slide-2-flex-item__numbering-first-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-9rem;min-width:2rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-first-tab{display:none;left:0.4rem;top:-1rem}}.slide-2-flex-item__numbering-first-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-second-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-4rem;position:relative;text-align:center;top:0.4rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-second-tab{display:none}}.slide-2-flex-item__numbering-second-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-third-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-0.5rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-third-tab{display:none}}.slide-2-flex-item__numbering-third-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}@font-face{font-family:'Source Sans Pro';src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}*,::after,::before{box-sizing:border-box;font-size:100%;vertical-align:baseline}body{font-family:'Source Sans Pro', Arial, sans-serif;font-size:16px;min-height:100%;min-width:240px;overflow:hidden;position:relative}@use './components/ButtonComponent/buttonStyles.scss';@use './components/ButtonComponent/buttonStyles.scss';@use './components/FetchComponent/fetchComponentStyles.scss';@use './components/FormComponent/formStyles.scss';@use './components/SelectComponent/selectElementStyles.scss';@use './components/ThreeDimensionComponent/threeDimensionComponentStyles.scss';@use './components/WaveComponent/waveStyles.scss';@use './ContainerStyles.scss';@use './global.scss'\n", "",{"version":3,"sources":["/srv/git/webpack-testing/src/components/ButtonComponent/buttonStyles.scss","/srv/git/webpack-testing/src/components/FetchComponent/fetchComponentStyles.scss","/srv/git/webpack-testing/src/components/FormComponent/formStyles.scss","/srv/git/webpack-testing/src/components/SelectComponent/selectElementStyles.scss","/srv/git/webpack-testing/src/containerStyles.scss","/srv/git/webpack-testing/src/components/ThreeDimensionComponent/threeDimensionComponentStyles.scss","/srv/git/webpack-testing/src/components/WaveComponent/waveStyles.scss","/srv/git/webpack-testing/src/global.scss","/srv/git/webpack-testing/src/index.scss"],"names":[],"mappings":"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","sourcesContent":["@mixin btn_style {\n background-color: blue;\n border-radius: 8px;\n border: none;\n box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);\n color: #fff;\n cursor: pointer;\n font-family: inherit;\n line-height: 1.1;\n min-height: 44px;\n min-width: 10ch;\n padding: 0.25em 0.75em;\n text-align: center;\n transition: 300ms background-color ease-in-out;\n &:hover,\n &:active {\n  background-color: scale-color(blue, $lightness: -20%);\n }\n &:focus {\n  box-shadow: 0 0 0 4px scale-color(blue, $lightness: -40%);\n  outline-color: transparent;\n  outline-style: solid;\n }\n @media screen and (-ms-high-contrast: active) {\n  border: 2px solid currentcolor;\n }\n}\n\n.btn {\n @include btn_style;\n}\n\n.section-counter {\n align-items: center;\n display: flex;\n flex-direction: column;\n justify-content: center;\n margin: auto;\n padding: 0.1rem;\n @media (max-width: 900px) {\n  flex-direction: row;\n  height: 5rem;\n }\n &__container-decrement {\n  margin: auto 1rem;\n }\n &__container-increment {\n  margin: auto 1rem;\n }\n &-container {\n  display: inline-block;\n  @media (max-width: 900px) {\n   display: inline;\n   position: absolute;\n   top: 0rem;\n  }\n }\n &__count-value {\n  font-size: 1.3rem;\n }\n &-buttons {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  @media (max-width: 900px) {\n   position: absolute;\n   top: 2.5rem;\n  }\n }\n}\n",".fetch-section {\n align-items: center;\n display: flex;\n flex-direction: column;\n font-size: 1.5rem;\n height: 22rem;\n justify-content: flex-start;\n position: absolute;\n width: 22rem;\n @media (max-width: 900px) {\n  font-size: 1rem;\n  width: 15rem;\n }\n &__quote,\n &__quote-author {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n }\n}\n","@use '../ButtonComponent/buttonStyles.scss';\n@import '../ButtonComponent/buttonStyles.scss';\n\n/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n* NOTE Form section styles\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */\n@mixin input_style {\n border-radius: 10px;\n border: none;\n box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);\n font-family: inherit;\n font-size: inherit;\n margin: 0.4rem;\n padding: 0.5em;\n &:focus {\n  outline: none;\n  box-shadow: 0px 0px 8px #0066ff;\n }\n}\n\ninput[type='text'] {\n @include input_style;\n}\n\n.container-form {\n border-radius: 20px;\n margin: 0 auto;\n padding: 0.1rem;\n width: 19rem;\n &__input-with-label {\n  div {\n   display: block;\n   @media (orientation: landscape) {\n    display: inline;\n   }\n  }\n }\n}\n","@use '../../containerStyles.scss';\n@import '../../containerStyles.scss';\n\n/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n* NOTE Select element styles\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */\n.container-select {\n height: 15rem;\n margin: auto;\n z-index: 2;\n}\n\n.select-wrapper {\n margin: 0.5rem auto;\n &__list {\n  list-style: none;\n  margin: 0 auto;\n  overflow: hidden;\n  padding: 0;\n  z-index: 2;\n }\n &__list-item {\n  background-color: white;\n  border: 1px solid black;\n  margin: 0 auto;\n  padding: 5px;\n  width: 9rem;\n  z-index: 1;\n  span {\n   cursor: pointer;\n  }\n }\n}\n\n.select-header {\n background-color: white;\n border: 1px solid black;\n margin: 0 auto;\n outline: none;\n padding: 0.625rem;\n position: relative;\n width: 9rem;\n z-index: 1;\n &__title {\n  cursor: pointer;\n  span {\n   margin: auto auto auto 8px;\n  }\n }\n}\n\n.heading__picked-color {\n margin: 4rem auto 0;\n width: 12rem;\n}\n\n.select-header__arrow-img {\n width: 20px;\n}\n\n.img-cloud {\n height: 12rem;\n margin: 0 auto;\n pointer-events: none;\n position: absolute;\n transform: translate(-50%, 5%);\n z-index: -1;\n @media (max-width: 900px) {\n  height: 10rem;\n }\n &-path--blue {\n  stroke: blue;\n }\n &-path--red {\n  stroke: red;\n }\n &-path--green {\n  stroke: green;\n }\n &-path--yellow {\n  stroke: yellow;\n }\n}\n","@mixin item_style {\n border-radius: 40px;\n box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.25),\n  -3px -3px 8px 1px rgba(0, 0, 0, 0.22);\n margin: 0 auto 0;\n max-width: 45rem;\n padding-bottom: 2rem;\n padding-top: 2rem;\n position: relative;\n text-align: center;\n width: 100%;\n z-index: 0;\n}\n\n.slides-container {\n height: 100vh;\n left: 0;\n overflow: hidden;\n position: absolute;\n top: 0;\n width: 100%;\n z-index: 10;\n}\n\n.slide {\n align-items: center;\n display: flex;\n flex-direction: row;\n flex-wrap: wrap;\n height: 105vh;\n justify-content: center;\n position: relative;\n text-align: center;\n &-2 {\n  align-items: flex-start;\n  display: flex;\n  justify-content: center;\n  @media (max-width: 700px) {\n   align-content: flex-start;\n  }\n }\n &-3 {\n  background-color: #ccebff;\n }\n}\n\n.background-img {\n height: 100vh;\n left: 0;\n object-fit: none;\n position: absolute;\n top: 0;\n width: 100vw;\n z-index: -1;\n}\n\n.btn-container-next-prev {\n bottom: 4rem;\n position: absolute;\n right: 1rem;\n text-align: center;\n}\n\n.btn-go-prev-slide-2,\n.btn-go-next-slide-2 {\n margin: auto 1rem;\n}\n\n.btn-go-prev-slide-3 {\n position: absolute;\n right: 2rem;\n bottom: 4rem;\n}\n\n.slide-2-flex-item {\n align-items: center;\n background-color: #bacdd4;\n border-radius: 20px;\n display: flex;\n justify-content: center;\n margin: auto 2rem;\n padding: 1rem;\n width: 21.875rem;\n @media (max-width: 900px) {\n  margin: 0;\n }\n &__numbering {\n  &-first-tab {\n   border-radius: 100%;\n   border: 0.1em solid black;\n   height: 2rem;\n   left: -9rem;\n   min-width: 2rem;\n   position: relative;\n   text-align: center;\n   top: 0rem;\n   width: 2rem;\n   @media (max-width: 900px) {\n    display: none;\n    left: 0.4rem;\n    top: -1rem;\n   }\n   p {\n    color: black;\n    font-family: sans-serif;\n    font-size: 1.5em;\n    font-weight: bold;\n    margin-top: 0.1em;\n   }\n  }\n  &-second-tab {\n   border-radius: 100%;\n   border: 0.1em solid black;\n   height: 2rem;\n   left: -4rem;\n   position: relative;\n   text-align: center;\n   top: 0.4rem;\n   width: 2rem;\n   @media (max-width: 900px) {\n    display: none;\n   }\n   p {\n    color: black;\n    font-family: sans-serif;\n    font-size: 1.5em;\n    font-weight: bold;\n    margin-top: 0.1em;\n   }\n  }\n  &-third-tab {\n   border-radius: 100%;\n   border: 0.1em solid black;\n   height: 2rem;\n   left: -0.5rem;\n   position: relative;\n   text-align: center;\n   top: 0rem;\n   width: 2rem;\n   @media (max-width: 900px) {\n    display: none;\n   }\n   p {\n    color: black;\n    font-family: sans-serif;\n    font-size: 1.5em;\n    font-weight: bold;\n    margin-top: 0.1em;\n   }\n  }\n }\n}\n","@use '../../containerStyles.scss';\n@import '../../containerStyles.scss';\n@use '../ButtonComponent/buttonStyles.scss';\n@import '../ButtonComponent/buttonStyles.scss';\n\n$min-width: 1200px;\n\n.three-dimension-container {\n @include item_style;\n background-color: #fff;\n grid-column: 1/-1;\n min-height: 100vh;\n min-width: 100%;\n position: relative;\n}\n\n.container-pet {\n left: 50vw;\n position: absolute;\n top: 2rem;\n transform: translate(-50%);\n width: 100%;\n @media (min-width: $min-width) {\n  top: 25vh;\n }\n}\n\n.container-flex-pet {\n align-items: center;\n display: flex;\n flex-direction: column;\n justify-content: center;\n @media (min-width: $min-width) {\n  flex-direction: row;\n }\n}\n\n.container-choose-pet {\n margin: 2rem 0;\n @media (min-width: $min-width) {\n  margin: 0 3rem;\n }\n &-duck {\n  height: 8rem;\n  width: 16rem;\n  @media (min-width: $min-width) {\n   height: 20rem;\n   width: 50rem;\n  }\n }\n &-cow {\n  height: 5rem;\n  width: 12rem;\n  @media (min-width: $min-width) {\n   height: 14rem;\n   width: 25rem;\n  }\n }\n &-chicken {\n  height: 7rem;\n  width: 22rem;\n  @media (min-width: $min-width) {\n   height: 20rem;\n   width: 40rem;\n  }\n }\n}\n\n.container-choose-pet-btn__choose-btn {\n &-duck, &-cow, &-chicken {\n  @include btn_style;\n }\n}\n\n.slide-1__heading {\n background-color: rgba(23, 6, 0, 0.7);\n border-radius: 10px;\n color: white;\n font-size: 2rem;\n padding: 0.2em;\n position: absolute;\n top: -1.5rem;\n z-index: 1;\n @media (min-width: $min-width) {\n  font-size: 4rem;\n  top: 3rem;\n }\n}\n","@use '../ButtonComponent/buttonStyles.scss';\n@import '../ButtonComponent/buttonStyles.scss';\n\n/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n* NOTE Wave section styles\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */\n#wave1 {\n z-index: 0;\n}\n\n.btn-wave {\n z-index: 1;\n}\n\n.container-wave {\n overflow: hidden;\n &__btn-wave {\n  @include btn_style;\n  left: 50vw;\n  position: absolute;\n  top: 10rem;\n  transform: translate(-50%);\n  z-index: 1;\n }\n &__container-treasure-img {\n  margin: 0.3rem;\n  overflow: visible;\n  width: 100%;\n }\n &__treasure-img {\n  left: 50vw;\n  margin: 0 auto;\n  position: absolute;\n  top: 30vh;\n  transform: translate(-50%);\n  @media (max-width: 900px) {\n   top: 40vh;\n  }\n  @media (min-width: 900px) and (max-width: 1200px) {\n   top: 35vh;\n  }\n }\n &__container-sun-img {\n  margin: 0.3rem;\n  overflow: visible;\n }\n &__sun-img {\n  left: 5rem;\n  margin: 1rem auto auto;\n  position: absolute;\n  top: 3rem;\n  @media (max-width: 900px) {\n   top: 0.1rem;\n   left: 0.1rem;\n  }\n  @media (min-width: 900px) and (max-width: 1200px) {\n   top: 2rem;\n  }\n }\n &__container-cloud-img {\n  margin: 0.3rem;\n  overflow: visible;\n }\n &__cloud-img {\n  margin: 1rem auto auto;\n  position: absolute;\n  right: 1rem;\n  top: -1rem;\n  width: 100px;\n  z-index: 0;\n  @media (min-width: 900px) and (max-width: 3000px) {\n   right: 5rem;\n   top: -1rem;\n   width: 200px;\n  }\n }\n &__sand-background {\n  background: #f9e3be;\n  bottom: 0;\n  height: 33rem;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  @media (max-width: 900px) {\n   height: 35rem;\n  }\n }\n &-part {\n  background: #0099ff;\n  bottom: 0;\n  height: 22rem;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  @media (max-width: 900px) {\n   height: 28rem;\n  }\n  &__svg-wave1 {\n   bottom: 21.9rem;\n   fill: #0099ff;\n   left: 0;\n   pointer-events: none;\n   position: absolute;\n   width: 100%;\n   z-index: 0;\n   @media (max-width: 900px) {\n    bottom: 27.9rem;\n   }\n  }\n }\n &__container-heading {\n  width: 100vw;\n }\n &__heading {\n  font-size: 2rem;\n  margin: 0 auto;\n  position: absolute;\n  text-align: center;\n  top: 2rem;\n  width: 100%;\n  z-index: 1;\n  p {\n   font-size: 1.3rem;\n  }\n }\n &__info-treasure-opened {\n  bottom: 5rem;\n  color: white;\n  font-size: 4rem;\n  margin: 0 auto;\n  position: absolute;\n  width: 100%;\n  z-index: 1;\n }\n}\n\n.container-portal {\n align-items: center;\n background-color: white;\n border: 1px solid black;\n display: flex;\n height: 90vh;\n justify-content: center;\n left: 50vw;\n position: relative;\n top: 0;\n transform: translate(-52.5%);\n width: 90vw;\n z-index: 9999;\n &__container-heading {\n  width: 100%;\n }\n &__heading {\n  background-color: #f2f2f2;\n  border-bottom: 5px solid green;\n  font-size: 2.5rem;\n  margin-top: 0;\n  padding-bottom: 0.8rem;\n  position: absolute;\n  text-align: center;\n  top: 2px;\n  width: 100%;\n }\n &__submitted-data {\n  align-items: center;\n  bottom: 7rem;\n  display: flex;\n  flex-direction: column;\n  font-size: 1rem;\n  height: 5rem;\n  justify-content: flex-start;\n  position: absolute;\n  width: 15rem;\n  p {\n   margin: 0;\n  }\n }\n}\n\n.container-close-icon {\n position: absolute;\n bottom: 2rem;\n &__btn {\n  align-items: center;\n  display: flex;\n  font-size: 1.2rem;\n  justify-content: center;\n }\n}\n","@font-face {\n font-family: 'Source Sans Pro';\n src: url('../fonts/SourceSansPro-Regular.ttf');\n}\n\n*,\n::after,\n::before {\n box-sizing: border-box;\n font-size: 100%;\n vertical-align: baseline;\n}\nbody {\n font-family: 'Source Sans Pro', Arial, sans-serif;\n font-size: 16px;\n min-height: 100%;\n min-width: 240px;\n overflow: hidden;\n position: relative;\n}\n","@import './components/ButtonComponent/buttonStyles.scss';\n@import './components/ButtonComponent/buttonStyles.scss';\n@import './components/FetchComponent/fetchComponentStyles.scss';\n@import './components/FormComponent/formStyles.scss';\n@import './components/SelectComponent/selectElementStyles.scss';\n@import './components/ThreeDimensionComponent/threeDimensionComponentStyles.scss';\n@import './components/WaveComponent/waveStyles.scss';\n@import './containerStyles.scss';\n@import './global.scss';\n@use './components/ButtonComponent/buttonStyles.scss';\n@use './components/ButtonComponent/buttonStyles.scss';\n@use './components/FetchComponent/fetchComponentStyles.scss';\n@use './components/FormComponent/formStyles.scss';\n@use './components/SelectComponent/selectElementStyles.scss';\n@use './components/ThreeDimensionComponent/threeDimensionComponentStyles.scss';\n@use './components/WaveComponent/waveStyles.scss';\n@use './ContainerStyles.scss';\n@use './global.scss';\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}.btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}.fetch-section{align-items:center;display:flex;flex-direction:column;font-size:1.5rem;height:22rem;justify-content:flex-start;position:absolute;width:22rem}@media (max-width: 900px){.fetch-section{font-size:1rem;width:15rem}}.fetch-section__quote,.fetch-section__quote-author{align-items:center;display:flex;justify-content:center}@use '../ButtonComponent/buttonStyles.scss';.btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}input[type='text']{border-radius:10px;border:none;box-shadow:0 0 12px 3px rgba(0,0,0,0.1);font-family:inherit;font-size:inherit;margin:0.4rem;padding:0.5em}input[type='text']:focus{outline:none;box-shadow:0px 0px 8px #0066ff}.container-form{border-radius:20px;margin:0 auto;padding:0.1rem;width:19rem}.container-form__input-with-label div{display:block}@media (orientation: landscape){.container-form__input-with-label div{display:inline}}@use '../../containerStyles.scss';.slides-container{height:100vh;left:0;overflow:hidden;position:absolute;top:0;width:100%;z-index:10}.slide{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;height:105vh;justify-content:center;position:relative;text-align:center}.slide-2{align-items:flex-start;display:flex;justify-content:center}@media (max-width: 700px){.slide-2{align-content:flex-start}}.slide-3{background-color:#ccebff}.background-img{height:100vh;left:0;-o-object-fit:none;object-fit:none;position:absolute;top:0;width:100vw;z-index:-1}.btn-container-next-prev{bottom:4rem;position:absolute;right:1rem;text-align:center}.btn-go-prev-slide-2,.btn-go-next-slide-2{margin:auto 1rem}.btn-go-prev-slide-3{position:absolute;right:2rem;bottom:4rem}.slide-2-flex-item{align-items:center;background-color:#bacdd4;border-radius:20px;display:flex;justify-content:center;margin:auto 2rem;padding:1rem;width:21.875rem}@media (max-width: 900px){.slide-2-flex-item{margin:0}}.slide-2-flex-item__numbering-first-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-9rem;min-width:2rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-first-tab{display:none;left:0.4rem;top:-1rem}}.slide-2-flex-item__numbering-first-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-second-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-4rem;position:relative;text-align:center;top:0.4rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-second-tab{display:none}}.slide-2-flex-item__numbering-second-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-third-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-0.5rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-third-tab{display:none}}.slide-2-flex-item__numbering-third-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.container-select{height:15rem;margin:auto;z-index:2}.select-wrapper{margin:0.5rem auto}.select-wrapper__list{list-style:none;margin:0 auto;overflow:hidden;padding:0;z-index:2}.select-wrapper__list-item{background-color:white;border:1px solid black;margin:0 auto;padding:5px;width:9rem;z-index:1}.select-wrapper__list-item span{cursor:pointer}.select-header{background-color:white;border:1px solid black;margin:0 auto;outline:none;padding:0.625rem;position:relative;width:9rem;z-index:1}.select-header__title{cursor:pointer}.select-header__title span{margin:auto auto auto 8px}.heading__picked-color{margin:4rem auto 0;width:12rem}.select-header__arrow-img{width:20px}.img-cloud{height:12rem;margin:0 auto;pointer-events:none;position:absolute;transform:translate(-50%, 5%);z-index:-1}@media (max-width: 900px){.img-cloud{height:10rem}}.img-cloud-path--blue{stroke:blue}.img-cloud-path--red{stroke:red}.img-cloud-path--green{stroke:green}.img-cloud-path--yellow{stroke:yellow}@use '../../containerStyles.scss';.slides-container{height:100vh;left:0;overflow:hidden;position:absolute;top:0;width:100%;z-index:10}.slide{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;height:105vh;justify-content:center;position:relative;text-align:center}.slide-2{align-items:flex-start;display:flex;justify-content:center}@media (max-width: 700px){.slide-2{align-content:flex-start}}.slide-3{background-color:#ccebff}.background-img{height:100vh;left:0;-o-object-fit:none;object-fit:none;position:absolute;top:0;width:100vw;z-index:-1}.btn-container-next-prev{bottom:4rem;position:absolute;right:1rem;text-align:center}.btn-go-prev-slide-2,.btn-go-next-slide-2{margin:auto 1rem}.btn-go-prev-slide-3{position:absolute;right:2rem;bottom:4rem}.slide-2-flex-item{align-items:center;background-color:#bacdd4;border-radius:20px;display:flex;justify-content:center;margin:auto 2rem;padding:1rem;width:21.875rem}@media (max-width: 900px){.slide-2-flex-item{margin:0}}.slide-2-flex-item__numbering-first-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-9rem;min-width:2rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-first-tab{display:none;left:0.4rem;top:-1rem}}.slide-2-flex-item__numbering-first-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-second-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-4rem;position:relative;text-align:center;top:0.4rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-second-tab{display:none}}.slide-2-flex-item__numbering-second-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-third-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-0.5rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-third-tab{display:none}}.slide-2-flex-item__numbering-third-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}@use '../ButtonComponent/buttonStyles.scss';.btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}.three-dimension-container{border-radius:40px;box-shadow:3px 3px 8px 1px rgba(0,0,0,0.25),-3px -3px 8px 1px rgba(0,0,0,0.22);margin:0 auto 0;max-width:45rem;padding-bottom:2rem;padding-top:2rem;position:relative;text-align:center;width:100%;z-index:0;background-color:#fff;grid-column:1/-1;min-height:100vh;min-width:100%;position:relative}.container-pet{left:50vw;position:absolute;top:2rem;transform:translate(-50%);width:100%}@media (min-width: 1200px){.container-pet{top:25vh}}.container-flex-pet{align-items:center;display:flex;flex-direction:column;justify-content:center}@media (min-width: 1200px){.container-flex-pet{flex-direction:row}}.container-choose-pet{margin:2rem 0}@media (min-width: 1200px){.container-choose-pet{margin:0 3rem}}.container-choose-pet-duck{height:8rem;width:16rem}@media (min-width: 1200px){.container-choose-pet-duck{height:20rem;width:50rem}}.container-choose-pet-cow{height:5rem;width:12rem}@media (min-width: 1200px){.container-choose-pet-cow{height:14rem;width:25rem}}.container-choose-pet-chicken{height:7rem;width:22rem}@media (min-width: 1200px){.container-choose-pet-chicken{height:20rem;width:40rem}}.container-choose-pet-btn__choose-btn-duck,.container-choose-pet-btn__choose-btn-cow,.container-choose-pet-btn__choose-btn-chicken{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.container-choose-pet-btn__choose-btn-duck:hover,.container-choose-pet-btn__choose-btn-duck:active,.container-choose-pet-btn__choose-btn-cow:hover,.container-choose-pet-btn__choose-btn-cow:active,.container-choose-pet-btn__choose-btn-chicken:hover,.container-choose-pet-btn__choose-btn-chicken:active{background-color:#00c}.container-choose-pet-btn__choose-btn-duck:focus,.container-choose-pet-btn__choose-btn-cow:focus,.container-choose-pet-btn__choose-btn-chicken:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.container-choose-pet-btn__choose-btn-duck,.container-choose-pet-btn__choose-btn-cow,.container-choose-pet-btn__choose-btn-chicken{border:2px solid currentcolor}}.slide-1__heading{background-color:rgba(23,6,0,0.7);border-radius:10px;color:white;font-size:2rem;padding:0.2em;position:absolute;top:-1.5rem;z-index:1}@media (min-width: 1200px){.slide-1__heading{font-size:4rem;top:3rem}}@use '../ButtonComponent/buttonStyles.scss';.btn{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out}.btn:hover,.btn:active{background-color:#00c}.btn:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.btn{border:2px solid currentcolor}}.section-counter{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:auto;padding:0.1rem}@media (max-width: 900px){.section-counter{flex-direction:row;height:5rem}}.section-counter__container-decrement{margin:auto 1rem}.section-counter__container-increment{margin:auto 1rem}.section-counter-container{display:inline-block}@media (max-width: 900px){.section-counter-container{display:inline;position:absolute;top:0rem}}.section-counter__count-value{font-size:1.3rem}.section-counter-buttons{align-items:center;display:flex;justify-content:center}@media (max-width: 900px){.section-counter-buttons{position:absolute;top:2.5rem}}#wave1{z-index:0}.btn-wave{z-index:1}.container-wave{overflow:hidden}.container-wave__btn-wave{background-color:blue;border-radius:8px;border:none;box-shadow:0 3px 5px rgba(0,0,0,0.18);color:#fff;cursor:pointer;font-family:inherit;line-height:1.1;min-height:44px;min-width:10ch;padding:0.25em 0.75em;text-align:center;transition:300ms background-color ease-in-out;left:50vw;position:absolute;top:10rem;transform:translate(-50%);z-index:1}.container-wave__btn-wave:hover,.container-wave__btn-wave:active{background-color:#00c}.container-wave__btn-wave:focus{box-shadow:0 0 0 4px #009;outline-color:transparent;outline-style:solid}@media screen and (-ms-high-contrast: active){.container-wave__btn-wave{border:2px solid currentcolor}}.container-wave__container-treasure-img{margin:0.3rem;overflow:visible;width:100%}.container-wave__treasure-img{left:50vw;margin:0 auto;position:absolute;top:30vh;transform:translate(-50%)}@media (max-width: 900px){.container-wave__treasure-img{top:40vh}}@media (min-width: 900px) and (max-width: 1200px){.container-wave__treasure-img{top:35vh}}.container-wave__container-sun-img{margin:0.3rem;overflow:visible}.container-wave__sun-img{left:5rem;margin:1rem auto auto;position:absolute;top:3rem}@media (max-width: 900px){.container-wave__sun-img{top:0.1rem;left:0.1rem}}@media (min-width: 900px) and (max-width: 1200px){.container-wave__sun-img{top:2rem}}.container-wave__container-cloud-img{margin:0.3rem;overflow:visible}.container-wave__cloud-img{margin:1rem auto auto;position:absolute;right:1rem;top:-1rem;width:100px;z-index:0}@media (min-width: 900px) and (max-width: 3000px){.container-wave__cloud-img{right:5rem;top:-1rem;width:200px}}.container-wave__sand-background{background:#f9e3be;bottom:0;height:33rem;left:0;position:absolute;width:100%}@media (max-width: 900px){.container-wave__sand-background{height:35rem}}.container-wave-part{background:#0099ff;bottom:0;height:22rem;left:0;position:absolute;width:100%}@media (max-width: 900px){.container-wave-part{height:28rem}}.container-wave-part__svg-wave1{bottom:21.9rem;fill:#0099ff;left:0;pointer-events:none;position:absolute;width:100%;z-index:0}@media (max-width: 900px){.container-wave-part__svg-wave1{bottom:27.9rem}}.container-wave__container-heading{width:100vw}.container-wave__heading{font-size:2rem;margin:0 auto;position:absolute;text-align:center;top:2rem;width:100%;z-index:1}.container-wave__heading p{font-size:1.3rem}.container-wave__info-treasure-opened{bottom:5rem;color:white;font-size:4rem;margin:0 auto;position:absolute;width:100%;z-index:1}.container-portal{align-items:center;background-color:white;border:1px solid black;display:flex;height:90vh;justify-content:center;left:50vw;position:relative;top:0;transform:translate(-52.5%);width:90vw;z-index:9999}.container-portal__container-heading{width:100%}.container-portal__heading{background-color:#f2f2f2;border-bottom:5px solid green;font-size:2.5rem;margin-top:0;padding-bottom:0.8rem;position:absolute;text-align:center;top:2px;width:100%}.container-portal__submitted-data{align-items:center;bottom:7rem;display:flex;flex-direction:column;font-size:1rem;height:5rem;justify-content:flex-start;position:absolute;width:15rem}.container-portal__submitted-data p{margin:0}.container-close-icon{position:absolute;bottom:2rem}.container-close-icon__btn{align-items:center;display:flex;font-size:1.2rem;justify-content:center}.slides-container{height:100vh;left:0;overflow:hidden;position:absolute;top:0;width:100%;z-index:10}.slide{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;height:105vh;justify-content:center;position:relative;text-align:center}.slide-2{align-items:flex-start;display:flex;justify-content:center}@media (max-width: 700px){.slide-2{align-content:flex-start}}.slide-3{background-color:#ccebff}.background-img{height:100vh;left:0;-o-object-fit:none;object-fit:none;position:absolute;top:0;width:100vw;z-index:-1}.btn-container-next-prev{bottom:4rem;position:absolute;right:1rem;text-align:center}.btn-go-prev-slide-2,.btn-go-next-slide-2{margin:auto 1rem}.btn-go-prev-slide-3{position:absolute;right:2rem;bottom:4rem}.slide-2-flex-item{align-items:center;background-color:#bacdd4;border-radius:20px;display:flex;justify-content:center;margin:auto 2rem;padding:1rem;width:21.875rem}@media (max-width: 900px){.slide-2-flex-item{margin:0}}.slide-2-flex-item__numbering-first-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-9rem;min-width:2rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-first-tab{display:none;left:0.4rem;top:-1rem}}.slide-2-flex-item__numbering-first-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-second-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-4rem;position:relative;text-align:center;top:0.4rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-second-tab{display:none}}.slide-2-flex-item__numbering-second-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}.slide-2-flex-item__numbering-third-tab{border-radius:100%;border:0.1em solid black;height:2rem;left:-0.5rem;position:relative;text-align:center;top:0rem;width:2rem}@media (max-width: 900px){.slide-2-flex-item__numbering-third-tab{display:none}}.slide-2-flex-item__numbering-third-tab p{color:black;font-family:sans-serif;font-size:1.5em;font-weight:bold;margin-top:0.1em}*,::after,::before{box-sizing:border-box;font-size:100%;vertical-align:baseline}body{font-family:Arial, sans-serif;font-size:16px;min-height:100%;min-width:240px;overflow:hidden;position:relative}@use './components/ButtonComponent/buttonStyles.scss';@use './components/ButtonComponent/buttonStyles.scss';@use './components/FetchComponent/fetchComponentStyles.scss';@use './components/FormComponent/formStyles.scss';@use './components/SelectComponent/selectElementStyles.scss';@use './components/ThreeDimensionComponent/threeDimensionComponentStyles.scss';@use './components/WaveComponent/waveStyles.scss';@use './ContainerStyles.scss';@use './global.scss'\n", "",{"version":3,"sources":["/srv/git/webpack-testing/src/components/ButtonComponent/buttonStyles.scss","/srv/git/webpack-testing/src/components/FetchComponent/fetchComponentStyles.scss","/srv/git/webpack-testing/src/components/FormComponent/formStyles.scss","/srv/git/webpack-testing/src/components/SelectComponent/selectElementStyles.scss","/srv/git/webpack-testing/src/containerStyles.scss","/srv/git/webpack-testing/src/components/ThreeDimensionComponent/threeDimensionComponentStyles.scss","/srv/git/webpack-testing/src/components/WaveComponent/waveStyles.scss","/srv/git/webpack-testing/src/global.scss","/srv/git/webpack-testing/src/index.scss"],"names":[],"mappings":"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","sourcesContent":["@mixin btn_style {\n background-color: blue;\n border-radius: 8px;\n border: none;\n box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);\n color: #fff;\n cursor: pointer;\n font-family: inherit;\n line-height: 1.1;\n min-height: 44px;\n min-width: 10ch;\n padding: 0.25em 0.75em;\n text-align: center;\n transition: 300ms background-color ease-in-out;\n &:hover,\n &:active {\n  background-color: scale-color(blue, $lightness: -20%);\n }\n &:focus {\n  box-shadow: 0 0 0 4px scale-color(blue, $lightness: -40%);\n  outline-color: transparent;\n  outline-style: solid;\n }\n @media screen and (-ms-high-contrast: active) {\n  border: 2px solid currentcolor;\n }\n}\n\n.btn {\n @include btn_style;\n}\n\n.section-counter {\n align-items: center;\n display: flex;\n flex-direction: column;\n justify-content: center;\n margin: auto;\n padding: 0.1rem;\n @media (max-width: 900px) {\n  flex-direction: row;\n  height: 5rem;\n }\n &__container-decrement {\n  margin: auto 1rem;\n }\n &__container-increment {\n  margin: auto 1rem;\n }\n &-container {\n  display: inline-block;\n  @media (max-width: 900px) {\n   display: inline;\n   position: absolute;\n   top: 0rem;\n  }\n }\n &__count-value {\n  font-size: 1.3rem;\n }\n &-buttons {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  @media (max-width: 900px) {\n   position: absolute;\n   top: 2.5rem;\n  }\n }\n}\n",".fetch-section {\n align-items: center;\n display: flex;\n flex-direction: column;\n font-size: 1.5rem;\n height: 22rem;\n justify-content: flex-start;\n position: absolute;\n width: 22rem;\n @media (max-width: 900px) {\n  font-size: 1rem;\n  width: 15rem;\n }\n &__quote,\n &__quote-author {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n }\n}\n","@use '../ButtonComponent/buttonStyles.scss';\n@import '../ButtonComponent/buttonStyles.scss';\n\n/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n* NOTE Form section styles\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */\n@mixin input_style {\n border-radius: 10px;\n border: none;\n box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);\n font-family: inherit;\n font-size: inherit;\n margin: 0.4rem;\n padding: 0.5em;\n &:focus {\n  outline: none;\n  box-shadow: 0px 0px 8px #0066ff;\n }\n}\n\ninput[type='text'] {\n @include input_style;\n}\n\n.container-form {\n border-radius: 20px;\n margin: 0 auto;\n padding: 0.1rem;\n width: 19rem;\n &__input-with-label {\n  div {\n   display: block;\n   @media (orientation: landscape) {\n    display: inline;\n   }\n  }\n }\n}\n","@use '../../containerStyles.scss';\n@import '../../containerStyles.scss';\n\n/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n* NOTE Select element styles\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */\n.container-select {\n height: 15rem;\n margin: auto;\n z-index: 2;\n}\n\n.select-wrapper {\n margin: 0.5rem auto;\n &__list {\n  list-style: none;\n  margin: 0 auto;\n  overflow: hidden;\n  padding: 0;\n  z-index: 2;\n }\n &__list-item {\n  background-color: white;\n  border: 1px solid black;\n  margin: 0 auto;\n  padding: 5px;\n  width: 9rem;\n  z-index: 1;\n  span {\n   cursor: pointer;\n  }\n }\n}\n\n.select-header {\n background-color: white;\n border: 1px solid black;\n margin: 0 auto;\n outline: none;\n padding: 0.625rem;\n position: relative;\n width: 9rem;\n z-index: 1;\n &__title {\n  cursor: pointer;\n  span {\n   margin: auto auto auto 8px;\n  }\n }\n}\n\n.heading__picked-color {\n margin: 4rem auto 0;\n width: 12rem;\n}\n\n.select-header__arrow-img {\n width: 20px;\n}\n\n.img-cloud {\n height: 12rem;\n margin: 0 auto;\n pointer-events: none;\n position: absolute;\n transform: translate(-50%, 5%);\n z-index: -1;\n @media (max-width: 900px) {\n  height: 10rem;\n }\n &-path--blue {\n  stroke: blue;\n }\n &-path--red {\n  stroke: red;\n }\n &-path--green {\n  stroke: green;\n }\n &-path--yellow {\n  stroke: yellow;\n }\n}\n","@mixin item_style {\n border-radius: 40px;\n box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.25),\n  -3px -3px 8px 1px rgba(0, 0, 0, 0.22);\n margin: 0 auto 0;\n max-width: 45rem;\n padding-bottom: 2rem;\n padding-top: 2rem;\n position: relative;\n text-align: center;\n width: 100%;\n z-index: 0;\n}\n\n.slides-container {\n height: 100vh;\n left: 0;\n overflow: hidden;\n position: absolute;\n top: 0;\n width: 100%;\n z-index: 10;\n}\n\n.slide {\n align-items: center;\n display: flex;\n flex-direction: row;\n flex-wrap: wrap;\n height: 105vh;\n justify-content: center;\n position: relative;\n text-align: center;\n &-2 {\n  align-items: flex-start;\n  display: flex;\n  justify-content: center;\n  @media (max-width: 700px) {\n   align-content: flex-start;\n  }\n }\n &-3 {\n  background-color: #ccebff;\n }\n}\n\n.background-img {\n height: 100vh;\n left: 0;\n object-fit: none;\n position: absolute;\n top: 0;\n width: 100vw;\n z-index: -1;\n}\n\n.btn-container-next-prev {\n bottom: 4rem;\n position: absolute;\n right: 1rem;\n text-align: center;\n}\n\n.btn-go-prev-slide-2,\n.btn-go-next-slide-2 {\n margin: auto 1rem;\n}\n\n.btn-go-prev-slide-3 {\n position: absolute;\n right: 2rem;\n bottom: 4rem;\n}\n\n.slide-2-flex-item {\n align-items: center;\n background-color: #bacdd4;\n border-radius: 20px;\n display: flex;\n justify-content: center;\n margin: auto 2rem;\n padding: 1rem;\n width: 21.875rem;\n @media (max-width: 900px) {\n  margin: 0;\n }\n &__numbering {\n  &-first-tab {\n   border-radius: 100%;\n   border: 0.1em solid black;\n   height: 2rem;\n   left: -9rem;\n   min-width: 2rem;\n   position: relative;\n   text-align: center;\n   top: 0rem;\n   width: 2rem;\n   @media (max-width: 900px) {\n    display: none;\n    left: 0.4rem;\n    top: -1rem;\n   }\n   p {\n    color: black;\n    font-family: sans-serif;\n    font-size: 1.5em;\n    font-weight: bold;\n    margin-top: 0.1em;\n   }\n  }\n  &-second-tab {\n   border-radius: 100%;\n   border: 0.1em solid black;\n   height: 2rem;\n   left: -4rem;\n   position: relative;\n   text-align: center;\n   top: 0.4rem;\n   width: 2rem;\n   @media (max-width: 900px) {\n    display: none;\n   }\n   p {\n    color: black;\n    font-family: sans-serif;\n    font-size: 1.5em;\n    font-weight: bold;\n    margin-top: 0.1em;\n   }\n  }\n  &-third-tab {\n   border-radius: 100%;\n   border: 0.1em solid black;\n   height: 2rem;\n   left: -0.5rem;\n   position: relative;\n   text-align: center;\n   top: 0rem;\n   width: 2rem;\n   @media (max-width: 900px) {\n    display: none;\n   }\n   p {\n    color: black;\n    font-family: sans-serif;\n    font-size: 1.5em;\n    font-weight: bold;\n    margin-top: 0.1em;\n   }\n  }\n }\n}\n","@use '../../containerStyles.scss';\n@import '../../containerStyles.scss';\n@use '../ButtonComponent/buttonStyles.scss';\n@import '../ButtonComponent/buttonStyles.scss';\n\n$min-width: 1200px;\n\n.three-dimension-container {\n @include item_style;\n background-color: #fff;\n grid-column: 1/-1;\n min-height: 100vh;\n min-width: 100%;\n position: relative;\n}\n\n.container-pet {\n left: 50vw;\n position: absolute;\n top: 2rem;\n transform: translate(-50%);\n width: 100%;\n @media (min-width: $min-width) {\n  top: 25vh;\n }\n}\n\n.container-flex-pet {\n align-items: center;\n display: flex;\n flex-direction: column;\n justify-content: center;\n @media (min-width: $min-width) {\n  flex-direction: row;\n }\n}\n\n.container-choose-pet {\n margin: 2rem 0;\n @media (min-width: $min-width) {\n  margin: 0 3rem;\n }\n &-duck {\n  height: 8rem;\n  width: 16rem;\n  @media (min-width: $min-width) {\n   height: 20rem;\n   width: 50rem;\n  }\n }\n &-cow {\n  height: 5rem;\n  width: 12rem;\n  @media (min-width: $min-width) {\n   height: 14rem;\n   width: 25rem;\n  }\n }\n &-chicken {\n  height: 7rem;\n  width: 22rem;\n  @media (min-width: $min-width) {\n   height: 20rem;\n   width: 40rem;\n  }\n }\n}\n\n.container-choose-pet-btn__choose-btn {\n &-duck, &-cow, &-chicken {\n  @include btn_style;\n }\n}\n\n.slide-1__heading {\n background-color: rgba(23, 6, 0, 0.7);\n border-radius: 10px;\n color: white;\n font-size: 2rem;\n padding: 0.2em;\n position: absolute;\n top: -1.5rem;\n z-index: 1;\n @media (min-width: $min-width) {\n  font-size: 4rem;\n  top: 3rem;\n }\n}\n","@use '../ButtonComponent/buttonStyles.scss';\n@import '../ButtonComponent/buttonStyles.scss';\n\n/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n* NOTE Wave section styles\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */\n#wave1 {\n z-index: 0;\n}\n\n.btn-wave {\n z-index: 1;\n}\n\n.container-wave {\n overflow: hidden;\n &__btn-wave {\n  @include btn_style;\n  left: 50vw;\n  position: absolute;\n  top: 10rem;\n  transform: translate(-50%);\n  z-index: 1;\n }\n &__container-treasure-img {\n  margin: 0.3rem;\n  overflow: visible;\n  width: 100%;\n }\n &__treasure-img {\n  left: 50vw;\n  margin: 0 auto;\n  position: absolute;\n  top: 30vh;\n  transform: translate(-50%);\n  @media (max-width: 900px) {\n   top: 40vh;\n  }\n  @media (min-width: 900px) and (max-width: 1200px) {\n   top: 35vh;\n  }\n }\n &__container-sun-img {\n  margin: 0.3rem;\n  overflow: visible;\n }\n &__sun-img {\n  left: 5rem;\n  margin: 1rem auto auto;\n  position: absolute;\n  top: 3rem;\n  @media (max-width: 900px) {\n   top: 0.1rem;\n   left: 0.1rem;\n  }\n  @media (min-width: 900px) and (max-width: 1200px) {\n   top: 2rem;\n  }\n }\n &__container-cloud-img {\n  margin: 0.3rem;\n  overflow: visible;\n }\n &__cloud-img {\n  margin: 1rem auto auto;\n  position: absolute;\n  right: 1rem;\n  top: -1rem;\n  width: 100px;\n  z-index: 0;\n  @media (min-width: 900px) and (max-width: 3000px) {\n   right: 5rem;\n   top: -1rem;\n   width: 200px;\n  }\n }\n &__sand-background {\n  background: #f9e3be;\n  bottom: 0;\n  height: 33rem;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  @media (max-width: 900px) {\n   height: 35rem;\n  }\n }\n &-part {\n  background: #0099ff;\n  bottom: 0;\n  height: 22rem;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  @media (max-width: 900px) {\n   height: 28rem;\n  }\n  &__svg-wave1 {\n   bottom: 21.9rem;\n   fill: #0099ff;\n   left: 0;\n   pointer-events: none;\n   position: absolute;\n   width: 100%;\n   z-index: 0;\n   @media (max-width: 900px) {\n    bottom: 27.9rem;\n   }\n  }\n }\n &__container-heading {\n  width: 100vw;\n }\n &__heading {\n  font-size: 2rem;\n  margin: 0 auto;\n  position: absolute;\n  text-align: center;\n  top: 2rem;\n  width: 100%;\n  z-index: 1;\n  p {\n   font-size: 1.3rem;\n  }\n }\n &__info-treasure-opened {\n  bottom: 5rem;\n  color: white;\n  font-size: 4rem;\n  margin: 0 auto;\n  position: absolute;\n  width: 100%;\n  z-index: 1;\n }\n}\n\n.container-portal {\n align-items: center;\n background-color: white;\n border: 1px solid black;\n display: flex;\n height: 90vh;\n justify-content: center;\n left: 50vw;\n position: relative;\n top: 0;\n transform: translate(-52.5%);\n width: 90vw;\n z-index: 9999;\n &__container-heading {\n  width: 100%;\n }\n &__heading {\n  background-color: #f2f2f2;\n  border-bottom: 5px solid green;\n  font-size: 2.5rem;\n  margin-top: 0;\n  padding-bottom: 0.8rem;\n  position: absolute;\n  text-align: center;\n  top: 2px;\n  width: 100%;\n }\n &__submitted-data {\n  align-items: center;\n  bottom: 7rem;\n  display: flex;\n  flex-direction: column;\n  font-size: 1rem;\n  height: 5rem;\n  justify-content: flex-start;\n  position: absolute;\n  width: 15rem;\n  p {\n   margin: 0;\n  }\n }\n}\n\n.container-close-icon {\n position: absolute;\n bottom: 2rem;\n &__btn {\n  align-items: center;\n  display: flex;\n  font-size: 1.2rem;\n  justify-content: center;\n }\n}\n","*,\n::after,\n::before {\n box-sizing: border-box;\n font-size: 100%;\n vertical-align: baseline;\n}\nbody {\n font-family: Arial, sans-serif;\n font-size: 16px;\n min-height: 100%;\n min-width: 240px;\n overflow: hidden;\n position: relative;\n}\n","@import './components/ButtonComponent/buttonStyles.scss';\n@import './components/ButtonComponent/buttonStyles.scss';\n@import './components/FetchComponent/fetchComponentStyles.scss';\n@import './components/FormComponent/formStyles.scss';\n@import './components/SelectComponent/selectElementStyles.scss';\n@import './components/ThreeDimensionComponent/threeDimensionComponentStyles.scss';\n@import './components/WaveComponent/waveStyles.scss';\n@import './containerStyles.scss';\n@import './global.scss';\n@use './components/ButtonComponent/buttonStyles.scss';\n@use './components/ButtonComponent/buttonStyles.scss';\n@use './components/FetchComponent/fetchComponentStyles.scss';\n@use './components/FormComponent/formStyles.scss';\n@use './components/SelectComponent/selectElementStyles.scss';\n@use './components/ThreeDimensionComponent/threeDimensionComponentStyles.scss';\n@use './components/WaveComponent/waveStyles.scss';\n@use './ContainerStyles.scss';\n@use './global.scss';\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
-/* 68 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+
+var __importDefault = undefined && undefined.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.Routes = void 0;
+
 var react_1 = __importDefault(__webpack_require__(1));
+
 var react_router_1 = __webpack_require__(9);
-var MainPage_1 = __webpack_require__(69);
-var Routes = function () {
-    return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement(react_router_1.Route, { exact: true, path: '/', component: MainPage_1.MainPage })));
+
+var MainPage_1 = __webpack_require__(67);
+
+var Routes = function Routes() {
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(react_router_1.Route, {
+    exact: true,
+    path: '/',
+    component: MainPage_1.MainPage
+  }));
 };
+
 exports.Routes = Routes;
 
-
 /***/ }),
-/* 69 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
+
+var __createBinding = undefined && undefined.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
 });
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
+
+var __setModuleDefault = undefined && undefined.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = undefined && undefined.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.MainPage = void 0;
+
 var gsap_1 = __webpack_require__(20);
-var ScrollToPlugin_1 = __webpack_require__(70);
+
+var ScrollToPlugin_1 = __webpack_require__(68);
+
 var ScrollTrigger_1 = __webpack_require__(31);
+
 var react_1 = __importStar(__webpack_require__(1));
-var FirstSlideContent_1 = __webpack_require__(71);
-var SecondSlideContent_1 = __webpack_require__(82);
-var ThirdSlideContent_1 = __webpack_require__(90);
+
+var FirstSlideContent_1 = __webpack_require__(69);
+
+var SecondSlideContent_1 = __webpack_require__(80);
+
+var ThirdSlideContent_1 = __webpack_require__(88);
+
 __webpack_require__(17);
+
 gsap_1.gsap.registerPlugin(ScrollTrigger_1.ScrollTrigger);
 gsap_1.gsap.registerPlugin(ScrollToPlugin_1.ScrollToPlugin);
-var MainPage = function () {
-    var _a = react_1.useState(1), currentSlide = _a[0], setCurrentSlide = _a[1];
-    var _b = react_1.useState(window.innerHeight), pageHeight = _b[0], setPageHeight = _b[1];
-    var updatePageHeight = function () { return setPageHeight(window.innerHeight); };
-    react_1.useEffect(function () {
-        window.addEventListener('resize', updatePageHeight);
-        gsap_1.gsap.to('.slides-container', {
-            duration: 0.1,
-            scrollTo: {
-                y: ".slide-" + currentSlide,
-            },
-        });
-        return function () { return window.removeEventListener('resize', updatePageHeight); };
-    }, [window.innerHeight,]);
-    var goToSlide = function (slide) {
-        setCurrentSlide(slide);
-        gsap_1.gsap.to('.slides-container', {
-            duration: 1,
-            scrollTo: {
-                y: ".slide-" + slide,
-            },
-        });
+
+var MainPage = function MainPage() {
+  var _a = react_1.useState(1),
+      currentSlide = _a[0],
+      setCurrentSlide = _a[1];
+
+  var _b = react_1.useState(window.innerHeight),
+      pageHeight = _b[0],
+      setPageHeight = _b[1];
+
+  var updatePageHeight = function updatePageHeight() {
+    return setPageHeight(window.innerHeight);
+  };
+
+  react_1.useEffect(function () {
+    window.addEventListener('resize', updatePageHeight);
+    gsap_1.gsap.to('.slides-container', {
+      duration: 0.1,
+      scrollTo: {
+        y: ".slide-" + currentSlide
+      }
+    });
+    return function () {
+      return window.removeEventListener('resize', updatePageHeight);
     };
-    var handleGoToFirstSlide = function () { return goToSlide(1); };
-    var handleGoToSecondSlide = function () {
-        goToSlide(2);
-        gsap_1.gsap.fromTo('.section-counter__container-increment', { x: '-=100', opacity: 0, }, {
-            duration: 3,
-            opacity: 1,
-            stagger: 0.2,
-            x: '0',
-        });
-        gsap_1.gsap.fromTo('.section-counter__container-decrement', { x: '+=100', opacity: 0, }, {
-            duration: 3,
-            opacity: 1,
-            stagger: 0.2,
-            x: '0',
-        });
-        gsap_1.gsap.fromTo('.heading__picked-color', { x: '-=100', opacity: 0, }, {
-            duration: 3,
-            opacity: 1,
-            stagger: 0.2,
-            x: '0',
-        });
-        gsap_1.gsap.fromTo('.select-wrapper', { x: '+=100', opacity: 0, }, {
-            duration: 3,
-            opacity: 1,
-            stagger: 0.2,
-            x: '0',
-        });
-        gsap_1.gsap.from('.container-form', {
-            duration: 6.5,
-            ease: 'Back.easeOut',
-            rotationX: 100,
-            transformOrigin: '50% 0',
-        });
-    };
-    var handleGoToThirdSlide = function () {
-        goToSlide(3);
-        gsap_1.gsap.fromTo('.container-wave__btn-wave', {
-            autoAlpha: 0,
-            duration: 2,
-            opacity: 0,
-            x: 100,
-        }, {
-            autoAlpha: 1,
-            opacity: 1,
-            x: 0,
-        });
-    };
-    return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("main", { className: 'slides-container' },
-            react_1.default.createElement(FirstSlideContent_1.FirstSlideContent, { handleGoToSecondSlide: handleGoToSecondSlide }),
-            react_1.default.createElement(SecondSlideContent_1.SecondSlideContent, { handleGoToThirdSlide: handleGoToThirdSlide, handleGoToFirstSlide: handleGoToFirstSlide }),
-            react_1.default.createElement(ThirdSlideContent_1.ThirdSlideContent, { handleGoToSecondSlide: handleGoToSecondSlide }))));
+  }, [window.innerHeight]);
+
+  var goToSlide = function goToSlide(slide) {
+    setCurrentSlide(slide);
+    gsap_1.gsap.to('.slides-container', {
+      duration: 1,
+      scrollTo: {
+        y: ".slide-" + slide
+      }
+    });
+  };
+
+  var handleGoToFirstSlide = function handleGoToFirstSlide() {
+    return goToSlide(1);
+  };
+
+  var handleGoToSecondSlide = function handleGoToSecondSlide() {
+    goToSlide(2);
+    gsap_1.gsap.fromTo('.section-counter__container-increment', {
+      x: '-=100',
+      opacity: 0
+    }, {
+      duration: 3,
+      opacity: 1,
+      stagger: 0.2,
+      x: '0'
+    });
+    gsap_1.gsap.fromTo('.section-counter__container-decrement', {
+      x: '+=100',
+      opacity: 0
+    }, {
+      duration: 3,
+      opacity: 1,
+      stagger: 0.2,
+      x: '0'
+    });
+    gsap_1.gsap.fromTo('.heading__picked-color', {
+      x: '-=100',
+      opacity: 0
+    }, {
+      duration: 3,
+      opacity: 1,
+      stagger: 0.2,
+      x: '0'
+    });
+    gsap_1.gsap.fromTo('.select-wrapper', {
+      x: '+=100',
+      opacity: 0
+    }, {
+      duration: 3,
+      opacity: 1,
+      stagger: 0.2,
+      x: '0'
+    });
+    gsap_1.gsap.from('.container-form', {
+      duration: 6.5,
+      ease: 'Back.easeOut',
+      rotationX: 100,
+      transformOrigin: '50% 0'
+    });
+  };
+
+  var handleGoToThirdSlide = function handleGoToThirdSlide() {
+    goToSlide(3);
+    gsap_1.gsap.fromTo('.container-wave__btn-wave', {
+      autoAlpha: 0,
+      duration: 2,
+      opacity: 0,
+      x: 100
+    }, {
+      autoAlpha: 1,
+      opacity: 1,
+      x: 0
+    });
+  };
+
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("main", {
+    className: 'slides-container'
+  }, react_1["default"].createElement(FirstSlideContent_1.FirstSlideContent, {
+    handleGoToSecondSlide: handleGoToSecondSlide
+  }), react_1["default"].createElement(SecondSlideContent_1.SecondSlideContent, {
+    handleGoToThirdSlide: handleGoToThirdSlide,
+    handleGoToFirstSlide: handleGoToFirstSlide
+  }), react_1["default"].createElement(ThirdSlideContent_1.ThirdSlideContent, {
+    handleGoToSecondSlide: handleGoToSecondSlide
+  })));
 };
+
 exports.MainPage = MainPage;
 
-
 /***/ }),
-/* 70 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73762,246 +73816,485 @@ _getGSAP() && gsap.registerPlugin(ScrollToPlugin);
 
 
 /***/ }),
-/* 71 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+
+var __importDefault = undefined && undefined.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.FirstSlideContent = void 0;
-var ThreeDimensionComponent_1 = __webpack_require__(72);
+
+var ThreeDimensionComponent_1 = __webpack_require__(70);
+
 var react_1 = __importDefault(__webpack_require__(1));
-var BackgroundPicture = __webpack_require__(41)
-    .default;
-var FirstSlideContent = function (_a) {
-    var handleGoToSecondSlide = _a.handleGoToSecondSlide;
-    return (react_1.default.createElement("section", { className: 'slide slide-1' },
-        react_1.default.createElement("h1", { className: 'slide-1__heading' }, "Adopt an animal"),
-        react_1.default.createElement("img", { src: BackgroundPicture, alt: 'background', className: 'background-img' }),
-        react_1.default.createElement(ThreeDimensionComponent_1.ThreeDimensionComponent, null),
-        react_1.default.createElement("header", { className: 'btn-container-next-prev' },
-            react_1.default.createElement("button", { className: 'btn btn-go-next-slide-1', onClick: handleGoToSecondSlide }, "Next"))));
+
+var BackgroundPicture = __webpack_require__(41)["default"];
+
+var FirstSlideContent = function FirstSlideContent(_a) {
+  var handleGoToSecondSlide = _a.handleGoToSecondSlide;
+  return react_1["default"].createElement("section", {
+    className: 'slide slide-1'
+  }, react_1["default"].createElement("h1", {
+    className: 'slide-1__heading'
+  }, "Adopt an animal"), react_1["default"].createElement("img", {
+    src: BackgroundPicture,
+    alt: 'background',
+    className: 'background-img'
+  }), react_1["default"].createElement(ThreeDimensionComponent_1.ThreeDimensionComponent, null), react_1["default"].createElement("header", {
+    className: 'btn-container-next-prev'
+  }, react_1["default"].createElement("button", {
+    className: 'btn btn-go-next-slide-1',
+    onClick: handleGoToSecondSlide
+  }, "Next")));
 };
+
 exports.FirstSlideContent = FirstSlideContent;
 
-
 /***/ }),
-/* 72 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+
+var __createBinding = undefined && undefined.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
     }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = undefined && undefined.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = undefined && undefined.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+
+var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
+  function adopt(value) {
+    return value instanceof P ? value : new P(function (resolve) {
+      resolve(value);
+    });
+  }
+
+  return new (P || (P = Promise))(function (resolve, reject) {
+    function fulfilled(value) {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+
+    function rejected(value) {
+      try {
+        step(generator["throw"](value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+
+    function step(result) {
+      result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+    }
+
+    step((generator = generator.apply(thisArg, _arguments || [])).next());
+  });
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+
+var __generator = undefined && undefined.__generator || function (thisArg, body) {
+  var _ = {
+    label: 0,
+    sent: function sent() {
+      if (t[0] & 1) throw t[1];
+      return t[1];
+    },
+    trys: [],
+    ops: []
+  },
+      f,
+      y,
+      t,
+      g;
+  return g = {
+    next: verb(0),
+    "throw": verb(1),
+    "return": verb(2)
+  }, typeof Symbol === "function" && (g[Symbol.iterator] = function () {
+    return this;
+  }), g;
+
+  function verb(n) {
+    return function (v) {
+      return step([n, v]);
+    };
+  }
+
+  function step(op) {
+    if (f) throw new TypeError("Generator is already executing.");
+
+    while (_) {
+      try {
+        if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+        if (y = 0, t) op = [op[0] & 2, t.value];
+
+        switch (op[0]) {
+          case 0:
+          case 1:
+            t = op;
+            break;
+
+          case 4:
+            _.label++;
+            return {
+              value: op[1],
+              done: false
+            };
+
+          case 5:
+            _.label++;
+            y = op[1];
+            op = [0];
+            continue;
+
+          case 7:
+            op = _.ops.pop();
+
+            _.trys.pop();
+
+            continue;
+
+          default:
+            if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+              _ = 0;
+              continue;
+            }
+
+            if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+              _.label = op[1];
+              break;
+            }
+
+            if (op[0] === 6 && _.label < t[1]) {
+              _.label = t[1];
+              t = op;
+              break;
+            }
+
+            if (t && _.label < t[2]) {
+              _.label = t[2];
+
+              _.ops.push(op);
+
+              break;
+            }
+
+            if (t[2]) _.ops.pop();
+
+            _.trys.pop();
+
+            continue;
+        }
+
+        op = body.call(thisArg, _);
+      } catch (e) {
+        op = [6, e];
+        y = 0;
+      } finally {
+        f = t = 0;
+      }
+    }
+
+    if (op[0] & 5) throw op[1];
+    return {
+      value: op[0] ? op[1] : void 0,
+      done: true
+    };
+  }
+};
+
+var __importDefault = undefined && undefined.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.ThreeDimensionComponent = void 0;
-var drei_1 = __webpack_require__(98);
+
+var drei_1 = __webpack_require__(96);
+
 var react_1 = __importStar(__webpack_require__(1));
+
 var react_three_fiber_1 = __webpack_require__(4);
-var useMedia_1 = __importDefault(__webpack_require__(78));
+
+var useMedia_1 = __importDefault(__webpack_require__(76));
+
 var OrbitControls_1 = __webpack_require__(25);
+
 __webpack_require__(17);
-react_three_fiber_1.extend({ OrbitControls: OrbitControls_1.OrbitControls });
+
+react_three_fiber_1.extend({
+  OrbitControls: OrbitControls_1.OrbitControls
+});
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Importing 3D models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-var Model = function (_a) {
-    var modelPath = _a.modelPath;
-    var gltf = drei_1.useGLTF(modelPath, true);
-    return react_1.default.createElement("primitive", { object: gltf.scene, dispose: null });
+
+var Model = function Model(_a) {
+  var modelPath = _a.modelPath;
+  var gltf = drei_1.useGLTF(modelPath, true);
+  return react_1["default"].createElement("primitive", {
+    object: gltf.scene,
+    dispose: null
+  });
 };
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Lights settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-var Lights = function () { return (react_1.default.createElement(react_1.default.Fragment, null,
-    react_1.default.createElement("ambientLight", { intensity: 0.3 }),
-    react_1.default.createElement("directionalLight", { position: [10, 10, 5], intensity: 1 }),
-    react_1.default.createElement("directionalLight", { position: [0, 10, 0], intensity: 1.5 }),
-    react_1.default.createElement("spotLight", { position: [0, 1000, 0], intensity: 1 }))); };
+
+
+var Lights = function Lights() {
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("ambientLight", {
+    intensity: 0.3
+  }), react_1["default"].createElement("directionalLight", {
+    position: [10, 10, 5],
+    intensity: 1
+  }), react_1["default"].createElement("directionalLight", {
+    position: [0, 10, 0],
+    intensity: 1.5
+  }), react_1["default"].createElement("spotLight", {
+    position: [0, 1000, 0],
+    intensity: 1
+  }));
+};
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Orbit settings and setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-var OrbitControlsSettings = function () {
-    var orbitRef = react_1.useRef(null);
-    var _a = react_three_fiber_1.useThree(), camera = _a.camera, gl = _a.gl;
-    react_three_fiber_1.useFrame(function () {
-        var _a;
-        (_a = orbitRef === null || orbitRef === void 0 ? void 0 : orbitRef.current) === null || _a === void 0 ? void 0 : _a.update();
-    });
-    return (react_1.default.createElement("orbitControls", { args: [camera, gl.domElement], autoRotate: true, maxPolarAngle: Math.PI / 3, minPolarAngle: Math.PI / 3, ref: orbitRef }));
+
+
+var OrbitControlsSettings = function OrbitControlsSettings() {
+  var orbitRef = react_1.useRef(null);
+
+  var _a = react_three_fiber_1.useThree(),
+      camera = _a.camera,
+      gl = _a.gl;
+
+  react_three_fiber_1.useFrame(function () {
+    var _a;
+
+    (_a = orbitRef === null || orbitRef === void 0 ? void 0 : orbitRef.current) === null || _a === void 0 ? void 0 : _a.update();
+  });
+  return react_1["default"].createElement("orbitControls", {
+    args: [camera, gl.domElement],
+    autoRotate: true,
+    maxPolarAngle: Math.PI / 3,
+    minPolarAngle: Math.PI / 3,
+    ref: orbitRef
+  });
 };
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE 3D models content
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-var DuckModel = function () {
-    /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    * NOTE 3D models refs and ration animation
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    var duckModelRef = react_1.useRef();
-    react_three_fiber_1.useFrame(function () { return (duckModelRef.current.rotation.y += 0.01); });
-    return (react_1.default.createElement("mesh", { ref: duckModelRef, rotation: [0, -Math.PI / 1.3, 0] },
-        react_1.default.createElement(Model, { modelPath: './models/Duck/glTF/Duck.gltf' })));
+
+
+var DuckModel = function DuckModel() {
+  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  * NOTE 3D models refs and ration animation
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  var duckModelRef = react_1.useRef();
+  react_three_fiber_1.useFrame(function () {
+    return duckModelRef.current.rotation.y += 0.01;
+  });
+  return react_1["default"].createElement("mesh", {
+    ref: duckModelRef,
+    rotation: [0, -Math.PI / 1.3, 0]
+  }, react_1["default"].createElement(Model, {
+    modelPath: './models/Duck/glTF/Duck.gltf'
+  }));
 };
-var CowModel = function () {
-    /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    * NOTE 3D models refs and ration animation
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    var cowModelRef = react_1.useRef();
-    react_three_fiber_1.useFrame(function () { return (cowModelRef.current.rotation.y += 0.01); });
-    return (react_1.default.createElement("mesh", { ref: cowModelRef, rotation: [0, -Math.PI / 1.3, 0] },
-        react_1.default.createElement(Model, { modelPath: './models/Cow/scene.gltf' })));
+
+var CowModel = function CowModel() {
+  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  * NOTE 3D models refs and ration animation
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  var cowModelRef = react_1.useRef();
+  react_three_fiber_1.useFrame(function () {
+    return cowModelRef.current.rotation.y += 0.01;
+  });
+  return react_1["default"].createElement("mesh", {
+    ref: cowModelRef,
+    rotation: [0, -Math.PI / 1.3, 0]
+  }, react_1["default"].createElement(Model, {
+    modelPath: './models/Cow/scene.gltf'
+  }));
 };
-var ChickenModel = function () {
-    /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    * NOTE 3D models refs and ration animation
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    var chickenModelRef = react_1.useRef();
-    react_three_fiber_1.useFrame(function () { return (chickenModelRef.current.rotation.y += 0.01); });
-    return (react_1.default.createElement("mesh", { ref: chickenModelRef, rotation: [0, -Math.PI / 1.3, 0] },
-        react_1.default.createElement(Model, { modelPath: './models/Chicken/scene.gltf' })));
+
+var ChickenModel = function ChickenModel() {
+  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  * NOTE 3D models refs and ration animation
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  var chickenModelRef = react_1.useRef();
+  react_three_fiber_1.useFrame(function () {
+    return chickenModelRef.current.rotation.y += 0.01;
+  });
+  return react_1["default"].createElement("mesh", {
+    ref: chickenModelRef,
+    rotation: [0, -Math.PI / 1.3, 0]
+  }, react_1["default"].createElement(Model, {
+    modelPath: './models/Chicken/scene.gltf'
+  }));
 };
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Content inside react-three-fiber Html tags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-var HTMLContent = function (_a) {
-    var CHICKEN_Z_POSITION = _a.CHICKEN_Z_POSITION, COW_Z_POSITION = _a.COW_Z_POSITION, DUCK_Z_POSITION = _a.DUCK_Z_POSITION;
-    var CowSound = new Audio('/sounds/Cow/cow.mp3');
-    var ChickenSound = new Audio('/sounds/Chicken/chicken.mp3');
-    var DuckSound = new Audio('/sounds/Duck/duck.mp3');
-    var handleChoseAnimal = function (animal) {
-        return localStorage.setItem('chosenAnimal', animal);
-    };
-    var playCowSound = function () { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            handleChoseAnimal('Cow');
-            return [2 /*return*/, CowSound.play()];
-        });
-    }); };
-    var playChickenSound = function () { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            handleChoseAnimal('Chicken');
-            return [2 /*return*/, ChickenSound.play()];
-        });
-    }); };
-    var playDuckSound = function () { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            handleChoseAnimal('Duck');
-            return [2 /*return*/, DuckSound.play()];
-        });
-    }); };
-    return (react_1.default.createElement(drei_1.Html, null,
-        react_1.default.createElement("div", { className: 'container-pet' },
-            react_1.default.createElement("div", { className: 'container-flex-pet' },
-                react_1.default.createElement("div", { className: 'container-choose-pet container-choose-pet-duck' },
-                    react_1.default.createElement(react_three_fiber_1.Canvas, { camera: {
-                            position: [0, 0, DUCK_Z_POSITION],
-                        } },
-                        react_1.default.createElement(OrbitControlsSettings, null),
-                        react_1.default.createElement(Lights, null),
-                        react_1.default.createElement(react_1.Suspense, { fallback: null },
-                            react_1.default.createElement(DuckModel, null))),
-                    react_1.default.createElement("button", { className: 'container-choose-pet-btn__choose-btn-duck', onClick: playDuckSound }, "Duck")),
-                react_1.default.createElement("div", { className: 'container-choose-pet container-choose-pet-cow' },
-                    react_1.default.createElement(react_three_fiber_1.Canvas, { camera: {
-                            position: [0, 0, COW_Z_POSITION],
-                        } },
-                        react_1.default.createElement(OrbitControlsSettings, null),
-                        react_1.default.createElement(Lights, null),
-                        react_1.default.createElement(react_1.Suspense, { fallback: null },
-                            react_1.default.createElement(CowModel, null))),
-                    react_1.default.createElement("button", { className: 'container-choose-pet-btn__choose-btn-cow', onClick: playCowSound }, "Cow")),
-                react_1.default.createElement("div", { className: 'container-choose-pet container-choose-pet-chicken' },
-                    react_1.default.createElement(react_three_fiber_1.Canvas, { camera: {
-                            fov: 100,
-                            position: [0, 0, CHICKEN_Z_POSITION],
-                        } },
-                        react_1.default.createElement(OrbitControlsSettings, null),
-                        react_1.default.createElement(Lights, null),
-                        react_1.default.createElement(react_1.Suspense, { fallback: null },
-                            react_1.default.createElement(ChickenModel, null))),
-                    react_1.default.createElement("button", { className: ' container-choose-pet-btn__choose-btn-chicken', onClick: playChickenSound }, "Chicken"))))));
+
+
+var HTMLContent = function HTMLContent(_a) {
+  var CHICKEN_Z_POSITION = _a.CHICKEN_Z_POSITION,
+      COW_Z_POSITION = _a.COW_Z_POSITION,
+      DUCK_Z_POSITION = _a.DUCK_Z_POSITION;
+  var CowSound = new Audio('/sounds/Cow/cow.mp3');
+  var ChickenSound = new Audio('/sounds/Chicken/chicken.mp3');
+  var DuckSound = new Audio('/sounds/Duck/duck.mp3');
+
+  var handleChoseAnimal = function handleChoseAnimal(animal) {
+    return localStorage.setItem('chosenAnimal', animal);
+  };
+
+  var playCowSound = function playCowSound() {
+    return __awaiter(void 0, void 0, void 0, function () {
+      return __generator(this, function (_a) {
+        handleChoseAnimal('Cow');
+        return [2
+        /*return*/
+        , CowSound.play()];
+      });
+    });
+  };
+
+  var playChickenSound = function playChickenSound() {
+    return __awaiter(void 0, void 0, void 0, function () {
+      return __generator(this, function (_a) {
+        handleChoseAnimal('Chicken');
+        return [2
+        /*return*/
+        , ChickenSound.play()];
+      });
+    });
+  };
+
+  var playDuckSound = function playDuckSound() {
+    return __awaiter(void 0, void 0, void 0, function () {
+      return __generator(this, function (_a) {
+        handleChoseAnimal('Duck');
+        return [2
+        /*return*/
+        , DuckSound.play()];
+      });
+    });
+  };
+
+  return react_1["default"].createElement(drei_1.Html, null, react_1["default"].createElement("div", {
+    className: 'container-pet'
+  }, react_1["default"].createElement("div", {
+    className: 'container-flex-pet'
+  }, react_1["default"].createElement("div", {
+    className: 'container-choose-pet container-choose-pet-duck'
+  }, react_1["default"].createElement(react_three_fiber_1.Canvas, {
+    camera: {
+      position: [0, 0, DUCK_Z_POSITION]
+    }
+  }, react_1["default"].createElement(OrbitControlsSettings, null), react_1["default"].createElement(Lights, null), react_1["default"].createElement(react_1.Suspense, {
+    fallback: null
+  }, react_1["default"].createElement(DuckModel, null))), react_1["default"].createElement("button", {
+    className: 'container-choose-pet-btn__choose-btn-duck',
+    onClick: playDuckSound
+  }, "Duck")), react_1["default"].createElement("div", {
+    className: 'container-choose-pet container-choose-pet-cow'
+  }, react_1["default"].createElement(react_three_fiber_1.Canvas, {
+    camera: {
+      position: [0, 0, COW_Z_POSITION]
+    }
+  }, react_1["default"].createElement(OrbitControlsSettings, null), react_1["default"].createElement(Lights, null), react_1["default"].createElement(react_1.Suspense, {
+    fallback: null
+  }, react_1["default"].createElement(CowModel, null))), react_1["default"].createElement("button", {
+    className: 'container-choose-pet-btn__choose-btn-cow',
+    onClick: playCowSound
+  }, "Cow")), react_1["default"].createElement("div", {
+    className: 'container-choose-pet container-choose-pet-chicken'
+  }, react_1["default"].createElement(react_three_fiber_1.Canvas, {
+    camera: {
+      fov: 100,
+      position: [0, 0, CHICKEN_Z_POSITION]
+    }
+  }, react_1["default"].createElement(OrbitControlsSettings, null), react_1["default"].createElement(Lights, null), react_1["default"].createElement(react_1.Suspense, {
+    fallback: null
+  }, react_1["default"].createElement(ChickenModel, null))), react_1["default"].createElement("button", {
+    className: ' container-choose-pet-btn__choose-btn-chicken',
+    onClick: playChickenSound
+  }, "Chicken")))));
 };
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Main component
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-var ThreeDimensionComponent = function () {
-    /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    * NOTE Media query for 3D models position
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    var isWide = useMedia_1.default('(min-width: 1100px)');
-    var CHICKEN_Z_POSITION = isWide ? 3 : 3;
-    var COW_Z_POSITION = isWide ? -25 : -25;
-    var DUCK_Z_POSITION = isWide ? 3 : 3;
-    return (react_1.default.createElement(react_1.Fragment, null,
-        react_1.default.createElement(react_three_fiber_1.Canvas, { camera: {
-                position: [0, 0, 0],
-            } },
-            react_1.default.createElement(HTMLContent, { CHICKEN_Z_POSITION: CHICKEN_Z_POSITION, COW_Z_POSITION: COW_Z_POSITION, DUCK_Z_POSITION: DUCK_Z_POSITION }))));
+
+
+var ThreeDimensionComponent = function ThreeDimensionComponent() {
+  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  * NOTE Media query for 3D models position
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  var isWide = useMedia_1["default"]('(min-width: 1100px)');
+  var CHICKEN_Z_POSITION = isWide ? 3 : 3;
+  var COW_Z_POSITION = isWide ? -25 : -25;
+  var DUCK_Z_POSITION = isWide ? 3 : 3;
+  return react_1["default"].createElement(react_1.Fragment, null, react_1["default"].createElement(react_three_fiber_1.Canvas, {
+    camera: {
+      position: [0, 0, 0]
+    }
+  }, react_1["default"].createElement(HTMLContent, {
+    CHICKEN_Z_POSITION: CHICKEN_Z_POSITION,
+    COW_Z_POSITION: COW_Z_POSITION,
+    DUCK_Z_POSITION: DUCK_Z_POSITION
+  })));
 };
+
 exports.ThreeDimensionComponent = ThreeDimensionComponent;
 
-
 /***/ }),
-/* 73 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {/** @license React v0.26.1
@@ -74014,7 +74307,7 @@ exports.ThreeDimensionComponent = ThreeDimensionComponent;
  */
 module.exports = function $$$reconciler($$$hostConfig) {
     var exports = {};
-'use strict';var aa=__webpack_require__(30),ba=__webpack_require__(1),m=__webpack_require__(74);function q(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
+'use strict';var aa=__webpack_require__(30),ba=__webpack_require__(1),m=__webpack_require__(72);function q(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
 var ca=ba.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,da=60103,ea=60106,fa=60107,ha=60108,ia=60114,ja=60109,ka=60110,la=60112,ma=60113,na=60120,oa=60115,pa=60116,qa=60121,ra=60129,sa=60130,ta=60131;
 if("function"===typeof Symbol&&Symbol.for){var r=Symbol.for;da=r("react.element");ea=r("react.portal");fa=r("react.fragment");ha=r("react.strict_mode");ia=r("react.profiler");ja=r("react.provider");ka=r("react.context");la=r("react.forward_ref");ma=r("react.suspense");na=r("react.suspense_list");oa=r("react.memo");pa=r("react.lazy");qa=r("react.block");r("react.scope");ra=r("react.debug_trace_mode");sa=r("react.offscreen");ta=r("react.legacy_hidden")}var ua="function"===typeof Symbol&&Symbol.iterator;
 function va(a){if(null===a||"object"!==typeof a)return null;a=ua&&a[ua]||a["@@iterator"];return"function"===typeof a?a:null}
@@ -74224,73 +74517,73 @@ d?null:d;null!==d&&(b.callback=d);md(e,b);ud(e,g,f);return g};
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(39)(module)))
 
 /***/ }),
-/* 74 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(75);
+  module.exports = __webpack_require__(73);
 } else {}
 
 
 /***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v0.20.1
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var f,g,h,k;if("object"===typeof performance&&"function"===typeof performance.now){var l=performance;exports.unstable_now=function(){return l.now()}}else{var p=Date,q=p.now();exports.unstable_now=function(){return p.now()-q}}
+if("undefined"===typeof window||"function"!==typeof MessageChannel){var t=null,u=null,w=function(){if(null!==t)try{var a=exports.unstable_now();t(!0,a);t=null}catch(b){throw setTimeout(w,0),b;}};f=function(a){null!==t?setTimeout(f,0,a):(t=a,setTimeout(w,0))};g=function(a,b){u=setTimeout(a,b)};h=function(){clearTimeout(u)};exports.unstable_shouldYield=function(){return!1};k=exports.unstable_forceFrameRate=function(){}}else{var x=window.setTimeout,y=window.clearTimeout;if("undefined"!==typeof console){var z=
+window.cancelAnimationFrame;"function"!==typeof window.requestAnimationFrame&&console.error("This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills");"function"!==typeof z&&console.error("This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills")}var A=!1,B=null,C=-1,D=5,E=0;exports.unstable_shouldYield=function(){return exports.unstable_now()>=
+E};k=function(){};exports.unstable_forceFrameRate=function(a){0>a||125<a?console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"):D=0<a?Math.floor(1E3/a):5};var F=new MessageChannel,G=F.port2;F.port1.onmessage=function(){if(null!==B){var a=exports.unstable_now();E=a+D;try{B(!0,a)?G.postMessage(null):(A=!1,B=null)}catch(b){throw G.postMessage(null),b;}}else A=!1};f=function(a){B=a;A||(A=!0,G.postMessage(null))};g=function(a,b){C=
+x(function(){a(exports.unstable_now())},b)};h=function(){y(C);C=-1}}function H(a,b){var c=a.length;a.push(b);a:for(;;){var d=c-1>>>1,e=a[d];if(void 0!==e&&0<I(e,b))a[d]=b,a[c]=e,c=d;else break a}}function J(a){a=a[0];return void 0===a?null:a}
+function K(a){var b=a[0];if(void 0!==b){var c=a.pop();if(c!==b){a[0]=c;a:for(var d=0,e=a.length;d<e;){var m=2*(d+1)-1,n=a[m],v=m+1,r=a[v];if(void 0!==n&&0>I(n,c))void 0!==r&&0>I(r,n)?(a[d]=r,a[v]=c,d=v):(a[d]=n,a[m]=c,d=m);else if(void 0!==r&&0>I(r,c))a[d]=r,a[v]=c,d=v;else break a}}return b}return null}function I(a,b){var c=a.sortIndex-b.sortIndex;return 0!==c?c:a.id-b.id}var L=[],M=[],N=1,O=null,P=3,Q=!1,R=!1,S=!1;
+function T(a){for(var b=J(M);null!==b;){if(null===b.callback)K(M);else if(b.startTime<=a)K(M),b.sortIndex=b.expirationTime,H(L,b);else break;b=J(M)}}function U(a){S=!1;T(a);if(!R)if(null!==J(L))R=!0,f(V);else{var b=J(M);null!==b&&g(U,b.startTime-a)}}
+function V(a,b){R=!1;S&&(S=!1,h());Q=!0;var c=P;try{T(b);for(O=J(L);null!==O&&(!(O.expirationTime>b)||a&&!exports.unstable_shouldYield());){var d=O.callback;if("function"===typeof d){O.callback=null;P=O.priorityLevel;var e=d(O.expirationTime<=b);b=exports.unstable_now();"function"===typeof e?O.callback=e:O===J(L)&&K(L);T(b)}else K(L);O=J(L)}if(null!==O)var m=!0;else{var n=J(M);null!==n&&g(U,n.startTime-b);m=!1}return m}finally{O=null,P=c,Q=!1}}var W=k;exports.unstable_IdlePriority=5;
+exports.unstable_ImmediatePriority=1;exports.unstable_LowPriority=4;exports.unstable_NormalPriority=3;exports.unstable_Profiling=null;exports.unstable_UserBlockingPriority=2;exports.unstable_cancelCallback=function(a){a.callback=null};exports.unstable_continueExecution=function(){R||Q||(R=!0,f(V))};exports.unstable_getCurrentPriorityLevel=function(){return P};exports.unstable_getFirstCallbackNode=function(){return J(L)};
+exports.unstable_next=function(a){switch(P){case 1:case 2:case 3:var b=3;break;default:b=P}var c=P;P=b;try{return a()}finally{P=c}};exports.unstable_pauseExecution=function(){};exports.unstable_requestPaint=W;exports.unstable_runWithPriority=function(a,b){switch(a){case 1:case 2:case 3:case 4:case 5:break;default:a=3}var c=P;P=a;try{return b()}finally{P=c}};
+exports.unstable_scheduleCallback=function(a,b,c){var d=exports.unstable_now();"object"===typeof c&&null!==c?(c=c.delay,c="number"===typeof c&&0<c?d+c:d):c=d;switch(a){case 1:var e=-1;break;case 2:e=250;break;case 5:e=1073741823;break;case 4:e=1E4;break;default:e=5E3}e=c+e;a={id:N++,callback:b,priorityLevel:a,startTime:c,expirationTime:e,sortIndex:-1};c>d?(a.sortIndex=c,H(M,a),null===J(L)&&a===J(M)&&(S?h():S=!0,g(U,c-d))):(a.sortIndex=e,H(L,a),R||Q||(R=!0,f(V)));return a};
+exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;try{return a.apply(this,arguments)}finally{P=c}}};
+
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v0.20.1
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var f,g,h,k;if("object"===typeof performance&&"function"===typeof performance.now){var l=performance;exports.unstable_now=function(){return l.now()}}else{var p=Date,q=p.now();exports.unstable_now=function(){return p.now()-q}}
+if("undefined"===typeof window||"function"!==typeof MessageChannel){var t=null,u=null,w=function(){if(null!==t)try{var a=exports.unstable_now();t(!0,a);t=null}catch(b){throw setTimeout(w,0),b;}};f=function(a){null!==t?setTimeout(f,0,a):(t=a,setTimeout(w,0))};g=function(a,b){u=setTimeout(a,b)};h=function(){clearTimeout(u)};exports.unstable_shouldYield=function(){return!1};k=exports.unstable_forceFrameRate=function(){}}else{var x=window.setTimeout,y=window.clearTimeout;if("undefined"!==typeof console){var z=
+window.cancelAnimationFrame;"function"!==typeof window.requestAnimationFrame&&console.error("This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills");"function"!==typeof z&&console.error("This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills")}var A=!1,B=null,C=-1,D=5,E=0;exports.unstable_shouldYield=function(){return exports.unstable_now()>=
+E};k=function(){};exports.unstable_forceFrameRate=function(a){0>a||125<a?console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"):D=0<a?Math.floor(1E3/a):5};var F=new MessageChannel,G=F.port2;F.port1.onmessage=function(){if(null!==B){var a=exports.unstable_now();E=a+D;try{B(!0,a)?G.postMessage(null):(A=!1,B=null)}catch(b){throw G.postMessage(null),b;}}else A=!1};f=function(a){B=a;A||(A=!0,G.postMessage(null))};g=function(a,b){C=
+x(function(){a(exports.unstable_now())},b)};h=function(){y(C);C=-1}}function H(a,b){var c=a.length;a.push(b);a:for(;;){var d=c-1>>>1,e=a[d];if(void 0!==e&&0<I(e,b))a[d]=b,a[c]=e,c=d;else break a}}function J(a){a=a[0];return void 0===a?null:a}
+function K(a){var b=a[0];if(void 0!==b){var c=a.pop();if(c!==b){a[0]=c;a:for(var d=0,e=a.length;d<e;){var m=2*(d+1)-1,n=a[m],v=m+1,r=a[v];if(void 0!==n&&0>I(n,c))void 0!==r&&0>I(r,n)?(a[d]=r,a[v]=c,d=v):(a[d]=n,a[m]=c,d=m);else if(void 0!==r&&0>I(r,c))a[d]=r,a[v]=c,d=v;else break a}}return b}return null}function I(a,b){var c=a.sortIndex-b.sortIndex;return 0!==c?c:a.id-b.id}var L=[],M=[],N=1,O=null,P=3,Q=!1,R=!1,S=!1;
+function T(a){for(var b=J(M);null!==b;){if(null===b.callback)K(M);else if(b.startTime<=a)K(M),b.sortIndex=b.expirationTime,H(L,b);else break;b=J(M)}}function U(a){S=!1;T(a);if(!R)if(null!==J(L))R=!0,f(V);else{var b=J(M);null!==b&&g(U,b.startTime-a)}}
+function V(a,b){R=!1;S&&(S=!1,h());Q=!0;var c=P;try{T(b);for(O=J(L);null!==O&&(!(O.expirationTime>b)||a&&!exports.unstable_shouldYield());){var d=O.callback;if("function"===typeof d){O.callback=null;P=O.priorityLevel;var e=d(O.expirationTime<=b);b=exports.unstable_now();"function"===typeof e?O.callback=e:O===J(L)&&K(L);T(b)}else K(L);O=J(L)}if(null!==O)var m=!0;else{var n=J(M);null!==n&&g(U,n.startTime-b);m=!1}return m}finally{O=null,P=c,Q=!1}}var W=k;exports.unstable_IdlePriority=5;
+exports.unstable_ImmediatePriority=1;exports.unstable_LowPriority=4;exports.unstable_NormalPriority=3;exports.unstable_Profiling=null;exports.unstable_UserBlockingPriority=2;exports.unstable_cancelCallback=function(a){a.callback=null};exports.unstable_continueExecution=function(){R||Q||(R=!0,f(V))};exports.unstable_getCurrentPriorityLevel=function(){return P};exports.unstable_getFirstCallbackNode=function(){return J(L)};
+exports.unstable_next=function(a){switch(P){case 1:case 2:case 3:var b=3;break;default:b=P}var c=P;P=b;try{return a()}finally{P=c}};exports.unstable_pauseExecution=function(){};exports.unstable_requestPaint=W;exports.unstable_runWithPriority=function(a,b){switch(a){case 1:case 2:case 3:case 4:case 5:break;default:a=3}var c=P;P=a;try{return b()}finally{P=c}};
+exports.unstable_scheduleCallback=function(a,b,c){var d=exports.unstable_now();"object"===typeof c&&null!==c?(c=c.delay,c="number"===typeof c&&0<c?d+c:d):c=d;switch(a){case 1:var e=-1;break;case 2:e=250;break;case 5:e=1073741823;break;case 4:e=1E4;break;default:e=5E3}e=c+e;a={id:N++,callback:b,priorityLevel:a,startTime:c,expirationTime:e,sortIndex:-1};c>d?(a.sortIndex=c,H(M,a),null===J(L)&&a===J(M)&&(S?h():S=!0,g(U,c-d))):(a.sortIndex=e,H(L,a),R||Q||(R=!0,f(V)));return a};
+exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;try{return a.apply(this,arguments)}finally{P=c}}};
+
+
+/***/ }),
 /* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/** @license React v0.20.1
- * scheduler.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var f,g,h,k;if("object"===typeof performance&&"function"===typeof performance.now){var l=performance;exports.unstable_now=function(){return l.now()}}else{var p=Date,q=p.now();exports.unstable_now=function(){return p.now()-q}}
-if("undefined"===typeof window||"function"!==typeof MessageChannel){var t=null,u=null,w=function(){if(null!==t)try{var a=exports.unstable_now();t(!0,a);t=null}catch(b){throw setTimeout(w,0),b;}};f=function(a){null!==t?setTimeout(f,0,a):(t=a,setTimeout(w,0))};g=function(a,b){u=setTimeout(a,b)};h=function(){clearTimeout(u)};exports.unstable_shouldYield=function(){return!1};k=exports.unstable_forceFrameRate=function(){}}else{var x=window.setTimeout,y=window.clearTimeout;if("undefined"!==typeof console){var z=
-window.cancelAnimationFrame;"function"!==typeof window.requestAnimationFrame&&console.error("This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills");"function"!==typeof z&&console.error("This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills")}var A=!1,B=null,C=-1,D=5,E=0;exports.unstable_shouldYield=function(){return exports.unstable_now()>=
-E};k=function(){};exports.unstable_forceFrameRate=function(a){0>a||125<a?console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"):D=0<a?Math.floor(1E3/a):5};var F=new MessageChannel,G=F.port2;F.port1.onmessage=function(){if(null!==B){var a=exports.unstable_now();E=a+D;try{B(!0,a)?G.postMessage(null):(A=!1,B=null)}catch(b){throw G.postMessage(null),b;}}else A=!1};f=function(a){B=a;A||(A=!0,G.postMessage(null))};g=function(a,b){C=
-x(function(){a(exports.unstable_now())},b)};h=function(){y(C);C=-1}}function H(a,b){var c=a.length;a.push(b);a:for(;;){var d=c-1>>>1,e=a[d];if(void 0!==e&&0<I(e,b))a[d]=b,a[c]=e,c=d;else break a}}function J(a){a=a[0];return void 0===a?null:a}
-function K(a){var b=a[0];if(void 0!==b){var c=a.pop();if(c!==b){a[0]=c;a:for(var d=0,e=a.length;d<e;){var m=2*(d+1)-1,n=a[m],v=m+1,r=a[v];if(void 0!==n&&0>I(n,c))void 0!==r&&0>I(r,n)?(a[d]=r,a[v]=c,d=v):(a[d]=n,a[m]=c,d=m);else if(void 0!==r&&0>I(r,c))a[d]=r,a[v]=c,d=v;else break a}}return b}return null}function I(a,b){var c=a.sortIndex-b.sortIndex;return 0!==c?c:a.id-b.id}var L=[],M=[],N=1,O=null,P=3,Q=!1,R=!1,S=!1;
-function T(a){for(var b=J(M);null!==b;){if(null===b.callback)K(M);else if(b.startTime<=a)K(M),b.sortIndex=b.expirationTime,H(L,b);else break;b=J(M)}}function U(a){S=!1;T(a);if(!R)if(null!==J(L))R=!0,f(V);else{var b=J(M);null!==b&&g(U,b.startTime-a)}}
-function V(a,b){R=!1;S&&(S=!1,h());Q=!0;var c=P;try{T(b);for(O=J(L);null!==O&&(!(O.expirationTime>b)||a&&!exports.unstable_shouldYield());){var d=O.callback;if("function"===typeof d){O.callback=null;P=O.priorityLevel;var e=d(O.expirationTime<=b);b=exports.unstable_now();"function"===typeof e?O.callback=e:O===J(L)&&K(L);T(b)}else K(L);O=J(L)}if(null!==O)var m=!0;else{var n=J(M);null!==n&&g(U,n.startTime-b);m=!1}return m}finally{O=null,P=c,Q=!1}}var W=k;exports.unstable_IdlePriority=5;
-exports.unstable_ImmediatePriority=1;exports.unstable_LowPriority=4;exports.unstable_NormalPriority=3;exports.unstable_Profiling=null;exports.unstable_UserBlockingPriority=2;exports.unstable_cancelCallback=function(a){a.callback=null};exports.unstable_continueExecution=function(){R||Q||(R=!0,f(V))};exports.unstable_getCurrentPriorityLevel=function(){return P};exports.unstable_getFirstCallbackNode=function(){return J(L)};
-exports.unstable_next=function(a){switch(P){case 1:case 2:case 3:var b=3;break;default:b=P}var c=P;P=b;try{return a()}finally{P=c}};exports.unstable_pauseExecution=function(){};exports.unstable_requestPaint=W;exports.unstable_runWithPriority=function(a,b){switch(a){case 1:case 2:case 3:case 4:case 5:break;default:a=3}var c=P;P=a;try{return b()}finally{P=c}};
-exports.unstable_scheduleCallback=function(a,b,c){var d=exports.unstable_now();"object"===typeof c&&null!==c?(c=c.delay,c="number"===typeof c&&0<c?d+c:d):c=d;switch(a){case 1:var e=-1;break;case 2:e=250;break;case 5:e=1073741823;break;case 4:e=1E4;break;default:e=5E3}e=c+e;a={id:N++,callback:b,priorityLevel:a,startTime:c,expirationTime:e,sortIndex:-1};c>d?(a.sortIndex=c,H(M,a),null===J(L)&&a===J(M)&&(S?h():S=!0,g(U,c-d))):(a.sortIndex=e,H(L,a),R||Q||(R=!0,f(V)));return a};
-exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;try{return a.apply(this,arguments)}finally{P=c}}};
-
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/** @license React v0.20.1
- * scheduler.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var f,g,h,k;if("object"===typeof performance&&"function"===typeof performance.now){var l=performance;exports.unstable_now=function(){return l.now()}}else{var p=Date,q=p.now();exports.unstable_now=function(){return p.now()-q}}
-if("undefined"===typeof window||"function"!==typeof MessageChannel){var t=null,u=null,w=function(){if(null!==t)try{var a=exports.unstable_now();t(!0,a);t=null}catch(b){throw setTimeout(w,0),b;}};f=function(a){null!==t?setTimeout(f,0,a):(t=a,setTimeout(w,0))};g=function(a,b){u=setTimeout(a,b)};h=function(){clearTimeout(u)};exports.unstable_shouldYield=function(){return!1};k=exports.unstable_forceFrameRate=function(){}}else{var x=window.setTimeout,y=window.clearTimeout;if("undefined"!==typeof console){var z=
-window.cancelAnimationFrame;"function"!==typeof window.requestAnimationFrame&&console.error("This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills");"function"!==typeof z&&console.error("This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills")}var A=!1,B=null,C=-1,D=5,E=0;exports.unstable_shouldYield=function(){return exports.unstable_now()>=
-E};k=function(){};exports.unstable_forceFrameRate=function(a){0>a||125<a?console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"):D=0<a?Math.floor(1E3/a):5};var F=new MessageChannel,G=F.port2;F.port1.onmessage=function(){if(null!==B){var a=exports.unstable_now();E=a+D;try{B(!0,a)?G.postMessage(null):(A=!1,B=null)}catch(b){throw G.postMessage(null),b;}}else A=!1};f=function(a){B=a;A||(A=!0,G.postMessage(null))};g=function(a,b){C=
-x(function(){a(exports.unstable_now())},b)};h=function(){y(C);C=-1}}function H(a,b){var c=a.length;a.push(b);a:for(;;){var d=c-1>>>1,e=a[d];if(void 0!==e&&0<I(e,b))a[d]=b,a[c]=e,c=d;else break a}}function J(a){a=a[0];return void 0===a?null:a}
-function K(a){var b=a[0];if(void 0!==b){var c=a.pop();if(c!==b){a[0]=c;a:for(var d=0,e=a.length;d<e;){var m=2*(d+1)-1,n=a[m],v=m+1,r=a[v];if(void 0!==n&&0>I(n,c))void 0!==r&&0>I(r,n)?(a[d]=r,a[v]=c,d=v):(a[d]=n,a[m]=c,d=m);else if(void 0!==r&&0>I(r,c))a[d]=r,a[v]=c,d=v;else break a}}return b}return null}function I(a,b){var c=a.sortIndex-b.sortIndex;return 0!==c?c:a.id-b.id}var L=[],M=[],N=1,O=null,P=3,Q=!1,R=!1,S=!1;
-function T(a){for(var b=J(M);null!==b;){if(null===b.callback)K(M);else if(b.startTime<=a)K(M),b.sortIndex=b.expirationTime,H(L,b);else break;b=J(M)}}function U(a){S=!1;T(a);if(!R)if(null!==J(L))R=!0,f(V);else{var b=J(M);null!==b&&g(U,b.startTime-a)}}
-function V(a,b){R=!1;S&&(S=!1,h());Q=!0;var c=P;try{T(b);for(O=J(L);null!==O&&(!(O.expirationTime>b)||a&&!exports.unstable_shouldYield());){var d=O.callback;if("function"===typeof d){O.callback=null;P=O.priorityLevel;var e=d(O.expirationTime<=b);b=exports.unstable_now();"function"===typeof e?O.callback=e:O===J(L)&&K(L);T(b)}else K(L);O=J(L)}if(null!==O)var m=!0;else{var n=J(M);null!==n&&g(U,n.startTime-b);m=!1}return m}finally{O=null,P=c,Q=!1}}var W=k;exports.unstable_IdlePriority=5;
-exports.unstable_ImmediatePriority=1;exports.unstable_LowPriority=4;exports.unstable_NormalPriority=3;exports.unstable_Profiling=null;exports.unstable_UserBlockingPriority=2;exports.unstable_cancelCallback=function(a){a.callback=null};exports.unstable_continueExecution=function(){R||Q||(R=!0,f(V))};exports.unstable_getCurrentPriorityLevel=function(){return P};exports.unstable_getFirstCallbackNode=function(){return J(L)};
-exports.unstable_next=function(a){switch(P){case 1:case 2:case 3:var b=3;break;default:b=P}var c=P;P=b;try{return a()}finally{P=c}};exports.unstable_pauseExecution=function(){};exports.unstable_requestPaint=W;exports.unstable_runWithPriority=function(a,b){switch(a){case 1:case 2:case 3:case 4:case 5:break;default:a=3}var c=P;P=a;try{return b()}finally{P=c}};
-exports.unstable_scheduleCallback=function(a,b,c){var d=exports.unstable_now();"object"===typeof c&&null!==c?(c=c.delay,c="number"===typeof c&&0<c?d+c:d):c=d;switch(a){case 1:var e=-1;break;case 2:e=250;break;case 5:e=1073741823;break;case 4:e=1E4;break;default:e=5E3}e=c+e;a={id:N++,callback:b,priorityLevel:a,startTime:c,expirationTime:e,sortIndex:-1};c>d?(a.sortIndex=c,H(M,a),null===J(L)&&a===J(M)&&(S?h():S=!0,g(U,c-d))):(a.sortIndex=e,H(L,a),R||Q||(R=!0,f(V)));return a};
-exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;try{return a.apply(this,arguments)}finally{P=c}}};
-
-
-/***/ }),
-/* 77 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -74320,14 +74613,14 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 78 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __webpack_require__(1);
-var util_1 = __webpack_require__(79);
+var util_1 = __webpack_require__(77);
 var useMedia = function (query, defaultState) {
     if (defaultState === void 0) { defaultState = false; }
     var _a = react_1.useState(util_1.isClient ? function () { return window.matchMedia(query).matches; } : defaultState), state = _a[0], setState = _a[1];
@@ -74353,15 +74646,15 @@ exports.default = useMedia;
 
 
 /***/ }),
-/* 79 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isDeepEqual = exports.off = exports.on = exports.isClient = void 0;
-var tslib_1 = __webpack_require__(80);
-var react_1 = tslib_1.__importDefault(__webpack_require__(81));
+var tslib_1 = __webpack_require__(78);
+var react_1 = tslib_1.__importDefault(__webpack_require__(79));
 exports.isClient = typeof window === 'object';
 exports.on = function (obj) {
     var args = [];
@@ -74381,7 +74674,7 @@ exports.isDeepEqual = react_1.default;
 
 
 /***/ }),
-/* 80 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74639,7 +74932,7 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 
 /***/ }),
-/* 81 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -74699,38 +74992,269 @@ module.exports = function equal(a, b) {
 
 
 /***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = undefined && undefined.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SecondSlideContent = void 0;
+
+var Buttons_1 = __webpack_require__(81);
+
+var FormComponent_1 = __webpack_require__(82);
+
+var SelectElement_1 = __webpack_require__(83);
+
+var react_1 = __importDefault(__webpack_require__(1));
+
+var BackgroundPicture = __webpack_require__(41)["default"];
+
+var SecondSlideContent = function SecondSlideContent(_a) {
+  var handleGoToThirdSlide = _a.handleGoToThirdSlide,
+      handleGoToFirstSlide = _a.handleGoToFirstSlide;
+  return react_1["default"].createElement("section", {
+    className: 'slide slide-2'
+  }, react_1["default"].createElement("img", {
+    src: BackgroundPicture,
+    alt: 'background',
+    className: 'background-img'
+  }), react_1["default"].createElement("div", {
+    className: 'slide-2-flex-item'
+  }, react_1["default"].createElement(Buttons_1.Buttons, null)), react_1["default"].createElement("div", {
+    className: 'slide-2-flex-item'
+  }, react_1["default"].createElement(SelectElement_1.SelectElements, null)), react_1["default"].createElement("div", {
+    className: 'slide-2-flex-item'
+  }, react_1["default"].createElement(FormComponent_1.FormComponent, null)), react_1["default"].createElement("header", {
+    className: 'btn-container-next-prev'
+  }, react_1["default"].createElement("button", {
+    className: 'btn btn-go-prev-slide-2',
+    onClick: handleGoToFirstSlide
+  }, "Previous"), react_1["default"].createElement("button", {
+    className: 'btn btn-go-next-slide-2',
+    onClick: handleGoToThirdSlide
+  }, "Next")));
+};
+
+exports.SecondSlideContent = SecondSlideContent;
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __createBinding = undefined && undefined.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = undefined && undefined.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = undefined && undefined.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Buttons = void 0;
+
+var gsap_1 = __webpack_require__(20);
+
+var ScrollTrigger_1 = __webpack_require__(31);
+
+var react_1 = __importStar(__webpack_require__(1));
+
+__webpack_require__(17);
+
+gsap_1.gsap.registerPlugin(ScrollTrigger_1.ScrollTrigger);
+
+var Buttons = function Buttons() {
+  var _a = react_1.useState(1),
+      count = _a[0],
+      setCounter = _a[1];
+
+  var handleClickIncrement = function handleClickIncrement() {
+    setCounter(function (countIncrement) {
+      return countIncrement + 1;
+    });
+    localStorage.setItem('chosenAnimalCount', (count + 1).toString());
+  };
+
+  var handleClickDecrement = function handleClickDecrement() {
+    if (count > 1) {
+      setCounter(function (countDecrement) {
+        return countDecrement - 1;
+      });
+      localStorage.setItem('chosenAnimalCount', (count - 1).toString());
+    }
+  };
+
+  return react_1["default"].createElement(react_1.Fragment, null, react_1["default"].createElement("div", {
+    className: 'section-counter'
+  }, react_1["default"].createElement("div", {
+    className: 'slide-2-flex-item__numbering-first-tab'
+  }, react_1["default"].createElement("p", null, "1")), react_1["default"].createElement("div", {
+    className: 'section-counter-container'
+  }, react_1["default"].createElement("h1", {
+    className: 'section-counter-container__heading'
+  }, "Select amount of animals to adopt")), react_1["default"].createElement("div", {
+    className: 'section-counter-buttons'
+  }, react_1["default"].createElement("div", {
+    className: 'section-counter__container-increment'
+  }, react_1["default"].createElement("button", {
+    className: 'btn container-increment__counter-btn-increment',
+    onClick: handleClickIncrement
+  }, react_1["default"].createElement("span", null, "Increment"))), react_1["default"].createElement("h2", {
+    className: 'section-counter__count-value',
+    "data-testid": 'countvalue'
+  }, count), react_1["default"].createElement("div", {
+    className: 'section-counter__container-decrement'
+  }, react_1["default"].createElement("button", {
+    className: 'btn container-decrement__counter-btn-decrement',
+    onClick: handleClickDecrement
+  }, react_1["default"].createElement("span", null, "Decrement"))))));
+};
+
+exports.Buttons = Buttons;
+
+/***/ }),
 /* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SecondSlideContent = void 0;
-var Buttons_1 = __webpack_require__(83);
-var FormComponent_1 = __webpack_require__(84);
-var SelectElement_1 = __webpack_require__(85);
-var react_1 = __importDefault(__webpack_require__(1));
-var BackgroundPicture = __webpack_require__(41)
-    .default;
-var SecondSlideContent = function (_a) {
-    var handleGoToThirdSlide = _a.handleGoToThirdSlide, handleGoToFirstSlide = _a.handleGoToFirstSlide;
-    return (react_1.default.createElement("section", { className: 'slide slide-2' },
-        react_1.default.createElement("img", { src: BackgroundPicture, alt: 'background', className: 'background-img' }),
-        react_1.default.createElement("div", { className: 'slide-2-flex-item' },
-            react_1.default.createElement(Buttons_1.Buttons, null)),
-        react_1.default.createElement("div", { className: 'slide-2-flex-item' },
-            react_1.default.createElement(SelectElement_1.SelectElements, null)),
-        react_1.default.createElement("div", { className: 'slide-2-flex-item' },
-            react_1.default.createElement(FormComponent_1.FormComponent, null)),
-        react_1.default.createElement("header", { className: 'btn-container-next-prev' },
-            react_1.default.createElement("button", { className: 'btn btn-go-prev-slide-2', onClick: handleGoToFirstSlide }, "Previous"),
-            react_1.default.createElement("button", { className: 'btn btn-go-next-slide-2', onClick: handleGoToThirdSlide }, "Next"))));
-};
-exports.SecondSlideContent = SecondSlideContent;
 
+var __assign = undefined && undefined.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+var __createBinding = undefined && undefined.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = undefined && undefined.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = undefined && undefined.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FormComponent = void 0;
+
+var react_1 = __importStar(__webpack_require__(1));
+
+__webpack_require__(17);
+
+var FormComponent = function FormComponent() {
+  var _a = react_1.useState({
+    name: ''
+  }),
+      formValues = _a[0],
+      setFormValues = _a[1];
+
+  var updateFormField = function updateFormField(e) {
+    var _a;
+
+    setFormValues(__assign(__assign({}, formValues), (_a = {}, _a[e.target.name] = e.target.value, _a)));
+    localStorage.setItem('firstName', e.target.value);
+  };
+
+  return react_1["default"].createElement(react_1.Fragment, null, react_1["default"].createElement("section", {
+    className: 'section__form',
+    "data-testid": 'container__form'
+  }, react_1["default"].createElement("div", {
+    className: 'slide-2-flex-item__numbering-third-tab'
+  }, react_1["default"].createElement("p", null, "3")), react_1["default"].createElement("div", {
+    className: 'container-form'
+  }, react_1["default"].createElement("h1", null, "Insert your name"), react_1["default"].createElement("section", {
+    className: 'container-form__input-with-label'
+  }, react_1["default"].createElement("div", null, react_1["default"].createElement("label", {
+    htmlFor: 'name',
+    id: 'name'
+  }, "Name")), react_1["default"].createElement("div", null, react_1["default"].createElement("input", {
+    "data-testid": 'form-name-input',
+    name: 'name',
+    onChange: updateFormField,
+    placeholder: 'Name',
+    type: 'text',
+    value: formValues.name
+  }))))));
+};
+
+exports.FormComponent = FormComponent;
 
 /***/ }),
 /* 83 */
@@ -74738,217 +75262,180 @@ exports.SecondSlideContent = SecondSlideContent;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Buttons = void 0;
-var gsap_1 = __webpack_require__(20);
-var ScrollTrigger_1 = __webpack_require__(31);
-var react_1 = __importStar(__webpack_require__(1));
-__webpack_require__(17);
-gsap_1.gsap.registerPlugin(ScrollTrigger_1.ScrollTrigger);
-var Buttons = function () {
-    var _a = react_1.useState(1), count = _a[0], setCounter = _a[1];
-    var handleClickIncrement = function () {
-        setCounter(function (countIncrement) { return countIncrement + 1; });
-        localStorage.setItem('chosenAnimalCount', (count + 1).toString());
-    };
-    var handleClickDecrement = function () {
-        if (count > 1) {
-            setCounter(function (countDecrement) { return countDecrement - 1; });
-            localStorage.setItem('chosenAnimalCount', (count - 1).toString());
-        }
-    };
-    return (react_1.default.createElement(react_1.Fragment, null,
-        react_1.default.createElement("div", { className: 'section-counter' },
-            react_1.default.createElement("div", { className: 'slide-2-flex-item__numbering-first-tab' },
-                react_1.default.createElement("p", null, "1")),
-            react_1.default.createElement("div", { className: 'section-counter-container' },
-                react_1.default.createElement("h1", { className: 'section-counter-container__heading' }, "Select amount of animals to adopt")),
-            react_1.default.createElement("div", { className: 'section-counter-buttons' },
-                react_1.default.createElement("div", { className: 'section-counter__container-increment' },
-                    react_1.default.createElement("button", { className: 'btn container-increment__counter-btn-increment', onClick: handleClickIncrement },
-                        react_1.default.createElement("span", null, "Increment"))),
-                react_1.default.createElement("h2", { className: 'section-counter__count-value', "data-testid": 'countvalue' }, count),
-                react_1.default.createElement("div", { className: 'section-counter__container-decrement' },
-                    react_1.default.createElement("button", { className: 'btn container-decrement__counter-btn-decrement', onClick: handleClickDecrement },
-                        react_1.default.createElement("span", null, "Decrement")))))));
-};
-exports.Buttons = Buttons;
 
+var __createBinding = undefined && undefined.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = undefined && undefined.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = undefined && undefined.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = undefined && undefined.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SelectElements = void 0;
+
+var gsap_1 = __webpack_require__(20);
+
+var ScrollTrigger_1 = __webpack_require__(31);
+
+var lodash_1 = __webpack_require__(84);
+
+var react_1 = __importStar(__webpack_require__(1));
+
+var react_onclickoutside_1 = __importDefault(__webpack_require__(85));
+
+__webpack_require__(17);
+
+var DownArrowIcon = __webpack_require__(86)["default"];
+
+var UpArrowIcon = __webpack_require__(87)["default"];
+
+gsap_1.gsap.registerPlugin(ScrollTrigger_1.ScrollTrigger);
+
+var SelectElementsComponent = function SelectElementsComponent() {
+  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     * NOTE Select element logic
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  var _a = react_1.useState('blue'),
+      pickedColor = _a[0],
+      setPickedColor = _a[1];
+
+  var _b = react_1.useState(false),
+      listOpen = _b[0],
+      setListOpen = _b[1];
+
+  var toggleList = function toggleList() {
+    setListOpen(!listOpen);
+  };
+
+  var handleToggleList = function handleToggleList() {
+    return toggleList();
+  };
+
+  var handleColorChange = function handleColorChange(color) {
+    return function () {
+      setPickedColor(color);
+      setListOpen(false);
+      localStorage.setItem('chosenColor', color);
+    };
+  };
+
+  var colors = ['blue', 'red', 'green', 'yellow'];
+
+  var selectList = function selectList() {
+    return react_1["default"].createElement("ul", {
+      className: 'select-wrapper__list',
+      "data-testid": 'select'
+    }, colors.map(function (color) {
+      return react_1["default"].createElement("li", {
+        className: 'select-wrapper__list-item',
+        "data-testid": color,
+        key: color,
+        onClick: handleColorChange(color),
+        value: color
+      }, react_1["default"].createElement("span", null, lodash_1.capitalize(color)));
+    }));
+  };
+
+  SelectElementsComponent.handleClickOutside = function () {
+    return setListOpen(false);
+  };
+  /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     * NOTE Fade in animations
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+  var headingRef = react_1.useRef(null);
+  var selectElementRef = react_1.useRef(null);
+  return react_1["default"].createElement("section", {
+    className: 'container-select'
+  }, react_1["default"].createElement("div", {
+    className: 'slide-2-flex-item__numbering-second-tab'
+  }, react_1["default"].createElement("p", null, "2")), react_1["default"].createElement("svg", {
+    className: 'img-cloud',
+    version: '1.1',
+    viewBox: '0 0 770 471',
+    xmlns: 'http://www.w3.org/2000/svg'
+  }, react_1["default"].createElement("title", null, "Combined Shape"), react_1["default"].createElement("desc", null, "Created with Sketch."), react_1["default"].createElement("g", {
+    id: 'Page-1',
+    stroke: 'none',
+    strokeWidth: '1',
+    fill: 'none',
+    fillRule: 'evenodd'
+  }, react_1["default"].createElement("path", {
+    className: "img-cloud-path--" + pickedColor,
+    d: 'M144.212377,462.78928 C134.83509,464.290153 125.231568,464.438317 115.604179,462.993705 C50.3259969,453.198562 7,409.356552 7,347.533295 C7,289.1092 54.5931438,241.138902 115.307847,236.04052 C114.224391,230.293943 113.659142,224.378971 113.659142,218.339844 C113.659142,162.721071 161.603078,117.633147 220.744921,117.633147 C229.187082,117.633147 237.401075,118.551856 245.280023,120.288762 C278.812818,53.3455432 351.311479,7 435.343115,7 C528.627279,7 607.698907,64.113422 635.029007,143.116433 C708.623372,160.931085 763,223.734176 763,298.475791 C763,387.007045 686.707729,458.788141 592.553415,458.893738 L592.50165,459.255636 L144.212377,462.78928 Z',
+    fillRule: 'nonzero',
+    id: 'Combined-Shape',
+    stroke: '#46AFE8',
+    strokeWidth: '14'
+  }))), react_1["default"].createElement("h2", {
+    className: 'heading__picked-color',
+    ref: headingRef
+  }, react_1["default"].createElement("legend", null, "Choose a color of the toy (gift)")), react_1["default"].createElement("section", {
+    className: 'select-wrapper',
+    ref: selectElementRef
+  }, react_1["default"].createElement("header", {
+    className: 'select-header'
+  }, react_1["default"].createElement("div", {
+    className: 'select-header__title',
+    "data-testid": 'currently-selected-color',
+    onClick: handleToggleList
+  }, lodash_1.capitalize(pickedColor), react_1["default"].createElement("span", null, listOpen ? react_1["default"].createElement("img", {
+    alt: 'up arrow',
+    className: 'select-header__arrow-img',
+    src: UpArrowIcon
+  }) : react_1["default"].createElement("img", {
+    alt: 'down arrow',
+    className: 'select-header__arrow-img',
+    src: DownArrowIcon
+  })))), listOpen ? selectList() : null));
+};
+
+var clickOutsideConfig = {
+  handleClickOutside: function handleClickOutside() {
+    return SelectElementsComponent.handleClickOutside;
+  }
+};
+var SelectElements = react_onclickoutside_1["default"](SelectElementsComponent, clickOutsideConfig);
+exports.SelectElements = SelectElements;
 
 /***/ }),
 /* 84 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FormComponent = void 0;
-var react_1 = __importStar(__webpack_require__(1));
-__webpack_require__(17);
-var FormComponent = function () {
-    var _a = react_1.useState({
-        name: '',
-    }), formValues = _a[0], setFormValues = _a[1];
-    var updateFormField = function (e) {
-        var _a;
-        setFormValues(__assign(__assign({}, formValues), (_a = {}, _a[e.target.name] = e.target.value, _a)));
-        localStorage.setItem('firstName', e.target.value);
-    };
-    return (react_1.default.createElement(react_1.Fragment, null,
-        react_1.default.createElement("section", { className: 'section__form', "data-testid": 'container__form' },
-            react_1.default.createElement("div", { className: 'slide-2-flex-item__numbering-third-tab' },
-                react_1.default.createElement("p", null, "3")),
-            react_1.default.createElement("div", { className: 'container-form' },
-                react_1.default.createElement("h1", null, "Insert your name"),
-                react_1.default.createElement("section", { className: 'container-form__input-with-label' },
-                    react_1.default.createElement("div", null,
-                        react_1.default.createElement("label", { htmlFor: 'name', id: 'name' }, "Name")),
-                    react_1.default.createElement("div", null,
-                        react_1.default.createElement("input", { "data-testid": 'form-name-input', name: 'name', onChange: updateFormField, placeholder: 'Name', type: 'text', value: formValues.name })))))));
-};
-exports.FormComponent = FormComponent;
-
-
-/***/ }),
-/* 85 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SelectElements = void 0;
-var gsap_1 = __webpack_require__(20);
-var ScrollTrigger_1 = __webpack_require__(31);
-var lodash_1 = __webpack_require__(86);
-var react_1 = __importStar(__webpack_require__(1));
-var react_onclickoutside_1 = __importDefault(__webpack_require__(87));
-__webpack_require__(17);
-var DownArrowIcon = __webpack_require__(88).default;
-var UpArrowIcon = __webpack_require__(89).default;
-gsap_1.gsap.registerPlugin(ScrollTrigger_1.ScrollTrigger);
-var SelectElementsComponent = function () {
-    /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-       * NOTE Select element logic
-       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    var _a = react_1.useState('blue'), pickedColor = _a[0], setPickedColor = _a[1];
-    var _b = react_1.useState(false), listOpen = _b[0], setListOpen = _b[1];
-    var toggleList = function () {
-        setListOpen(!listOpen);
-    };
-    var handleToggleList = function () { return toggleList(); };
-    var handleColorChange = function (color) { return function () {
-        setPickedColor(color);
-        setListOpen(false);
-        localStorage.setItem('chosenColor', color);
-    }; };
-    var colors = ['blue', 'red', 'green', 'yellow'];
-    var selectList = function () {
-        return (react_1.default.createElement("ul", { className: 'select-wrapper__list', "data-testid": 'select' }, colors.map(function (color) { return (react_1.default.createElement("li", { className: 'select-wrapper__list-item', "data-testid": color, key: color, onClick: handleColorChange(color), value: color },
-            react_1.default.createElement("span", null, lodash_1.capitalize(color)))); })));
-    };
-    SelectElementsComponent.handleClickOutside = function () { return setListOpen(false); };
-    /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-       * NOTE Fade in animations
-       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    var headingRef = react_1.useRef(null);
-    var selectElementRef = react_1.useRef(null);
-    return (react_1.default.createElement("section", { className: 'container-select' },
-        react_1.default.createElement("div", { className: 'slide-2-flex-item__numbering-second-tab' },
-            react_1.default.createElement("p", null, "2")),
-        react_1.default.createElement("svg", { className: 'img-cloud', version: '1.1', viewBox: '0 0 770 471', xmlns: 'http://www.w3.org/2000/svg' },
-            react_1.default.createElement("title", null, "Combined Shape"),
-            react_1.default.createElement("desc", null, "Created with Sketch."),
-            react_1.default.createElement("g", { id: 'Page-1', stroke: 'none', strokeWidth: '1', fill: 'none', fillRule: 'evenodd' },
-                react_1.default.createElement("path", { className: "img-cloud-path--" + pickedColor, d: 'M144.212377,462.78928 C134.83509,464.290153 125.231568,464.438317 115.604179,462.993705 C50.3259969,453.198562 7,409.356552 7,347.533295 C7,289.1092 54.5931438,241.138902 115.307847,236.04052 C114.224391,230.293943 113.659142,224.378971 113.659142,218.339844 C113.659142,162.721071 161.603078,117.633147 220.744921,117.633147 C229.187082,117.633147 237.401075,118.551856 245.280023,120.288762 C278.812818,53.3455432 351.311479,7 435.343115,7 C528.627279,7 607.698907,64.113422 635.029007,143.116433 C708.623372,160.931085 763,223.734176 763,298.475791 C763,387.007045 686.707729,458.788141 592.553415,458.893738 L592.50165,459.255636 L144.212377,462.78928 Z', fillRule: 'nonzero', id: 'Combined-Shape', stroke: '#46AFE8', strokeWidth: '14' }))),
-        react_1.default.createElement("h2", { className: 'heading__picked-color', ref: headingRef },
-            react_1.default.createElement("legend", null, "Choose a color of the toy (gift)")),
-        react_1.default.createElement("section", { className: 'select-wrapper', ref: selectElementRef },
-            react_1.default.createElement("header", { className: 'select-header' },
-                react_1.default.createElement("div", { className: 'select-header__title', "data-testid": 'currently-selected-color', onClick: handleToggleList },
-                    lodash_1.capitalize(pickedColor),
-                    react_1.default.createElement("span", null, listOpen ? (react_1.default.createElement("img", { alt: 'up arrow', className: 'select-header__arrow-img', src: UpArrowIcon })) : (react_1.default.createElement("img", { alt: 'down arrow', className: 'select-header__arrow-img', src: DownArrowIcon }))))),
-            listOpen ? selectList() : null)));
-};
-var clickOutsideConfig = {
-    handleClickOutside: function () { return SelectElementsComponent.handleClickOutside; },
-};
-var SelectElements = react_onclickoutside_1.default(SelectElementsComponent, clickOutsideConfig);
-exports.SelectElements = SelectElements;
-
-
-/***/ }),
-/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -92108,7 +92595,7 @@ exports.SelectElements = SelectElements;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(24), __webpack_require__(39)(module)))
 
 /***/ }),
-/* 87 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92484,7 +92971,7 @@ function onClickOutsideHOC(WrappedComponent, config) {
 
 
 /***/ }),
-/* 88 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92492,7 +92979,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGRhdGEtbmFtZT0iTGF5ZXIgMSIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTYsMjJhMiwyLDAsMCwxLTEuNDEtLjU5bC0xMC0xMEEyLDIsMCwwLDEsNy40MSw4LjU5TDE2LDE3LjE3bDguNTktOC41OGEyLDIsMCwwLDEsMi44MiwyLjgybC0xMCwxMEEyLDIsMCwwLDEsMTYsMjJaIi8+PC9zdmc+");
 
 /***/ }),
-/* 89 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92500,26 +92987,287 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01LjMwNTY4IDE1LjY5NEM1LjcxMzI1IDE2LjEwMiA2LjM3NDA3IDE2LjEwMiA2Ljc4MTY1IDE1LjY5NEwxMiAxMC40Njk5TDE3LjIxODMgMTUuNjk0QzE3LjYyNTkgMTYuMTAyIDE4LjI4NjcgMTYuMTAyIDE4LjY5NDMgMTUuNjk0QzE5LjEwMTkgMTUuMjg2IDE5LjEwMTkgMTQuNjI0NCAxOC42OTQzIDE0LjIxNjRMMTIuNzkwNCA4LjMwNjAyQzEyLjU3MzMgOC4wODg2NCAxMi4yODQzIDcuOTg3MDcgMTIgOC4wMDEzMUMxMS43MTU3IDcuOTg3MDkgMTEuNDI2NyA4LjA4ODY2IDExLjIwOTYgOC4zMDYwMkw1LjMwNTY4IDE0LjIxNjRDNC44OTgxIDE0LjYyNDQgNC44OTgxIDE1LjI4NiA1LjMwNTY4IDE1LjY5NFoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
 
 /***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = undefined && undefined.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ThirdSlideContent = void 0;
+
+var WaveComponent_1 = __webpack_require__(89);
+
+var react_1 = __importDefault(__webpack_require__(1));
+
+var ThirdSlideContent = function ThirdSlideContent(_a) {
+  var handleGoToSecondSlide = _a.handleGoToSecondSlide;
+  return react_1["default"].createElement("section", {
+    className: 'slide slide-3'
+  }, react_1["default"].createElement(WaveComponent_1.WaveComponent, null), react_1["default"].createElement("button", {
+    className: 'btn btn-go-prev-slide-3',
+    onClick: handleGoToSecondSlide
+  }, "Previous"));
+};
+
+exports.ThirdSlideContent = ThirdSlideContent;
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __createBinding = undefined && undefined.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = undefined && undefined.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = undefined && undefined.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.WaveComponent = void 0;
+
+var gsap_1 = __webpack_require__(20);
+
+var react_1 = __importStar(__webpack_require__(1));
+
+__webpack_require__(17);
+
+var FetchComponent_1 = __webpack_require__(90);
+
+var Portal_1 = __webpack_require__(91);
+
+var TreasureIcon = __webpack_require__(92)["default"];
+
+var PortalCloseIcon = __webpack_require__(93)["default"];
+
+var SunIcon = __webpack_require__(94)["default"];
+
+var CloudIcon = __webpack_require__(95)["default"];
+
+var WaveComponent = function WaveComponent() {
+  var _a = react_1.useState(false),
+      isPortalVisible = _a[0],
+      setPortalVisible = _a[1];
+
+  var _b = react_1.useState(false),
+      chestOpened = _b[0],
+      setChestOpened = _b[1];
+
+  var handleButtonClick = function handleButtonClick() {
+    setChestOpened(true);
+    gsap_1.gsap.to('.container-wave-part', {
+      duration: 1,
+      y: 100
+    });
+    gsap_1.gsap.to('.container-wave__treasure-img', {
+      duration: 0.1,
+      repeat: -1,
+      x: '-=5',
+      y: '+=5',
+      yoyo: true
+    });
+  };
+
+  var handleChestIconClick = function handleChestIconClick() {
+    setPortalVisible(true);
+  };
+
+  var handlePortalCloseButtonClick = function handlePortalCloseButtonClick() {
+    setPortalVisible(false);
+  };
+
+  var chosenAnimalFromStorage = localStorage.getItem('chosenAnimal');
+  var chosenColorFromStorage = localStorage.getItem('chosenColor');
+  var chosenAnimalCountFromStorage = localStorage.getItem('chosenAnimalCount');
+  var firstNameFromStorage = localStorage.getItem('firstName');
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("section", {
+    className: 'container-wave'
+  }, react_1["default"].createElement("div", {
+    className: 'container-wave__container-heading'
+  }, react_1["default"].createElement("h1", {
+    className: 'container-wave__heading'
+  }, "Press button and then chest which will show beneath waves!")), react_1["default"].createElement("button", {
+    className: 'container-wave__btn-wave',
+    "data-testid": 'container-wave__btn-wave',
+    onClick: handleButtonClick,
+    type: 'button'
+  }, "Claim reward!"), react_1["default"].createElement("div", {
+    className: 'container-wave__sand-background'
+  }), react_1["default"].createElement("div", {
+    className: 'container-wave__container-cloud-img'
+  }, react_1["default"].createElement("img", {
+    alt: 'cloud',
+    className: 'container-wave__cloud-img',
+    src: CloudIcon
+  })), react_1["default"].createElement("div", {
+    className: 'container-wave__container-sun-img'
+  }, react_1["default"].createElement("img", {
+    alt: 'sun',
+    className: 'container-wave__sun-img',
+    src: SunIcon,
+    width: '100px'
+  })), react_1["default"].createElement("div", {
+    className: 'container-wave__container-treasure-img'
+  }, react_1["default"].createElement("img", {
+    alt: 'treasure',
+    className: 'container-wave__treasure-img',
+    onClick: handleChestIconClick,
+    src: TreasureIcon,
+    width: '100px'
+  })), chestOpened ? react_1["default"].createElement("div", {
+    className: 'container-wave__info-treasure-opened',
+    "data-testid": 'container-wave__info-treasure-opened'
+  }, react_1["default"].createElement("h1", null, "Click chest")) : null, react_1["default"].createElement("div", {
+    className: 'container-wave-part'
+  }, react_1["default"].createElement("svg", {
+    className: 'container-wave-part__svg-wave1',
+    viewBox: '0 0 1440 320',
+    xmlns: 'http://www.w3.org/2000/svg'
+  }, react_1["default"].createElement("path", {
+    className: 'wave1',
+    d: 'M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z',
+    fill: '#0099ff',
+    fillOpacity: '1',
+    id: 'wave1'
+  }))), isPortalVisible ? react_1["default"].createElement(Portal_1.Portal, {
+    id: 'modal-root'
+  }, react_1["default"].createElement("section", {
+    className: 'container-portal'
+  }, react_1["default"].createElement("div", {
+    className: 'container-portal__container-heading'
+  }, react_1["default"].createElement("h1", {
+    className: 'container-portal__heading'
+  }, "Congratulations")), react_1["default"].createElement("header", {
+    className: 'container-close-icon'
+  }, react_1["default"].createElement("button", {
+    className: 'btn container-close-icon__btn',
+    onClick: handlePortalCloseButtonClick
+  }, react_1["default"].createElement("span", null, "Close"), react_1["default"].createElement("img", {
+    alt: 'close portal',
+    className: 'container-close-icon__img',
+    src: PortalCloseIcon
+  }))), react_1["default"].createElement(FetchComponent_1.FetchComponent, null), react_1["default"].createElement("section", {
+    className: 'container-portal__submitted-data'
+  }, react_1["default"].createElement("p", null, "Adopted animal: ", chosenAnimalFromStorage), react_1["default"].createElement("p", null, "Chosen animal name: ", firstNameFromStorage), react_1["default"].createElement("p", null, "Chosen pet toy color: ", chosenColorFromStorage), react_1["default"].createElement("p", null, "Chosen animal count: ", chosenAnimalCountFromStorage)))) : null));
+};
+
+exports.WaveComponent = WaveComponent;
+
+/***/ }),
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ThirdSlideContent = void 0;
-var WaveComponent_1 = __webpack_require__(91);
-var react_1 = __importDefault(__webpack_require__(1));
-var ThirdSlideContent = function (_a) {
-    var handleGoToSecondSlide = _a.handleGoToSecondSlide;
-    return (react_1.default.createElement("section", { className: 'slide slide-3' },
-        react_1.default.createElement(WaveComponent_1.WaveComponent, null),
-        react_1.default.createElement("button", { className: 'btn btn-go-prev-slide-3', onClick: handleGoToSecondSlide }, "Previous")));
-};
-exports.ThirdSlideContent = ThirdSlideContent;
 
+var __createBinding = undefined && undefined.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = undefined && undefined.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = undefined && undefined.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FetchComponent = void 0;
+
+var react_1 = __importStar(__webpack_require__(1));
+
+__webpack_require__(17);
+
+var FetchComponent = function FetchComponent() {
+  var _a = react_1.useState(''),
+      quote = _a[0],
+      setQuote = _a[1];
+
+  react_1.useEffect(function () {
+    fetch('https://api.kanye.rest').then(function (res) {
+      return res.json();
+    }).then(function (res) {
+      return setQuote(res.quote);
+    })["catch"](function (err) {
+      return console.log(err);
+    });
+  }, []);
+  return react_1["default"].createElement("section", {
+    className: 'fetch-section'
+  }, react_1["default"].createElement("div", {
+    className: 'fetch-section__quote',
+    "data-testid": 'fetch-section__quote'
+  }, react_1["default"].createElement("q", null, quote)), react_1["default"].createElement("p", {
+    className: 'fetch-section__quote-author'
+  }, "- Kanye West"));
+};
+
+exports.FetchComponent = FetchComponent;
 
 /***/ }),
 /* 91 */
@@ -92527,203 +93275,66 @@ exports.ThirdSlideContent = ThirdSlideContent;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WaveComponent = void 0;
-var gsap_1 = __webpack_require__(20);
-var react_1 = __importStar(__webpack_require__(1));
-__webpack_require__(17);
-var FetchComponent_1 = __webpack_require__(92);
-var Portal_1 = __webpack_require__(93);
-var TreasureIcon = __webpack_require__(94).default;
-var PortalCloseIcon = __webpack_require__(95).default;
-var SunIcon = __webpack_require__(96).default;
-var CloudIcon = __webpack_require__(97).default;
-var WaveComponent = function () {
-    var _a = react_1.useState(false), isPortalVisible = _a[0], setPortalVisible = _a[1];
-    var _b = react_1.useState(false), chestOpened = _b[0], setChestOpened = _b[1];
-    var handleButtonClick = function () {
-        setChestOpened(true);
-        gsap_1.gsap.to('.container-wave-part', {
-            duration: 1,
-            y: 100,
-        });
-        gsap_1.gsap.to('.container-wave__treasure-img', {
-            duration: 0.1,
-            repeat: -1,
-            x: '-=5',
-            y: '+=5',
-            yoyo: true,
-        });
-    };
-    var handleChestIconClick = function () {
-        setPortalVisible(true);
-    };
-    var handlePortalCloseButtonClick = function () {
-        setPortalVisible(false);
-    };
-    var chosenAnimalFromStorage = localStorage.getItem('chosenAnimal');
-    var chosenColorFromStorage = localStorage.getItem('chosenColor');
-    var chosenAnimalCountFromStorage = localStorage.getItem('chosenAnimalCount');
-    var firstNameFromStorage = localStorage.getItem('firstName');
-    return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("section", { className: 'container-wave' },
-            react_1.default.createElement("div", { className: 'container-wave__container-heading' },
-                react_1.default.createElement("h1", { className: 'container-wave__heading' }, "Press button and then chest which will show beneath waves!")),
-            react_1.default.createElement("button", { className: 'container-wave__btn-wave', "data-testid": 'container-wave__btn-wave', onClick: handleButtonClick, type: 'button' }, "Claim reward!"),
-            react_1.default.createElement("div", { className: 'container-wave__sand-background' }),
-            react_1.default.createElement("div", { className: 'container-wave__container-cloud-img' },
-                react_1.default.createElement("img", { alt: 'cloud', className: 'container-wave__cloud-img', src: CloudIcon })),
-            react_1.default.createElement("div", { className: 'container-wave__container-sun-img' },
-                react_1.default.createElement("img", { alt: 'sun', className: 'container-wave__sun-img', src: SunIcon, width: '100px' })),
-            react_1.default.createElement("div", { className: 'container-wave__container-treasure-img' },
-                react_1.default.createElement("img", { alt: 'treasure', className: 'container-wave__treasure-img', onClick: handleChestIconClick, src: TreasureIcon, width: '100px' })),
-            chestOpened ? (react_1.default.createElement("div", { className: 'container-wave__info-treasure-opened', "data-testid": 'container-wave__info-treasure-opened' },
-                react_1.default.createElement("h1", null, "Click chest"))) : null,
-            react_1.default.createElement("div", { className: 'container-wave-part' },
-                react_1.default.createElement("svg", { className: 'container-wave-part__svg-wave1', viewBox: '0 0 1440 320', xmlns: 'http://www.w3.org/2000/svg' },
-                    react_1.default.createElement("path", { className: 'wave1', d: 'M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z', fill: '#0099ff', fillOpacity: '1', id: 'wave1' }))),
-            isPortalVisible ? (react_1.default.createElement(Portal_1.Portal, { id: 'modal-root' },
-                react_1.default.createElement("section", { className: 'container-portal' },
-                    react_1.default.createElement("div", { className: 'container-portal__container-heading' },
-                        react_1.default.createElement("h1", { className: 'container-portal__heading' }, "Congratulations")),
-                    react_1.default.createElement("header", { className: 'container-close-icon' },
-                        react_1.default.createElement("button", { className: 'btn container-close-icon__btn', onClick: handlePortalCloseButtonClick },
-                            react_1.default.createElement("span", null, "Close"),
-                            react_1.default.createElement("img", { alt: 'close portal', className: 'container-close-icon__img', src: PortalCloseIcon }))),
-                    react_1.default.createElement(FetchComponent_1.FetchComponent, null),
-                    react_1.default.createElement("section", { className: 'container-portal__submitted-data' },
-                        react_1.default.createElement("p", null,
-                            "Adopted animal: ",
-                            chosenAnimalFromStorage),
-                        react_1.default.createElement("p", null,
-                            "Chosen animal name: ",
-                            firstNameFromStorage),
-                        react_1.default.createElement("p", null,
-                            "Chosen pet toy color: ",
-                            chosenColorFromStorage),
-                        react_1.default.createElement("p", null,
-                            "Chosen animal count: ",
-                            chosenAnimalCountFromStorage))))) : null)));
-};
-exports.WaveComponent = WaveComponent;
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Portal = void 0;
+
+var react_1 = __webpack_require__(1);
+
+var react_dom_1 = __webpack_require__(14);
+
+var createRootElement = function createRootElement(id) {
+  var rootContainer = document.createElement('div');
+  rootContainer.setAttribute('id', id);
+  return rootContainer;
+};
+
+var addRootElement = function addRootElement(rootElem) {
+  document.body.insertBefore(rootElem, document.body.lastElementChild.nextElementSibling);
+};
+
+var usePortal = function usePortal(id) {
+  var rootElementRef = react_1.useRef(null);
+  react_1.useEffect(function () {
+    var existingParent = document.querySelector("#" + id);
+    var parentElement = existingParent || createRootElement(id);
+
+    if (!existingParent) {
+      addRootElement(parentElement);
+    }
+
+    parentElement === null || parentElement === void 0 ? void 0 : parentElement.appendChild(rootElementRef.current);
+    return function () {
+      var _a;
+
+      (_a = rootElementRef === null || rootElementRef === void 0 ? void 0 : rootElementRef.current) === null || _a === void 0 ? void 0 : _a.remove();
+
+      if ((parentElement === null || parentElement === void 0 ? void 0 : parentElement.childNodes.length) === -1) {
+        parentElement.remove();
+      }
+    };
+  }, []);
+
+  var getRootElement = function getRootElement() {
+    return !rootElementRef.current ? rootElementRef.current = document.createElement('div') : rootElementRef.current;
+  };
+
+  return getRootElement();
+};
+
+var Portal = function Portal(_a) {
+  var id = _a.id,
+      children = _a.children;
+  var target = usePortal(id);
+  return react_dom_1.createPortal(children, target);
+};
+
+exports.Portal = Portal;
 
 /***/ }),
 /* 92 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FetchComponent = void 0;
-var react_1 = __importStar(__webpack_require__(1));
-__webpack_require__(17);
-var FetchComponent = function () {
-    var _a = react_1.useState(''), quote = _a[0], setQuote = _a[1];
-    react_1.useEffect(function () {
-        fetch('https://api.kanye.rest')
-            .then(function (res) { return res.json(); })
-            .then(function (res) { return setQuote(res.quote); })
-            .catch(function (err) { return console.log(err); });
-    }, []);
-    return (react_1.default.createElement("section", { className: 'fetch-section' },
-        react_1.default.createElement("div", { className: 'fetch-section__quote', "data-testid": 'fetch-section__quote' },
-            react_1.default.createElement("q", null, quote)),
-        react_1.default.createElement("p", { className: 'fetch-section__quote-author' }, "- Kanye West")));
-};
-exports.FetchComponent = FetchComponent;
-
-
-/***/ }),
-/* 93 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Portal = void 0;
-var react_1 = __webpack_require__(1);
-var react_dom_1 = __webpack_require__(14);
-var createRootElement = function (id) {
-    var rootContainer = document.createElement('div');
-    rootContainer.setAttribute('id', id);
-    return rootContainer;
-};
-var addRootElement = function (rootElem) {
-    document.body.insertBefore(rootElem, document.body.lastElementChild.nextElementSibling);
-};
-var usePortal = function (id) {
-    var rootElementRef = react_1.useRef(null);
-    react_1.useEffect(function () {
-        var existingParent = document.querySelector("#" + id);
-        var parentElement = existingParent || createRootElement(id);
-        if (!existingParent) {
-            addRootElement(parentElement);
-        }
-        parentElement === null || parentElement === void 0 ? void 0 : parentElement.appendChild(rootElementRef.current);
-        return function () {
-            var _a;
-            (_a = rootElementRef === null || rootElementRef === void 0 ? void 0 : rootElementRef.current) === null || _a === void 0 ? void 0 : _a.remove();
-            if ((parentElement === null || parentElement === void 0 ? void 0 : parentElement.childNodes.length) === -1) {
-                parentElement.remove();
-            }
-        };
-    }, []);
-    var getRootElement = function () {
-        return !rootElementRef.current
-            ? (rootElementRef.current = document.createElement('div'))
-            : rootElementRef.current;
-    };
-    return getRootElement();
-};
-var Portal = function (_a) {
-    var id = _a.id, children = _a.children;
-    var target = usePortal(id);
-    return react_dom_1.createPortal(children, target);
-};
-exports.Portal = Portal;
-
-
-/***/ }),
-/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92731,7 +93342,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIG9wYWNpdHk9IjAuMDUiIGQ9Ik0yMiAyMC43NUgyYTIgMiAwIDAgMS0yLTJWMTlhMiAyIDAgMCAwIDIgMmgyMGEyIDIgMCAwIDAgMi0ydi0uMjVhMiAyIDAgMCAxLTIgMnoiLz48cGF0aCBmaWxsPSIjRjlDNjA2IiBkPSJNMTguNSAzaC0xM0E1LjUwNiA1LjUwNiAwIDAgMCAwIDguNVYxOWEyIDIgMCAwIDAgMiAyaDIwYTIgMiAwIDAgMCAyLTJWOC41QzI0IDUuNDY3IDIxLjUzMyAzIDE4LjUgM3oiLz48cGF0aCBmaWxsPSIjQkY2QTFFIiBkPSJNMiA4LjVDMiA2LjU3IDMuNTcgNSA1LjUgNWgxM0MyMC40MyA1IDIyIDYuNTcgMjIgOC41SDJ6Ii8+PHBhdGggZmlsbD0iI0JGNkExRSIgZD0iTTIgMTJoMjB2N0gyeiIvPjxwYXRoIG9wYWNpdHk9IjAuMDUiIGQ9Ik0wIDEwLjI1aDI0di4yNUgweiIvPjxwYXRoIG9wYWNpdHk9IjAuMSIgZmlsbD0iI0ZGRiIgZD0iTTAgMTAuNWgyNHYuMjVIMHoiLz48cGF0aCBmaWxsPSIjRjlDNjA2IiBkPSJNOCA5djMuNTg2YTEgMSAwIDAgMCAuMjkzLjcwN2wxLjQxNCAxLjQxNGExIDEgMCAwIDAgLjcwNy4yOTNoMy4xNzJhMSAxIDAgMCAwIC43MDctLjI5M2wxLjQxNC0xLjQxNGExIDEgMCAwIDAgLjI5My0uNzA3VjlhMSAxIDAgMCAwLTEtMUg5YTEgMSAwIDAgMC0xIDF6Ii8+PHBhdGggZmlsbD0iI0ZGQ0U1MSIgZD0iTTggOHY1bDIgMmg0bDItMlY4eiIvPjxwYXRoIGZpbGw9IiNGREI5MTMiIGQ9Ik0xMC40MTQgMTRMOSAxMi41ODZWOWg2djMuNTg2TDEzLjU4NiAxNGgtMy4xNzJ6Ii8+PGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8xXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSI5Ljg1NjY2MDgiIHkxPSI4LjY0OTYyOTYiIHgyPSIxMy42NTExMjAyIiB5Mj0iMTIuNDQ0MDg4OSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDAwIiBzdG9wLW9wYWNpdHk9IjAuMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI1NWR0lEXzFfKSIgZD0iTTEwLjQxNCAxNEw5IDEyLjU4NlY5aDZ2My41ODZMMTMuNTg2IDE0aC0zLjE3MnoiLz48cGF0aCBmaWxsPSIjOUE0OTEyIiBkPSJNMyAxM2gzdjFIM3oiLz48cGF0aCBmaWxsPSIjOUE0OTEyIiBkPSJNMTMuNSA2aDN2MWgtM3oiLz48cGF0aCBmaWxsPSIjOUE0OTEyIiBkPSJNOCAxNi41aDV2MUg4eiIvPjxwYXRoIGZpbGw9IiM5QTQ5MTIiIGQ9Ik00LjUgNi41aDV2MWgtNXoiLz48cGF0aCBmaWxsPSIjOUE0OTEyIiBkPSJNMTggMTNoM3YxaC0zeiIvPjxwYXRoIGZpbGw9IiM5QTQ5MTIiIGQ9Ik0xNiAxNi41aDN2MWgtM3oiLz48bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzJfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjE1LjY4ODY5MTEiIHkxPSI4LjI3Nzg5NCIgeDI9IjE1LjcwMjY1NTgiIHkyPSI4LjI5MTg1ODciPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNTVkdJRF8yXykiIGQ9Ik0xNS42ODYgOC4yNzljLjAwNi4wMDYuMDE1LjAwOC4wMjEuMDE0bC0uMDE4LS4wMTgtLjAwMy4wMDR6Ii8+PHBhdGggZmlsbD0iI0I1NzkxNiIgZD0iTTEzIDExYzAtLjU1MS0uNDQ5LTEtMS0xcy0xIC40NDktMSAxYzAgLjMyNC4xNjcuNTk1LjQwOC43NzZMMTEgMTNoMmwtLjQwOC0xLjIyNEEuOTY3Ljk2NyAwIDAgMCAxMyAxMXoiLz48bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzNfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjExLjAxMzE4NzQiIHkxPSIxMC44MDY0NjEzIiB4Mj0iMTIuNzYwMTkxIiB5Mj0iMTIuNTUzNDY0OSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDAwIiBzdG9wLW9wYWNpdHk9IjAuMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI1NWR0lEXzNfKSIgZD0iTTEzIDExYzAtLjU1MS0uNDQ5LTEtMS0xcy0xIC40NDktMSAxYzAgLjMyNC4xNjcuNTk1LjQwOC43NzZMMTEgMTNoMmwtLjQwOC0xLjIyNEEuOTY3Ljk2NyAwIDAgMCAxMyAxMXoiLz48Zz48bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzRfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjEzLjI3MzYyOTIiIHkxPSIxMS43NzM2MjkyIiB4Mj0iMjEuMTIyNDI4OSIgeTI9IjE5LjYyMjQyODkiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNTVkdJRF80XykiIGQ9Ik0yNCAxOXYtM2wtOC04djVsLTIgMmgtNGw2IDZoNmEyIDIgMCAwIDAgMi0yeiIvPjwvZz48bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzVfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAuMDkyNTAzMiIgeTE9IjcuMDgyOTkwMiIgeDI9IjI0LjQ2NDcwODMiIHkyPSIxOC40NDc5MzUxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGRkYiIHN0b3Atb3BhY2l0eT0iMC4yIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRkZGIiBzdG9wLW9wYWNpdHk9IjAiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIGZpbGw9InVybCgjU1ZHSURfNV8pIiBkPSJNMTguNSAzaC0xM0E1LjUwNiA1LjUwNiAwIDAgMCAwIDguNVYxOWEyIDIgMCAwIDAgMiAyaDIwYTIgMiAwIDAgMCAyLTJWOC41QzI0IDUuNDY3IDIxLjUzMyAzIDE4LjUgM3oiLz48bWV0YWRhdGE+PHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxuczpyZGZzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzAxL3JkZi1zY2hlbWEjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPjxyZGY6RGVzY3JpcHRpb24gYWJvdXQ9Imh0dHBzOi8vaWNvbnNjb3V0LmNvbS9sZWdhbCNsaWNlbnNlcyIgZGM6dGl0bGU9InRyZWFzdXJlLGNoZXN0LGJveCx2YWx1ZSxwaXJhdGUiIGRjOmRlc2NyaXB0aW9uPSJ0cmVhc3VyZSxjaGVzdCxib3gsdmFsdWUscGlyYXRlIiBkYzpwdWJsaXNoZXI9Ikljb25zY291dCIgZGM6ZGF0ZT0iMjAxNy0xMS0xMyIgZGM6Zm9ybWF0PSJpbWFnZS9zdmcreG1sIiBkYzpsYW5ndWFnZT0iZW4iPjxkYzpjcmVhdG9yPjxyZGY6QmFnPjxyZGY6bGk+VGhvc2UgSWNvbnM8L3JkZjpsaT48L3JkZjpCYWc+PC9kYzpjcmVhdG9yPjwvcmRmOkRlc2NyaXB0aW9uPjwvcmRmOlJERj48L21ldGFkYXRhPjwvc3ZnPg==");
 
 /***/ }),
-/* 95 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92739,7 +93350,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OCI+PHBhdGggZD0iTTM4IDEyLjgzbC0yLjgzLTIuODMtMTEuMTcgMTEuMTctMTEuMTctMTEuMTctMi44MyAyLjgzIDExLjE3IDExLjE3LTExLjE3IDExLjE3IDIuODMgMi44MyAxMS4xNy0xMS4xNyAxMS4xNyAxMS4xNyAyLjgzLTIuODMtMTEuMTctMTEuMTd6Ii8+PHBhdGggZD0iTTAgMGg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+CgkKCQoJPG1ldGFkYXRhPgoJCTxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6cmRmcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wMS9yZGYtc2NoZW1hIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIj4KCQkJPHJkZjpEZXNjcmlwdGlvbiBhYm91dD0iaHR0cHM6Ly9pY29uc2NvdXQuY29tL2xlZ2FsI2xpY2Vuc2VzIiBkYzp0aXRsZT0iQ2xvc2UsIERlbGV0ZSwgUmVtb3ZlLCBDYW5jZWwsIFVpIiBkYzpkZXNjcmlwdGlvbj0iQ2xvc2UsIERlbGV0ZSwgUmVtb3ZlLCBDYW5jZWwsIFVpIiBkYzpwdWJsaXNoZXI9Ikljb25zY291dCIgZGM6ZGF0ZT0iMjAxNi0xMi0xNCIgZGM6Zm9ybWF0PSJpbWFnZS9zdmcreG1sIiBkYzpsYW5ndWFnZT0iZW4iPgoJCQkJPGRjOmNyZWF0b3I+CgkJCQkJPHJkZjpCYWc+CgkJCQkJCTxyZGY6bGk+R29vZ2xlIEluYy48L3JkZjpsaT4KCQkJCQk8L3JkZjpCYWc+CgkJCQk8L2RjOmNyZWF0b3I+CgkJCTwvcmRmOkRlc2NyaXB0aW9uPgoJCTwvcmRmOlJERj4KICAgIDwvbWV0YWRhdGE+PC9zdmc+Cg==");
 
 /***/ }),
-/* 96 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92747,7 +93358,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGRhdGEtbmFtZT0iTGF5ZXIgMSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZWViMzAwIiBkPSJNMjMuMjIsMTIuNzFsLTEuMzUsMS40M2ExLDEsMCwwLDAtLjI1Ljk1TDIyLjA3LDE3YTEsMSwwLDAsMS0uNzEsMS4yM2wtMS44OC41NmExLDEsMCwwLDAtLjcuN2wtLjU2LDEuODhhMSwxLDAsMCwxLTEuMjMuNzFsLTEuOTEtLjQ1YTEsMSwwLDAsMC0uOTUuMjVsLTEuNDMsMS4zNWExLDEsMCwwLDEtMS40MiwwTDkuODYsMjEuODdhMSwxLDAsMCwwLS45NS0uMjVMNywyMi4wN2ExLDEsMCwwLDEtMS4yMy0uNzFsLS41Ni0xLjg4YTEsMSwwLDAsMC0uNy0uN2wtMS44OC0uNTZBMSwxLDAsMCwxLDEuOTMsMTdsLjQ1LTEuOTFhMSwxLDAsMCwwLS4yNS0uOTVMLjc4LDEyLjcxYTEsMSwwLDAsMSwwLTEuNDJMMi4xMyw5Ljg2YTEsMSwwLDAsMCwuMjUtLjk1TDEuOTMsN2ExLDEsMCwwLDEsLjcxLTEuMjNsMS44OC0uNTZhMSwxLDAsMCwwLC43LS43bC41Ni0xLjg4QTEsMSwwLDAsMSw3LDEuOTNsMS45MS40NWExLDEsMCwwLDAsLjk1LS4yNUwxMS4yOS43OGExLDEsMCwwLDEsMS40MiwwbDEuNDMsMS4zNWExLDEsMCwwLDAsLjk1LjI1TDE3LDEuOTNhMSwxLDAsMCwxLDEuMjMuNzFsLjU2LDEuODhhMSwxLDAsMCwwLC43LjdsMS44OC41NkExLDEsMCwwLDEsMjIuMDcsN2wtLjQ1LDEuOTFhMSwxLDAsMCwwLC4yNS45NWwxLjM1LDEuNDNBMSwxLDAsMCwxLDIzLjIyLDEyLjcxWiIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjcuNSIgZmlsbD0iI2ZkZDMzMSIvPjwvc3ZnPg==");
 
 /***/ }),
-/* 97 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92755,7 +93366,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQ2M3B0IiB2aWV3Qm94PSIwIC04NyA0NjMuODM0MjUgNDYzIiB3aWR0aD0iNDYzcHQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTM3NS44MzU5MzggMTEyLjk1NzAzMWMtNS44NTE1NjMgMC0xMS42OTE0MDcuNTgyMDMxLTE3LjQyNTc4MiAxLjc0MjE4OC00LjMyNDIxOC0yMS41ODIwMzEtMTguMzA0Njg3LTM5Ljk5MjE4OC0zNy45MzM1OTQtNDkuOTU3MDMxLTE5LjYyNS05Ljk2NDg0NC00Mi43MzgyODEtMTAuMzgyODEzLTYyLjcxNDg0My0xLjEzNjcxOS0xOC4wNzgxMjUtNDkuNzk2ODc1LTczLjEwMTU2My03NS41MDc4MTMtMTIyLjg5ODQzOC01Ny40Mjk2ODhzLTc1LjUwNzgxMiA3My4xMDU0NjktNTcuNDI5Njg3IDEyMi44OTg0MzhjLTQzLjYyMTA5NCAxLjM3ODkwNi03OC4wNzgxMjUgMzcuNDg0Mzc1LTc3LjQyNTc4MTUgODEuMTIxMDkzLjY1NjI0OTUgNDMuNjQwNjI2IDM2LjE4MzU5MzUgNzguNjkxNDA3IDc5LjgyODEyNTUgNzguNzYxNzE5aDI5NmM0OC41OTc2NTYgMCA4OC0zOS4zOTg0MzcgODgtODggMC00OC42MDE1NjItMzkuNDAyMzQ0LTg4LTg4LTg4em0wIDAiIGZpbGw9IiNhM2Q0ZjciLz48L3N2Zz4=");
 
 /***/ }),
-/* 98 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -104604,11 +105215,11 @@ TransformControlsPlane.prototype = Object.assign( Object.create( three_module["M
 
 
 // EXTERNAL MODULE: ./node_modules/lodash.pick/index.js
-var lodash_pick = __webpack_require__(46);
+var lodash_pick = __webpack_require__(44);
 var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
 
 // EXTERNAL MODULE: ./node_modules/lodash.omit/index.js
-var lodash_omit = __webpack_require__(47);
+var lodash_omit = __webpack_require__(45);
 var lodash_omit_default = /*#__PURE__*/__webpack_require__.n(lodash_omit);
 
 // CONCATENATED MODULE: ./node_modules/three/examples/jsm/controls/PointerLockControls.js
@@ -114157,11 +114768,11 @@ Reflector.ReflectorShader = {
 
 
 // EXTERNAL MODULE: ./node_modules/three/examples/js/libs/stats.min.js
-var stats_min = __webpack_require__(48);
+var stats_min = __webpack_require__(46);
 var stats_min_default = /*#__PURE__*/__webpack_require__.n(stats_min);
 
 // EXTERNAL MODULE: ./node_modules/detect-gpu/dist/detect-gpu.umd.js
-var detect_gpu_umd = __webpack_require__(49);
+var detect_gpu_umd = __webpack_require__(47);
 
 // CONCATENATED MODULE: ./node_modules/three/examples/jsm/modifiers/SimplifyModifier.js
 

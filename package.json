@@ -22,7 +22,7 @@
  "bugs": {
   "url": "https://github.com/andrev36/webpack-testing/issues"
  },
- "homepage": "https://github.com/andrev36/webpack-testing#readme",
+ "homepage": "https://andrev36.github.io/webpack-testing/",
  "jest": {
   "moduleNameMapper": {
    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir> /__mocks__/fileMock.js",
@@ -51,8 +51,9 @@
   "three": "^0.120.1"
  },
  "devDependencies": {
-  "@babel/core": "^7.11.4",
-  "@babel/preset-env": "^7.11.0",
+  "@babel/core": "^7.12.10",
+  "@babel/plugin-transform-runtime": "^7.12.10",
+  "@babel/preset-env": "^7.12.11",
   "@babel/preset-react": "^7.10.4",
   "@testing-library/jest-dom": "^5.11.4",
   "@testing-library/react": "^10.4.9",
@@ -67,7 +68,7 @@
   "@types/three": "^0.103.2",
   "autoprefixer": "^9.8.6",
   "babel-core": "^6.26.3",
-  "babel-loader": "^8.1.0",
+  "babel-loader": "^8.2.2",
   "babel-preset-env": "^1.7.0",
   "babel-preset-react": "^6.24.1",
   "clean-webpack-plugin": "^3.0.0",
@@ -94,7 +95,7 @@
   "tslint-react-hooks": "^2.2.2",
   "typescript": "^4.0.2",
   "url-loader": "^4.1.0",
-  "webpack": "^4.44.1",
+  "webpack": "^4.44.2",
   "webpack-cli": "^3.3.12",
   "webpack-dev-server": "^3.11.0",
   "webpack-merge": "^5.4.0"
