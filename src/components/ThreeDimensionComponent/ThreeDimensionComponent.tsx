@@ -5,7 +5,7 @@ import {
  extend,
  ReactThreeFiber,
  useFrame,
- useThree
+ useThree,
 } from 'react-three-fiber'
 import useMedia from 'react-use/lib/useMedia'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
@@ -134,9 +134,9 @@ const HTMLContent = ({
  COW_Z_POSITION: number
  DUCK_Z_POSITION: number
 }) => {
- const CowSound = new Audio('/sounds/Cow/cow.mp3')
- const ChickenSound = new Audio('/sounds/Chicken/chicken.mp3')
- const DuckSound = new Audio('/sounds/Duck/duck.mp3')
+ const CowSound = new Audio('./sounds/Cow/cow.mp3')
+ const ChickenSound = new Audio('./sounds/Chicken/chicken.mp3')
+ const DuckSound = new Audio('./sounds/Duck/duck.mp3')
 
  const handleChoseAnimal = (animal: string) =>
   localStorage.setItem('chosenAnimal', animal)
@@ -215,7 +215,7 @@ const HTMLContent = ({
        </Suspense>
       </Canvas>
       <button
-       className=' container-choose-pet-btn__choose-btn-chicken'
+       className='container-choose-pet-btn__choose-btn-chicken'
        onClick={playChickenSound}
       >
        Chicken
