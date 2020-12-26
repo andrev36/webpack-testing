@@ -1,5 +1,4 @@
-import { render, } from '@testing-library/react'
-import fs from 'fs'
+import { act, render, } from '@testing-library/react'
 import React from 'react'
 import { FetchComponent, } from './FetchComponent'
 const jsonData = require( './kanyeQuotes.json', )
@@ -12,25 +11,12 @@ describe( 'FetchComponent tests', () => {
   expect( fetchedQuote.textContent, ).toBe( '', )
  }, )
  it( 'FetchComponent fetches quote and quote is contained in Kanye REST API', async () => {
-  expect.assertions( 1, )
-  const { getByTestId, } = render( <FetchComponent />, )
-
   const fetchQuote = () =>
    fetch( 'https://api.kanye.rest', )
     .then( ( res, ) => res.json(), )
+    .then( ( res, ) => expect( jsonData, ).toContain( res.quote, ), )
     .catch( ( err, ) => console.log( err, ), )
 
-  let data
-  fs.readFile( jsonData, 'utf8', async ( err, dataFromFile, ) => {
-   try {
-    data = await JSON.parse( dataFromFile, )
-    const fetchedQuoteSection = getByTestId( 'fetch-section__quote', )
-    const fetchedQuote = await fetchQuote()
-    expect( data, ).toContain( fetchedQuote, )
-    expect( fetchedQuoteSection, ).toContain( fetchedQuote, )
-   } catch ( e ) {
-    console.log( 'err: ', err, )
-   }
-  }, )
+  return fetchQuote()
  }, )
 }, )

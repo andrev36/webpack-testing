@@ -12,13 +12,28 @@ describe( 'SelectElement tests', () => {
  it( 'select element changes color', () => {
   const { getByTestId, } = render( <SelectElements />, )
 
-  const currentlySelectedColorValue = getByTestId( 'currently-selected-color', )
-  const selectElementValue = getByTestId( 'select', )
+  const selectElement = getByTestId( 'currently-selected-color', )
 
-  fireEvent.change( selectElementValue, {
-   target: { value: 'green', },
-  }, )
+  fireEvent.click( selectElement, )
 
-  expect( currentlySelectedColorValue.textContent, ).toBe( 'Green', )
+  const currentlySelectedColor = getByTestId( 'blue', )
+
+  fireEvent.click( currentlySelectedColor, )
+
+  // const colorToBeSelected = getByTestId( 'green', )
+
+  // fireEvent.click( colorToBeSelected, )
+
+  // fireEvent.change( currentlySelectedColorValue, {
+  //  target: { value: 'green', },
+  // }, )
+
+  const currentlySelectedColorText = getByTestId(
+   'currently-selected-color-text',
+  )
+
+  expect( currentlySelectedColorText.textContent, ).toBe(
+   'Choose a color of the toy (gift) - blue',
+  )
  }, )
 }, )

@@ -13,8 +13,9 @@ const FetchComponent = () => {
 
  return (
   <section className='fetch-section'>
+   <p>Enjoy random Kanye West quote</p>
    <div className='fetch-section__quote' data-testid='fetch-section__quote'>
-    <q>{quote}</q>
+    {quote ? <q>{quote}</q> : null}
    </div>
    <p className='fetch-section__quote-author'>- Kanye West</p>
   </section>

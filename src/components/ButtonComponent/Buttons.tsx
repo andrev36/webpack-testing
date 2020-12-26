@@ -1,9 +1,5 @@
-import { gsap, } from 'gsap'
-import { ScrollTrigger, } from 'gsap/ScrollTrigger'
 import React, { Fragment, useState, } from 'react'
 import '../../index.scss'
-
-gsap.registerPlugin( ScrollTrigger, )
 
 const Buttons = () => {
  const [count, setCounter, ] = useState<number>( 1, )

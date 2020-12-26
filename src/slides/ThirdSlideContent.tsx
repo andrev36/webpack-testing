@@ -2,7 +2,7 @@ import { WaveComponent, } from 'components/WaveComponent/WaveComponent'
 import React from 'react'
 
 interface Props {
- handleGoToSecondSlide() : void
+ handleGoToSecondSlide(): void
 }
 
 const ThirdSlideContent = ( { handleGoToSecondSlide, }: Props, ) => {

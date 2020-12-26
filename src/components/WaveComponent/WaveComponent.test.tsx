@@ -1,4 +1,4 @@
-import { render, } from '@testing-library/react'
+import { fireEvent, render, } from '@testing-library/react'
 import React from 'react'
 import { WaveComponent, } from './WaveComponent'
 
@@ -20,9 +20,14 @@ describe( 'WaveComponent tests', () => {
  it( 'render click chest text after clicking button', () => {
   const { getByTestId, } = render( <WaveComponent />, )
 
+  const buttonClaimReward = getByTestId( 'container-wave__btn-wave', )
+
+  fireEvent.click( buttonClaimReward, )
+
   const currentClickChestTextState = getByTestId(
    'container-wave__info-treasure-opened',
   )
+
   expect( currentClickChestTextState.textContent, ).toBe( 'Click chest', )
  }, )
 }, )

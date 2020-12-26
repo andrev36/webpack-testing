@@ -4,7 +4,7 @@ const BackgroundPicture = require( '../assets/images/background/background.png',
  .default
 
 interface Props {
- handleGoToSecondSlide() : void;
+ handleGoToSecondSlide(): void;
 }
 
 const FirstSlideContent = ( { handleGoToSecondSlide, }: Props, ) => {

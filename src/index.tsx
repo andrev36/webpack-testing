@@ -1,6 +1,6 @@
 // tslint:disable: file-name-casing
-import { CSSPlugin, gsap } from 'gsap'
-import { MainPage } from 'MainPage'
+import { CSSPlugin, gsap, } from 'gsap'
+import { MainPage, } from 'MainPage'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
@@ -14,7 +14,7 @@ class App extends React.Component {
  render() {
   return (
    <React.Fragment>
-    <MainPage/>
+    <MainPage />
    </React.Fragment>
   )
  }
