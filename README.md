@@ -15,6 +15,11 @@ Webpack and Web App Testing.
  <a href="https://sass-lang.com" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a>
  <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a>
  <a href="https://webpack.js.org" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/webpack/webpack-original.svg" alt="webpack" width="40" height="40"/> </a>
+ <a href="https://www.npmjs.com/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/npm/npm-original-wordmark.svg" alt="npm" width="40" height="40"/> </a>
+ <a href="https://babeljs.io/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/babel/babel-original.svg" alt="babel" width="40" height="40"/> </a>
+ <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
+ <a href="https://greensock.com/gsap/" target="_blank"> <img src="https://richcontentdesign.com/wp-content/uploads/2019/10/greensock@2x.png" alt="gsap" width="40" height="40"/> </a>
+ <a href="https://threejs.org/" target="_blank"> <img src="https://miro.medium.com/max/724/1*aDcnXab1QC_5KF8JUxDEYA.png" alt="threejs" width="80" height="40"/> </a>
 </p>
 
 ## Information about Tech stack is at the bottom
@@ -71,6 +76,16 @@ npm test
   </ul>
   <h1>Technology used</h1>
   <ul>
+  <li>
+        Jest/React Testing Library. Tests for components (click list element to view tests):
+        <ul>
+          <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/ButtonComponent/Buttons.test.tsx'>Counter buttons</a></li>
+          <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/WaveComponent/WaveComponent.test.tsx'>Wave component</a></li>
+          <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/SelectComponent/SelectElement.test.tsx'>Select element</a></li>
+          <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/FormComponent/FormComponent.test.tsx'>Form component</a></li>
+          <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/FetchComponent/FetchComponent.test.tsx'>Fetch component</a></li>
+        </ul>
+      </li>
     <li>
       <h4>Frontend</h4>
       <li>HTML5</li>
@@ -116,13 +131,6 @@ npm test
             (Jest/react-testing-library)
           </li>
           <li>Babel/Typescript configuration</li>
-        </ul>
-      </li>
-      <li>
-        React Testing Library/Jest (tests in progress - not done
-        yet)
-        <ul>
-          <li>Tests for components:</li>
         </ul>
       </li>
     </li>
