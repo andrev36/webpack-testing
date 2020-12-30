@@ -1,6 +1,10 @@
 import React, { ChangeEvent, Fragment, useState, } from 'react'
 import '../../index.scss'
 
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE The form lets the user input their name and save it
+* to local storage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const FormComponent = () => {
  const [formValues, setFormValues, ] = useState( {
   name: '',

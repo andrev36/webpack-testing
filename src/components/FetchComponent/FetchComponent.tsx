@@ -1,6 +1,10 @@
 import React, { useEffect, useState, } from 'react'
 import '../../index.scss'
 
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Component fetches quote from Kanye REST API and maps
+* it to JSX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const FetchComponent = () => {
  const [quote, setQuote, ] = useState( '', )
 

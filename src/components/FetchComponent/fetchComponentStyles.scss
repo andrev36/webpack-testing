@@ -1,20 +1,19 @@
+@use '../../containerStyles.scss';
+@import '../../containerStyles.scss';
+
 .fetch-section {
- align-items: center;
- display: flex;
- flex-direction: column;
- font-size: 1.5rem;
- height: 22rem;
+ @include flexCenter(column);
  justify-content: flex-start;
+ font-size: 1rem;
+ height: 22rem;
  position: absolute;
- width: 22rem;
- @media (max-width: 900px) {
-  font-size: 1rem;
-  width: 15rem;
+ width: 15rem;
+ @include lg {
+  font-size: 1.5rem;
+  width: 22rem;
  }
  &__quote,
  &__quote-author {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  @include flexCenter(row);
  }
 }

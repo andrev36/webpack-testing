@@ -5,7 +5,7 @@ Webpack and Web App Testing.
 
 ## [View website live demo here](https://andrev36.github.io/webpack-testing/)
 
-<h3 align="left">Languages and Tools:</h3>
+<h1 align="left">Languages and Tools:</h1>
 <p align="left">
  <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
  <a href="https://www.w3.org/html/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
@@ -22,19 +22,19 @@ Webpack and Web App Testing.
  <a href="https://threejs.org/" target="_blank"> <img src="https://miro.medium.com/max/724/1*aDcnXab1QC_5KF8JUxDEYA.png" alt="threejs" width="80" height="40"/> </a>
 </p>
 
-## Information about Tech stack is at the bottom
+## Information about a tech stack is at the bottom
 
-### Interesting files to explore in project:
+### Interesting files to explore in a project:
 
 - [package.json (explore libraries used in project)](https://github.com/andrev36/webpack-testing/blob/master/package.json)
 - [Webpack development config (explore configuration)](https://github.com/andrev36/webpack-testing/blob/master/webpack.config.dev.js)
 - [Webpack production config (explore configuration)](https://github.com/andrev36/webpack-testing/blob/master/webpack.config.js)
 - [Main page (explore project structure)](https://github.com/andrev36/webpack-testing/blob/master/src/MainPage.tsx)
 - [Three dimension component (explore ThreeJS - react-three-fiber) ](https://github.com/andrev36/webpack-testing/blob/master/src/components/ThreeDimensionComponent/ThreeDimensionComponent.tsx)
-  [Wave animation component (explore GSAP animations and Portal usage)](https://github.com/andrev36/webpack-testing/blob/master/src/components/WaveComponent/WaveComponent.tsx)
-- [Portal component](https://github.com/andrev36/webpack-testing/blob/master/src/components/WaveComponent/Portal.tsx)
+  [Wave animation component (explore GSAP animations and Portal usage)](https://github.com/andrev36/webpack-testing/blob/master/src/components/RewardComponent/RewardComponent.tsx)
+- [Portal component](https://github.com/andrev36/webpack-testing/blob/master/src/components/RewardComponent/Portal.tsx)
 
-To run project locally clone repository using command:
+To run a project locally clone repository using a command:
 
 ```js
 git clone https://github.com/andrev36/webpack-testing
@@ -46,7 +46,7 @@ Preview in the development environment is available via command:
 npm start
 ```
 
-Run tests using command:
+Run tests using a command:
 
 ```js
 npm test
@@ -79,8 +79,8 @@ npm test
   <li>
         Jest/React Testing Library. Tests for components (click list element to view tests):
         <ul>
-          <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/ButtonComponent/Buttons.test.tsx'>Counter buttons</a></li>
-          <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/WaveComponent/WaveComponent.test.tsx'>Wave component</a></li>
+          <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/CounterComponent/Counter.test.tsx'>Counter buttons</a></li>
+          <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/RewardComponent/RewardComponent.test.tsx'>Wave component</a></li>
           <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/SelectComponent/SelectElement.test.tsx'>Select element</a></li>
           <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/FormComponent/FormComponent.test.tsx'>Form component</a></li>
           <li><a href='https://github.com/andrev36/webpack-testing/blob/master/src/components/FetchComponent/FetchComponent.test.tsx'>Fetch component</a></li>
@@ -109,13 +109,6 @@ npm test
           <li>React Hooks</li>
           <li>react-three-fiber (ThreeJS)</li>
           <li>GSAP</li>
-        </ul>
-      </li>
-      <li>
-        Webpack
-        <ul>
-          <li>React Hooks</li>
-          <li>react-three-fiber (ThreeJS)</li>
         </ul>
       </li>
       <li>

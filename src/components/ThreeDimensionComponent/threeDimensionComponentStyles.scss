@@ -1,12 +1,11 @@
 @use '../../containerStyles.scss';
 @import '../../containerStyles.scss';
-@use '../ButtonComponent/buttonStyles.scss';
-@import '../ButtonComponent/buttonStyles.scss';
+@use '../CounterComponent/counterStyles.scss';
+@import '../CounterComponent/counterStyles.scss';
 
 $min-width: 1200px;
 
 .three-dimension-container {
- @include item_style;
  background-color: #fff;
  grid-column: 1/-1;
  min-height: 100vh;
@@ -26,10 +25,7 @@ $min-width: 1200px;
 }
 
 .container-flex-pet {
- align-items: center;
- display: flex;
- flex-direction: column;
- justify-content: center;
+ @include flexCenter(column);
  @media (min-width: $min-width) {
   flex-direction: row;
  }
@@ -68,7 +64,7 @@ $min-width: 1200px;
 
 .container-choose-pet-btn__choose-btn {
  &-duck, &-cow, &-chicken {
-  @include btn_style;
+  @include btn-style;
  }
 }
 

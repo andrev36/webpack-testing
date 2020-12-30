@@ -1,24 +1,26 @@
-import { Buttons, } from 'components/ButtonComponent/Buttons'
+import { Counter, } from 'components/CounterComponent/Counter'
 import { FormComponent, } from 'components/FormComponent/FormComponent'
 import { SelectElements, } from 'components/SelectComponent/SelectElement'
+import { MainPageHook, } from 'MainPageHook'
 import React from 'react'
 const BackgroundPicture = require( '../assets/images/background/background.png', )
  .default
 
-interface Props {
- handleGoToThirdSlide(): void
- handleGoToFirstSlide(): void
-}
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Content of the second slide:
+* 1. Counter component to chose the amount of adopted animals
+* 2. Select component to chose color of gift toy
+* 3. Form component to the input user name
+* 4. Navigation using next/previous buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const SecondSlideContent = () => {
+ const { handleGoToFirstSlide, handleGoToThirdSlide, } = MainPageHook()
 
-const SecondSlideContent = ( {
- handleGoToThirdSlide,
- handleGoToFirstSlide,
-}: Props, ) => {
  return (
   <section className='slide slide-2'>
    <img src={BackgroundPicture} alt='background' className='background-img' />
    <div className='slide-2-flex-item'>
-    <Buttons />
+    <Counter />
    </div>
    <div className='slide-2-flex-item'>
     <SelectElements />

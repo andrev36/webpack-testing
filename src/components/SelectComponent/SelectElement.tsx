@@ -5,10 +5,10 @@ import '../../index.scss'
 const DownArrowIcon = require( '../../assets/images/down-arrow.svg', ).default
 const UpArrowIcon = require( '../../assets/images/up-arrow.svg', ).default
 
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Select element lets the user choose the color of gift toy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const SelectElementsComponent = () => {
- /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    * NOTE Select element logic
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const [pickedColor, setPickedColor, ] = useState<string>( 'blue', )
  const [listOpen, setListOpen, ] = useState<boolean>( false, )
 
@@ -43,11 +43,10 @@ const SelectElementsComponent = () => {
   )
  }
 
+ // * NOTE Utility to close select element after clicking
+ // * outside of the list
  ; ( SelectElementsComponent as any ).handleClickOutside = () => setListOpen( false, )
 
- /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    * NOTE Fade in animations
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  const headingRef = useRef( null, )
  const selectElementRef = useRef( null, )
 

@@ -46,7 +46,11 @@ const usePortal = ( id: string, ) => {
  return getRootElement()
 }
 
-const Portal = ( {
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Creates portal in place of div with "modal-root" id
+* in index.html file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const CreatePortal = ( {
  id,
  children,
 }: {
@@ -58,4 +62,4 @@ const Portal = ( {
  return createPortal( children, target, )
 }
 
-export { Portal, }
+export { CreatePortal, }

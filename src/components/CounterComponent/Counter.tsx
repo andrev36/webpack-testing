@@ -1,15 +1,19 @@
 import React, { Fragment, useState, } from 'react'
 import '../../index.scss'
 
-const Buttons = () => {
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Counter element to chose the amount of adopted animals
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const Counter = () => {
  const [count, setCounter, ] = useState<number>( 1, )
 
- const handleClickIncrement = () => {
+ const handleClickIncrement = (): void => {
   setCounter( ( countIncrement, ) => countIncrement + 1, )
   localStorage.setItem( 'chosenAnimalCount', ( count + 1 ).toString(), )
  }
 
- const handleClickDecrement = () => {
+ // * NOTE Counter is not allowed to go below 1 value
+ const handleClickDecrement = (): void => {
   if ( count > 1 ) {
    setCounter( ( countDecrement, ) => countDecrement - 1, )
    localStorage.setItem( 'chosenAnimalCount', ( count - 1 ).toString(), )
@@ -24,7 +28,7 @@ const Buttons = () => {
     </div>
     <div className='section-counter-container'>
      <h1 className='section-counter-container__heading'>
-      Select amount of animals to adopt
+      Select the amount of animals to adopt
      </h1>
     </div>
     <div className='section-counter-buttons'>
@@ -53,4 +57,4 @@ const Buttons = () => {
  )
 }
 
-export { Buttons, }
+export { Counter, }

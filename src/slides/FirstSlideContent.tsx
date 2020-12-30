@@ -1,13 +1,17 @@
 import { ThreeDimensionComponent, } from 'components/ThreeDimensionComponent/ThreeDimensionComponent'
+import { MainPageHook, } from 'MainPageHook'
 import React from 'react'
-const BackgroundPicture = require( '../assets/images/background/background.png', )
+const BackgroundPicture = require( '../assets/images/background/background.png',)
  .default
 
-interface Props {
- handleGoToSecondSlide(): void;
-}
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* NOTE Content of the first slide:
+* 1. Component with 3D models for animals
+* 2. Navigation using next button
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const FirstSlideContent = () => {
+ const { handleGoToSecondSlide, } = MainPageHook()
 
-const FirstSlideContent = ( { handleGoToSecondSlide, }: Props, ) => {
  return (
   <section className='slide slide-1'>
    <h1 className='slide-1__heading'>Adopt an animal</h1>
