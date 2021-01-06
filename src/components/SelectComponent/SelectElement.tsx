@@ -101,6 +101,7 @@ const SelectElementsComponent = () => {
          alt='down arrow'
          className='select-header__arrow-img'
          src={DownArrowIcon}
+         data-testid='opening-down-arrow-icon'
         />
        )}
       </span>

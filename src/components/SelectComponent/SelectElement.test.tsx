@@ -20,20 +20,20 @@ describe( 'SelectElement tests', () => {
 
   fireEvent.click( currentlySelectedColor, )
 
-  // const colorToBeSelected = getByTestId( 'green', )
+  const openingArrowDownIcon = getByTestId( 'opening-down-arrow-icon', )
 
-  // fireEvent.click( colorToBeSelected, )
+  fireEvent.click( openingArrowDownIcon, )
 
-  // fireEvent.change( currentlySelectedColorValue, {
-  //  target: { value: 'green', },
-  // }, )
+  const colorToBeSelected = getByTestId( 'green', )
+
+  fireEvent.click( colorToBeSelected, )
 
   const currentlySelectedColorText = getByTestId(
    'currently-selected-color-text',
   )
 
   expect( currentlySelectedColorText.textContent, ).toBe(
-   'Choose a color of the toy (gift) - blue',
+   'Choose a color of the toy (gift) - green',
   )
  }, )
 }, )
