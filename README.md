@@ -26,13 +26,13 @@ Webpack and Web App Testing.
 
 ### Interesting files to explore in a project:
 
-- [package.json (explore libraries used in project)](https://github.com/awiaderny/webpack-testing/blob/master/package.json)
-- [Webpack development config (explore configuration)](https://github.com/awiaderny/webpack-testing/blob/master/webpack.config.dev.js)
-- [Webpack production config (explore configuration)](https://github.com/awiaderny/webpack-testing/blob/master/webpack.config.js)
-- [Main page (explore project structure)](https://github.com/awiaderny/webpack-testing/blob/master/src/MainPage.tsx)
-- [Three dimension component (explore ThreeJS - react-three-fiber) ](https://github.com/awiaderny/webpack-testing/blob/master/src/components/ThreeDimensionComponent/ThreeDimensionComponent.tsx)
-  [Wave animation component (explore GSAP animations and Portal usage)](https://github.com/awiaderny/webpack-testing/blob/master/src/components/RewardComponent/RewardComponent.tsx)
-- [Portal component](https://github.com/awiaderny/webpack-testing/blob/master/src/components/RewardComponent/Portal.tsx)
+-   [package.json (explore libraries used in project)](https://github.com/awiaderny/webpack-testing/blob/master/package.json)
+-   [Webpack development config (explore configuration)](https://github.com/awiaderny/webpack-testing/blob/master/webpack.config.dev.js)
+-   [Webpack production config (explore configuration)](https://github.com/awiaderny/webpack-testing/blob/master/webpack.config.js)
+-   [Main page (explore project structure)](https://github.com/awiaderny/webpack-testing/blob/master/src/MainPage.tsx)
+-   [Three dimension component (explore ThreeJS - react-three-fiber) ](https://github.com/awiaderny/webpack-testing/blob/master/src/components/ThreeDimensionComponent/ThreeDimensionComponent.tsx)
+    [Wave animation component (explore GSAP animations and Portal usage)](https://github.com/awiaderny/webpack-testing/blob/master/src/components/RewardComponent/RewardComponent.tsx)
+-   [Portal component](https://github.com/awiaderny/webpack-testing/blob/master/src/components/RewardComponent/Portal.tsx)
 
 To run a project locally clone repository using a command:
 

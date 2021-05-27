@@ -1,10 +1,9 @@
-import { Counter, } from 'components/CounterComponent/Counter'
-import { FormComponent, } from 'components/FormComponent/FormComponent'
-import { SelectElements, } from 'components/SelectComponent/SelectElement'
-import { MainPageHook, } from 'MainPageHook'
-import React from 'react'
-const BackgroundPicture = require( '../assets/images/background/background.png', )
- .default
+import {Counter} from 'components/CounterComponent/Counter';
+import {FormComponent} from 'components/FormComponent/FormComponent';
+import {SelectElements} from 'components/SelectComponent/SelectElement';
+import {MainPageHook} from 'MainPageHook';
+import React from 'react';
+const BackgroundPicture = require('../assets/images/background/background.png').default;
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Content of the second slide:
@@ -14,30 +13,30 @@ const BackgroundPicture = require( '../assets/images/background/background.png',
 * 4. Navigation using next/previous buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const SecondSlideContent = () => {
- const { handleGoToFirstSlide, handleGoToThirdSlide, } = MainPageHook()
+	const {handleGoToFirstSlide, handleGoToThirdSlide} = MainPageHook();
 
- return (
-  <section className='slide slide-2'>
-   <img src={BackgroundPicture} alt='background' className='background-img' />
-   <div className='slide-2-flex-item'>
-    <Counter />
-   </div>
-   <div className='slide-2-flex-item'>
-    <SelectElements />
-   </div>
-   <div className='slide-2-flex-item'>
-    <FormComponent />
-   </div>
-   <header className='btn-container-next-prev'>
-    <button className='btn btn-go-prev-slide-2' onClick={handleGoToFirstSlide}>
-     Previous
-    </button>
-    <button className='btn btn-go-next-slide-2' onClick={handleGoToThirdSlide}>
-     Next
-    </button>
-   </header>
-  </section>
- )
-}
+	return (
+		<section className='slide slide-2'>
+			<img src={BackgroundPicture} alt='background' className='background-img' />
+			<div className='slide-2-flex-item'>
+				<Counter />
+			</div>
+			<div className='slide-2-flex-item'>
+				<SelectElements />
+			</div>
+			<div className='slide-2-flex-item'>
+				<FormComponent />
+			</div>
+			<header className='btn-container-next-prev'>
+				<button className='btn btn-go-prev-slide-2' onClick={handleGoToFirstSlide}>
+					Previous
+				</button>
+				<button className='btn btn-go-next-slide-2' onClick={handleGoToThirdSlide}>
+					Next
+				</button>
+			</header>
+		</section>
+	);
+};
 
-export { SecondSlideContent, }
+export {SecondSlideContent};

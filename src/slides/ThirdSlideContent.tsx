@@ -1,6 +1,6 @@
-import { MainPageHook, } from 'MainPageHook'
-import React from 'react'
-import { RewardComponent, } from '../components/RewardComponent/RewardComponent'
+import {MainPageHook} from 'MainPageHook';
+import React from 'react';
+import {RewardComponent} from '../components/RewardComponent/RewardComponent';
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * NOTE Content of the third slide:
@@ -9,16 +9,16 @@ import { RewardComponent, } from '../components/RewardComponent/RewardComponent'
 * 3. Navigation using previous button
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const ThirdSlideContent = () => {
- const { handleGoToSecondSlide, } = MainPageHook()
+	const {handleGoToSecondSlide} = MainPageHook();
 
- return (
-  <section className='slide slide-3'>
-   <RewardComponent />
-   <button className='btn btn-go-prev-slide-3' onClick={handleGoToSecondSlide}>
-    Previous
-   </button>
-  </section>
- )
-}
+	return (
+		<section className='slide slide-3'>
+			<RewardComponent />
+			<button className='btn btn-go-prev-slide-3' onClick={handleGoToSecondSlide}>
+				Previous
+			</button>
+		</section>
+	);
+};
 
-export { ThirdSlideContent, }
+export {ThirdSlideContent};
